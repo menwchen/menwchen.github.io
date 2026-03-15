@@ -4,3 +4,4 @@ url: "https://menwchen.github.io"
 baseurl: ""
 markdown: kramdown
 permalink: /blog/:title/
+future: true
