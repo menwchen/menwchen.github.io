@@ -1,0 +1,484 @@
+---
+layout: null
+title: "신안군 농어촌기본소득 시뮬레이션 대시보드"
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신안군 농어촌기본소득 시뮬레이션</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans KR',sans-serif; background:#0f1923; color:#e0e8ec; }
+  .header { background:linear-gradient(135deg,#0a7e8c,#0d5c63); padding:2.5rem 2rem 2rem; }
+  .header h1 { font-size:1.8rem; font-weight:700; color:#fff; margin-bottom:0.3rem; }
+  .header p { font-size:0.9rem; color:#8bbfc4; }
+  .tabs { display:flex; gap:4px; padding:0.8rem 2rem 0; background:#14232e; border-bottom:2px solid #1a3040; overflow-x:auto; }
+  .tab { padding:0.6rem 1.2rem; border-radius:8px 8px 0 0; cursor:pointer; font-size:0.85rem; font-weight:500; background:#1a3040; color:#8bbfc4; transition:all .2s; white-space:nowrap; }
+  .tab.active { background:#0a7e8c; color:#fff; }
+  .tab:hover:not(.active) { background:#1e3a4a; }
+  .panels { padding:1.5rem 2rem 3rem; }
+  .panel { display:none; }
+  .panel.active { display:block; }
+  .card { background:#1a2f38; border-radius:12px; padding:1.5rem; margin-bottom:1.2rem; border:1px solid #1e3a4a; }
+  .card h3 { color:#0a7e8c; font-size:1.1rem; margin-bottom:0.8rem; font-weight:700; }
+  .card h4 { color:#f7a325; font-size:0.95rem; margin:0.8rem 0 0.4rem; font-weight:600; }
+  .chart-container { position:relative; height:320px; margin:1rem 0; }
+  .stat-row { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; }
+  .stat-box { flex:1; min-width:140px; background:#14232e; border-radius:8px; padding:1rem; text-align:center; border-left:3px solid #0a7e8c; }
+  .stat-box.warn { border-left-color:#f7a325; }
+  .stat-box.alert { border-left-color:#d94032; }
+  .stat-box .num { font-size:1.6rem; font-weight:900; color:#fff; }
+  .stat-box .label { font-size:0.75rem; color:#8bbfc4; margin-top:0.2rem; }
+  .insight { background:#0d5c63; border-radius:8px; padding:1rem 1.2rem; margin-top:0.8rem; font-size:0.85rem; line-height:1.6; color:#d4eef0; }
+  .insight strong { color:#f7a325; }
+  table { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.85rem; }
+  th { background:#0a7e8c; color:#fff; padding:0.5rem 0.8rem; text-align:center; font-weight:500; }
+  td { padding:0.5rem 0.8rem; border-bottom:1px solid #1e3a4a; text-align:center; }
+  tr:nth-child(even) td { background:#14232e; }
+  .bar-inline { display:inline-block; height:14px; border-radius:3px; vertical-align:middle; margin-left:6px; }
+  .legend-item { display:inline-flex; align-items:center; gap:5px; margin-right:14px; font-size:0.78rem; color:#8bbfc4; }
+  .legend-dot { width:10px; height:10px; border-radius:50%; }
+  .stress-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.75rem; font-weight:600; }
+  .stress-ok { background:#1a4a3a; color:#2ecc71; }
+  .stress-warning { background:#4a3a1a; color:#f7a325; }
+  .stress-critical { background:#4a1a1a; color:#d94032; }
+  .decomp-bar { display:flex; border-radius:6px; overflow:hidden; height:28px; margin:0.6rem 0; }
+  .decomp-bar div { display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:600; color:#fff; }
+  @media(max-width:700px) {
+    .stat-row { flex-direction:column; }
+    .chart-container { height:250px; }
+    .header h1 { font-size:1.3rem; }
+    .panels { padding:1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>신안군 농어촌기본소득 시뮬레이션</h1>
+  <p>5가지 건설적 질문에 대한 정량적 분석 — 기본사회정책연구소</p>
+</div>
+
+<div class="tabs" id="tabs">
+  <div class="tab active" onclick="showPanel(0)">Q1 반사실적 추론</div>
+  <div class="tab" onclick="showPanel(1)">Q2 정착률 분석</div>
+  <div class="tab" onclick="showPanel(2)">Q3 임계점·승수</div>
+  <div class="tab" onclick="showPanel(3)">Q4 소비 제약</div>
+  <div class="tab" onclick="showPanel(4)">Q5 인프라 부하</div>
+  <div class="tab" onclick="showPanel(5)">종합 판정</div>
+</div>
+
+<div class="panels">
+
+<!-- ═══ Q1 ═══ -->
+<div class="panel active" id="p0">
+  <div class="card">
+    <h3>Q1. 실험 설계 — 반사실적 추론 (Counterfactual)</h3>
+    <p style="font-size:0.85rem;color:#8bbfc4;margin-bottom:1rem;">기본소득이 없었다면 신안 인구는 어떻게 변했을까?</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="num">+3,000</div><div class="label">4개월 순효과 (명)</div></div>
+      <div class="stat-box"><div class="num">+2,021</div><div class="label">24개월 순효과 (명)</div></div>
+      <div class="stat-box warn"><div class="num">+1,020</div><div class="label">종료 1년 후 잔존 (명)</div></div>
+    </div>
+    <div class="chart-container"><canvas id="chartPop"></canvas></div>
+    <h4>인구 유입 3,000명 구성 분해</h4>
+    <div class="decomp-bar">
+      <div style="width:35%;background:#0a7e8c;">행정정리 35%</div>
+      <div style="width:25%;background:#2ecc71;">실이전 25%</div>
+      <div style="width:25%;background:#3498db;">귀농촌 25%</div>
+      <div style="width:15%;background:#d94032;">기회적 15%</div>
+    </div>
+    <div style="margin:0.5rem 0;">
+      <span class="legend-item"><span class="legend-dot" style="background:#0a7e8c"></span>행정상 주소 정리</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#2ecc71"></span>실제 거주지 이전</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#3498db"></span>귀농·귀촌 앞당김</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#d94032"></span>기회주의적 이동</span>
+    </div>
+    <h4>제로섬 가설 검증: 목포 -3,300명의 실체</h4>
+    <div class="decomp-bar">
+      <div style="width:33%;background:#3d5a63;">자연감소 33%</div>
+      <div style="width:32%;background:#d94032;">신안효과 32%</div>
+      <div style="width:35%;background:#8b6914;">기타요인 35%</div>
+    </div>
+    <div class="insight">
+      <strong>핵심 발견:</strong> 목포 인구 감소(-3,300명)의 약 <strong>32%만</strong>이 신안 기본소득 효과로 추정됨. 나머지 68%는 목포 자체의 자연 감소 추세(-1,080명)와 기타 경제적 요인(-1,169명). <strong>'제로섬'이라는 프레이밍은 인과관계를 상관관계로 치환한 것.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Q2 ═══ -->
+<div class="panel" id="p1">
+  <div class="card">
+    <h3>Q2. 실험 기간에 따른 인구 정착률</h3>
+    <p style="font-size:0.85rem;color:#8bbfc4;margin-bottom:1rem;">2년으로 충분한가? 청산면 5년 경험과 비교</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="num">60.9%</div><div class="label">2년 실험 정착률</div></div>
+      <div class="stat-box"><div class="num">71.5%</div><div class="label">5년 실험 정착률</div></div>
+      <div class="stat-box warn"><div class="num">+318</div><div class="label">5년 시 추가 정착 (명)</div></div>
+    </div>
+    <div class="chart-container"><canvas id="chartRetention"></canvas></div>
+    <h4>유형별 정착률 변화 (2년 vs 5년)</h4>
+    <table>
+      <tr><th>유입 유형</th><th>비중</th><th>2년 정착률</th><th>5년 정착률</th><th>차이</th></tr>
+      <tr><td>행정상 주소 정리</td><td>35%</td><td>91.0%</td><td>95.0%</td><td style="color:#2ecc71">+4.0%p</td></tr>
+      <tr><td>실제 거주지 이전</td><td>25%</td><td>59.2%</td><td>78.0%</td><td style="color:#2ecc71">+18.8%p</td></tr>
+      <tr><td>귀농·귀촌 앞당김</td><td>25%</td><td>49.6%</td><td>70.0%</td><td style="color:#2ecc71">+20.4%p</td></tr>
+      <tr><td>기회주의적 이동</td><td>15%</td><td>10.4%</td><td>5.0%</td><td style="color:#d94032">-5.4%p</td></tr>
+    </table>
+    <div class="insight">
+      <strong>핵심 발견:</strong> 2년→5년으로 연장 시 <strong>실이전자(+18.8%p)와 귀농귀촌자(+20.4%p)</strong>의 정착률이 크게 상승. 이는 커뮤니티 형성과 생활 인프라 적응에 시간이 필요함을 시사. 2년은 '유인 효과'는 볼 수 있으나, 진정한 <strong>'정착 효과'를 평가하기에는 부족</strong>할 수 있음.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Q3 ═══ -->
+<div class="panel" id="p2">
+  <div class="card">
+    <h3>Q3. 월 15만 원은 임계점을 넘는가?</h3>
+    <p style="font-size:0.85rem;color:#8bbfc4;margin-bottom:1rem;">지급액별 행동 변화 확률 + 지역경제 승수효과</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="num">12.0%</div><div class="label">소득보충비율 (2인가구)</div></div>
+      <div class="stat-box warn"><div class="num">50%</div><div class="label">행동변화 확률</div></div>
+      <div class="stat-box"><div class="num">×1.61</div><div class="label">지역경제 승수</div></div>
+      <div class="stat-box"><div class="num">20.6%</div><div class="label">GRDP 대비 효과</div></div>
+    </div>
+    <div class="chart-container"><canvas id="chartThreshold"></canvas></div>
+    <h4>지역경제 승수효과 (라운드별)</h4>
+    <div class="chart-container" style="height:250px;"><canvas id="chartMultiplier"></canvas></div>
+    <div class="insight">
+      <strong>핵심 발견:</strong> 월 15만 원은 <strong>주소이전(88%)</strong>은 강력히 유발하나, 실질적 행동변화(이주·경제활동)는 확률 50%로 <strong>전환점 정확히 위</strong>에 위치. 월 20만 원(소득보충 16%)이면 행동변화 65%로 유의미하게 상승. 승수효과 ×1.61로 연간 <strong>1,234억 원</strong>의 지역경제 효과 추정, 이는 신안 GRDP의 약 20.6%.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Q4 ═══ -->
+<div class="panel" id="p3">
+  <div class="card">
+    <h3>Q4. 지역상품권이 소비 자유를 제약하는가?</h3>
+    <p style="font-size:0.85rem;color:#8bbfc4;margin-bottom:1rem;">신안군 1,025개 섬 지역의 업종별 사용가능률</p>
+    <div class="stat-row">
+      <div class="stat-box warn"><div class="num">62.9%</div><div class="label">종합 소비 자유도</div></div>
+      <div class="stat-box"><div class="num">9.4만원</div><div class="label">실효 사용 가능</div></div>
+      <div class="stat-box alert"><div class="num">5.6만원</div><div class="label">제약받는 금액</div></div>
+    </div>
+    <div class="chart-container"><canvas id="chartVoucher"></canvas></div>
+    <table>
+      <tr><th>지출 영역</th><th>필요 비중</th><th>상품권 사용 가능</th><th>갭</th><th>적절성</th></tr>
+      <tr><td>식료품·생필품</td><td>35%</td><td>95%</td><td style="color:#2ecc71">▲ 양호</td><td>●</td></tr>
+      <tr><td>의료·약국</td><td>15%</td><td style="color:#d94032">30%</td><td style="color:#d94032">▼ 심각</td><td>○</td></tr>
+      <tr><td>교통·연료</td><td>12%</td><td>60%</td><td style="color:#f7a325">▽ 부족</td><td>◐</td></tr>
+      <tr><td>교육·학원</td><td>8%</td><td style="color:#d94032">10%</td><td style="color:#d94032">▼ 매우 심각</td><td>✕</td></tr>
+      <tr><td>의류·생활용품</td><td>10%</td><td>70%</td><td style="color:#f7a325">▽ 부족</td><td>◐</td></tr>
+      <tr><td>외식·카페</td><td>8%</td><td>85%</td><td style="color:#2ecc71">▲ 양호</td><td>●</td></tr>
+      <tr><td>통신·공과금</td><td>7%</td><td style="color:#d94032">20%</td><td style="color:#d94032">▼ 심각</td><td>○</td></tr>
+      <tr><td>기타 서비스</td><td>5%</td><td>40%</td><td style="color:#f7a325">▽ 부족</td><td>○</td></tr>
+    </table>
+    <div class="insight">
+      <strong>핵심 발견:</strong> 월 15만 원 중 <strong>5.6만 원(37%)</strong>이 필요한 곳에 쓰지 못할 수 있음. 특히 도서 지역 주민에게 가장 절실한 <strong>의료(사용가능 30%)와 교육(10%)</strong>에서 상품권 사용이 극히 제한적. 이는 '지역경제 활성화'와 '주민 생활 안정' 사이의 <strong>정책 목표 충돌</strong>을 시사.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Q5 ═══ -->
+<div class="panel" id="p4">
+  <div class="card">
+    <h3>Q5. 인구 급증 시 인프라는 버티는가?</h3>
+    <p style="font-size:0.85rem;color:#8bbfc4;margin-bottom:1rem;">인구 +3,000명(+7.6%) 유입 시 공공서비스 부하</p>
+    <div class="chart-container"><canvas id="chartInfra"></canvas></div>
+    <table>
+      <tr><th>시설</th><th>현재 가동률</th><th>유입 후 예상</th><th>상태</th><th>확충 필요</th></tr>
+      <tr><td>의료기관</td><td>75%</td><td>81%</td><td><span class="stress-badge stress-ok">양호</span></td><td>필요</td></tr>
+      <tr><td>초중고교</td><td>45%</td><td>48%</td><td><span class="stress-badge stress-ok">양호</span></td><td>여유</td></tr>
+      <tr><td>대중교통(여객선)</td><td>80%</td><td>86%</td><td><span class="stress-badge stress-warning">주의</span></td><td>필요</td></tr>
+      <tr><td>주거</td><td>60%</td><td>65%</td><td><span class="stress-badge stress-ok">양호</span></td><td>필요</td></tr>
+      <tr><td>상하수도</td><td>65%</td><td>70%</td><td><span class="stress-badge stress-ok">양호</span></td><td>여유</td></tr>
+    </table>
+    <div class="insight">
+      <strong>핵심 발견:</strong> 단기적으로는 인프라 과부하 위험이 크지 않으나, <strong>대중교통(여객선) 86%</strong>로 주의 수준 진입. 도서 지역 특성상 <strong>의료 접근성</strong>이 가장 취약한 구조적 문제. 기본소득으로 사람은 유인하되 <strong>의료·교통 인프라 병행 투자 없이는</strong> '살아볼 만한 곳'이 되기 어려움.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 종합 ═══ -->
+<div class="panel" id="p5">
+  <div class="card">
+    <h3>종합 판정: 신안군 시뮬레이션이 말하는 것</h3>
+    <table style="margin:1.2rem 0;">
+      <tr><th style="width:25%">질문</th><th style="width:30%">시뮬레이션 결과</th><th style="width:15%">현행 평가</th><th style="width:30%">개선 방향</th></tr>
+      <tr>
+        <td style="text-align:left;font-weight:600;">Q1. 실험 설계</td>
+        <td style="text-align:left;">제로섬 주장의 68%는 독립적 추세. 비교군 부재로 인과효과 식별 불가</td>
+        <td><span class="stress-badge stress-warning">미흡</span></td>
+        <td style="text-align:left;">DID 설계, 매칭된 비교군 도입 필요</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;font-weight:600;">Q2. 실험 기간</td>
+        <td style="text-align:left;">2년→5년 시 정착률 61%→72%, +318명 추가 정착</td>
+        <td><span class="stress-badge stress-warning">부족</span></td>
+        <td style="text-align:left;">최소 3년, 이상적으로 5년 추적 필요</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;font-weight:600;">Q3. 지급 임계점</td>
+        <td style="text-align:left;">15만 원=행동변화 전환점 정확히 위. 주소이전(88%)은 강력, 실이주(33%)는 약함</td>
+        <td><span class="stress-badge stress-warning">경계</span></td>
+        <td style="text-align:left;">20만 원 이상 시 실질적 행동변화 확률 유의미 상승</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;font-weight:600;">Q4. 소비 제약</td>
+        <td style="text-align:left;">소비 자유도 63%. 의료(30%)·교육(10%) 사용 극히 제한</td>
+        <td><span class="stress-badge stress-critical">심각</span></td>
+        <td style="text-align:left;">현금 혼합 지급 또는 의료·교통 특화 바우처 병행</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;font-weight:600;">Q5. 인프라</td>
+        <td style="text-align:left;">대중교통 86% 주의. 의료 접근성 구조적 취약</td>
+        <td><span class="stress-badge stress-ok">관리가능</span></td>
+        <td style="text-align:left;">여객선 증편, 원격의료 시스템 병행 투자</td>
+      </tr>
+    </table>
+    <div class="insight" style="background:#1a3a2a;">
+      <strong>결론:</strong> 이 시뮬레이션이 보여주는 것은 농어촌 기본소득이 '실패'하거나 '성공'한다는 이분법적 판단이 아니다. <strong>정책의 설계를 어떻게 보완하면 더 잘 작동할 수 있는가</strong>에 대한 구체적 방향을 제시한다. 이것이 '묻지마 실험'이라 낙인찍는 것과, 실험을 더 정교하게 만들자고 제안하는 것의 차이다.
+    </div>
+    <div class="insight" style="margin-top:0.6rem;">
+      <strong>방법론 참고:</strong> 본 시뮬레이션은 언론 보도 데이터, 공개 통계, 기존 기본소득 실험(청산면 5년) 결과를 기반으로 한 <strong>추정 모델</strong>임. 실제 정책 평가에는 개인 단위 패널 데이터, DID(이중차분법), RDD(회귀불연속설계) 등 보다 엄밀한 인과추론 방법론이 필요함.
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+const DATA = {
+  pop: {
+    months: Array.from({length:61}, (_,i)=>i),
+    counterfactual: [],
+    withBI: [],
+  },
+  retention: [
+    {yr:1, rate:55.6, perm:1667},
+    {yr:2, rate:60.9, perm:1827},
+    {yr:3, rate:66.0, perm:1979},
+    {yr:4, rate:70.7, perm:2121},
+    {yr:5, rate:71.5, perm:2145},
+  ],
+  threshold: [
+    {amt:5, supp:4.0, reg:50, behav:23, move:16},
+    {amt:10, supp:8.0, reg:73, behav:35, move:23},
+    {amt:15, supp:12.0, reg:88, behav:50, move:33},
+    {amt:20, supp:16.0, reg:95, behav:65, move:44},
+    {amt:30, supp:24.0, reg:95, behav:86, move:67},
+    {amt:50, supp:40.0, reg:95, behav:99, move:93},
+  ],
+  multiplier: [63.75, 26.78, 8.42, 2.65, 0.83, 0.26, 0.08, 0.03, 0.01, 0.00],
+};
+
+// Generate population data
+{
+  const base = 39500;
+  const monthlyDecline = Math.pow(1 - 0.03, 1/12) - 1;
+  let cfNoise = 0;
+  for (let m = 0; m <= 60; m++) {
+    cfNoise += (Math.random() - 0.5) * 60;
+    const cf = base * Math.pow(1 + monthlyDecline, m) + cfNoise;
+    DATA.pop.counterfactual.push(Math.round(cf));
+
+    let bi = cf;
+    if (m <= 4 && m > 0) {
+      bi = cf + 3000 * (1 - Math.exp(-1.2 * m)) / (1 - Math.exp(-4.8));
+    } else if (m <= 24) {
+      const opp = Math.max(0, 450 * (1 - 0.05 * (m - 4)));
+      const adm = 1050 * 0.95;
+      const act = 750 * Math.max(0.6, 1 - 0.015 * (m - 4));
+      const ret = 750 * Math.max(0.5, 1 - 0.02 * (m - 4));
+      const nat = 30 * Math.log(1 + m / 6);
+      bi = cf + opp + adm + act + ret + nat;
+    } else {
+      const netAt24 = DATA.pop.withBI[24] - DATA.pop.counterfactual[24];
+      const monthsAfter = m - 24;
+      const retention = 0.45 + 0.10 * Math.exp(-0.05 * monthsAfter);
+      bi = cf + netAt24 * retention;
+    }
+    DATA.pop.withBI.push(Math.round(bi));
+  }
+}
+
+// Chart defaults
+Chart.defaults.color = '#8bbfc4';
+Chart.defaults.borderColor = '#1e3a4a';
+Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+
+// Tab logic
+function showPanel(idx) {
+  document.querySelectorAll('.panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+}
+
+// Q1: Population chart
+new Chart(document.getElementById('chartPop'), {
+  type: 'line',
+  data: {
+    labels: DATA.pop.months.map(m => m % 12 === 0 ? `${m/12}년` : ''),
+    datasets: [
+      {
+        label: '기본소득 없는 세계 (반사실적)',
+        data: DATA.pop.counterfactual,
+        borderColor: '#d94032',
+        borderDash: [8, 4],
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false,
+      },
+      {
+        label: '기본소득 있는 세계',
+        data: DATA.pop.withBI,
+        borderColor: '#0a7e8c',
+        borderWidth: 2.5,
+        pointRadius: 0,
+        fill: {target: 0, above: 'rgba(10,126,140,0.15)'},
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'top', labels: { padding: 15, usePointStyle: true } },
+      annotation: {},
+    },
+    scales: {
+      x: { grid: { display: false } },
+      y: { title: { display: true, text: '인구 (명)' }, min: 34000, max: 44000 }
+    }
+  }
+});
+
+// Q2: Retention chart
+new Chart(document.getElementById('chartRetention'), {
+  type: 'bar',
+  data: {
+    labels: DATA.retention.map(r => `${r.yr}년`),
+    datasets: [
+      {
+        label: '정착률 (%)',
+        data: DATA.retention.map(r => r.rate),
+        backgroundColor: DATA.retention.map(r => r.yr === 2 ? '#f7a325' : '#0a7e8c'),
+        borderRadius: 6,
+        yAxisID: 'y',
+      },
+      {
+        label: '영구 인구 증가 (명)',
+        data: DATA.retention.map(r => r.perm),
+        type: 'line',
+        borderColor: '#2ecc71',
+        borderWidth: 2.5,
+        pointRadius: 5,
+        pointBackgroundColor: '#2ecc71',
+        yAxisID: 'y1',
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true } } },
+    scales: {
+      y: { title: { display: true, text: '정착률 (%)' }, min: 40, max: 80 },
+      y1: { position: 'right', title: { display: true, text: '인구 (명)' }, min: 1400, max: 2300, grid: { display: false } },
+    }
+  }
+});
+
+// Q3: Threshold chart
+new Chart(document.getElementById('chartThreshold'), {
+  type: 'line',
+  data: {
+    labels: DATA.threshold.map(t => `${t.amt}만원`),
+    datasets: [
+      { label: '주소이전 확률', data: DATA.threshold.map(t => t.reg), borderColor: '#3498db', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#3498db' },
+      { label: '행동변화 확률', data: DATA.threshold.map(t => t.behav), borderColor: '#f7a325', borderWidth: 2.5, pointRadius: 5, pointBackgroundColor: '#f7a325' },
+      { label: '실제이주 확률', data: DATA.threshold.map(t => t.move), borderColor: '#2ecc71', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#2ecc71' },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true } } },
+    scales: {
+      x: { title: { display: true, text: '월 지급액' } },
+      y: { title: { display: true, text: '확률 (%)' }, min: 0, max: 100 }
+    }
+  }
+});
+
+// Q3-2: Multiplier chart
+new Chart(document.getElementById('chartMultiplier'), {
+  type: 'bar',
+  data: {
+    labels: DATA.multiplier.map((_, i) => `${i+1}차`),
+    datasets: [{
+      label: '라운드별 경제효과 (억 원)',
+      data: DATA.multiplier,
+      backgroundColor: DATA.multiplier.map((_, i) => i === 0 ? '#0a7e8c' : `rgba(10,126,140,${Math.max(0.2, 1 - i*0.1)})`),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { title: { display: true, text: '소비 라운드' } },
+      y: { title: { display: true, text: '경제효과 (억 원)' } }
+    }
+  }
+});
+
+// Q4: Voucher chart
+const vCats = ['식료품', '의료', '교통', '교육', '의류', '외식', '통신', '기타'];
+const vNeed = [35, 15, 12, 8, 10, 8, 7, 5];
+const vUsable = [95, 30, 60, 10, 70, 85, 20, 40];
+new Chart(document.getElementById('chartVoucher'), {
+  type: 'bar',
+  data: {
+    labels: vCats,
+    datasets: [
+      { label: '필요 비중 (%)', data: vNeed, backgroundColor: '#3d5a63', borderRadius: 4 },
+      { label: '상품권 사용 가능 (%)', data: vUsable, backgroundColor: vUsable.map(v => v < 40 ? '#d94032' : v < 65 ? '#f7a325' : '#0a7e8c'), borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true } } },
+    scales: { y: { max: 100, title: { display: true, text: '%' } } }
+  }
+});
+
+// Q5: Infrastructure chart
+const infraLabels = ['의료기관', '초중고교', '대중교통', '주거', '상하수도'];
+const infraCurrent = [75, 45, 80, 60, 65];
+const infraProjected = [81, 48, 86, 65, 70];
+new Chart(document.getElementById('chartInfra'), {
+  type: 'bar',
+  data: {
+    labels: infraLabels,
+    datasets: [
+      { label: '현재 가동률 (%)', data: infraCurrent, backgroundColor: '#0a7e8c', borderRadius: 4 },
+      { label: '인구 유입 후 예상 (%)', data: infraProjected, backgroundColor: infraProjected.map(v => v > 85 ? '#f7a325' : '#3498db'), borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true } } },
+    scales: { x: { max: 100, title: { display: true, text: '가동률 (%)' } } }
+  }
+});
+</script>
+</body>
+</html>
