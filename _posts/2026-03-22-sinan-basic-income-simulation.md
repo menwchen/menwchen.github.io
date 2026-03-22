@@ -15,7 +15,6 @@ series: "농어촌기본소득 논쟁"
 아래는 신안군 공개 데이터와 언론 보도 수치를 기반으로 구축한 시뮬레이션 결과다.
 
 > **인터랙티브 대시보드**: [신안군 시뮬레이션 대시보드](/sinan-dashboard.html)
-> **소스 코드**: [Python](/assets/code/sinan_simulation.py) · [Julia](/assets/code/sinan_simulation.jl) · [Stata](/assets/code/sinan_simulation.do)
 
 ---
 
