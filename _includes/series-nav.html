@@ -1,0 +1,19 @@
+{% if page.series %}
+{% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+{% if series_posts.size > 1 %}
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;margin:2em 0;">
+  <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">이 시리즈의 다른 글 — {{ page.series }}</h4>
+  {% for spost in series_posts %}
+  <div style="padding:8px 0;{% unless forloop.last %}border-bottom:1px solid rgba(255,255,255,0.04);{% endunless %}">
+    {% if spost.url == page.url %}
+      <span style="color:#feca57;font-weight:600;">{{ forloop.index }}. {{ spost.title }}</span>
+      <span style="color:#888;font-size:0.85rem;">(현재 글)</span>
+    {% else %}
+      <a href="{{ spost.url }}" style="color:#54a0ff;text-decoration:none;">{{ forloop.index }}. {{ spost.title }}</a>
+      <span style="color:#555;font-size:0.85rem;">{{ spost.date | date: "%Y-%m-%d" }}</span>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endif %}

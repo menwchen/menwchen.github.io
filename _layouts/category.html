@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <div class="container">
+    <div class="post-header">
+      <a href="/categories/" class="back-link" style="display:inline-block;color:#a8a8b8;text-decoration:none;font-size:0.9rem;padding:8px 0;">← 카테고리 목록</a>
+      <h1>{{ page.category_name }}</h1>
+      {% if page.category_description %}
+      <p class="post-date">{{ page.category_description }}</p>
+      {% endif %}
+    </div>
+    <section class="posts">
+      {% assign cat_posts = site.posts | where: "category", page.category_id %}
+      {% if cat_posts.size > 0 %}
+        {% for post in cat_posts %}
+        <a href="{{ post.url }}" class="card">
+          <div class="card-tags">
+            {% for tag in post.tags %}
+              {% assign colors = "rgba(255,107,107,0.2);color:#ff6b6b|rgba(254,202,87,0.2);color:#feca57|rgba(72,219,251,0.2);color:#48dbfb|rgba(84,160,255,0.2);color:#54a0ff|rgba(255,159,243,0.2);color:#ff9ff3" | split: "|" %}
+              {% assign color_index = forloop.index0 | modulo: 5 %}
+              <span class="tag" style="background:{{ colors[color_index] }};">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+        </a>
+        {% endfor %}
+      {% else %}
+        <p style="color:#888;padding:40px 0;text-align:center;">아직 이 카테고리에 글이 없습니다.</p>
+      {% endif %}
+    </section>
+  </div>
+  <footer>&copy; 2026 JG. All rights reserved.</footer>
+</body>
+</html>

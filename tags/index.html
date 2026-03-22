@@ -1,0 +1,23 @@
+---
+layout: default
+title: 태그
+---
+<div class="container">
+  <div class="post-header">
+    <h1>태그</h1>
+    <p class="post-date">모든 태그 목록</p>
+  </div>
+  <section class="posts">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+      <div class="card" id="tag-{{ tag[0] | slugify }}">
+        <h3>{{ tag[0] }} <span style="color:#888;font-weight:400;font-size:0.9rem;">({{ tag[1].size }})</span></h3>
+        {% for post in tag[1] %}
+        <a href="{{ post.url }}" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          {{ post.title }} <span style="color:#555;font-size:0.85rem;">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+</div>

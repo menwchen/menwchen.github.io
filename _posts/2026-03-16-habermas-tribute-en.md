@@ -4,6 +4,8 @@ title: "In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment"
 description: "A tribute to Jürgen Habermas (1929–2026), the last great defender of reason, dialogue, and the unfinished project of modernity."
 date: 2026-03-16
 tags: [Philosophy, Tribute, Habermas, Enlightenment]
+category: 철학
+series: "하버마스 추모"
 ---
 
 ## I. A Departure, and the Void Left Behind

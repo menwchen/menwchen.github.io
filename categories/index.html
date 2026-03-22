@@ -1,0 +1,23 @@
+---
+layout: default
+title: 카테고리
+---
+<div class="container">
+  <div class="post-header">
+    <h1>카테고리</h1>
+    <p class="post-date">연구 주제별 글 분류</p>
+  </div>
+  <section class="posts">
+    {% assign categories = "정치경제|철학|서평|화폐이론|기본소득|한국자본시장" | split: "|" %}
+    {% assign cat_descriptions = "국제정치, 안보, 경제 분석|사상, 이론, 추모|도서 리뷰와 비평|화폐와 통화 정책|기본소득 이론과 정책|한국 금융시장 분석" | split: "|" %}
+    {% assign cat_slugs = "정치경제|철학|서평|화폐이론|기본소득|한국자본시장" | split: "|" %}
+    {% for cat in categories %}
+      {% assign cat_posts = site.posts | where: "category", cat %}
+      <a href="/categories/{{ cat_slugs[forloop.index0] }}/" class="card">
+        <h3>{{ cat }}</h3>
+        <p>{{ cat_descriptions[forloop.index0] }}</p>
+        <time>{{ cat_posts.size }}개의 글</time>
+      </a>
+    {% endfor %}
+  </section>
+</div>
