@@ -1,0 +1,916 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프랑스 혁명: 정치사 — AI 인터랙티브 프레젠테이션</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+:root {
+  --bg: #0B0B16;
+  --card: #141428;
+  --card2: #1A1A30;
+  --gold: #D4A94C;
+  --gold-dim: #A07830;
+  --white: #FFFFFF;
+  --light: #CCD6E0;
+  --subtle: #8A9BB0;
+  --red: #E04B4B;
+  --blue: #3B82F6;
+  --green: #4EC98B;
+  --purple: #A05ED6;
+  --pink: #E056A0;
+  --orange: #E88D2A;
+  --line: #1E1E38;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Noto Serif KR', serif;
+}
+
+/* ── API KEY MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+
+.modal-overlay.hidden { display: none; }
+
+.modal-box {
+  background: var(--card);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-box h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.modal-box p { color: var(--subtle); font-size: 0.85rem; margin-bottom: 1.5rem; }
+
+.modal-box input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+.modal-box input:focus { outline: none; border-color: var(--gold); }
+
+.modal-box button {
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Noto Serif KR', serif;
+}
+
+.modal-box button:hover { background: var(--gold-dim); }
+
+.modal-box .skip {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--subtle);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ── LAYOUT ── */
+.app {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+.app.chat-closed { grid-template-columns: 1fr 0; }
+
+/* ── SLIDE AREA ── */
+.slide-area {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background: rgba(11,11,22,0.95);
+  border-bottom: 1px solid var(--line);
+  min-height: 48px;
+}
+
+.slide-topbar .title {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.slide-topbar .nav-btns { display: flex; gap: 0.5rem; align-items: center; }
+
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--subtle);
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.slide-counter {
+  font-size: 0.75rem;
+  color: var(--subtle);
+  min-width: 60px;
+  text-align: center;
+}
+
+.slide-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  max-width: 960px;
+  animation: fadeIn 0.4s ease;
+}
+
+.slide.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── SLIDE CONTENT STYLES ── */
+.slide h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.slide h1 em { color: var(--gold); font-style: italic; }
+
+.slide h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold-dim);
+}
+
+.slide h3 { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+.slide p { color: var(--light); line-height: 1.8; margin-bottom: 0.8rem; font-size: 0.95rem; }
+.slide .subtitle { color: var(--subtle); font-size: 1rem; }
+.slide .highlight { color: var(--gold); font-weight: 700; }
+.slide .danger { color: var(--red); font-weight: 700; }
+
+.slide ul { padding-left: 1.2rem; color: var(--light); line-height: 1.9; font-size: 0.93rem; }
+.slide li { margin-bottom: 0.3rem; }
+
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.s-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.2rem;
+  border-top: 3px solid var(--gold);
+}
+
+.s-card.red { border-color: var(--red); }
+.s-card.blue { border-color: var(--blue); }
+.s-card.green { border-color: var(--green); }
+.s-card.purple { border-color: var(--purple); }
+.s-card.pink { border-color: var(--pink); }
+.s-card.orange { border-color: var(--orange); }
+
+.s-card h3 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+.s-card p, .s-card ul { font-size: 0.85rem; }
+
+.quote-box {
+  background: var(--card);
+  border-left: 4px solid var(--gold);
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.quote-box p { font-style: italic; color: var(--white); font-size: 1.05rem; }
+.quote-box cite { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: var(--subtle); font-style: normal; }
+
+.stat-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat-box .num { font-size: 2rem; font-weight: 900; color: var(--gold); display: block; }
+.stat-box .num.red { color: var(--red); }
+.stat-box .label { font-size: 0.75rem; color: var(--subtle); }
+
+.char-row {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.char-tag {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.char-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ── CHAT PANEL ── */
+.chat-panel {
+  background: var(--bg);
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.app.chat-closed .chat-panel { display: none; }
+
+.chat-header {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat-header .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+.chat-header span { font-size: 0.85rem; color: var(--gold); font-weight: 700; }
+.chat-header .model { font-size: 0.7rem; color: var(--subtle); margin-left: auto; }
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+
+.msg {
+  max-width: 95%;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.msg.user {
+  background: var(--gold-dim);
+  color: var(--white);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.msg.assistant {
+  background: var(--card);
+  color: var(--light);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.msg.system {
+  background: transparent;
+  color: var(--subtle);
+  font-size: 0.75rem;
+  text-align: center;
+  align-self: center;
+}
+
+.msg.assistant strong { color: var(--gold); }
+.msg.loading { color: var(--subtle); font-style: italic; }
+
+.chat-suggestions {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.suggest-btn {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--subtle);
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  font-family: 'Noto Serif KR', serif;
+  transition: all 0.2s;
+}
+
+.suggest-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.chat-input-area {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input-area input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-family: 'Noto Serif KR', serif;
+}
+
+.chat-input-area input:focus { outline: none; border-color: var(--gold); }
+
+.chat-input-area button {
+  background: var(--gold);
+  border: none;
+  color: var(--bg);
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.chat-input-area button:disabled { background: var(--line); cursor: not-allowed; }
+
+/* ── TOGGLE BUTTON ── */
+.chat-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(212,169,76,0.4);
+  z-index: 100;
+  display: none;
+}
+
+.app.chat-closed .chat-toggle { display: flex; align-items: center; justify-content: center; }
+
+/* ── KEYBOARD HINTS ── */
+.kb-hints {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  font-size: 0.65rem;
+  color: var(--subtle);
+  opacity: 0.5;
+}
+
+.kb-hints kbd {
+  background: var(--card);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  font-family: monospace;
+}
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .chat-panel { position: fixed; right: 0; top: 0; width: 85vw; z-index: 200; box-shadow: -5px 0 30px rgba(0,0,0,0.5); }
+  .app.chat-closed .chat-panel { display: none; }
+  .card-grid.cols-3, .card-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- API KEY MODAL -->
+<div class="modal-overlay" id="apiModal">
+  <div class="modal-box">
+    <h2>Claude API Key</h2>
+    <p>Anthropic API 키를 입력하면 발표 중 Claude에게 실시간 질문할 수 있습니다.<br>키는 브라우저에만 저장되며 서버로 전송되지 않습니다.</p>
+    <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-..." autocomplete="off">
+    <button onclick="saveApiKey()">시작하기</button>
+    <span class="skip" onclick="skipApiKey()">API 키 없이 슬라이드만 보기</span>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div class="app" id="app">
+
+  <!-- SLIDE AREA -->
+  <div class="slide-area">
+    <div class="slide-topbar">
+      <div class="title">프랑스 혁명: 정치사 — John Hardman</div>
+      <div class="nav-btns">
+        <button class="nav-btn" onclick="prevSlide()">←</button>
+        <span class="slide-counter" id="slideCounter">1 / 15</span>
+        <button class="nav-btn" onclick="nextSlide()">→</button>
+        <button class="nav-btn" onclick="toggleChat()" title="Claude 패널 토글">💬</button>
+      </div>
+    </div>
+    <div class="slide-container" id="slideContainer">
+
+      <!-- SLIDE 1: 표지 -->
+      <div class="slide active" data-context="이 프레젠테이션은 John Hardman의 'The French Revolution: A Political History' (Yale, 2025) 핵심 요약입니다.">
+        <p class="subtitle" style="color:var(--gold);letter-spacing:0.2em;font-size:0.8rem;">JOHN HARDMAN · YALE UNIVERSITY PRESS · 2025</p>
+        <h1>The French Revolution<br><em>프랑스 혁명: 정치사</em></h1>
+        <p class="subtitle" style="margin-top:1rem;">핵심 요약 AI 인터랙티브 프레젠테이션</p>
+        <div class="stat-row" style="margin-top:2rem;">
+          <div class="stat-box"><span class="num">7</span><span class="label">핵심 인물</span></div>
+          <div class="stat-box"><span class="num">12</span><span class="label">장</span></div>
+          <div class="stat-box"><span class="num">8</span><span class="label">격동의 해</span></div>
+          <div class="stat-box"><span class="num">5/7</span><span class="label">단두대의 이슬</span></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: 핵심 논지 -->
+      <div class="slide" data-context="Hardman의 핵심 논지: 혁명의 정치사는 실패, 불안정, 내분의 기록. 사회적 성취는 이미 진행 중이던 변화의 가속화였으나, 정치적 실험은 모두 실패. 후속 혁명들(러시아, 중국)이 같은 패턴을 반복.">
+        <h2>핵심 논지</h2>
+        <div class="quote-box">
+          <p>"혁명의 정치사는 실패, 불안정, 내분으로 점철된 기록이다."</p>
+          <cite>— John Hardman</cite>
+        </div>
+        <div class="card-grid cols-2">
+          <div class="s-card green">
+            <h3>사회적 혁명 = 성공</h3>
+            <p>봉건제 폐지, 귀족 계급 해체, 권리 선언 — 이미 진행 중이던 변화의 <strong>'가속화'</strong></p>
+          </div>
+          <div class="s-card red">
+            <h3>정치적 혁명 = 실패</h3>
+            <p>입헌군주제→공화정→공포정치→반동 — 안정적 체제를 만들지 못함. <strong>혁명은 자식을 잡아먹었다.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: 7인의 주인공 -->
+      <div class="slide" data-context="7인의 주인공: 칼롱(1734-1802, 재무장관, 혁명의 도화선, 침상사망), 루이16세(1754-1793, 국왕, 1793.1.21 처형), 마리앙투아네트(1755-1793, 왕비, 1793.10.16 처형), 바르나브(1761-1793, 혁명이론가, 1793.11.28 처형), 미라보(1749-1791, 웅변가, 병사), 당통(1759-1794, 관용파, 1794.4.5 처형), 로베스피에르(1758-1794, 공포정치, 1794.7.28 처형). 7명 중 5명이 단두대에서 사망.">
+        <h2>일곱 주인공</h2>
+        <p>7명 중 <span class="danger">5명이 단두대</span>에서, 1명이 병사, 1명만 천수를 누림</p>
+        <div class="card-grid cols-4" style="margin-top:1rem;">
+          <div class="s-card orange"><h3>칼롱</h3><p>재무장관<br>혁명의 도화선<br><span style="color:var(--green)">침상 사망</span></p></div>
+          <div class="s-card blue"><h3>루이 16세</h3><p>프랑스 국왕<br>수수께끼 같은 존재<br><span style="color:var(--red)">1793.1 처형</span></p></div>
+          <div class="s-card pink"><h3>마리 앙투아네트</h3><p>왕비<br>비밀 정치의 주역<br><span style="color:var(--red)">1793.10 처형</span></p></div>
+          <div class="s-card green"><h3>바르나브</h3><p>혁명 이론가<br>온건파<br><span style="color:var(--red)">1793.11 처형</span></p></div>
+        </div>
+        <div class="card-grid cols-3" style="margin-top:0.5rem;">
+          <div class="s-card"><h3>미라보 백작</h3><p>웅변가 · 입헌군주제론자<br><span style="color:var(--green)">1791.4 병사</span></p></div>
+          <div class="s-card green"><h3>당통</h3><p>혁명의 운동선수 · 관용파<br><span style="color:var(--red)">1794.4 처형</span></p></div>
+          <div class="s-card red"><h3>로베스피에르</h3><p>공포정치의 화신<br><span style="color:var(--red)">1794.7 처형</span></p></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: 1장 -->
+      <div class="slide" data-context="1장: 1787년 칼롱이 귀족회의에 개혁안 제시 - 모든 계급 동등 과세, 특권 폐지. 귀족들이 거부하여 혁명의 도화선. '의회, 귀족, 성직자들이 왕에 맞서 저항했다. 2년 안에 그들 모두 사라질 것이다.'">
+        <h2>1장 · 실패한 왕실 혁명 <span style="font-size:0.7em;color:var(--subtle)">1787–1788</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card">
+            <h3>칼롱의 개혁안 (1787.2)</h3>
+            <ul><li>모든 계급에 동등한 과세, 특권 폐지 제안</li><li>귀족회의가 거부 → 혁명에서 채택될 개혁이 좌절</li><li class="highlight">이 거부가 혁명의 도화선이 됨</li></ul>
+          </div>
+          <div class="s-card red">
+            <h3>핵심 교훈</h3>
+            <p>귀족·성직자가 왕에 저항한 결과, <strong style="color:var(--red)">2년 안에 그들 자신이 사라짐</strong></p>
+          </div>
+        </div>
+        <div class="quote-box"><p>"의회, 귀족, 성직자들이 감히 왕에 맞서 저항했다. 2년도 채 지나지 않아 그들 모두 사라질 것이다."</p><cite>— Hardman</cite></div>
+      </div>
+
+      <!-- SLIDE 5: 2장 -->
+      <div class="slide" data-context="2장: 1789.5.5 삼부회 소집, 6.17 제3계급이 국민의회 선포, 6.20 테니스코트 선서, 7.14 바스티유 함락. 투표 방식(계급별 vs 개인별)이 핵심 쟁점. 바스티유 함락이 혁명의 상징적 사건.">
+        <h2>2장 · 삼부회에서 국민의회로 <span style="font-size:0.7em;color:var(--subtle)">1789.5–7</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card blue"><h3>국민의회 선포 (6.17)</h3><p>제3계급이 스스로를 '국민의회'로 선포.<br><strong>구체제의 신분 질서를 공식 부정한 역사적 순간.</strong></p></div>
+          <div class="s-card red"><h3>바스티유 함락 (7.14)</h3><p>네케르 해임 → 파리 시민 봉기 → 감옥 습격.<br><strong>프랑스 혁명의 상징.</strong> 왕이 굴복.</p></div>
+        </div>
+        <div class="quote-box"><p>"변신은 완성되었다: 삼부회는 국민의회가 되었다."</p><cite>— Hardman</cite></div>
+      </div>
+
+      <!-- SLIDE 6: 3-4장 -->
+      <div class="slide" data-context="3장: 8.4 봉건적 권리 폐지, 8.26 인간과 시민의 권리 선언. 4장: 10.5-6 10월 사건 - 여성들의 베르사유 행진, 왕실 파리로 강제 이주. 11.7 '치명적 법령' - 의원의 장관 겸직 금지로 의회제 발전 저지.">
+        <h2>3–4장 · 핵심 개혁과 방향 전환 <span style="font-size:0.7em;color:var(--subtle)">1789.8–11</span></h2>
+        <div class="card-grid cols-3">
+          <div class="s-card green"><h3>8월의 밤 (8.4)</h3><p>봉건적 권리 폐지<br>구체제의 법적 해체</p></div>
+          <div class="s-card blue"><h3>권리 선언 (8.26)</h3><p>모든 인간은 자유롭고 평등하게 태어난다</p></div>
+          <div class="s-card red"><h3>10월 사건</h3><p>왕실 파리로 강제 이주<br>루이: '나는 포로다'</p></div>
+        </div>
+        <div class="s-card purple" style="margin-top:1rem;">
+          <h3>치명적 법령 (11.7)</h3>
+          <p>의원의 장관 겸직 금지 — 미라보 견제 목적이었으나, <strong style="color:var(--red)">프랑스가 기능하는 의회제로 발전하는 것을 영구히 저지</strong></p>
+        </div>
+      </div>
+
+      <!-- SLIDE 7: 5-6장 -->
+      <div class="slide" data-context="5장: 미라보의 이중 생활(의회 지도자이면서 비밀리에 왕에게 조언), 성직자 시민 헌장(제헌 의회의 가장 큰 실수), 미라보 사망(1791.4.2). 6장: 바렌느 도주 사건(1791.6.20-21) - 왕실 탈출 시도 실패, 왕에 대한 신뢰 완전 붕괴, 샹드마르스 학살(약 50명 사망).">
+        <h2>5–6장 · 미라보의 죽음과 바렌느 <span style="font-size:0.7em;color:var(--subtle)">1790–1791</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card">
+            <h3>미라보의 죽음 (1791.4)</h3>
+            <p>혁명의 가장 위대한 웅변가 병사. <strong>입헌군주제의 마지막 희망이 사라짐.</strong></p>
+          </div>
+          <div class="s-card red">
+            <h3>성직자 시민 헌장</h3>
+            <p><strong>"제헌 의회의 가장 큰 실수"</strong><br>프랑스를 맹세파/비맹세파로 분열</p>
+          </div>
+        </div>
+        <div class="s-card red" style="margin-top:1rem;">
+          <h3>바렌느 도주 (1791.6.20)</h3>
+          <p>왕실 가족이 몽메디로 탈출 시도 → 바렌느에서 체포. <strong>혁명과 왕정의 양립 가능성에 치명타.</strong> 이어진 샹 드 마르스 학살(약 50명 사망)로 혁명 내부 첫 대규모 유혈 사태.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 8: 7-8장 -->
+      <div class="slide" data-context="7장: 입법의회, 지롱드파의 전쟁 추진, 오스트리아 선전포고(1792.4.20), 튈르리 궁 함락(8.10) - 1000년 왕정의 종말. 8장: 국민공회 소집, 공화국 선포(9.22), 루이16세 재판(721명 중 361명 사형찬성, 1표차), 1793.1.21 처형, 방데 반란, 지롱드파 추방(6.2).">
+        <h2>7–8장 · 왕정 붕괴에서 공포정치로 <span style="font-size:0.7em;color:var(--subtle)">1791–1793</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card red">
+            <h3>튈르리 궁 함락 (1792.8.10)</h3>
+            <p><strong style="color:var(--red)">1,000년 프랑스 왕정의 종말</strong><br>→ 공화국 선포 (9.22)</p>
+          </div>
+          <div class="s-card red">
+            <h3>루이 16세 처형 (1793.1.21)</h3>
+            <p>721명 중 361명 사형 — <strong>단 1표 차</strong><br>"나는 무고하게 죽습니다"</p>
+          </div>
+        </div>
+        <div class="card-grid cols-2" style="margin-top:0.5rem;">
+          <div class="s-card orange"><h3>방데 반란 (1793.3)</h3><p>징병제 반대 + 왕좌 수호. 수만 명 사망하는 내전.</p></div>
+          <div class="s-card purple"><h3>지롱드파 추방 (6.2)</h3><p>22명 추방. 몽타뉴파 승리 → 공포정치로의 길.</p></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 9: 9-10장 -->
+      <div class="slide" data-context="9장: 마리앙투아네트 처형(10.16), 지롱드파 처형(10.31), 바르나브 처형(11.28), 에베르파 처형(1794.3.24), 당통 처형(1794.4.5). 10장: 프레리알 22일 법(6.10) - 변호인·증인 배제, 사형만 허용, 47일간 1376명 처형 '대테러'. 최고존재의 축제(6.8). 플뢰루스 전투 승리(6.26) - 역설적으로 공포정치 정당성 약화.">
+        <h2>9–10장 · 공포정치의 절정 <span style="font-size:0.7em;color:var(--subtle)">1793.10–1794.7</span></h2>
+        <div class="stat-row">
+          <div class="stat-box"><span class="num red">1,376</span><span class="label">대테러 47일간 처형</span></div>
+          <div class="stat-box"><span class="num red">71</span><span class="label">하루 최다 처형 (7.29)</span></div>
+          <div class="stat-box"><span class="num red">16,594</span><span class="label">공식 처형 총수</span></div>
+        </div>
+        <div class="card-grid cols-2">
+          <div class="s-card red">
+            <h3>혁명이 삼킨 자식들</h3>
+            <ul><li>마리 앙투아네트 (10.16)</li><li>지롱드파 (10.31)</li><li>바르나브 (11.28)</li><li>에베르파 (1794.3.24)</li><li><strong>당통 (1794.4.5)</strong></li></ul>
+          </div>
+          <div class="s-card purple">
+            <h3>프레리알 22일 법 (6.10)</h3>
+            <p>변호인·증인 배제, 사형만 허용.<br><strong>대테러 시대의 개막.</strong><br><br>역설: 플뢰루스 전투 승리(6.26)로 외부 위협이 사라지자 공포정치의 정당성도 약화.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 10: 11장 -->
+      <div class="slide" data-context="11장: 로베스피에르의 몰락. 7.26 마지막 연설 - 숙청 대상 이름 밝히기 거부로 공포 증폭. 7.27 테르미도르 9일 - 국민공회에서 체포 결의, 코뮌이 봉기 조직했으나 단호한 행동 실패. 코뮌은 병력이 있었으나 합법성에 집착하여 기회를 놓침. 7.28 처형 - 턱이 부서진 채 단두대에. 7.29 하루 71명 처형.">
+        <h2>11장 · 로베스피에르의 몰락 <span style="font-size:0.7em;color:var(--subtle)">1794.7.26–28</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card">
+            <h3>마지막 연설 (7.26)</h3>
+            <p>숙청 대상의 이름을 밝히기 거부 → <strong>오히려 모든 사람이 공포에 빠짐.</strong> 반로베스피에르 세력이 결집.</p>
+          </div>
+          <div class="s-card red">
+            <h3>테르미도르 9일 (7.27)</h3>
+            <p>국민공회에서 체포 결의. 코뮌이 봉기를 조직했으나 <strong>단호한 행동을 취하지 못함.</strong></p>
+          </div>
+        </div>
+        <div class="quote-box">
+          <p>"코뮌은 기회를 놓쳤다. 국민공회를 제압할 충분한 병력이 있었으나, 합법성에 집착하여 결정적 순간에 행동하지 못했다."</p>
+          <cite>— Hardman</cite>
+        </div>
+        <p style="text-align:center;margin-top:1rem;"><strong style="color:var(--red)">7.28: 턱이 부서진 채 단두대에. 7.29: 파리 역사상 최다 — 하루 71명 처형.</strong></p>
+      </div>
+
+      <!-- SLIDE 11: 12장 -->
+      <div class="slide" data-context="12장 테르미도르 반동: 자코뱅 클럽 폐쇄(11.12), 물가상한제 폐지 → 인플레이션, 제3년 헌법(1795.8) - 5인 집행부 디렉투아르 + 양원제, 방데미에르 봉기를 나폴레옹이 진압(10.5), 국민공회 해산(10.26) - 혁명의 공식적 종료.">
+        <h2>12장 · 테르미도르 반동 <span style="font-size:0.7em;color:var(--subtle)">1794.8–1795.10</span></h2>
+        <div class="card-grid cols-2">
+          <div class="s-card">
+            <h3>해체와 재편</h3>
+            <ul><li>자코뱅 클럽 폐쇄 (11.12)</li><li>물가 상한제 폐지 → 급격한 인플레이션</li><li>지롱드파 생존자 복귀</li></ul>
+          </div>
+          <div class="s-card blue">
+            <h3>제3년 헌법 (1795.8)</h3>
+            <ul><li>5인 집행부(디렉투아르) + 양원제</li><li>재산권 보장, 평등 희생</li><li>지롱드파의 강한 영향</li></ul>
+          </div>
+        </div>
+        <div class="s-card" style="margin-top:1rem;border-color:var(--gold);">
+          <h3>나폴레옹의 등장 & 혁명의 종결</h3>
+          <p><strong>방데미에르 봉기 (10.5)</strong>를 나폴레옹이 진압 — 나폴레옹 시대의 서막.<br><strong>국민공회 해산 (10.26)</strong> — 혁명의 공식적 종료.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 12: 5대 전환점 -->
+      <div class="slide" data-context="혁명의 5대 전환점: 1) 바스티유 함락(1789.7.14) - 민중이 혁명 주체로 등장, 2) 10월 사건(1789.10) - 왕이 포로가 됨, 3) 바렌느 도주(1791.6) - 왕에 대한 신뢰 붕괴, 4) 루이 처형(1793.1) - 왕조 복귀 차단, 5) 테르미도르(1794.7) - 공포정치 종결이나 대안 없이 나폴레옹으로.">
+        <h2>혁명의 5대 전환점</h2>
+        <div class="card-grid cols-1" style="grid-template-columns:1fr;">
+          <div class="s-card"><p><strong style="color:var(--gold)">1789.7.14</strong> 바스티유 함락 — 민중이 혁명의 주체로 등장. 왕권의 물리적 무력화.</p></div>
+          <div class="s-card blue"><p><strong style="color:var(--blue)">1789.10.5</strong> 10월 사건 — 왕이 파리의 '포로'가 됨. 입헌군주제 합의 불가능.</p></div>
+          <div class="s-card red"><p><strong style="color:var(--red)">1791.6.20</strong> 바렌느 도주 — 왕에 대한 신뢰 완전 붕괴. 공화정의 길이 열림.</p></div>
+          <div class="s-card purple"><p><strong style="color:var(--purple)">1793.1.21</strong> 루이 16세 처형 — 부르봉 왕조 복귀 가능성 차단. 유럽 전면전.</p></div>
+          <div class="s-card green"><p><strong style="color:var(--green)">1794.7.27</strong> 테르미도르 — 공포정치 종결. 그러나 안정적 대안 없이 나폴레옹으로.</p></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 13: 혁명의 패턴 -->
+      <div class="slide" data-context="혁명의 구조적 패턴: 1) 교조주의 - 영국·미국 모델 거부, 백지 위에 설계, 2) 행정부-입법부 단절 - 치명적 법령, 3) 사상의 획일화 - 루소 일반의지, 반대파=인민의 적, 4) 자기 급진화 - 전쟁+내란→공포정치, 5) 개인 권력 - 미라보→당통→로베스피에르→나폴레옹">
+        <h2>혁명의 구조적 패턴</h2>
+        <p style="margin-bottom:1rem;">왜 혁명은 자식을 잡아먹는가?</p>
+        <div class="card-grid cols-1" style="grid-template-columns:1fr;">
+          <div class="s-card blue"><h3>1. 교조주의의 함정</h3><p>영국·미국 모델과 자신들의 과거를 거부. 백지 위에 이상 국가 설계 → 현실과 괴리.</p></div>
+          <div class="s-card red"><h3>2. 행정부-입법부 단절</h3><p>'치명적 법령'으로 소통 불가 → 기능하는 의회제 실패.</p></div>
+          <div class="s-card purple"><h3>3. 사상의 획일화</h3><p>"너희는 자유롭다. 그러나 우리처럼 생각하라." 반대파 = 인민의 적.</p></div>
+          <div class="s-card orange"><h3>4. 혁명의 자기 급진화</h3><p>전쟁 + 내란 → 공포정치 정당화. 위협이 사라져도 관성은 멈추지 않음.</p></div>
+          <div class="s-card"><h3>5. 개인 권력의 불가피성</h3><p>제도 부재 → 카리스마에 의존: 미라보 → 당통 → 로베스피에르 → 나폴레옹</p></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 14: 유산 -->
+      <div class="slide" data-context="혁명의 유산: 지속된 것(사회적) - 봉건제 폐지, 권리선언, 미터법, 행정체계(도 제도), 민법전 기초. 사라진 것(정치적) - 입헌군주제, 지롱드파 공화정, 자코뱅 헌법(시행 안됨), 디렉투아르. 결론: 사회적 성취는 혁명 없이도 가능했을 것, 정치적 실패는 후속 혁명들에서 반복.">
+        <h2>혁명의 유산</h2>
+        <div class="card-grid cols-2">
+          <div class="s-card green">
+            <h3>지속된 것 (사회적 혁명)</h3>
+            <ul><li>봉건적 특권과 귀족 계급 폐지</li><li>인간과 시민의 권리 선언</li><li>교회 재산 세속화</li><li>미터법, 행정체계(도 제도)</li><li>민법전의 기초</li></ul>
+            <p style="margin-top:0.5rem;" class="highlight">→ 이미 진행 중이던 변화의 '가속화'</p>
+          </div>
+          <div class="s-card red">
+            <h3>사라진 것 (정치적 실험)</h3>
+            <ul><li>입헌군주제: 왕의 탈출로 좌절</li><li>지롱드파 공화정: 몽타뉴파에 패배</li><li>덕의 공화국: 테르미도르로 종결</li><li>1793년 헌법: 한 번도 시행 안 됨</li><li>디렉투아르: 나폴레옹에 종결</li></ul>
+            <p style="margin-top:0.5rem;" class="danger">→ 안정적 정치 체제를 만들지 못함</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 15: 마무리 -->
+      <div class="slide" data-context="마무리 인용: 베르니오(지롱드파 의원, 1793년 처형)의 말 - '우리는 혁명이 마치 카이로스처럼 자식들을 하나씩 삼켜버리고 오직 전제정과 그에 수반되는 재앙만을 낳을까 두려워할 이유가 있다.'">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;text-align:center;">
+          <p style="font-size:4rem;color:var(--gold);font-family:'Playfair Display',serif;line-height:1;">"</p>
+          <p style="font-size:1.4rem;line-height:1.8;max-width:700px;">우리는 혁명이 마치 카이로스처럼<br>자식들을 하나씩 삼켜버리고<br>오직 전제정과 그에 수반되는 재앙만을<br>낳을까 두려워할 이유가 있다.</p>
+          <div style="width:60px;height:2px;background:var(--gold);margin:1.5rem 0;"></div>
+          <p style="color:var(--subtle);font-size:0.9rem;">피에르-빅투르니앵 베르니오<br><span style="font-size:0.8rem;">지롱드파 의원 · 1793년 단두대 처형</span></p>
+        </div>
+      </div>
+
+    </div><!-- /slideContainer -->
+    <div class="kb-hints">
+      <span><kbd>←</kbd><kbd>→</kbd> 슬라이드 이동</span>
+      <span><kbd>C</kbd> Claude 토글</span>
+      <span><kbd>F</kbd> 풀스크린</span>
+    </div>
+  </div>
+
+  <!-- CHAT PANEL -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <div class="dot" id="statusDot"></div>
+      <span>Claude</span>
+      <span class="model" id="modelLabel">API 키 필요</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg system">슬라이드 내용에 대해 Claude에게 질문하세요.</div>
+    </div>
+    <div class="chat-suggestions" id="suggestions"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="질문을 입력하세요..." disabled>
+      <button id="sendBtn" onclick="sendMessage()" disabled>→</button>
+    </div>
+  </div>
+
+  <button class="chat-toggle" onclick="toggleChat()">💬</button>
+</div>
+
+<script>
+// ── STATE ──
+let apiKey = null;
+let currentSlide = 0;
+let chatHistory = [];
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+// ── API KEY ──
+function saveApiKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) return;
+  apiKey = key;
+  document.getElementById('apiModal').classList.add('hidden');
+  document.getElementById('chatInput').disabled = false;
+  document.getElementById('sendBtn').disabled = false;
+  document.getElementById('modelLabel').textContent = 'claude-sonnet-4-20250514';
+  document.getElementById('statusDot').style.background = 'var(--green)';
+  updateSuggestions();
+}
+
+function skipApiKey() {
+  document.getElementById('apiModal').classList.add('hidden');
+  document.getElementById('modelLabel').textContent = 'API 키 없음';
+  document.getElementById('statusDot').style.background = 'var(--red)';
+}
+
+// ── SLIDES ──
+function showSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = ((n % totalSlides) + totalSlides) % totalSlides;
+  slides[currentSlide].classList.add('active');
+  document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+  updateSuggestions();
+}
+
+function nextSlide() { showSlide(currentSlide + 1); }
+function prevSlide() { showSlide(currentSlide - 1); }
+
+// ── CHAT ──
+function toggleChat() {
+  document.getElementById('app').classList.toggle('chat-closed');
+}
+
+function getSlideContext() {
+  return slides[currentSlide].getAttribute('data-context') || '';
+}
+
+function updateSuggestions() {
+  if (!apiKey) return;
+  const ctx = getSlideContext();
+  const suggestionsEl = document.getElementById('suggestions');
+  const allSuggestions = [
+    '이 슬라이드를 더 자세히 설명해줘',
+    '왜 이것이 중요한가?',
+    '현대 정치에 주는 시사점은?',
+    '반론은 없나?',
+    '한국 역사와 비교하면?',
+  ];
+  suggestionsEl.innerHTML = allSuggestions.map(s =>
+    `<button class="suggest-btn" onclick="askSuggestion('${s}')">${s}</button>`
+  ).join('');
+}
+
+function askSuggestion(text) {
+  document.getElementById('chatInput').value = text;
+  sendMessage();
+}
+
+function addMessage(role, content) {
+  const el = document.createElement('div');
+  el.className = `msg ${role}`;
+  el.innerHTML = content;
+  document.getElementById('chatMessages').appendChild(el);
+  document.getElementById('chatMessages').scrollTop = 999999;
+  return el;
+}
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text || !apiKey) return;
+
+  input.value = '';
+  addMessage('user', text);
+
+  const loadingEl = addMessage('assistant', '<span class="loading">생각하는 중...</span>');
+
+  const slideContext = getSlideContext();
+  const systemPrompt = `당신은 프랑스 혁명 전문가입니다. John Hardman의 'The French Revolution: A Political History' (Yale, 2025)를 기반으로 답변합니다.
+현재 발표 슬라이드의 맥락: ${slideContext}
+
+규칙:
+- 한국어로 답변
+- 간결하되 깊이 있게 (3-5문단)
+- 책의 내용을 우선하되, 필요시 역사적 맥락 보충
+- 현대적 시사점을 연결할 수 있으면 연결
+- 마크다운 사용하지 말고 일반 텍스트로`;
+
+  chatHistory.push({ role: 'user', content: text });
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1024,
+        system: systemPrompt,
+        messages: chatHistory.slice(-10)
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.error?.message || `HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    const reply = data.content[0].text;
+
+    chatHistory.push({ role: 'assistant', content: reply });
+    loadingEl.innerHTML = reply.replace(/\n/g, '<br>');
+  } catch (e) {
+    loadingEl.innerHTML = `<span style="color:var(--red)">오류: ${e.message}</span>`;
+    chatHistory.pop(); // remove failed user message
+  }
+}
+
+// ── KEYBOARD ──
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+  if (e.key === 'c' || e.key === 'C') toggleChat();
+  if (e.key === 'f' || e.key === 'F') {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+});
+
+// Enter to send
+document.getElementById('chatInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendMessage();
+});
+
+// Init
+updateSuggestions();
+</script>
+</body>
+</html>
