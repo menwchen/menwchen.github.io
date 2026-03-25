@@ -8,7 +8,7 @@ future: true
 lang: ko
 
 author:
-  name: JG
+  name: Alle Menschen werden Brüder
 
 plugins:
   - jekyll-sitemap
@@ -20,4 +20,4 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: JG
+      author: Alle Menschen werden Brüder
