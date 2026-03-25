@@ -1,0 +1,980 @@
+---
+layout: null
+title: "프랑스 혁명 인터랙티브 타임라인 (1787-1795)"
+description: "John Hardman의 '프랑스 혁명: 정치사'를 기반으로 한 인터랙티브 타임라인"
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프랑스 혁명 인터랙티브 타임라인 (1787–1795)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --card: #1a1a2e;
+  --border: #2a2a3e;
+  --text: #e0e0e8;
+  --muted: #8888a0;
+  --gold: #d4a94c;
+  --gold-dim: #a07830;
+  --red: #c0392b;
+  --blue: #2980b9;
+  --green: #27ae60;
+  --purple: #8e44ad;
+  --orange: #e67e22;
+  --teal: #16a085;
+  --line: #2a2a3e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(212,169,76,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(192,57,43,0.05) 0%, transparent 60%),
+    var(--bg);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+.hero-pretitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', 'Noto Serif KR', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero h1 em {
+  font-style: italic;
+  display: block;
+  font-size: 0.55em;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 1.5rem 0 2.5rem;
+  max-width: 600px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-stat .label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+.scroll-hint svg { width: 20px; height: 20px; stroke: var(--gold); }
+
+/* ── CHARACTERS ── */
+.characters-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.char-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.char-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--char-color, var(--gold));
+}
+
+.char-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--char-color, var(--gold));
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.char-card.active {
+  border-color: var(--char-color, var(--gold));
+  box-shadow: 0 0 20px rgba(212,169,76,0.15);
+}
+
+.char-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.char-dates {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.char-role {
+  font-size: 0.8rem;
+  color: var(--char-color, var(--gold));
+  font-weight: 700;
+}
+
+.char-death {
+  font-size: 0.7rem;
+  color: var(--red);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,15,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-bar::-webkit-scrollbar { height: 0; }
+
+.filter-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: 'Noto Serif KR', serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover { border-color: var(--gold); color: var(--text); }
+
+.filter-btn.active {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+/* ── YEAR NAV ── */
+.year-nav {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.year-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.year-dot:hover, .year-dot.active {
+  background: var(--gold);
+  transform: scale(1.4);
+}
+
+.year-dot .year-label {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: var(--gold);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.year-dot:hover .year-label,
+.year-dot.active .year-label { opacity: 1; }
+
+/* ── TIMELINE ── */
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+  position: relative;
+}
+
+.timeline-year {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.year-marker {
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 0;
+}
+
+.year-marker h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  text-shadow: 0 0 40px rgba(212,169,76,0.3);
+}
+
+.year-marker .year-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dim), transparent);
+}
+
+.year-marker .year-summary {
+  font-size: 0.75rem;
+  color: var(--muted);
+  max-width: 250px;
+  text-align: right;
+}
+
+/* ── EVENTS ── */
+.event-list { position: relative; padding-left: 2.5rem; }
+
+.event-list::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold-dim) 0%, var(--border) 50%, var(--gold-dim) 100%);
+}
+
+.event-item {
+  position: relative;
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.event-item.hidden { display: none; }
+
+.event-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--event-color, var(--gold));
+  background: var(--bg);
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.event-item:hover .event-dot {
+  background: var(--event-color, var(--gold));
+  box-shadow: 0 0 12px var(--event-color, var(--gold));
+  transform: scale(1.3);
+}
+
+.event-item.major .event-dot {
+  width: 22px;
+  height: 22px;
+  left: calc(-2.5rem - 2px);
+  background: var(--event-color, var(--gold));
+  box-shadow: 0 0 15px rgba(212,169,76,0.4);
+}
+
+.event-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-left: 3px solid var(--event-color, var(--border));
+}
+
+.event-card:hover {
+  border-color: var(--event-color, var(--gold));
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transform: translateX(4px);
+}
+
+.event-card.expanded {
+  background: var(--bg2);
+  border-color: var(--event-color, var(--gold));
+}
+
+.event-date {
+  font-size: 0.75rem;
+  color: var(--event-color, var(--gold));
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.event-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.event-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.badge-category {
+  background: rgba(212,169,76,0.15);
+  color: var(--gold);
+}
+
+.badge-person {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+}
+
+.event-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+  display: none;
+}
+
+.event-card.expanded .event-desc { display: block; margin-top: 0.5rem; }
+
+.event-item.major .event-title { color: var(--gold); }
+.event-item.major .event-card { background: rgba(212,169,76,0.05); }
+
+/* ── CATEGORY COLORS ── */
+.cat-정치 { --event-color: var(--blue); }
+.cat-군사 { --event-color: var(--red); }
+.cat-사회 { --event-color: var(--green); }
+.cat-인물 { --event-color: var(--purple); }
+.cat-경제 { --event-color: var(--orange); }
+.cat-종교 { --event-color: var(--teal); }
+.cat-사상 { --event-color: #e056a0; }
+.cat-외교 { --event-color: #3498db; }
+.cat-처형 { --event-color: #e74c3c; }
+.cat-반란 { --event-color: #e67e22; }
+
+/* ── SEARCH ── */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin-left: auto;
+  min-width: 180px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.8rem;
+  outline: none;
+  width: 100%;
+}
+
+.search-box input::placeholder { color: var(--muted); }
+
+.search-box svg { width: 14px; height: 14px; stroke: var(--muted); margin-right: 0.5rem; flex-shrink: 0; }
+
+/* ── BACK TO TOP ── */
+.back-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  box-shadow: 0 4px 15px rgba(212,169,76,0.4);
+  transition: transform 0.2s;
+}
+
+.back-top:hover { transform: scale(1.1); }
+.back-top.show { display: flex; }
+
+/* ── FOOTER ── */
+.tl-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.tl-footer a { color: var(--gold); text-decoration: none; }
+.tl-footer a:hover { text-decoration: underline; }
+
+/* ── EVENT COUNTER ── */
+.event-counter {
+  text-align: center;
+  padding: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.event-counter strong { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .year-nav { display: none; }
+  .hero h1 { font-size: 2.2rem; }
+  .characters-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 1.2rem; }
+  .hero-stat .num { font-size: 1.6rem; }
+  .filter-bar { padding: 0.6rem 1rem; }
+  .timeline-container { padding: 2rem 1rem 4rem; }
+  .event-list { padding-left: 2rem; }
+  .event-dot { left: -2rem; }
+  .event-item.major .event-dot { left: calc(-2rem - 2px); }
+}
+
+@media (max-width: 480px) {
+  .characters-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-pretitle">John Hardman &middot; 프랑스 혁명: 정치사</div>
+    <h1>La Revolution<em>프랑스 혁명 타임라인</em></h1>
+    <p class="hero-sub">
+      1787년 칼롱의 개혁안 좌절부터 1795년 국민공회 해산까지 &mdash;
+      왕정의 붕괴, 공화정의 탄생, 공포정치, 그리고 테르미도르 반동의 모든 순간
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">8</span><span class="label">격동의 해</span></div>
+      <div class="hero-stat"><span class="num">120+</span><span class="label">주요 사건</span></div>
+      <div class="hero-stat"><span class="num">7</span><span class="label">핵심 인물</span></div>
+      <div class="hero-stat"><span class="num">5</span><span class="label">단두대의 이슬</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>스크롤하여 탐험하기</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- CHARACTERS -->
+<section class="characters-section" id="characters">
+  <h2 class="section-title">일곱 주인공</h2>
+  <p class="section-sub">클릭하면 해당 인물 관련 사건만 필터링됩니다</p>
+  <div class="characters-grid">
+    <div class="char-card" data-person="칼롱" style="--char-color: var(--orange)">
+      <div class="char-name">샤를 알렉상드르 드 칼롱</div>
+      <div class="char-dates">1734–1802</div>
+      <div class="char-role">재무장관 &middot; 혁명의 도화선</div>
+      <div class="char-death">침상에서 사망</div>
+    </div>
+    <div class="char-card" data-person="루이" style="--char-color: var(--blue)">
+      <div class="char-name">루이 16세</div>
+      <div class="char-dates">1754–1793</div>
+      <div class="char-role">프랑스 국왕</div>
+      <div class="char-death">1793.1.21 단두대 처형</div>
+    </div>
+    <div class="char-card" data-person="마리 앙투아네트" style="--char-color: #e056a0">
+      <div class="char-name">마리 앙투아네트</div>
+      <div class="char-dates">1755–1793</div>
+      <div class="char-role">왕비 &middot; 비밀 정치의 주역</div>
+      <div class="char-death">1793.10.16 단두대 처형</div>
+    </div>
+    <div class="char-card" data-person="바르나브" style="--char-color: var(--teal)">
+      <div class="char-name">앙투안 바르나브</div>
+      <div class="char-dates">1761–1793</div>
+      <div class="char-role">혁명 이론가 &middot; 온건파</div>
+      <div class="char-death">1793.11.28 단두대 처형</div>
+    </div>
+    <div class="char-card" data-person="미라보" style="--char-color: var(--gold)">
+      <div class="char-name">미라보 백작</div>
+      <div class="char-dates">1749–1791</div>
+      <div class="char-role">웅변가 &middot; 입헌군주제론자</div>
+      <div class="char-death">1791.4.2 병사(침상 사망)</div>
+    </div>
+    <div class="char-card" data-person="당통" style="--char-color: var(--green)">
+      <div class="char-name">조르주-자크 당통</div>
+      <div class="char-dates">1759–1794</div>
+      <div class="char-role">혁명의 운동선수 &middot; 관용파</div>
+      <div class="char-death">1794.4.5 단두대 처형</div>
+    </div>
+    <div class="char-card" data-person="로베스피에르" style="--char-color: var(--red)">
+      <div class="char-name">막시밀리앵 로베스피에르</div>
+      <div class="char-dates">1758–1794</div>
+      <div class="char-role">공포정치의 화신 &middot; "나는 국민이다"</div>
+      <div class="char-death">1794.7.28 단두대 처형</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<nav class="filter-bar" id="filterBar">
+  <button class="filter-btn active" data-filter="all">전체</button>
+  <button class="filter-btn" data-filter="정치">정치</button>
+  <button class="filter-btn" data-filter="군사">군사</button>
+  <button class="filter-btn" data-filter="처형">처형</button>
+  <button class="filter-btn" data-filter="반란">반란</button>
+  <button class="filter-btn" data-filter="사회">사회</button>
+  <button class="filter-btn" data-filter="경제">경제</button>
+  <button class="filter-btn" data-filter="종교">종교</button>
+  <button class="filter-btn" data-filter="외교">외교</button>
+  <button class="filter-btn" data-filter="사상">사상</button>
+  <button class="filter-btn" data-filter="인물">인물</button>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="검색...">
+  </div>
+</nav>
+
+<div class="event-counter" id="eventCounter"></div>
+
+<!-- TIMELINE -->
+<div class="timeline-container" id="timeline"></div>
+
+<!-- YEAR NAV -->
+<nav class="year-nav" id="yearNav"></nav>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0})">↑</button>
+
+<!-- FOOTER -->
+<footer class="tl-footer">
+  <p>John Hardman, <em>The French Revolution: A Political History</em> (Yale University Press, 2025) 기반</p>
+  <p style="margin-top:0.5rem"><a href="/">← 블로그로 돌아가기</a></p>
+</footer>
+
+<script>
+const EVENTS = [
+  // ── 1748–1786: 배경 ──
+  {year:1748,date:"1748",title:"몽테스키외, '법의 정신' 출판",desc:"행정부·입법부·사법부의 삼권분립을 주장하고 통치자와 피통치자 사이에 '중간 기관'의 필요성을 강조한 저서. 프랑스 혁명의 사상적 기초가 됨.",cat:"사상",persons:[],major:false},
+  {year:1762,date:"1762",title:"루소, '사회계약론' 출간",desc:"'일반 의지'가 인간이 완전한 정보와 적절한 동기를 부여받았을 때 원할 것들의 총체라고 주장. 혁명 초기에는 영향이 미미했으나 점차 깊이 스며들게 됨.",cat:"사상",persons:[],major:true},
+  {year:1774,date:"1774",title:"루이 16세 즉위",desc:"루이 15세 사망 후 손자 루이 16세가 즉위. 파리 의회를 소집함.",cat:"정치",persons:["루이"],major:true},
+  {year:1778,date:"1778",title:"프랑스, 미국 독립전쟁 참전",desc:"미국 독립을 지원하기 위해 참전. 이 전쟁의 비용이 프랑스 재정 위기의 직접적 원인이 됨.",cat:"외교",persons:["루이"],major:false},
+  {year:1783,date:"1783",title:"파리 조약 체결 — 전쟁 비용 15억 리브르",desc:"프랑스의 소규모 영토 획득. 전쟁 비용 15억 리브르 지출로 재정 위기 심화.",cat:"경제",persons:[],major:false},
+
+  // ── 1787 ──
+  {year:1787,date:"1787.2.22",title:"루이 16세, 귀족회의 소집 — 칼롱의 개혁안",desc:"칼롱이 세금 및 기타 조치에서 지역적·사회적 특권을 종식시키기 위한 개혁안을 제시. 귀족들은 승인을 거부함. 이 거부가 혁명의 도화선이 됨.",cat:"정치",persons:["루이","칼롱"],major:true},
+  {year:1787,date:"1787.4.8",title:"칼롱 내각 붕괴",desc:"귀족회의의 거부로 칼롱의 개혁이 좌절되고 내각이 무너짐.",cat:"정치",persons:["칼롱"],major:false},
+  {year:1787,date:"1787.5.1",title:"브리엔을 정부 수반으로 임명",desc:"툴루즈 대주교 로메니 드 브리엔이 새 정부 수반으로 임명됨.",cat:"정치",persons:["루이"],major:false},
+
+  // ── 1788 ──
+  {year:1788,date:"1788.5.8",title:"라모이뇽의 파리 의회 쿠데타",desc:"사법개혁을 통해 의회의 권한을 제한하려는 시도.",cat:"정치",persons:[],major:false},
+  {year:1788,date:"1788.8.25",title:"네케르 재소환",desc:"재정 위기 속에서 대중적 인기가 높은 네케르를 재무장관으로 소환.",cat:"정치",persons:["루이"],major:false},
+  {year:1788,date:"1788.12.27",title:"제3계급에 이중 대표권 부여",desc:"향후 삼부회에서 제3계급의 대표 수를 두 배로 늘리는 결의안 통과. 혁명적 변화의 제도적 기초.",cat:"정치",persons:[],major:true},
+
+  // ── 1789 ──
+  {year:1789,date:"1789.1~4월",title:"삼부회 선거 운동",desc:"전국적으로 삼부회 선거가 진행됨. 시에예스의 '제3계급이란 무엇인가?' 출판.",cat:"정치",persons:[],major:false},
+  {year:1789,date:"1789.5.5",title:"삼부회 소집 — 베르사유",desc:"루이 16세가 베르사유에서 삼부회를 소집. 투표 방식(계급별 vs 개인별)과 헌법 필요성이 핵심 쟁점. 브르타뉴·도피네 출신 급진파가 혁명을 주도.",cat:"정치",persons:["루이","미라보","바르나브","로베스피에르"],major:true},
+  {year:1789,date:"1789.6.17",title:"제3계급, 스스로를 '국민의회'로 선포",desc:"제3계급이 단독으로 국민의회를 구성. 구체제의 신분 질서를 공식적으로 부정한 역사적 순간.",cat:"정치",persons:["미라보","바르나브"],major:true},
+  {year:1789,date:"1789.6.20",title:"테니스 코트 선서",desc:"의회가 프랑스 헌법 제정의 독점권을 주장. '헌법을 제정할 때까지 해산하지 않겠다'는 선서.",cat:"정치",persons:["미라보","바르나브"],major:true},
+  {year:1789,date:"1789.6.23",title:"왕실 회의 — 실패한 반쿠데타",desc:"루이 16세의 왕실 회의 프로그램이 반혁명의 기준이 됨. 그러나 국민의회의 저항으로 실패.",cat:"정치",persons:["루이"],major:false},
+  {year:1789,date:"1789.7.14",title:"바스티유 감옥 습격",desc:"네케르 해임 소식에 파리 시민이 봉기. 바스티유 감옥을 함락시킴. 프랑스 혁명의 상징적 사건.",cat:"반란",persons:[],major:true},
+  {year:1789,date:"1789.7~8월",title:"그랑드 페르 — 농민 대공포",desc:"농촌 지역에서 대규모 농민 소요 발생. 도시에서는 새로운 기계에 반대하는 폭동.",cat:"반란",persons:[],major:false},
+  {year:1789,date:"1789.8.4~11",title:"봉건적 권리와 특권 폐지",desc:"8월의 밤: 봉건적 권리와 개인·지방 특권 폐지 칙령. 구체제의 법적 해체.",cat:"사회",persons:[],major:true},
+  {year:1789,date:"1789.8.26",title:"인간과 시민의 권리 선언",desc:"모든 인간은 자유롭고 평등하게 태어난다. 프랑스 혁명의 핵심 이념을 선언.",cat:"사상",persons:[],major:true},
+  {year:1789,date:"1789.9월",title:"왕에게 유보적 거부권 부여 — 양원제 패배",desc:"왕권주의자들의 양원제 의회 제안이 패배. 왕에게는 유보적(한시적) 거부권만 부여됨.",cat:"정치",persons:["루이","미라보"],major:false},
+  {year:1789,date:"1789.10.5~6",title:"10월 사건 — 베르사유 궁전 점령",desc:"파리 여성들이 베르사유로 진군. 궁전 점령 후 왕실 가족이 파리 튈르리 궁으로 강제 이주. 마리 앙투아네트 암살 위기 간신히 모면. 루이 16세는 스스로를 포로로 인식.",cat:"반란",persons:["루이","마리 앙투아네트"],major:true},
+  {year:1789,date:"1789.11.2",title:"교회 재산 국유화 & 자코뱅 클럽 창설",desc:"교회 소유 토지를 국유화하여 지폐(아시냐) 발행 담보로 삼음. 자코뱅 클럽 창립 — 전국적 네트워크 구축.",cat:"경제",persons:["로베스피에르"],major:true},
+  {year:1789,date:"1789.11.7",title:"'치명적 법령' — 의원의 장관 겸직 금지",desc:"미라보의 과도한 권력 장악을 막기 위한 법령. 그러나 이는 프랑스가 기능하는 의회 체제로 발전하는 것을 저지하는 결과를 낳음.",cat:"정치",persons:["미라보"],major:false},
+
+  // ── 1790 ──
+  {year:1790,date:"1790.2.4",title:"루이 16세, '혁명의 수장' 선언",desc:"자발적 은둔을 끝내고 혁명의 수장임을 선언하나 믿는 이는 거의 없음.",cat:"정치",persons:["루이"],major:false},
+  {year:1790,date:"1790.6.19",title:"귀족 계급 폐지",desc:"프랑스의 모든 귀족 칭호와 신분 특권이 공식적으로 폐지됨.",cat:"사회",persons:[],major:true},
+  {year:1790,date:"1790.7.3",title:"미라보, 왕에게 파리 탈출 촉구",desc:"미라보가 왕과 왕비를 만나 파리 탈출을 촉구하며 내전까지 고려할 것을 건의.",cat:"정치",persons:["미라보","루이","마리 앙투아네트"],major:false},
+  {year:1790,date:"1790.7.12",title:"성직자 시민 헌장 제정",desc:"'제헌 의회의 가장 큰 실수'로 평가. 교회를 국가에 종속시키는 법령으로 프랑스를 맹세파와 비맹세파로 분열시킴.",cat:"종교",persons:[],major:true},
+  {year:1790,date:"1790.9.4",title:"네케르 사임",desc:"스위스로 은퇴. 의회 재정위원회가 실질적으로 국가 재정을 장악.",cat:"정치",persons:[],major:false},
+
+  // ── 1791 ──
+  {year:1791,date:"1791.3.2",title:"교황, 성직자 시민헌법 규탄",desc:"교황 비오 6세가 성직자 시민헌법을 공식 규탄. 카톨릭 세계와 혁명 프랑스의 결정적 분열.",cat:"종교",persons:[],major:false},
+  {year:1791,date:"1791.4.2",title:"미라보 사망",desc:"혁명의 가장 위대한 웅변가이자 입헌군주제의 옹호자 미라보가 병사. 침상에서 숨을 거둔 몇 안 되는 혁명 지도자.",cat:"인물",persons:["미라보"],major:true},
+  {year:1791,date:"1791.4.18",title:"왕실, 생클루행 저지 — 탈출 계획 가속",desc:"왕실 일행이 생클루로 가는 길이 막힘. 이로 인해 비밀 탈출 계획이 급속히 진행됨.",cat:"정치",persons:["루이","마리 앙투아네트"],major:false},
+  {year:1791,date:"1791.6.20~21",title:"바렌느 도주 사건",desc:"왕실 가족이 파리를 탈출하여 몽메디로 도주하나 바렌느에서 체포. 국왕이 남긴 선언문이 발견됨. 혁명과 왕정의 양립 가능성에 치명타.",cat:"정치",persons:["루이","마리 앙투아네트","바르나브"],major:true},
+  {year:1791,date:"1791.7.17",title:"샹 드 마르스 학살",desc:"국왕의 도주 선언문에 항의하는 시민 약 50명이 사망. 혁명 내부의 첫 번째 큰 유혈 사태.",cat:"반란",persons:[],major:true},
+  {year:1791,date:"1791.9.14",title:"루이 16세, 새 헌법 수락",desc:"국왕이 개정된 헌법을 수락. 그러나 이미 바렌느 사건으로 신뢰가 무너진 상태.",cat:"정치",persons:["루이"],major:false},
+  {year:1791,date:"1791.10.1",title:"입법의회 출범",desc:"국민의회가 입법의회로 대체됨. 퓌이앙파와 지롱드파가 주요 세력.",cat:"정치",persons:["바르나브"],major:true},
+  {year:1791,date:"1791.12월",title:"지롱드파, 오스트리아와의 전쟁 추진",desc:"지롱드파는 전쟁을 통해 왕비의 반역을 밝혀내려 함. 로베스피에르는 반역적 장군들을 우려하며 전쟁 반대 — 지롱드파와 영구 결별.",cat:"정치",persons:["로베스피에르"],major:false},
+
+  // ── 1792 ──
+  {year:1792,date:"1792.3.15~20",title:"퓌이앙 장관 사임 & 지롱드 내각 구성",desc:"잔여 퓌이앙 장관들이 사임하고 오스트리아와의 전쟁을 추진하는 지롱드 내각이 구성됨.",cat:"정치",persons:["루이"],major:false},
+  {year:1792,date:"1792.4.20",title:"오스트리아에 선전포고",desc:"루이 16세가 새 각료들의 조언에 따라 오스트리아에 대한 선전포고. 프로이센이 오스트리아 편에 가담하지 않을 것이라는 오판.",cat:"군사",persons:["루이"],major:true},
+  {year:1792,date:"1792.6.20",title:"튈르리 궁전 시위 — 루이 16세의 저항",desc:"항의 시위로 궁전 대규모 점거. 그러나 루이 16세가 굳건히 버티며 일부 인기를 회복.",cat:"반란",persons:["루이"],major:false},
+  {year:1792,date:"1792.7.25",title:"로베스피에르, 국왕 폐위 요구",desc:"로베스피에르가 공식적으로 국왕 폐위를 요구. 혁명의 급진화.",cat:"정치",persons:["로베스피에르"],major:false},
+  {year:1792,date:"1792.8.10",title:"군주제 붕괴 — 튈르리 궁 함락",desc:"무장 시민들이 튈르리 궁전을 공격. 루이 16세가 폐위되고 왕실이 탕플 탑에 감금됨. 1,000년 프랑스 왕정의 종말.",cat:"반란",persons:["루이","마리 앙투아네트","로베스피에르"],major:true},
+  {year:1792,date:"1792.9.2~6",title:"9월 학살 — 1,300명 살해",desc:"약 1,300명의 정치범 및 일반 수감자가 살해되는 감옥 학살(제1차 테러). 국민공회 선거와 동시 진행.",cat:"반란",persons:["당통","로베스피에르"],major:true},
+  {year:1792,date:"1792.9.20",title:"발미 전투 — 프로이센군 격퇴",desc:"프로이센 침공군을 격퇴하는 결정적 승리. 당통이 법무부 장관으로 실세 부상.",cat:"군사",persons:["당통"],major:true},
+  {year:1792,date:"1792.9.21~22",title:"국민공회 소집 & 공화국 선포",desc:"국민공회가 소집되고 다음 날 프랑스 공화국이 선포됨. 왕정 시대의 공식적 종결.",cat:"정치",persons:[],major:true},
+
+  // ── 1792–1793 루이 재판 ──
+  {year:1793,date:"1792.12~1793.1",title:"루이 16세 재판",desc:"721명 투표자 중 361명만이 무조건 사형 찬성 — 단 1표 차 다수결. 몽타뉴파가 부르봉 왕조 복귀의 모든 가능성을 차단.",cat:"정치",persons:["루이","로베스피에르"],major:true},
+  {year:1793,date:"1793.1.21",title:"루이 16세 처형",desc:"콩코르드 광장에서 단두대로 처형. 유럽 전체에 충격파. '프랑스인들이여, 나는 무고하게 죽습니다.'",cat:"처형",persons:["루이"],major:true},
+
+  // ── 1793 ──
+  {year:1793,date:"1793.2.1",title:"영국·네덜란드에 선전포고",desc:"혁명 전쟁이 유럽 전체로 확대. 이어 스페인에도 선전포고(3월 7일).",cat:"군사",persons:[],major:false},
+  {year:1793,date:"1793.3.10",title:"방데 반란 발발",desc:"징병제 반대 및 왕좌와 교회를 위한 방데 지역 반란. 수만 명이 사망하는 내전으로 발전.",cat:"반란",persons:[],major:true},
+  {year:1793,date:"1793.3.13",title:"혁명 재판소 설립",desc:"당통의 제안으로 설립. 1794년 6월까지 1,251명이 단두대에 처형됨.",cat:"정치",persons:["당통"],major:true},
+  {year:1793,date:"1793.3.25",title:"뒤무리에 장군의 배신",desc:"프랑스군 사령관 뒤무리에가 오스트리아에 투항. 군사적·정치적 위기 심화.",cat:"군사",persons:[],major:false},
+  {year:1793,date:"1793.4.6",title:"공안위원회(CPS) 창설",desc:"혁명 정부의 핵심 기관 설립. 7월까지 당통이 주도.",cat:"정치",persons:["당통"],major:true},
+  {year:1793,date:"1793.6.2",title:"지롱드파 22명 추방",desc:"민중 봉기로 지롱드파 의원 22명이 국민공회에서 추방. 일부는 탈출하여 지방에서 반란.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1793,date:"1793.7.13",title:"마라 암살",desc:"급진파 언론인 장 폴 마라가 샤를로트 코르데에 의해 욕조에서 암살됨.",cat:"인물",persons:[],major:true},
+  {year:1793,date:"1793.7.27",title:"로베스피에르, 공안위원회 입성",desc:"로베스피에르가 CPS에 합류. 공포정치의 서막.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1793,date:"1793.9.4~5",title:"민중 봉기 — 민중 운동의 정점",desc:"에베르파와 상쿨로트의 압력으로 공포정치가 '의사일정'에 올라감. 콜로 드 에르부아와 빌로-바렌이 CPS에 합류.",cat:"반란",persons:["로베스피에르"],major:true},
+  {year:1793,date:"1793.9.17",title:"용의자 법",desc:"혁명에 적대적인 모든 이를 체포할 수 있는 법률. 공포정치의 법적 기초.",cat:"정치",persons:[],major:true},
+  {year:1793,date:"1793.10.9",title:"리옹 함락",desc:"반혁명 반란의 중심지 리옹이 국민공회군에 함락. '리옹은 더 이상 없다'는 선포.",cat:"군사",persons:[],major:false},
+  {year:1793,date:"1793.10.16",title:"마리 앙투아네트 처형",desc:"혁명재판소의 모욕적 재판 끝에 단두대에서 처형. 근친상간 등 거짓 혐의가 포함됨.",cat:"처형",persons:["마리 앙투아네트"],major:true},
+  {year:1793,date:"1793.10.31",title:"지롱드파 의원들 처형",desc:"추방된 지롱드파 의원들이 단두대에서 처형됨.",cat:"처형",persons:[],major:true},
+  {year:1793,date:"1793.11.10",title:"이성의 제전 — 기독교 배척 운동의 정점",desc:"노트르담 대성당에서 '이성의 제전' 개최. 혁명적 탈기독교화 운동의 절정.",cat:"종교",persons:[],major:true},
+  {year:1793,date:"1793.11.28",title:"바르나브 처형",desc:"혁명 이론가이자 온건파 지도자 바르나브가 단두대에서 처형됨.",cat:"처형",persons:["바르나브"],major:true},
+  {year:1793,date:"1793.12.4",title:"혁명 정부 '헌법' — 권력 집중",desc:"프리메르 14일 법: 권력이 공안위원회에 집중. 모든 지방 당국은 10일마다 CPS에 보고서 제출 의무.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1793,date:"1793.12.19",title:"툴롱 재정복",desc:"영국 해군에 협력한 툴롱을 혁명군이 재정복. 나폴레옹 보나파르트가 두각을 나타냄.",cat:"군사",persons:[],major:false},
+
+  // ── 1794 ──
+  {year:1794,date:"1794.3.24",title:"에베르파 처형",desc:"극좌파 에베르주의자들이 단두대에서 처형. 로베스피에르가 좌파를 숙청.",cat:"처형",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.4.5",title:"당통 처형",desc:"'관용파' 지도자 당통과 데물랭이 단두대에서 처형. '내 머리를 인민에게 보여라, 볼 가치가 있다.' 로베스피에르의 권력이 정점에.",cat:"처형",persons:["당통","로베스피에르"],major:true},
+  {year:1794,date:"1794.6.4",title:"로베스피에르, 국민공회 의장으로 선출",desc:"사실상 프랑스의 최고 권력자가 됨.",cat:"정치",persons:["로베스피에르"],major:false},
+  {year:1794,date:"1794.6.8",title:"최고존재의 축제",desc:"로베스피에르가 주관한 '최고존재' 숭배 의식. 무신론과 기독교 모두를 대체하려는 시도.",cat:"종교",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.6.10",title:"프레리알 22일 법 — 대테러 개시",desc:"혁명재판소 재편: 변호인·증인 배제, 단일 판결(사형)만 허용. 이후 47일간 1,376명이 단두대에서 처형됨. '대테러' 시대의 개막.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.6.26",title:"플뢰루스 전투 — 결정적 군사 승리",desc:"벨기에에서의 결정적 승리. 역설적으로 외부 위협 감소가 공포정치의 정당성을 약화시킴.",cat:"군사",persons:[],major:true},
+  {year:1794,date:"1794.7.26",title:"로베스피에르의 마지막 연설",desc:"국민공회에서 연설 후 자코뱅 클럽에서 반복. 숙청 대상의 이름을 밝히기를 거부하여 오히려 공포를 증폭시킴. 반로베스피에르 세력이 결집.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.7.27",title:"테르미도르 9일 — 로베스피에르 체포",desc:"국민공회에서 로베스피에르 체포 결의. 코뮌이 봉기를 조직하나 단호한 행동을 취하지 못함. 파리 구역 분열.",cat:"정치",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.7.28",title:"로베스피에르 처형",desc:"턱이 부서진 채 단두대에 올라감. 지지자들과 함께 처형. 공포정치의 종말.",cat:"처형",persons:["로베스피에르"],major:true},
+  {year:1794,date:"1794.7.29",title:"역사상 최다 단두대 처형 — 하루 71명",desc:"파리 역사상 단 하루에 가장 많은 71명이 단두대에서 처형됨. 로베스피에르 잔존 세력 숙청.",cat:"처형",persons:[],major:false},
+  {year:1794,date:"1794.11.12",title:"자코뱅 클럽 폐쇄",desc:"폭도들에 의해 회의가 중단된 후 자코뱅 클럽이 공식 폐쇄됨. 급진 혁명의 제도적 종말.",cat:"정치",persons:[],major:true},
+  {year:1794,date:"1794.12.24",title:"물가 상한제 폐지 — 급격한 인플레이션",desc:"혁명 경제 통제의 해제. 이후 급격한 인플레이션이 발생하여 민중의 고통 가중.",cat:"경제",persons:[],major:false},
+
+  // ── 1795 ──
+  {year:1795,date:"1795.4.1",title:"제르미날 봉기",desc:"국민공회가 포위되나 온건파와 피슈그루 장군에 의해 진압. 바레르, 빌로-바렌 등 급진파 추방.",cat:"반란",persons:[],major:false},
+  {year:1795,date:"1795.5.20",title:"프레리알 봉기 — 의원 피살",desc:"상쿨로트들이 국민공회를 점거, 의원 페로가 살해됨. '마지막 몽타뉴파' 6명에게 사형 선고.",cat:"반란",persons:[],major:true},
+  {year:1795,date:"1795.8월",title:"제3년 헌법 제정",desc:"5인 집행부(디렉투아르)와 양원제 입법부 창설. 재산권 보장, 평등 희생. 지롱드파의 강한 영향.",cat:"정치",persons:[],major:true},
+  {year:1795,date:"1795.10.5",title:"방데미에르 봉기 진압 — 나폴레옹 등장",desc:"파리 왕당파의 봉기를 바라와 젊은 나폴레옹 보나파르트가 진압. 나폴레옹 시대의 서막.",cat:"군사",persons:[],major:true},
+  {year:1795,date:"1795.10.26",title:"국민공회 해산",desc:"3년간의 국민공회가 해산. 디렉투아르(총재정부) 체제로 전환. 혁명의 공식적 종료.",cat:"정치",persons:[],major:true}
+];
+
+const YEAR_SUMMARIES = {
+  1748: "사상적 배경",
+  1762: "계몽사상의 시대",
+  1774: "루이 16세의 치세",
+  1778: "미국 독립전쟁 참전",
+  1783: "재정 위기의 씨앗",
+  1787: "실패한 왕실 개혁",
+  1788: "삼부회로의 길",
+  1789: "혁명의 해 — 바스티유에서 10월 사건까지",
+  1790: "새로운 프랑스의 건설",
+  1791: "바렌느와 입헌군주제의 실험",
+  1792: "왕정 붕괴와 공화국 선포",
+  1793: "루이 처형, 공포정치, 내전",
+  1794: "로베스피에르의 부상과 몰락",
+  1795: "테르미도르 반동과 혁명의 종결"
+};
+
+let activeFilter = 'all';
+let activePerson = null;
+let searchQuery = '';
+
+function renderTimeline() {
+  const container = document.getElementById('timeline');
+  const years = [...new Set(EVENTS.map(e => e.year))].sort((a, b) => a - b);
+
+  let html = '';
+  let visibleCount = 0;
+
+  years.forEach(year => {
+    const yearEvents = EVENTS.filter(e => {
+      if (e.year !== year) return false;
+      if (activeFilter !== 'all' && e.cat !== activeFilter) return false;
+      if (activePerson && !e.persons.includes(activePerson)) return false;
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        return e.title.toLowerCase().includes(q) || e.desc.toLowerCase().includes(q);
+      }
+      return true;
+    });
+
+    if (yearEvents.length === 0) return;
+    visibleCount += yearEvents.length;
+
+    html += `<div class="timeline-year" id="year-${year}">`;
+    html += `<div class="year-marker"><h2>${year}</h2><div class="year-line"></div><div class="year-summary">${YEAR_SUMMARIES[year] || ''}</div></div>`;
+    html += `<div class="event-list">`;
+
+    yearEvents.forEach((ev, i) => {
+      const majorClass = ev.major ? 'major' : '';
+      const catClass = `cat-${ev.cat}`;
+      const delay = i * 0.08;
+      const personBadges = ev.persons.map(p => `<span class="badge badge-person">${p}</span>`).join('');
+
+      html += `
+        <div class="event-item ${majorClass} ${catClass}" style="animation-delay:${delay}s" data-cat="${ev.cat}">
+          <div class="event-dot"></div>
+          <div class="event-card" onclick="this.classList.toggle('expanded')">
+            <div class="event-date">${ev.date}</div>
+            <div class="event-title">${ev.title}</div>
+            <div class="event-badges">
+              <span class="badge badge-category">${ev.cat}</span>
+              ${personBadges}
+            </div>
+            <div class="event-desc">${ev.desc}</div>
+          </div>
+        </div>`;
+    });
+
+    html += `</div></div>`;
+  });
+
+  container.innerHTML = html;
+
+  const counter = document.getElementById('eventCounter');
+  const totalCount = EVENTS.length;
+  let filterText = '';
+  if (activeFilter !== 'all') filterText += ` · ${activeFilter}`;
+  if (activePerson) filterText += ` · ${activePerson}`;
+  if (searchQuery) filterText += ` · "${searchQuery}"`;
+  counter.innerHTML = `<strong>${visibleCount}</strong> / ${totalCount}개 사건 표시${filterText}`;
+
+  // Year nav
+  const navEl = document.getElementById('yearNav');
+  const visibleYears = [...new Set(EVENTS.filter(e => {
+    if (activeFilter !== 'all' && e.cat !== activeFilter) return false;
+    if (activePerson && !e.persons.includes(activePerson)) return false;
+    return true;
+  }).map(e => e.year))].sort((a,b) => a-b);
+
+  navEl.innerHTML = visibleYears.map(y =>
+    `<div class="year-dot" data-year="${y}" onclick="document.getElementById('year-${y}').scrollIntoView({behavior:'smooth'})">
+      <span class="year-label">${y}</span>
+    </div>`
+  ).join('');
+}
+
+// Filter buttons
+document.getElementById('filterBar').addEventListener('click', e => {
+  if (!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  activeFilter = e.target.dataset.filter;
+  activePerson = null;
+  document.querySelectorAll('.char-card').forEach(c => c.classList.remove('active'));
+  renderTimeline();
+});
+
+// Character filter
+document.querySelectorAll('.char-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const person = card.dataset.person;
+    if (activePerson === person) {
+      activePerson = null;
+      card.classList.remove('active');
+    } else {
+      document.querySelectorAll('.char-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      activePerson = person;
+    }
+    // Reset category filter
+    activeFilter = 'all';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-filter="all"]').classList.add('active');
+    renderTimeline();
+  });
+});
+
+// Search
+let searchTimeout;
+document.getElementById('searchInput').addEventListener('input', e => {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => {
+    searchQuery = e.target.value.trim();
+    renderTimeline();
+  }, 300);
+});
+
+// Back to top
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backTop');
+  btn.classList.toggle('show', window.scrollY > 600);
+
+  // Update year nav active state
+  const yearEls = document.querySelectorAll('.timeline-year');
+  const dots = document.querySelectorAll('.year-dot');
+  let currentYear = null;
+  yearEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight / 2) currentYear = el.id.replace('year-', '');
+  });
+  dots.forEach(d => {
+    d.classList.toggle('active', d.dataset.year === currentYear);
+  });
+});
+
+// Intersection observer for animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = 'running';
+    }
+  });
+}, { threshold: 0.1 });
+
+// Init
+renderTimeline();
+document.querySelectorAll('.event-item').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
