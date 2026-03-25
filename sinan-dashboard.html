@@ -14,30 +14,30 @@ permalink: /sinan-dashboard.html
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Noto Sans KR',sans-serif; background:#0f1923; color:#e0e8ec; }
-  .header { background:linear-gradient(135deg,#0a7e8c,#0d5c63); padding:2.5rem 2rem 2rem; }
+  .header { background:linear-gradient(135deg,#1a3a5c,#122d4a); padding:2.5rem 2rem 2rem; }
   .header h1 { font-size:1.8rem; font-weight:700; color:#fff; margin-bottom:0.3rem; }
   .header p { font-size:0.9rem; color:#8bbfc4; }
   .tabs { display:flex; gap:4px; padding:0.8rem 2rem 0; background:#14232e; border-bottom:2px solid #1a3040; overflow-x:auto; }
   .tab { padding:0.6rem 1.2rem; border-radius:8px 8px 0 0; cursor:pointer; font-size:0.85rem; font-weight:500; background:#1a3040; color:#8bbfc4; transition:all .2s; white-space:nowrap; }
-  .tab.active { background:#0a7e8c; color:#fff; }
+  .tab.active { background:#1a3a5c; color:#fff; }
   .tab:hover:not(.active) { background:#1e3a4a; }
   .panels { padding:1.5rem 2rem 3rem; }
   .panel { display:none; }
   .panel.active { display:block; }
   .card { background:#1a2f38; border-radius:12px; padding:1.5rem; margin-bottom:1.2rem; border:1px solid #1e3a4a; }
-  .card h3 { color:#0a7e8c; font-size:1.1rem; margin-bottom:0.8rem; font-weight:700; }
+  .card h3 { color:#1a3a5c; font-size:1.1rem; margin-bottom:0.8rem; font-weight:700; }
   .card h4 { color:#f7a325; font-size:0.95rem; margin:0.8rem 0 0.4rem; font-weight:600; }
   .chart-container { position:relative; height:320px; margin:1rem 0; }
   .stat-row { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; }
-  .stat-box { flex:1; min-width:140px; background:#14232e; border-radius:8px; padding:1rem; text-align:center; border-left:3px solid #0a7e8c; }
+  .stat-box { flex:1; min-width:140px; background:#14232e; border-radius:8px; padding:1rem; text-align:center; border-left:3px solid #1a3a5c; }
   .stat-box.warn { border-left-color:#f7a325; }
   .stat-box.alert { border-left-color:#d94032; }
   .stat-box .num { font-size:1.6rem; font-weight:900; color:#fff; }
   .stat-box .label { font-size:0.75rem; color:#8bbfc4; margin-top:0.2rem; }
-  .insight { background:#0d5c63; border-radius:8px; padding:1rem 1.2rem; margin-top:0.8rem; font-size:0.85rem; line-height:1.6; color:#d4eef0; }
+  .insight { background:#122d4a; border-radius:8px; padding:1rem 1.2rem; margin-top:0.8rem; font-size:0.85rem; line-height:1.6; color:#d4eef0; }
   .insight strong { color:#f7a325; }
   table { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.85rem; }
-  th { background:#0a7e8c; color:#fff; padding:0.5rem 0.8rem; text-align:center; font-weight:500; }
+  th { background:#1a3a5c; color:#fff; padding:0.5rem 0.8rem; text-align:center; font-weight:500; }
   td { padding:0.5rem 0.8rem; border-bottom:1px solid #1e3a4a; text-align:center; }
   tr:nth-child(even) td { background:#14232e; }
   .bar-inline { display:inline-block; height:14px; border-radius:3px; vertical-align:middle; margin-left:6px; }
@@ -88,13 +88,13 @@ permalink: /sinan-dashboard.html
     <div class="chart-container"><canvas id="chartPop"></canvas></div>
     <h4>인구 유입 3,000명 구성 분해</h4>
     <div class="decomp-bar">
-      <div style="width:35%;background:#0a7e8c;">행정정리 35%</div>
+      <div style="width:35%;background:#1a3a5c;">행정정리 35%</div>
       <div style="width:25%;background:#2ecc71;">실이전 25%</div>
       <div style="width:25%;background:#3498db;">귀농촌 25%</div>
       <div style="width:15%;background:#d94032;">기회적 15%</div>
     </div>
     <div style="margin:0.5rem 0;">
-      <span class="legend-item"><span class="legend-dot" style="background:#0a7e8c"></span>행정상 주소 정리</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#1a3a5c"></span>행정상 주소 정리</span>
       <span class="legend-item"><span class="legend-dot" style="background:#2ecc71"></span>실제 거주지 이전</span>
       <span class="legend-item"><span class="legend-dot" style="background:#3498db"></span>귀농·귀촌 앞당김</span>
       <span class="legend-item"><span class="legend-dot" style="background:#d94032"></span>기회주의적 이동</span>
@@ -336,7 +336,7 @@ new Chart(document.getElementById('chartPop'), {
       {
         label: '기본소득 있는 세계',
         data: DATA.pop.withBI,
-        borderColor: '#0a7e8c',
+        borderColor: '#1a3a5c',
         borderWidth: 2.5,
         pointRadius: 0,
         fill: {target: 0, above: 'rgba(10,126,140,0.15)'},
@@ -366,7 +366,7 @@ new Chart(document.getElementById('chartRetention'), {
       {
         label: '정착률 (%)',
         data: DATA.retention.map(r => r.rate),
-        backgroundColor: DATA.retention.map(r => r.yr === 2 ? '#f7a325' : '#0a7e8c'),
+        backgroundColor: DATA.retention.map(r => r.yr === 2 ? '#f7a325' : '#1a3a5c'),
         borderRadius: 6,
         yAxisID: 'y',
       },
@@ -423,7 +423,7 @@ new Chart(document.getElementById('chartMultiplier'), {
     datasets: [{
       label: '라운드별 경제효과 (억 원)',
       data: DATA.multiplier,
-      backgroundColor: DATA.multiplier.map((_, i) => i === 0 ? '#0a7e8c' : `rgba(10,126,140,${Math.max(0.2, 1 - i*0.1)})`),
+      backgroundColor: DATA.multiplier.map((_, i) => i === 0 ? '#1a3a5c' : `rgba(10,126,140,${Math.max(0.2, 1 - i*0.1)})`),
       borderRadius: 4,
     }]
   },
@@ -448,7 +448,7 @@ new Chart(document.getElementById('chartVoucher'), {
     labels: vCats,
     datasets: [
       { label: '필요 비중 (%)', data: vNeed, backgroundColor: '#3d5a63', borderRadius: 4 },
-      { label: '상품권 사용 가능 (%)', data: vUsable, backgroundColor: vUsable.map(v => v < 40 ? '#d94032' : v < 65 ? '#f7a325' : '#0a7e8c'), borderRadius: 4 },
+      { label: '상품권 사용 가능 (%)', data: vUsable, backgroundColor: vUsable.map(v => v < 40 ? '#d94032' : v < 65 ? '#f7a325' : '#1a3a5c'), borderRadius: 4 },
     ]
   },
   options: {
@@ -468,7 +468,7 @@ new Chart(document.getElementById('chartInfra'), {
   data: {
     labels: infraLabels,
     datasets: [
-      { label: '현재 가동률 (%)', data: infraCurrent, backgroundColor: '#0a7e8c', borderRadius: 4 },
+      { label: '현재 가동률 (%)', data: infraCurrent, backgroundColor: '#1a3a5c', borderRadius: 4 },
       { label: '인구 유입 후 예상 (%)', data: infraProjected, backgroundColor: infraProjected.map(v => v > 85 ? '#f7a325' : '#3498db'), borderRadius: 4 },
     ]
   },
