@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "한국도 재정적자를 줄여야 하지만, 줄이지 못할 것이다"
+title: "한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드"
 date: 2026-03-26
 tags: [경제, 재정, 한국, 미국, 크루그먼, 칼럼]
 description: "Krugman의 'Why We Should, but Won't, Reduce the Budget Deficit'을 한국 상황에 대입한다. 이란 전쟁, 유가 급등, 저출생 — 한국의 재정 딜레마는 미국보다 더 깊다."
