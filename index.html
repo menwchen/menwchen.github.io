@@ -13,7 +13,7 @@ layout: default
 
   <section class="categories" id="categories">
     <h2 class="section-title">연구 주제</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:48px;">
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:48px;">
       {% assign cat_names = "정치경제|철학|서평|기본소득|화폐이론|한국자본시장" | split: "|" %}
       {% assign cat_icons = "🌏|💭|📖|💰|🏦|📊" | split: "|" %}
       {% for cat in cat_names %}
