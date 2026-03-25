@@ -1,0 +1,1095 @@
+---
+layout: null
+title: "프랑스 제도주의 화폐 이론 — 핵심 개념 인포그래픽"
+description: "Bruno Théret 편, Théories françaises de la monnaie (PUF, 2016) 핵심 개념 시각화"
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프랑스 제도주의 화폐 이론 — 핵심 개념 인포그래픽</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+:root {
+  --bg: #faf8f4;
+  --bg2: #f0ece4;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --muted: #6b6b80;
+  --gold: #b8860b;
+  --gold-light: #daa520;
+  --navy: #1a1a3e;
+  --red: #8b1a1a;
+  --blue: #1a4a8b;
+  --green: #1a6b4a;
+  --purple: #4a1a6b;
+  --teal: #0a6b6b;
+  --orange: #8b4a1a;
+  --border: #d5d0c8;
+  --shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif KR', Georgia, serif;
+  line-height: 1.8;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background:
+    linear-gradient(180deg, #f5f0e8 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-pretitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--navy);
+  max-width: 700px;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 em {
+  display: block;
+  font-size: 0.5em;
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.hero-desc {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.hero-meta span { display: flex; align-items: center; gap: 0.3rem; }
+.hero-meta strong { color: var(--navy); }
+
+/* ── NAV ── */
+.toc-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250,248,244,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  gap: 0.3rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.toc-bar::-webkit-scrollbar { height: 0; }
+
+.toc-link {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: 'Noto Serif KR', serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.toc-link:hover { border-color: var(--gold); color: var(--navy); }
+.toc-link.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+/* ── SECTIONS ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-num {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+
+/* ── TRIPOD DIAGRAM ── */
+.tripod-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tripod-svg-wrap {
+  width: 100%;
+  max-width: 500px;
+}
+
+.tripod-svg-wrap svg { width: 100%; height: auto; }
+
+.tripod-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.tripod-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.tripod-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--card-color, var(--gold));
+}
+
+.tripod-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--card-color, var(--navy));
+}
+
+.tripod-card .fr { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-bottom: 0.8rem; }
+.tripod-card p { font-size: 0.85rem; color: var(--text); line-height: 1.7; }
+.tripod-card ul { font-size: 0.83rem; padding-left: 1.2rem; color: var(--text); }
+.tripod-card li { margin-bottom: 0.3rem; }
+
+/* ── THREE STATES ── */
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.state-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.state-card:hover { transform: translateY(-4px); }
+
+.state-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+}
+
+.state-card h3 { font-size: 1.1rem; margin-bottom: 0.15rem; }
+.state-card .fr { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-bottom: 0.8rem; }
+.state-card .state-desc { font-size: 0.85rem; color: var(--text); text-align: left; line-height: 1.7; }
+
+.state-detail {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.state-detail dt { color: var(--gold); font-weight: 700; margin-top: 0.5rem; }
+.state-detail dd { color: var(--muted); margin-left: 0; }
+
+/* ── CONFIDENCE ── */
+.confidence-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.conf-layer {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.conf-layer::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: 12px 0 0 12px;
+  background: var(--layer-color, var(--gold));
+}
+
+.conf-num {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--layer-color, var(--gold));
+}
+
+.conf-body h4 { font-size: 1rem; margin-bottom: 0.1rem; }
+.conf-body .fr { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-bottom: 0.5rem; }
+.conf-body p { font-size: 0.85rem; color: var(--text); line-height: 1.7; }
+
+.conf-arrow {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+/* ── CRISIS ── */
+.crisis-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.crisis-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.crisis-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+}
+
+.crisis-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--step-color, var(--red));
+  flex-shrink: 0;
+}
+
+.crisis-connector {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+}
+
+.crisis-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.crisis-content h4 { font-size: 0.95rem; color: var(--step-color, var(--red)); margin-bottom: 0.3rem; }
+.crisis-content p { font-size: 0.83rem; color: var(--text); }
+
+/* ── VS TABLE ── */
+.vs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.85rem;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.vs-table th {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.vs-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.vs-table tr:last-child td { border-bottom: none; }
+.vs-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+
+.badge-std { background: #e8e0d4; color: var(--orange); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+.badge-inst { background: #d4dce8; color: var(--blue); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+
+/* ── THINKERS ── */
+.thinkers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.thinker {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.thinker:hover { transform: translateY(-3px); }
+
+.thinker-init {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.8rem;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.thinker h4 { font-size: 0.9rem; margin-bottom: 0.15rem; }
+.thinker .period { font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; }
+.thinker p { font-size: 0.78rem; color: var(--text); text-align: left; }
+
+/* ── QUOTE ── */
+.quote-block {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.8;
+}
+
+.quote-block cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--muted);
+}
+
+/* ── MATRIX TABLE ── */
+.matrix-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  min-width: 600px;
+}
+
+.matrix th {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.7rem 0.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.matrix th:first-child { text-align: left; }
+
+.matrix td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.matrix td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(0,0,0,0.02);
+}
+
+.matrix tr:last-child td { border-bottom: none; }
+
+.highlight-cell { background: rgba(218,165,32,0.1); font-weight: 700; color: var(--gold); }
+
+/* ── FOOTER ── */
+.page-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.page-footer a { color: var(--gold); text-decoration: none; }
+.page-footer a:hover { text-decoration: underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .tripod-cards, .states-grid { grid-template-columns: 1fr; }
+  .section { padding: 2.5rem 1.2rem; }
+  .conf-layer { flex-direction: column; gap: 0.8rem; }
+  .thinkers-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pretitle">Bruno Th&eacute;ret (dir.) &middot; PUF, 2016</div>
+  <h1>Th&eacute;ories fran&ccedil;aises de la monnaie<em>프랑스 제도주의 화폐 이론의 핵심 개념</em></h1>
+  <p class="hero-desc">
+    화폐는 단순한 교환 수단이 아니라, 사회의 총체적 사실(fait social total)이다.
+    부채&middot;주권&middot;신뢰의 삼각대 위에 서 있는 화폐의 본질을 시각적으로 탐구합니다.
+  </p>
+  <div class="hero-meta">
+    <span><strong>7</strong>개 장</span>
+    <span><strong>45</strong>명의 저자</span>
+    <span><strong>30</strong>년간의 연구</span>
+    <span><strong>4</strong>차례 세미나 사이클</span>
+  </div>
+</section>
+
+<!-- TOC -->
+<nav class="toc-bar" id="tocBar">
+  <a class="toc-link" href="#s1">패러다임 전환</a>
+  <a class="toc-link" href="#s2">삼각대</a>
+  <a class="toc-link" href="#s3">세 가지 신뢰</a>
+  <a class="toc-link" href="#s4">세 가지 상태</a>
+  <a class="toc-link" href="#s5">화폐 위기</a>
+  <a class="toc-link" href="#s6">물물교환 신화</a>
+  <a class="toc-link" href="#s7">좋은 화폐란</a>
+  <a class="toc-link" href="#s8">사상가들</a>
+  <a class="toc-link" href="#s9">종합 매트릭스</a>
+</nav>
+
+<!-- ═══ 1. 패러다임 전환 ═══ -->
+<section class="section" id="s1">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <h2 class="section-title">패러다임 전환</h2>
+    <p class="section-sub">도구적 화폐관에서 제도주의 화폐관으로</p>
+    <div class="divider"></div>
+  </div>
+
+  <table class="vs-table">
+    <thead>
+      <tr>
+        <th style="width:25%">구분</th>
+        <th style="width:37%"><span class="badge-std">주류 경제학</span> 도구적 화폐관</th>
+        <th style="width:37%"><span class="badge-inst">제도주의</span> 프랑스 화폐 이론</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>화폐의 본질</strong></td>
+        <td>교환을 효율화하는 <strong>도구</strong>(instrument)</td>
+        <td>사회의 <strong>총체적 사실</strong>(fait social total)</td>
+      </tr>
+      <tr>
+        <td><strong>기원 서사</strong></td>
+        <td>물물교환의 불편함 → 화폐 발명</td>
+        <td>부채와 주권 관계 → 화폐 출현</td>
+      </tr>
+      <tr>
+        <td><strong>정의 방식</strong></td>
+        <td>3대 기능: 가치 척도, 교환 수단, 가치 저장</td>
+        <td>3대 속성: 계산(compte), 지불(paiement), 주조(monnayage)</td>
+      </tr>
+      <tr>
+        <td><strong>가치의 원천</strong></td>
+        <td>효용(utilit&eacute;) — 가치는 화폐 이전에 존재</td>
+        <td>사회적 관계 — 화폐가 가치를 가능하게 함</td>
+      </tr>
+      <tr>
+        <td><strong>시장과의 관계</strong></td>
+        <td>화폐는 시장의 <strong>결과물</strong></td>
+        <td>화폐는 시장의 <strong>전제 조건</strong></td>
+      </tr>
+      <tr>
+        <td><strong>사회적 차원</strong></td>
+        <td>중립적 베일 — 실물경제에 무영향</td>
+        <td>권력·폭력·신뢰·주권이 내재된 사회적 관계</td>
+      </tr>
+      <tr>
+        <td><strong>위기의 원인</strong></td>
+        <td>과잉 발행, 수량 불균형</td>
+        <td>신뢰의 붕괴, 지불 공동체의 분열</td>
+      </tr>
+      <tr>
+        <td><strong>학문 분야</strong></td>
+        <td>경제학 단독</td>
+        <td>경제학 + 사회학 + 인류학 + 역사학 + 철학</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="quote-block">
+    "화폐를 이해하려면, 첫 번째 파도의 경제학자들은 주류 경제학의 패러다임적 토대 자체를 거부한다.
+    그들은 물물교환의 우화에 기초한 도구적 화폐관을 배척하고,
+    화폐의 분석을 제도와 사회적 관계의 분석에 연결시킨다."
+    <cite>— Pierre Alary, J&eacute;r&ocirc;me Blanc, Ludovic Desmedt (서론)</cite>
+  </div>
+</section>
+
+<!-- ═══ 2. 삼각대 ═══ -->
+<section class="section" id="s2" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding-left: calc((100% - 1100px)/2 + 2rem); padding-right: calc((100% - 1100px)/2 + 2rem);">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <h2 class="section-title">화폐의 삼각대</h2>
+    <p class="section-sub">Le tr&eacute;pied de la monnaie: dette, souverainet&eacute;, confiance</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="tripod-container">
+    <!-- SVG Triangle -->
+    <div class="tripod-svg-wrap">
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Triangle -->
+        <polygon points="250,40 60,350 440,350" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.3"/>
+        <!-- Edges with labels -->
+        <line x1="250" y1="40" x2="60" y2="350" stroke="#1a4a8b" stroke-width="2" opacity="0.4"/>
+        <line x1="250" y1="40" x2="440" y2="350" stroke="#1a6b4a" stroke-width="2" opacity="0.4"/>
+        <line x1="60" y1="350" x2="440" y2="350" stroke="#8b1a1a" stroke-width="2" opacity="0.4"/>
+        <!-- Center label -->
+        <text x="250" y="215" text-anchor="middle" font-family="Playfair Display,serif" font-size="18" font-weight="700" fill="#1a1a3e">MONNAIE</text>
+        <text x="250" y="238" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="12" fill="#6b6b80">화폐</text>
+        <!-- Edge labels -->
+        <text x="130" y="185" text-anchor="middle" font-size="11" fill="#1a4a8b" transform="rotate(-58,130,185)">생명의 부채 → 주권</text>
+        <text x="370" y="185" text-anchor="middle" font-size="11" fill="#1a6b4a" transform="rotate(58,370,185)">주권 → 정당성 → 신뢰</text>
+        <text x="250" y="375" text-anchor="middle" font-size="11" fill="#8b1a1a">부채의 순환 ← 신뢰</text>
+        <!-- Vertices -->
+        <circle cx="250" cy="40" r="30" fill="#1a4a8b"/>
+        <text x="250" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="white">부채</text>
+        <text x="250" y="52" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">Dette</text>
+        <circle cx="60" cy="350" r="30" fill="#8b1a1a"/>
+        <text x="60" y="346" text-anchor="middle" font-size="14" font-weight="700" fill="white">주권</text>
+        <text x="60" y="362" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">Souverainet&eacute;</text>
+        <circle cx="440" cy="350" r="30" fill="#1a6b4a"/>
+        <text x="440" y="346" text-anchor="middle" font-size="14" font-weight="700" fill="white">신뢰</text>
+        <text x="440" y="362" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">Confiance</text>
+      </svg>
+    </div>
+
+    <div class="tripod-cards">
+      <div class="tripod-card" style="--card-color: var(--blue)">
+        <h3>부채 (Dette)</h3>
+        <div class="fr">La monnaie comme tissu de dettes</div>
+        <p>모든 화폐 사회는 부채의 직물이다. 화폐는 부채를 표시하는 <strong>계산 단위</strong>이자 부채를 이전시키는 <strong>지불 수단</strong>이다.</p>
+        <ul>
+          <li><strong>생명의 부채</strong>(dette de vie): 태어남·출산·죽음에서 발생</li>
+          <li>모든 사회에 보편적으로 존재</li>
+          <li>화폐의 보편성의 근거</li>
+        </ul>
+      </div>
+      <div class="tripod-card" style="--card-color: var(--red)">
+        <h3>주권 (Souverainet&eacute;)</h3>
+        <div class="fr">Monnaie et souverainet&eacute;</div>
+        <p>죽음은 주권의 최초 형태이며, 불멸은 그 궁극적 원천이다. 생명의 부채가 화폐와 주권을 연결한다.</p>
+        <ul>
+          <li>화폐는 주권의 <strong>상징적 표현</strong></li>
+          <li>동전의 앞면 = 주권자의 상징</li>
+          <li>지불의 순환 → 사회의 영속성</li>
+        </ul>
+      </div>
+      <div class="tripod-card" style="--card-color: var(--green)">
+        <h3>신뢰 (Confiance)</h3>
+        <div class="fr">Les fondements de la confiance</div>
+        <p>주권이 정당하면 화폐에 대한 신뢰가 보장된다. 신뢰는 세 층위(방법적·위계적·윤리적)로 구성된다.</p>
+        <ul>
+          <li>신뢰의 붕괴 = 화폐 위기</li>
+          <li>금속 화폐든 신용 화폐든 <strong>항상</strong> 신뢰에 의존</li>
+          <li>신뢰는 사회적으로 구성됨</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. 세 가지 신뢰 ═══ -->
+<section class="section" id="s3">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <h2 class="section-title">신뢰의 세 층위</h2>
+    <p class="section-sub">Les trois formes de la confiance</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="confidence-stack">
+    <div class="conf-layer" style="--layer-color: var(--teal)">
+      <div class="conf-num">3</div>
+      <div class="conf-body">
+        <h4>윤리적 신뢰</h4>
+        <div class="fr">Confiance &eacute;thique</div>
+        <p>화폐가 체현하는 <strong>가치와 규범</strong>에 대한 믿음. 화폐가 사회 정의에 부합한다는 느낌. 공동체의 근본 가치가 화폐 제도에 반영되어 있다는 확신. 가장 심층적이며, 이것이 무너지면 화폐 체계 전체가 붕괴한다.</p>
+      </div>
+    </div>
+    <div class="conf-arrow">↑ 지탱</div>
+    <div class="conf-layer" style="--layer-color: var(--blue)">
+      <div class="conf-num">2</div>
+      <div class="conf-body">
+        <h4>위계적 신뢰</h4>
+        <div class="fr">Confiance hi&eacute;rarchique</div>
+        <p>화폐를 관리하는 <strong>권위 기관</strong>(중앙은행, 국가)에 대한 신뢰. 화폐 접근이 불평등하게 분배되기에, 이를 조정하는 위계적 규제가 필요. 방법적 신뢰가 흔들릴 때 이를 보증하는 안전장치 역할.</p>
+      </div>
+    </div>
+    <div class="conf-arrow">↑ 보증</div>
+    <div class="conf-layer" style="--layer-color: var(--gold)">
+      <div class="conf-num">1</div>
+      <div class="conf-body">
+        <h4>방법적 신뢰</h4>
+        <div class="fr">Confiance m&eacute;thodique</div>
+        <p><strong>모방적 행동</strong>(comportement mim&eacute;tique)에 기반한 일상적 신뢰. 다른 사람들이 이 화폐를 받으니까 나도 받는다. 내일도 오늘의 가치로 받아들여질 것이라는 루틴적 기대. 가장 표층적이며, 일상적으로 작동하는 신뢰.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block" style="margin-top:2.5rem">
+    "주권이 정당하면 화폐에 대한 신뢰가 보장된다. 방법적 신뢰는 위계적 신뢰에 의해 보증되고,
+    위계적 신뢰는 윤리적 신뢰에 의해 지탱된다."
+    <cite>— La Monnaie souveraine (Aglietta &amp; Orl&eacute;an, 1998)</cite>
+  </div>
+</section>
+
+<!-- ═══ 4. 세 가지 상태 ═══ -->
+<section class="section" id="s4" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding-left: calc((100% - 1100px)/2 + 2rem); padding-right: calc((100% - 1100px)/2 + 2rem);">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <h2 class="section-title">화폐의 세 가지 상태</h2>
+    <p class="section-sub">Les trois &eacute;tats de la monnaie &mdash; Bourdieu의 '문화 자본'에서 착안</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="states-grid">
+    <div class="state-card">
+      <div class="state-icon" style="background: linear-gradient(135deg, var(--purple), #6b3fa0);">
+        <span style="color:#fff">&#9672;</span>
+      </div>
+      <h3>체화된 화폐</h3>
+      <div class="fr">Monnaie incorpor&eacute;e</div>
+      <div class="state-desc">
+        화폐는 개인의 <strong>정신</strong> 안에 존재한다. 계산은 먼저 정신적 활동이며, 화폐 기호에 대한 인식과 신뢰가 사람 안에 체화(體化)되어 있다.
+      </div>
+      <div class="state-detail">
+        <dt>핵심 속성</dt><dd>계산(Compte) — 화폐 언어의 내면화</dd>
+        <dt>연결되는 신뢰</dt><dd>윤리적 신뢰 (가장 심층)</dd>
+        <dt>비유</dt><dd>동전의 <strong>앞면</strong>(face) — 주권자의 상징</dd>
+      </div>
+    </div>
+
+    <div class="state-card">
+      <div class="state-icon" style="background: linear-gradient(135deg, var(--orange), #b8660a);">
+        <span style="color:#fff">&#9673;</span>
+      </div>
+      <h3>객체화된 화폐</h3>
+      <div class="fr">Monnaie objectiv&eacute;e</div>
+      <div class="state-desc">
+        화폐는 <strong>사물</strong>(동전, 지폐, 디지털 토큰)로 존재한다. 충분한 양과 질의 지불 수단이 있어야 거래가 가능하다. 물질성이 추상에 두께를 부여한다.
+      </div>
+      <div class="state-detail">
+        <dt>핵심 속성</dt><dd>지불(Paiement) — 부채의 이전과 해소</dd>
+        <dt>연결되는 신뢰</dt><dd>방법적 신뢰 (일상적 루틴)</dd>
+        <dt>비유</dt><dd>동전의 <strong>뒷면</strong>(pile) — 액면가 표기</dd>
+      </div>
+    </div>
+
+    <div class="state-card">
+      <div class="state-icon" style="background: linear-gradient(135deg, var(--navy), #2a2a5e);">
+        <span style="color:#fff">&#9678;</span>
+      </div>
+      <h3>제도화된 화폐</h3>
+      <div class="fr">Monnaie institutionnalis&eacute;e</div>
+      <div class="state-desc">
+        화폐는 <strong>제도</strong>로서 존재한다. 주조 규칙, 발행 체계, 지불 공동체의 규제가 화폐에 지속성을 부여한다. 지불 공동체 = 화폐적으로 표현된 사회 집단.
+      </div>
+      <div class="state-detail">
+        <dt>핵심 속성</dt><dd>주조(Monnayage) — 화폐 발행과 규제의 규칙</dd>
+        <dt>연결되는 신뢰</dt><dd>위계적 신뢰 (제도적 보증)</dd>
+        <dt>비유</dt><dd>동전의 <strong>측면</strong>(tranche) — 물질성과 두께</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. 화폐 위기 ═══ -->
+<section class="section" id="s5">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <h2 class="section-title">화폐의 폭력과 위기</h2>
+    <p class="section-sub">La violence de la monnaie &mdash; 모방적 욕망과 위기의 메커니즘</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="crisis-flow">
+    <div class="crisis-step">
+      <div class="crisis-line"><div class="crisis-dot" style="--step-color: var(--navy)"></div><div class="crisis-connector"></div></div>
+      <div class="crisis-content">
+        <h4 style="--step-color: var(--navy)">1. 모방적 욕망 (D&eacute;sir mim&eacute;tique)</h4>
+        <p>Ren&eacute; Girard의 이론에 기초. 화폐에 대한 욕망은 타인의 욕망을 모방한 결과. 모든 사람이 동일한 화폐를 욕망함으로써 화폐가 보편적 가치를 획득한다. 그러나 이 모방적 욕망은 잠재적 폭력을 내포한다.</p>
+      </div>
+    </div>
+    <div class="crisis-step">
+      <div class="crisis-line"><div class="crisis-dot" style="--step-color: var(--orange)"></div><div class="crisis-connector"></div></div>
+      <div class="crisis-content">
+        <h4 style="--step-color: var(--orange)">2. 부의 유동성에 대한 욕망 (Liquidit&eacute;)</h4>
+        <p>화폐는 순수한 유동성의 욕구를 체현한다. 부채를 부로 전환하려는 욕망이 지불 공동체의 단일한 계산 체계를 위협. 화폐의 경제적 사용(가치 저장, 투기)이 화폐 고유의 순환 기능과 충돌한다.</p>
+      </div>
+    </div>
+    <div class="crisis-step">
+      <div class="crisis-line"><div class="crisis-dot" style="--step-color: var(--red)"></div><div class="crisis-connector"></div></div>
+      <div class="crisis-content">
+        <h4 style="--step-color: var(--red)">3. 인플레이션 위기 (Crise inflationniste)</h4>
+        <p><strong>계산 단위의 위기</strong> → 화폐 간 차이가 사라지는 <strong>탈분화</strong>(ind&eacute;ff&eacute;renciation). 여러 화폐가 경쟁하며 기존 계산 단위에 대한 신뢰가 무너짐. 투기가 화폐 간 경쟁을 부추기고, 궁극적으로 초인플레이션으로 귀결.</p>
+      </div>
+    </div>
+    <div class="crisis-step">
+      <div class="crisis-line"><div class="crisis-dot" style="--step-color: #4a1a6b"></div><div class="crisis-connector"></div></div>
+      <div class="crisis-content">
+        <h4 style="--step-color: #4a1a6b">4. 디플레이션 위기 (Crise d&eacute;flationniste)</h4>
+        <p><strong>가치 관계의 위기</strong> → 화폐가 지나치게 경직되어 경제 활동이 위축. 채무자에 대한 폭력의 귀환. 유통 수단의 위기.</p>
+      </div>
+    </div>
+    <div class="crisis-step">
+      <div class="crisis-line"><div class="crisis-dot" style="--step-color: var(--gold)"></div></div>
+      <div class="crisis-content">
+        <h4 style="--step-color: var(--gold)">5. 위기의 해소</h4>
+        <p>새로운 화폐의 선출(FI: 화폐적 제도), 또는 기존 화폐의 재정당화. 어떤 경우든 <strong>주권과 신뢰의 재구성</strong>이 필수. 화폐 위기는 항상 정치적 위기이기도 하다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. 물물교환 신화 ═══ -->
+<section class="section" id="s6" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding-left: calc((100% - 1100px)/2 + 2rem); padding-right: calc((100% - 1100px)/2 + 2rem);">
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <h2 class="section-title">물물교환 신화의 해체</h2>
+    <p class="section-sub">Le troc, phantasme sur la monnaie marchande</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="tripod-cards">
+    <div class="tripod-card" style="--card-color: var(--red)">
+      <h3>신화: 물물교환 → 화폐</h3>
+      <div class="fr">La fable du troc</div>
+      <p>아담 스미스 이래 주류 경제학의 기원 서사: 물물교환의 불편함("이중적 욕구의 일치")을 해결하기 위해 화폐가 발명되었다.</p>
+      <ul>
+        <li>화폐는 시장의 <strong>산물</strong></li>
+        <li>화폐는 교환의 <strong>수단</strong>일 뿐</li>
+        <li>화폐 없이도 경제는 가능</li>
+      </ul>
+    </div>
+    <div class="tripod-card" style="--card-color: var(--green)">
+      <h3>현실: 부채 → 화폐</h3>
+      <div class="fr">Il y a monnaie dans toutes les soci&eacute;t&eacute;s</div>
+      <p>인류학적·역사적 증거: 순수한 물물교환 사회는 발견된 적이 없다. 화폐적 실천은 모든 사회에 보편적으로 존재한다.</p>
+      <ul>
+        <li>화폐는 시장의 <strong>전제 조건</strong></li>
+        <li>주화의 등장은 상업이 아닌 <strong>정치적·종교적</strong> 맥락에서</li>
+        <li>화폐 = fait social total (총체적 사회적 사실)</li>
+      </ul>
+    </div>
+    <div class="tripod-card" style="--card-color: var(--blue)">
+      <h3>함의: 화폐의 복수성</h3>
+      <div class="fr">Pluralit&eacute; des monnaies</div>
+      <p>하나의 사회에 하나의 화폐만 있는 것이 아니다. 다양한 교환 영역에 다양한 화폐가 존재하며, 이는 보편적 현상이다.</p>
+      <ul>
+        <li>시장·국가·가족 = 3대 거래 영역</li>
+        <li>각 영역에 고유한 지불 수단</li>
+        <li>단일 화폐 = 근대적 예외</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. 좋은 화폐 ═══ -->
+<section class="section" id="s7">
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <h2 class="section-title">"좋은 화폐"란 무엇인가?</h2>
+    <p class="section-sub">Qu'est-ce qu'une bonne monnaie? &mdash; 두 가지 관점의 모순</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="tripod-cards" style="grid-template-columns: 1fr 1fr;">
+    <div class="tripod-card" style="--card-color: var(--red)">
+      <h3>정치-상징적으로 좋은 화폐</h3>
+      <div class="fr">Bonne monnaie politique</div>
+      <p><strong>강하고, 안정적이며, 주권의 정당성을 체현하는 화폐.</strong></p>
+      <ul>
+        <li>Locke의 입장: 화폐의 가치는 자연상태에서 합의된 것, 국가도 변경 불가</li>
+        <li>화폐 = 자유주의적 질서의 상징적 기초</li>
+        <li>경향: <strong>과대평가, 디플레이션적</strong></li>
+        <li>역사적 사례: 1696년 영국 대주화개혁, 유로화 도입</li>
+      </ul>
+    </div>
+    <div class="tripod-card" style="--card-color: var(--green)">
+      <h3>경제적으로 좋은 화폐</h3>
+      <div class="fr">Bonne monnaie &eacute;conomique</div>
+      <p><strong>풍부하고, 유통이 원활하며, 거래를 촉진하는 화폐.</strong></p>
+      <ul>
+        <li>Lowndes/Davenant의 입장: 주조 제도는 경제적 필요에 부합해야</li>
+        <li>화폐 = 경제 활동의 윤활유</li>
+        <li>경향: <strong>적절한 평가, 인플레이션적</strong></li>
+        <li>그레셤의 법칙 재해석: "나쁜 화폐"가 사실은 유통에 더 좋은 화폐</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    "화폐적 관점에서 보면, 그레셤의 법칙에서 좋은 화폐를 쫓아내는 '나쁜 화폐'야말로
+    사실은 부채의 순환과 지불 체계의 역동적 재생산에 봉사하는 '좋은 화폐'이다."
+    <cite>— Bruno Th&eacute;ret, "Les trois &eacute;tats de la monnaie" (7장)</cite>
+  </div>
+</section>
+
+<!-- ═══ 8. 사상가들 ═══ -->
+<section class="section" id="s8" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding-left: calc((100% - 1100px)/2 + 2rem); padding-right: calc((100% - 1100px)/2 + 2rem);">
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <h2 class="section-title">핵심 사상가들</h2>
+    <p class="section-sub">프랑스 제도주의 화폐 이론의 지적 계보</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="thinkers-grid">
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--red)">MO</div>
+      <h4>Marcel Mauss</h4>
+      <div class="period">인류학</div>
+      <p>증여론(Essai sur le don). 화폐 = <strong>총체적 사회적 사실</strong>. 화폐의 보편성을 증여와 부채의 관점에서 기초.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--blue)">&Eacute;D</div>
+      <h4>&Eacute;mile Durkheim</h4>
+      <div class="period">사회학</div>
+      <p>화폐의 <strong>사회적 권력</strong>. 화폐는 개인을 초월하는 집합적 힘으로서 사회적 응집력을 구현한다.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--green)">GS</div>
+      <h4>Georg Simmel</h4>
+      <div class="period">사회철학</div>
+      <p>화폐철학(Philosophie des Geldes). 화폐 = <strong>신뢰의 결정체</strong>. 신뢰와 상호작용의 관점에서 화폐를 재구성.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--purple)">RG</div>
+      <h4>Ren&eacute; Girard</h4>
+      <div class="period">인류학·철학</div>
+      <p>모방적 욕망과 <strong>희생양 메커니즘</strong>. Aglietta &amp; Orl&eacute;an이 화폐의 폭력을 설명하는 이론적 기초.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--gold)">KP</div>
+      <h4>Karl Polanyi</h4>
+      <div class="period">경제인류학</div>
+      <p>경제의 사회적 <strong>배태성</strong>(embeddedness). 시장경제의 탈배태와 화폐의 상품화 비판.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--teal)">AO</div>
+      <h4>Aglietta &amp; Orl&eacute;an</h4>
+      <div class="period">경제학 (1세대)</div>
+      <p><em>La violence de la monnaie</em>(1982), <em>La monnaie souveraine</em>(1998). 프로그램의 창시자. 화폐의 <strong>폭력과 신뢰</strong> 이론.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--navy)">BT</div>
+      <h4>Bruno Th&eacute;ret</h4>
+      <div class="period">경제학 (2세대)</div>
+      <p>화폐의 <strong>세 가지 상태</strong> 이론. Bourdieu의 문화자본론을 화폐에 적용. 본서 편집자.</p>
+    </div>
+    <div class="thinker">
+      <div class="thinker-init" style="background: var(--orange)">JS</div>
+      <h4>Jean-Michel Servet</h4>
+      <div class="period">경제사·인류학</div>
+      <p>물물교환 신화의 해체. 화폐적 실천의 <strong>보편성</strong>을 역사적·인류학적으로 입증.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. 종합 매트릭스 ═══ -->
+<section class="section" id="s9">
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <h2 class="section-title">종합 매트릭스</h2>
+    <p class="section-sub">화폐의 구조적 내밀함 — Th&eacute;ret의 종합</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th>화폐의 상태 ↓ / 속성 →</th>
+          <th>계산<br><small>(Compte)</small></th>
+          <th>주조<br><small>(Monnayage)</small></th>
+          <th>지불<br><small>(Paiement)</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>체화된 상태<br><small>(Incorpor&eacute;e)</small></td>
+          <td class="highlight-cell">계산 단위의 내면화<br><small>= 화폐 언어의 습득</small></td>
+          <td>주조 규칙의 내면화<br><small>= 화폐 질서의 정당성 인식</small></td>
+          <td>지불 루틴의 체화<br><small>= 방법적 신뢰</small></td>
+        </tr>
+        <tr>
+          <td>객체화된 상태<br><small>(Objectiv&eacute;e)</small></td>
+          <td>계산 장치<br><small>= 장부, 계산기</small></td>
+          <td>주조된 사물<br><small>= 동전, 지폐, 토큰</small></td>
+          <td class="highlight-cell">지불 수단의 물질성<br><small>= 구체적 지불 행위</small></td>
+        </tr>
+        <tr>
+          <td>제도화된 상태<br><small>(Institutionnalis&eacute;e)</small></td>
+          <td>계산 단위 명명 규칙<br><small>= 누가 단위를 정하는가</small></td>
+          <td class="highlight-cell">주조 규제 체계<br><small>= 발행 권한, 중앙은행</small></td>
+          <td>지불 공동체의 경계<br><small>= 누구와 거래 가능한가</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="text-align:center; color:var(--muted); font-size:0.8rem; margin-top:1rem;">
+    <strong style="color:var(--gold)">강조된 셀</strong> = 각 상태에서 지배적인 속성 (Th&eacute;ret, 2008)
+  </p>
+
+  <div class="quote-block" style="margin-top:2.5rem">
+    "화폐는 동시에 정신적이고 사회적인, 개인적이고 집합적인, 관념적이고 물질적인 사실이며,
+    경제적·정치적·상징적 성격을 동시에 지닌다.
+    화폐야말로 총체적 사회적 사실(fait social total)의 전형이다."
+    <cite>— Bruno Th&eacute;ret, "Les trois &eacute;tats de la monnaie"</cite>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <p>Bruno Th&eacute;ret (dir.), <em>Th&eacute;ories fran&ccedil;aises de la monnaie</em>, PUF, 2016</p>
+  <p style="margin-top:0.3rem">Pierre Alary, J&eacute;r&ocirc;me Blanc &amp; Ludovic Desmedt (편집 서론)</p>
+  <p style="margin-top:1rem"><a href="/">← 블로그로 돌아가기</a></p>
+</footer>
+
+<script>
+// TOC active state
+const sections = document.querySelectorAll('.section[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  tocLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+
+// Smooth scroll for toc
+tocLinks.forEach(l => {
+  l.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(l.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
