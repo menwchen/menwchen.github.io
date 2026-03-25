@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프랑스 혁명 AI 인터랙티브 프레젠테이션"
-date: 2026-03-26
+date: 2026-03-26 23:59:00 +0900
 tags: [역사, 프랑스혁명, AI, 인터랙티브, Claude]
 description: "John Hardman의 '프랑스 혁명: 정치사'를 15장 슬라이드로 요약하고, Claude AI를 내장하여 발표 중 실시간 질의응답이 가능한 인터랙티브 프레젠테이션."
 ---
