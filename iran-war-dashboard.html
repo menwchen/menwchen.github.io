@@ -1,0 +1,355 @@
+---
+layout: null
+title: "미·이란 전쟁 진단 & 한국 영향 분석 — 인터랙티브 대시보드"
+permalink: /iran-war-dashboard.html
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미·이란 전쟁 진단 & 한국 영향 분석</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    background: #f5f5f0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 24px 16px;
+  }
+  .container { max-width: 860px; margin: 0 auto; background: #fff; border-radius: 14px; padding: 28px 28px 36px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+  :root {
+    --border: rgba(0,0,0,0.12);
+    --border-light: rgba(0,0,0,0.07);
+    --bg-secondary: #f8f8f6;
+    --text-secondary: #666;
+    --text-tertiary: #999;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --blue-mid: #B5D4F4;
+    --red: #E24B4A;
+    --red-light: #FCEBEB;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --green: #3B6D11;
+    --green-light: #EAF3DE;
+  }
+  .top-bar { display: flex; align-items: flex-start; gap: 12px; padding-bottom: 18px; border-bottom: 0.5px solid var(--border); margin-bottom: 20px; }
+  .top-badge { font-size: 11px; padding: 3px 9px; border-radius: 4px; font-weight: 600; background: var(--red-light); color: var(--red); white-space: nowrap; margin-top: 4px; }
+  .top-title { font-size: 20px; font-weight: 600; color: #1a1a1a; flex: 1; }
+  .top-date { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 22px; flex-wrap: wrap; }
+  .tab { font-size: 13px; padding: 6px 15px; border-radius: 6px; border: 0.5px solid var(--border); color: var(--text-secondary); cursor: pointer; background: transparent; font-family: inherit; transition: all 0.15s; }
+  .tab:hover { background: var(--bg-secondary); color: #1a1a1a; }
+  .tab.active { background: var(--blue-light); color: var(--blue); border-color: var(--blue-mid); font-weight: 600; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .metric { background: var(--bg-secondary); border-radius: 8px; padding: 12px 14px; }
+  .metric-label { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
+  .metric-val { font-size: 22px; font-weight: 600; color: #1a1a1a; line-height: 1.1; }
+  .metric-sub { font-size: 11px; margin-top: 3px; }
+  .up { color: var(--red); } .dn { color: var(--green); } .neu { color: var(--text-secondary); }
+  .tl { position: relative; padding-left: 22px; }
+  .tl::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 0.5px; background: var(--border); }
+  .tl-item { position: relative; margin-bottom: 18px; }
+  .tl-item::before { content: ''; position: absolute; left: -19px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #bbb; }
+  .tl-item.key::before { background: var(--red); width: 10px; height: 10px; left: -20px; top: 5px; }
+  .tl-item.mod::before { background: var(--amber); }
+  .tl-date { font-size: 11px; color: var(--text-secondary); margin-bottom: 2px; }
+  .tl-head { font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 3px; }
+  .tl-body { font-size: 13px; color: #555; line-height: 1.55; }
+  .tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 3px; margin-left: 7px; font-weight: 600; }
+  .tag-r { background: var(--red-light); color: #A32D2D; }
+  .tag-a { background: var(--amber-light); color: #854F0B; }
+  .tag-b { background: var(--blue-light); color: var(--blue); }
+  .section-title { font-size: 11px; font-weight: 700; color: var(--text-secondary); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.07em; }
+  .cards-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .sc-card { border: 0.5px solid var(--border); border-radius: 10px; padding: 16px; background: #fff; }
+  .sc-card.featured { border-color: var(--blue-mid); border-width: 1.5px; }
+  .sc-head { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .sc-prob { font-size: 11px; margin-bottom: 10px; }
+  .sc-items { list-style: none; }
+  .sc-items li { font-size: 12px; color: #555; padding: 4px 0; border-top: 0.5px solid var(--border-light); line-height: 1.45; }
+  .sc-items li:first-child { border-top: none; }
+  .bar-wrap { margin-bottom: 16px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .bar-label { font-size: 12px; color: var(--text-secondary); min-width: 90px; }
+  .bar-track { flex: 1; height: 10px; background: var(--bg-secondary); border-radius: 99px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 99px; }
+  .bar-pct { font-size: 12px; font-weight: 600; min-width: 38px; text-align: right; }
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .impact-box { border: 0.5px solid var(--border); border-radius: 8px; padding: 14px; }
+  .impact-icon { font-size: 16px; margin-bottom: 6px; }
+  .impact-title { font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+  .impact-desc { font-size: 12px; color: #555; line-height: 1.55; }
+  .slider-section { margin-bottom: 20px; }
+  .slider-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .slider-row label { font-size: 13px; color: var(--text-secondary); min-width: 110px; }
+  .slider-row input[type=range] { flex: 1; accent-color: var(--blue); }
+  .slider-row .val { font-size: 13px; font-weight: 600; min-width: 60px; text-align: right; color: #1a1a1a; }
+  .result-box { background: var(--bg-secondary); border-radius: 8px; padding: 16px; }
+  .result-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 0.5px solid var(--border-light); font-size: 13px; }
+  .result-row:last-child { border-bottom: none; }
+  .result-key { color: var(--text-secondary); }
+  .result-val { font-weight: 600; }
+  .chart-wrap { position: relative; width: 100%; height: 230px; margin-bottom: 20px; }
+  .note { font-size: 11px; color: var(--text-tertiary); margin-top: 6px; line-height: 1.5; }
+  .divider { height: 0.5px; background: var(--border-light); margin: 20px 0; }
+  .back-link { display: inline-block; margin-bottom: 20px; font-size: 13px; color: var(--blue); text-decoration: none; }
+  .back-link:hover { text-decoration: underline; }
+  @media (max-width: 500px) {
+    .impact-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 16px 28px; }
+    .top-title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back-link">← 블로그로 돌아가기</a>
+
+  <div class="top-bar">
+    <div style="flex:1">
+      <div class="top-title">미·이란 전쟁 진단 &amp; 한국 영향 분석</div>
+      <div class="top-date">2026년 3월 기준 — 상황 급변 중</div>
+    </div>
+    <span class="top-badge">진행 중</span>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('timeline', this)">타임라인</button>
+    <button class="tab" onclick="switchTab('status', this)">현황·주요 지표</button>
+    <button class="tab" onclick="switchTab('scenario', this)">전망 시나리오</button>
+    <button class="tab" onclick="switchTab('korea', this)">한국 경제·삶 영향</button>
+    <button class="tab" onclick="switchTab('calc', this)">유가 영향 시뮬레이터</button>
+  </div>
+
+  <!-- 타임라인 -->
+  <div id="tab-timeline" class="panel active">
+    <div class="section-title">전쟁 발발 배경 &amp; 주요 경과</div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">2023년 10월</div>
+        <div class="tl-head">하마스 기습 공격 — 중동 위기 시작</div>
+        <div class="tl-body">하마스의 이스라엘 침공으로 이란이 지원하는 '저항의 축' 전선이 동시 활성화. 분쟁 구조의 씨앗이 됨.</div>
+      </div>
+      <div class="tl-item mod">
+        <div class="tl-date">2024년 4월 &amp; 10월</div>
+        <div class="tl-head">이란·이스라엘 미사일 교환<span class="tag tag-a">확전 전조</span></div>
+        <div class="tl-body">이란 드론·미사일 300여 기 발사. 헤즈볼라 지휘부 제거에 대한 보복으로 탄도미사일 180여 발 응사. 직접 충돌 패턴 고착.</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">2025년 6월 13일</div>
+        <div class="tl-head">라이징 라이언 작전<span class="tag tag-r">전쟁 개시</span></div>
+        <div class="tl-body">이스라엘, 이란 핵시설·군사기지 100곳+ 기습 공습. IRGC 사령관·핵 과학자 다수 사망. 이란, 전쟁 상태 선포. 나탄즈 핵시설 파괴. 이란-이라크 전쟁 후 최대 규모.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025년 6월 25일</div>
+        <div class="tl-head">트럼프 중재 — 1차 휴전</div>
+        <div class="tl-body">이란, 탄도미사일 550발·드론 1,000여 기로 보복(트루 프로미스 III 작전). 미국 중재로 6.25 휴전. 이란 핵시설 복구 시도 지속.</div>
+      </div>
+      <div class="tl-item mod">
+        <div class="tl-date">2025년 하반기</div>
+        <div class="tl-head">이란 내부 붕괴 가속<span class="tag tag-a">정세 변동</span></div>
+        <div class="tl-body">초인플레이션·세금 인상에 반정부 시위 폭발. 핵시설 복구 천명 vs. 내부 분열. IAEA, 20년 만에 이란 핵 의무 불이행 판단.</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">2026년 2월 28일</div>
+        <div class="tl-head">에픽 퓨리 작전 — 미·이스라엘 합동 공습<span class="tag tag-r">전면전</span></div>
+        <div class="tl-body">핵시설 완전 파괴 목적으로 미국 직접 참전. 하메네이 최고지도자 사망. 이란 수뇌부 와해. 이란, 중동 9개국 미군기지·이스라엘 향해 500발+ 미사일·2,000여 드론 발사.</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">2026년 3월 (현재)</div>
+        <div class="tl-head">호르무즈 봉쇄 &amp; 전선 확대<span class="tag tag-r">진행 중</span></div>
+        <div class="tl-body">이란, 호르무즈 해협 봉쇄 선언. 통행량 평시 대비 30%+ 급감. WTI 유가 111달러 돌파. 모즈타바 하메네이 신임 지도자로 부상. 레바논·예멘 전선 재활성화.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 현황 지표 -->
+  <div id="tab-status" class="panel">
+    <div class="section-title">핵심 지표 — 2026년 3월</div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-label">WTI 유가</div><div class="metric-val up">$111</div><div class="metric-sub up">▲ 개전 대비 +67%</div></div>
+      <div class="metric"><div class="metric-label">브렌트유</div><div class="metric-val up">$114</div><div class="metric-sub up">▲ 코로나 이후 최고</div></div>
+      <div class="metric"><div class="metric-label">코스피</div><div class="metric-val up">-7.24%</div><div class="metric-sub neu">개전 후 급락</div></div>
+      <div class="metric"><div class="metric-label">원/달러 환율</div><div class="metric-val up">1,467원</div><div class="metric-sub up">▲ 달러 강세</div></div>
+      <div class="metric"><div class="metric-label">국내 휘발유</div><div class="metric-val up">1,900원+</div><div class="metric-sub up">▲ 리터당 최고치</div></div>
+      <div class="metric"><div class="metric-label">해운 운임</div><div class="metric-val up">+20%</div><div class="metric-sub up">▲ 보험료 포함</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">호르무즈 해협 — 한국 의존도</div>
+    <div class="bar-wrap">
+      <div class="bar-row"><span class="bar-label">원유 (중동)</span><div class="bar-track"><div class="bar-fill" style="width:70.7%;background:var(--red)"></div></div><span class="bar-pct up">70.7%</span></div>
+      <div class="bar-row"><span class="bar-label">원유 (호르무즈)</span><div class="bar-track"><div class="bar-fill" style="width:95%;background:var(--red)"></div></div><span class="bar-pct up">95%</span></div>
+      <div class="bar-row"><span class="bar-label">LNG (중동)</span><div class="bar-track"><div class="bar-fill" style="width:20.4%;background:var(--amber)"></div></div><span class="bar-pct" style="color:var(--amber)">20.4%</span></div>
+      <div class="bar-row"><span class="bar-label">LNG (호르무즈)</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--amber)"></div></div><span class="bar-pct" style="color:var(--amber)">20%</span></div>
+    </div>
+    <div class="note">* 봉쇄 시 우회 수송 비용 50~80% 추가 상승 전망 (대체 루트 하루 처리량은 필요량의 1/7 수준)</div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">피해 현황 (2026년 3월 기준)</div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-label">이란 사망</div><div class="metric-val">1,845+</div><div class="metric-sub neu">민간 포함</div></div>
+      <div class="metric"><div class="metric-label">이란 부상</div><div class="metric-val">14,000+</div></div>
+      <div class="metric"><div class="metric-label">미국 사망</div><div class="metric-val">9명</div><div class="metric-sub neu">부상 150명</div></div>
+      <div class="metric"><div class="metric-label">이스라엘 사망</div><div class="metric-val">18명</div><div class="metric-sub neu">부상 2,000+</div></div>
+    </div>
+  </div>
+
+  <!-- 시나리오 -->
+  <div id="tab-scenario" class="panel">
+    <div class="section-title">향후 전망 — 3가지 시나리오</div>
+    <div class="cards-3">
+      <div class="sc-card featured">
+        <div class="sc-head" style="color:var(--blue)">시나리오 ① 조기 협상·휴전</div>
+        <div class="sc-prob" style="color:var(--blue)">가능성: 중상 (전문가 다수 전망)</div>
+        <ul class="sc-items">
+          <li>이란 지휘 체계 마비로 장기전 수행 능력 저하</li>
+          <li>트럼프 외교 일정(방중·대화) 압력</li>
+          <li>새 지도자 선출(40일) 집중 필요</li>
+          <li>유가 $65~75 수준 회귀 가능</li>
+          <li>한국 코스피 반등 기대</li>
+        </ul>
+      </div>
+      <div class="sc-card">
+        <div class="sc-head" style="color:var(--amber)">시나리오 ② 국지전 장기화</div>
+        <div class="sc-prob" style="color:var(--amber)">가능성: 중 (현재 진행 방향)</div>
+        <ul class="sc-items">
+          <li>호르무즈 부분 봉쇄 지속</li>
+          <li>유가 $75~100 구간 유지</li>
+          <li>한국 스태그플레이션 위험 고조</li>
+          <li>해운 운임·보험료 장기 고공 행진</li>
+          <li>건설·플랜트 수출 차질 지속</li>
+        </ul>
+      </div>
+      <div class="sc-card">
+        <div class="sc-head" style="color:var(--red)">시나리오 ③ 전면 확전</div>
+        <div class="sc-prob" style="color:var(--red)">가능성: 저~중 (최악 시나리오)</div>
+        <ul class="sc-items">
+          <li>러시아·중국 이란 직접 지원</li>
+          <li>헤즈볼라·후티 전면 참전</li>
+          <li>유가 $150+ (경기 침체 촉발)</li>
+          <li>코스피 5,000선 이하 가능성</li>
+          <li>글로벌 식량·비료 위기 동반</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">시나리오별 한국 경제 충격 예상</div>
+    <div class="bar-wrap">
+      <div class="bar-row"><span class="bar-label">① 조기 협상</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--green)"></div></div><span class="bar-pct dn">경미</span></div>
+      <div class="bar-row"><span class="bar-label">② 국지전 지속</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--amber)"></div></div><span class="bar-pct" style="color:var(--amber)">중간</span></div>
+      <div class="bar-row"><span class="bar-label">③ 전면 확전</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:var(--red)"></div></div><span class="bar-pct up">심각</span></div>
+    </div>
+    <div class="note">* 시나리오는 상호 배타적이지 않으며 단계적 이행 가능. 향후 3~6개월 내 분수령 도달 전망.</div>
+  </div>
+
+  <!-- 한국 영향 -->
+  <div id="tab-korea" class="panel">
+    <div class="section-title">경제 영향</div>
+    <div class="impact-grid">
+      <div class="impact-box"><div class="impact-icon">▲</div><div class="impact-title">에너지 비용 급등</div><div class="impact-desc">원유 70%+ 중동 의존. 수입 원유 95% 호르무즈 통과. 봉쇄 장기화 시 대체 루트 수송 비용 50~80% 추가 상승.</div></div>
+      <div class="impact-box"><div class="impact-icon">▲</div><div class="impact-title">물가·인플레이션</div><div class="impact-desc">유가 $100 돌파 시 CPI 0.6~0.7%p 추가 상승. 전기·가스요금 인상 압력. 화학·정유업계 원료비 급등.</div></div>
+      <div class="impact-box"><div class="impact-icon">▼</div><div class="impact-title">성장률 하락</div><div class="impact-desc">정부·한은 '2% 성장 목표' 수정 불가피. 저성장·고물가 스태그플레이션 위험. 글로벌 경기 침체 연동.</div></div>
+      <div class="impact-box"><div class="impact-icon">▼</div><div class="impact-title">금융시장 충격</div><div class="impact-desc">코스피 개전 후 7.24% 급락. 유가 $100+ 장기화 시 5,000선 초반 하락 가능성. 원/달러 1,467원 돌파.</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">국민 삶 영향</div>
+    <div class="impact-grid">
+      <div class="impact-box"><div class="impact-icon">▲</div><div class="impact-title">교통·연료비</div><div class="impact-desc">국내 휘발유 한때 리터당 1,900원+ 돌파. 개전 이전 1,600원대 대비 20%+ 급등. 물류·배달비 연쇄 인상.</div></div>
+      <div class="impact-box"><div class="impact-icon">▲</div><div class="impact-title">식품·생활물가</div><div class="impact-desc">비료·LNG 수송 차질로 식료품 가격 장기 상승. UN 세계식량계획 "식량 안보 위협" 경고.</div></div>
+      <div class="impact-box"><div class="impact-icon">▲</div><div class="impact-title">전기·가스 요금</div><div class="impact-desc">LNG 20% 호르무즈 의존. 봉쇄 지속 시 공공요금 인상 압력. 한국 가스공사 수입 비용 급증.</div></div>
+      <div class="impact-box"><div class="impact-icon">▶</div><div class="impact-title">방산·원전 기회</div><div class="impact-desc">지정학 불안 속 방산주 수혜. 에너지 전환 모멘텀 가속. 중동 건설·플랜트 수출은 단기 차질 불가피.</div></div>
+    </div>
+    <div class="note">* 긍정 수혜(▶) 포함. 장기적으로 에너지 다변화·전환의 전략적 계기가 될 수 있음.</div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">유가 시나리오별 코스피 전망 (KB자산운용)</div>
+    <div class="chart-wrap"><canvas id="kospiChart"></canvas></div>
+  </div>
+
+  <!-- 시뮬레이터 -->
+  <div id="tab-calc" class="panel">
+    <div class="section-title">유가 충격 영향 시뮬레이터</div>
+    <div class="slider-section">
+      <div class="slider-row">
+        <label>국제 유가 ($/배럴)</label>
+        <input type="range" id="sl-oil" min="60" max="150" value="111" step="1" oninput="calcImpact()">
+        <span class="val" id="out-oil">$111</span>
+      </div>
+      <div class="slider-row">
+        <label>봉쇄 지속 (주)</label>
+        <input type="range" id="sl-weeks" min="1" max="20" value="4" step="1" oninput="calcImpact()">
+        <span class="val" id="out-weeks">4주</span>
+      </div>
+    </div>
+    <div class="result-box">
+      <div class="result-row"><span class="result-key">국내 휘발유 예상 (리터)</span><span class="result-val up" id="r-gas">—</span></div>
+      <div class="result-row"><span class="result-key">인플레이션 추가 상승</span><span class="result-val up" id="r-cpi">—</span></div>
+      <div class="result-row"><span class="result-key">경제 성장률 영향</span><span class="result-val up" id="r-gdp">—</span></div>
+      <div class="result-row"><span class="result-key">코스피 예상 영향</span><span class="result-val" id="r-kospi">—</span></div>
+      <div class="result-row"><span class="result-key">종합 위험도</span><span class="result-val" id="r-risk">—</span></div>
+    </div>
+    <div class="note" style="margin-top:8px">* 시뮬레이션은 전문가 추정치 기반 참고용 수치입니다. 실제 영향은 다양한 변수에 따라 달라집니다.</div>
+    <div class="divider"></div>
+    <div class="section-title" style="margin-top:12px">정책 대응 과제</div>
+    <div class="tl">
+      <div class="tl-item mod"><div class="tl-head">에너지 비축·다변화</div><div class="tl-body">전략비축유 방출 검토. 공급처 다변화(미주·아프리카). 청해부대 비상 대기 중. LNG 장기 계약 다각화 시급.</div></div>
+      <div class="tl-item mod"><div class="tl-head">외교·균형 전략</div><div class="tl-body">미국 동맹 유지하면서 중동 외교 채널 확보. 이란 현지 교민 안전 확보(대피 70명+ 잔류). 중립국 경유 에너지 수입 검토.</div></div>
+      <div class="tl-item mod"><div class="tl-head">금융·물가 안정</div><div class="tl-body">유류세 인하 연장·확대. 취약계층 에너지 바우처 확대. 금리·환율 관리. 식료품 수급 안정 대책.</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchTab(id, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
+  if (id === 'korea' && !window.chartMade) makeChart();
+}
+function makeChart() {
+  window.chartMade = true;
+  new Chart(document.getElementById('kospiChart'), {
+    type: 'bar',
+    data: {
+      labels: ['① 조기 협상 ($65~75)', '② 국지전 지속 ($75~100)', '③ 전면 확전 ($100+)'],
+      datasets: [{ label: '코스피 예상', data: [6200, 5600, 5050], backgroundColor: ['#3B6D11', '#BA7517', '#E24B4A'], borderRadius: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.parsed.y.toLocaleString() + 'pt' } } },
+      scales: {
+        y: { beginAtZero: false, min: 4500, max: 7000, ticks: { callback: v => v.toLocaleString() + 'pt', font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.06)' } },
+        x: { ticks: { font: { size: 11 }, maxRotation: 0 }, grid: { display: false } }
+      }
+    }
+  });
+}
+function calcImpact() {
+  const oil = parseInt(document.getElementById('sl-oil').value);
+  const weeks = parseInt(document.getElementById('sl-weeks').value);
+  document.getElementById('out-oil').textContent = '$' + oil;
+  document.getElementById('out-weeks').textContent = weeks + '주';
+  const gasPrice = Math.round(1600 + (oil - 60) * 4.5);
+  const cpiAdd = ((oil - 60) * 0.012 + weeks * 0.03).toFixed(1);
+  const gdpImpact = oil > 100 ? '−0.3~0.5%p' : oil > 80 ? '−0.1~0.2%p' : '미미';
+  const kospiDrop = oil > 100 ? '−15~18%' : oil > 80 ? '−5~10%' : '−2~5%';
+  let risk = '낮음', riskClass = 'dn';
+  if (oil > 120 || weeks > 10) { risk = '매우 높음'; riskClass = 'up'; }
+  else if (oil > 100 || weeks > 6) { risk = '높음'; riskClass = 'up'; }
+  else if (oil > 80 || weeks > 3) { risk = '중간'; riskClass = 'neu'; }
+  document.getElementById('r-gas').textContent = gasPrice.toLocaleString() + '원/L';
+  document.getElementById('r-cpi').textContent = '+' + cpiAdd + '%p';
+  document.getElementById('r-gdp').textContent = gdpImpact;
+  const rk = document.getElementById('r-kospi'); rk.textContent = kospiDrop; rk.className = 'result-val up';
+  const rr = document.getElementById('r-risk'); rr.textContent = risk; rr.className = 'result-val ' + riskClass;
+}
+calcImpact();
+</script>
+</body>
+</html>
