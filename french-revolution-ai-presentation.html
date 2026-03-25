@@ -469,10 +469,14 @@ body {
 <div class="modal-overlay" id="apiModal">
   <div class="modal-box">
     <h2>Claude API Key</h2>
-    <p>Anthropic API 키를 입력하면 발표 중 Claude에게 실시간 질문할 수 있습니다.<br>키는 브라우저에만 저장되며 서버로 전송되지 않습니다.</p>
+    <p>Anthropic API 키를 입력하면 발표 중 Claude에게 실시간 질문할 수 있습니다.<br>키는 브라우저 localStorage에만 저장되며 서버로 전송되지 않습니다.</p>
     <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-..." autocomplete="off">
+    <label style="display:flex;align-items:center;gap:0.5rem;color:var(--subtle);font-size:0.8rem;margin-bottom:1rem;justify-content:center;">
+      <input type="checkbox" id="saveKeyCheck" checked style="accent-color:var(--gold);"> 이 브라우저에 키 저장
+    </label>
     <button onclick="saveApiKey()">시작하기</button>
     <span class="skip" onclick="skipApiKey()">API 키 없이 슬라이드만 보기</span>
+    <span class="skip" onclick="clearSavedKey()" id="clearKeyBtn" style="display:none;">저장된 키 삭제</span>
   </div>
 </div>
 
@@ -767,10 +771,7 @@ const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
 // ── API KEY ──
-function saveApiKey() {
-  const key = document.getElementById('apiKeyInput').value.trim();
-  if (!key) return;
-  apiKey = key;
+function activateChat() {
   document.getElementById('apiModal').classList.add('hidden');
   document.getElementById('chatInput').disabled = false;
   document.getElementById('sendBtn').disabled = false;
@@ -779,11 +780,45 @@ function saveApiKey() {
   updateSuggestions();
 }
 
+function saveApiKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) return;
+  apiKey = key;
+  if (document.getElementById('saveKeyCheck').checked) {
+    localStorage.setItem('claude_api_key', key);
+  }
+  activateChat();
+}
+
 function skipApiKey() {
   document.getElementById('apiModal').classList.add('hidden');
   document.getElementById('modelLabel').textContent = 'API 키 없음';
   document.getElementById('statusDot').style.background = 'var(--red)';
 }
+
+function clearSavedKey() {
+  localStorage.removeItem('claude_api_key');
+  document.getElementById('clearKeyBtn').style.display = 'none';
+  document.getElementById('apiKeyInput').value = '';
+}
+
+// 저장된 키 자동 로드
+(function loadSavedKey() {
+  const saved = localStorage.getItem('claude_api_key');
+  if (saved) {
+    apiKey = saved;
+    activateChat();
+  } else {
+    // 저장된 키가 없으면 clearKeyBtn 숨기기
+    document.getElementById('clearKeyBtn').style.display = 'none';
+  }
+
+  // 저장된 키가 있으면 모달에 표시
+  if (saved) {
+    document.getElementById('apiKeyInput').value = saved;
+    document.getElementById('clearKeyBtn').style.display = 'block';
+  }
+})();
 
 // ── SLIDES ──
 function showSlide(n) {
