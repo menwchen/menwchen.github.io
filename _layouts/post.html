@@ -16,13 +16,54 @@
         {% endfor %}
       </div>
       <h1>{{ page.title }}</h1>
-      <p class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</p>
+      <div class="post-meta">
+        <p class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
     </div>
     <div class="post-content">
       {{ content }}
       {% include series-nav.html %}
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
     </div>
   </div>
+
+  <script>
+    // GoatCounter page view count
+    (function() {
+      var path = window.location.pathname;
+      var el = document.getElementById('post-views');
+      if (!el) return;
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var data = JSON.parse(xhr.responseText);
+          el.textContent = '조회 ' + data.count + '회';
+        }
+      };
+      xhr.send();
+    })();
+  </script>
+
   <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
 </body>
 </html>
