@@ -48,20 +48,26 @@
 
   <script>
     // GoatCounter page view count
-    (function() {
-      var path = window.location.pathname;
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
       var el = document.getElementById('post-views');
-      if (!el) return;
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          var data = JSON.parse(xhr.responseText);
-          el.textContent = '조회 ' + data.count + '회';
-        }
-      };
-      xhr.send();
-    })();
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
   </script>
 
   <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
