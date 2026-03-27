@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2800" font-family="'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#0f1029"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff4444"/>
+      <stop offset="100%" stop-color="#ff8866"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4488ff"/>
+      <stop offset="100%" stop-color="#66bbff"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#44cc88"/>
+      <stop offset="100%" stop-color="#66ffaa"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffaa22"/>
+      <stop offset="100%" stop-color="#ffcc44"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#aa44ff"/>
+      <stop offset="100%" stop-color="#cc88ff"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6644"/>
+      <stop offset="50%" stop-color="#ffaa33"/>
+      <stop offset="100%" stop-color="#ff6644"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="2800" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(100,0)"/>
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(300,0)"/>
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(500,0)"/>
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(700,0)"/>
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(900,0)"/>
+    <line x1="0" y1="0" x2="0" y2="2800" stroke="#fff" stroke-width="1" transform="translate(1100,0)"/>
+  </g>
+
+  <!-- ===== TITLE SECTION ===== -->
+  <text x="600" y="80" text-anchor="middle" fill="url(#titleGrad)" font-size="42" font-weight="800" filter="url(#glow)">이란 전쟁 vs 과거 시장 충격</text>
+  <text x="600" y="120" text-anchor="middle" fill="#8899bb" font-size="18">2026 호르무즈 해협 위기 — 역사적 비교 인포그래픽</text>
+  <line x1="200" y1="145" x2="1000" y2="145" stroke="#ff6644" stroke-width="2" opacity="0.5"/>
+
+  <!-- ===== CHART 1: 공급 차질 규모 ===== -->
+  <g transform="translate(0, 180)">
+    <rect x="60" y="0" width="1080" height="420" rx="16" fill="#111128" stroke="#222244" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="100" y="45" fill="#ff8866" font-size="14" font-weight="700">CHART 01</text>
+    <text x="100" y="80" fill="#ffffff" font-size="28" font-weight="700">원유 공급 차질 규모 비교</text>
+    <text x="100" y="105" fill="#667799" font-size="14">하루 차단량 (백만 배럴/일) — 역사상 최대 규모</text>
+
+    <!-- Y axis labels -->
+    <text x="185" y="165" text-anchor="end" fill="#667799" font-size="13">12</text>
+    <text x="185" y="215" text-anchor="end" fill="#667799" font-size="13">10</text>
+    <text x="185" y="265" text-anchor="end" fill="#667799" font-size="13">8</text>
+    <text x="185" y="315" text-anchor="end" fill="#667799" font-size="13">4</text>
+    <text x="185" y="365" text-anchor="end" fill="#667799" font-size="13">2</text>
+
+    <!-- Grid lines -->
+    <line x1="200" y1="160" x2="1080" y2="160" stroke="#223" stroke-width="1"/>
+    <line x1="200" y1="210" x2="1080" y2="210" stroke="#223" stroke-width="1"/>
+    <line x1="200" y1="260" x2="1080" y2="260" stroke="#223" stroke-width="1"/>
+    <line x1="200" y1="310" x2="1080" y2="310" stroke="#223" stroke-width="1"/>
+    <line x1="200" y1="360" x2="1080" y2="360" stroke="#223" stroke-width="1"/>
+
+    <!-- Bar: 2026 이란 전쟁 -->
+    <rect x="240" y="160" width="180" height="220" rx="6" fill="url(#red)" opacity="0.9"/>
+    <text x="330" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">2026</text>
+    <text x="330" y="413" text-anchor="middle" fill="#ff8866" font-size="12">이란 전쟁</text>
+    <text x="330" y="195" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">10+</text>
+    <text x="330" y="215" text-anchor="middle" fill="#ffffff" font-size="11">백만 배럴/일</text>
+
+    <!-- Bar: 1990 걸프전 -->
+    <rect x="480" y="260" width="180" height="120" rx="6" fill="url(#blue)" opacity="0.9"/>
+    <text x="570" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">1990</text>
+    <text x="570" y="413" text-anchor="middle" fill="#6699ff" font-size="12">걸프전</text>
+    <text x="570" y="295" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">~4.3</text>
+    <text x="570" y="315" text-anchor="middle" fill="#ffffff" font-size="11">백만 배럴/일</text>
+
+    <!-- Bar: 2022 우크라이나 -->
+    <rect x="720" y="310" width="180" height="70" rx="6" fill="url(#green)" opacity="0.9"/>
+    <text x="810" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">2022</text>
+    <text x="810" y="413" text-anchor="middle" fill="#66ddaa" font-size="12">우크라이나</text>
+    <text x="810" y="340" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">~1.5</text>
+    <text x="810" y="358" text-anchor="middle" fill="#ffffff" font-size="11">백만 배럴/일</text>
+
+    <!-- Callout -->
+    <rect x="750" y="130" width="310" height="40" rx="8" fill="#ff4444" opacity="0.15"/>
+    <text x="905" y="155" text-anchor="middle" fill="#ff8866" font-size="14" font-weight="700">2026년: 과거 대비 2~7배 규모</text>
+  </g>
+
+  <!-- ===== CHART 2: 유가 급등률 ===== -->
+  <g transform="translate(0, 650)">
+    <rect x="60" y="0" width="1080" height="420" rx="16" fill="#111128" stroke="#222244" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="100" y="45" fill="#ffaa33" font-size="14" font-weight="700">CHART 02</text>
+    <text x="100" y="80" fill="#ffffff" font-size="28" font-weight="700">원유 가격 급등률 비교</text>
+    <text x="100" y="105" fill="#667799" font-size="14">분쟁 발생 후 유가 변동률 (%)</text>
+
+    <!-- Price spike lines (sparkline style) -->
+    <!-- 2026 Iran line -->
+    <polyline points="200,340 300,310 400,260 500,200 600,170 700,155 800,140"
+              fill="none" stroke="#ff5555" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="800" cy="140" r="8" fill="#ff5555"/>
+    <text x="820" y="137" fill="#ff5555" font-size="16" font-weight="800">+80%</text>
+    <text x="820" y="155" fill="#ff8866" font-size="12">2026 이란</text>
+
+    <!-- 1990 Gulf War line -->
+    <polyline points="200,340 300,305 400,270 500,225 600,200 700,195 800,200"
+              fill="none" stroke="#4488ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,4"/>
+    <circle cx="800" cy="200" r="6" fill="#4488ff"/>
+    <text x="820" y="197" fill="#4488ff" font-size="16" font-weight="800">+67%</text>
+    <text x="820" y="215" fill="#6699ff" font-size="12">1990 걸프전</text>
+
+    <!-- 2022 Ukraine line -->
+    <polyline points="200,340 300,320 400,290 500,265 600,255 700,250 800,260"
+              fill="none" stroke="#44cc88" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,4"/>
+    <circle cx="800" cy="260" r="6" fill="#44cc88"/>
+    <text x="820" y="257" fill="#44cc88" font-size="16" font-weight="800">+40%</text>
+    <text x="820" y="275" fill="#66ddaa" font-size="12">2022 우크라이나</text>
+
+    <!-- X axis -->
+    <line x1="200" y1="360" x2="800" y2="360" stroke="#334" stroke-width="1"/>
+    <text x="200" y="385" fill="#667799" font-size="12">분쟁 발생</text>
+    <text x="500" y="385" text-anchor="middle" fill="#667799" font-size="12">2주 후</text>
+    <text x="800" y="385" text-anchor="end" fill="#667799" font-size="12">4주 후</text>
+
+    <!-- Annotation -->
+    <rect x="140" y="130" width="350" height="55" rx="8" fill="#ffaa22" opacity="0.1"/>
+    <text x="160" y="152" fill="#ffcc44" font-size="13" font-weight="600">협상 소식에 급격한 매도세에도 불구하고</text>
+    <text x="160" y="172" fill="#ffcc44" font-size="13" font-weight="600">연초 대비 약 80% 급등 유지</text>
+  </g>
+
+  <!-- ===== CHART 3: S&P 500 비교 ===== -->
+  <g transform="translate(0, 1120)">
+    <rect x="60" y="0" width="1080" height="420" rx="16" fill="#111128" stroke="#222244" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="100" y="45" fill="#aa66ff" font-size="14" font-weight="700">CHART 03</text>
+    <text x="100" y="80" fill="#ffffff" font-size="28" font-weight="700">S&amp;P 500 주식 시장 반응</text>
+    <text x="100" y="105" fill="#667799" font-size="14">분쟁 발생 후 지수 변동 (%)</text>
+
+    <!-- 2026 decline -->
+    <polyline points="200,220 350,230 450,260 550,285 650,290 750,295"
+              fill="none" stroke="#ff5555" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="750" cy="295" r="7" fill="#ff5555"/>
+    <text x="770" y="292" fill="#ff5555" font-size="15" font-weight="800">-12%</text>
+    <text x="770" y="310" fill="#ff8866" font-size="12">2026 (진행 중)</text>
+
+    <!-- 2022 decline -->
+    <polyline points="200,220 350,218 450,215 550,222 650,250 750,310"
+              fill="none" stroke="#44cc88" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,4"/>
+    <circle cx="750" cy="310" r="6" fill="#44cc88"/>
+    <text x="770" y="330" fill="#44cc88" font-size="15" font-weight="800">-21%</text>
+    <text x="770" y="348" fill="#66ddaa" font-size="12">2022 (6개월)</text>
+
+    <!-- 1990 -->
+    <polyline points="200,220 350,240 450,255 550,260 650,250 750,235"
+              fill="none" stroke="#4488ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,4"/>
+    <circle cx="750" cy="235" r="6" fill="#4488ff"/>
+    <text x="770" y="232" fill="#4488ff" font-size="15" font-weight="800">-15%</text>
+    <text x="770" y="250" fill="#6699ff" font-size="12">1990 걸프전</text>
+
+    <!-- Base line -->
+    <line x1="200" y1="220" x2="750" y2="220" stroke="#445" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="190" y="224" text-anchor="end" fill="#667799" font-size="12">0%</text>
+
+    <!-- Warning box -->
+    <rect x="140" y="350" width="400" height="50" rx="8" fill="#ff4444" opacity="0.1"/>
+    <text x="160" y="370" fill="#ff8866" font-size="13" font-weight="600">2022년 교훈: 즉각적 충격보다</text>
+    <text x="160" y="390" fill="#ff8866" font-size="13" font-weight="600">3~6개월 후 2차 파급효과가 더 컸다</text>
+  </g>
+
+  <!-- ===== CHART 4: 국채 수익률 ===== -->
+  <g transform="translate(0, 1590)">
+    <rect x="60" y="0" width="1080" height="420" rx="16" fill="#111128" stroke="#222244" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="100" y="45" fill="#44ddff" font-size="14" font-weight="700">CHART 04</text>
+    <text x="100" y="80" fill="#ffffff" font-size="28" font-weight="700">10년물 국채 수익률 상승 속도</text>
+    <text x="100" y="105" fill="#667799" font-size="14">분쟁 발생 후 수익률 변동 (bp)</text>
+
+    <!-- Comparison table style -->
+    <!-- Headers -->
+    <rect x="140" y="140" width="280" height="45" rx="6" fill="#1a1a35"/>
+    <rect x="440" y="140" width="200" height="45" rx="6" fill="#1a1a35"/>
+    <rect x="660" y="140" width="200" height="45" rx="6" fill="#1a1a35"/>
+    <rect x="880" y="140" width="200" height="45" rx="6" fill="#1a1a35"/>
+    <text x="280" y="168" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="700">시기</text>
+    <text x="540" y="168" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="700">출발 금리</text>
+    <text x="760" y="168" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="700">상승 속도</text>
+    <text x="980" y="168" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="700">위험도</text>
+
+    <!-- Row 1: 2026 -->
+    <rect x="140" y="195" width="280" height="55" rx="6" fill="#ff4444" opacity="0.1"/>
+    <rect x="440" y="195" width="200" height="55" rx="6" fill="#ff4444" opacity="0.05"/>
+    <rect x="660" y="195" width="200" height="55" rx="6" fill="#ff4444" opacity="0.05"/>
+    <rect x="880" y="195" width="200" height="55" rx="6" fill="#ff4444" opacity="0.1"/>
+    <text x="160" y="225" fill="#ff8866" font-size="16" font-weight="700">2026 이란 전쟁</text>
+    <text x="540" y="228" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">높음</text>
+    <text x="760" y="228" text-anchor="middle" fill="#ff5555" font-size="18" font-weight="800">매우 빠름</text>
+    <text x="980" y="220" text-anchor="middle" fill="#ff5555" font-size="24" font-weight="800">●●●</text>
+
+    <!-- Row 2: 2022 -->
+    <rect x="140" y="260" width="280" height="55" rx="6" fill="#44cc88" opacity="0.08"/>
+    <rect x="440" y="260" width="200" height="55" rx="6" fill="#44cc88" opacity="0.04"/>
+    <rect x="660" y="260" width="200" height="55" rx="6" fill="#44cc88" opacity="0.04"/>
+    <rect x="880" y="260" width="200" height="55" rx="6" fill="#44cc88" opacity="0.08"/>
+    <text x="160" y="292" fill="#66ddaa" font-size="16" font-weight="700">2022 우크라이나</text>
+    <text x="540" y="295" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">낮음</text>
+    <text x="760" y="295" text-anchor="middle" fill="#44cc88" font-size="18" font-weight="700">빠름</text>
+    <text x="980" y="287" text-anchor="middle" fill="#44cc88" font-size="24" font-weight="800">●●○</text>
+
+    <!-- Row 3: 1990 -->
+    <rect x="140" y="325" width="280" height="55" rx="6" fill="#4488ff" opacity="0.08"/>
+    <rect x="440" y="325" width="200" height="55" rx="6" fill="#4488ff" opacity="0.04"/>
+    <rect x="660" y="325" width="200" height="55" rx="6" fill="#4488ff" opacity="0.04"/>
+    <rect x="880" y="325" width="200" height="55" rx="6" fill="#4488ff" opacity="0.08"/>
+    <text x="160" y="357" fill="#6699ff" font-size="16" font-weight="700">1990 걸프전</text>
+    <text x="540" y="360" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">높음</text>
+    <text x="760" y="360" text-anchor="middle" fill="#4488ff" font-size="18" font-weight="700">보통</text>
+    <text x="980" y="352" text-anchor="middle" fill="#4488ff" font-size="24" font-weight="800">●○○</text>
+  </g>
+
+  <!-- ===== CHART 5: 비축유 방출 ===== -->
+  <g transform="translate(0, 2060)">
+    <rect x="60" y="0" width="1080" height="380" rx="16" fill="#111128" stroke="#222244" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="100" y="45" fill="#ffcc44" font-size="14" font-weight="700">CHART 05</text>
+    <text x="100" y="80" fill="#ffffff" font-size="28" font-weight="700">전략적 비축유 방출 규모</text>
+    <text x="100" y="105" fill="#667799" font-size="14">미국 기여분 (백만 배럴)</text>
+
+    <!-- Horizontal bars -->
+    <!-- 2022 Biden -->
+    <rect x="300" y="140" width="640" height="60" rx="8" fill="url(#green)" opacity="0.85"/>
+    <text x="280" y="175" text-anchor="end" fill="#66ddaa" font-size="15" font-weight="600">2022 바이든</text>
+    <text x="620" y="178" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800">180</text>
+    <text x="730" y="178" fill="#ffffff" font-size="13">백만 배럴</text>
+
+    <!-- 2026 Trump -->
+    <rect x="300" y="220" width="610" height="60" rx="8" fill="url(#yellow)" opacity="0.85"/>
+    <text x="280" y="255" text-anchor="end" fill="#ffcc44" font-size="15" font-weight="600">2026 트럼프</text>
+    <text x="605" y="258" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800">172</text>
+    <text x="710" y="258" fill="#ffffff" font-size="13">백만 배럴</text>
+
+    <!-- 1991 Gulf War -->
+    <rect x="300" y="300" width="120" height="60" rx="8" fill="url(#blue)" opacity="0.85"/>
+    <text x="280" y="335" text-anchor="end" fill="#6699ff" font-size="15" font-weight="600">1991 걸프전</text>
+    <text x="360" y="338" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800">34</text>
+    <text x="440" y="338" fill="#ffffff" font-size="13">백만 배럴</text>
+  </g>
+
+  <!-- ===== BOTTOM: 한국 시사점 ===== -->
+  <g transform="translate(0, 2490)">
+    <rect x="60" y="0" width="1080" height="260" rx="16" fill="#1a0a0a" stroke="#441111" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="600" y="45" text-anchor="middle" fill="#ff6644" font-size="22" font-weight="800">한국에 대한 시사점</text>
+    <line x1="250" y1="60" x2="950" y2="60" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+
+    <!-- 4 impact cards -->
+    <g transform="translate(100, 80)">
+      <rect x="0" y="0" width="220" height="140" rx="10" fill="#221115" stroke="#442233" stroke-width="1"/>
+      <text x="110" y="35" text-anchor="middle" fill="#ff8866" font-size="30">&#9981;</text>
+      <text x="110" y="65" text-anchor="middle" fill="#ff8866" font-size="16" font-weight="700">에너지 비용</text>
+      <text x="110" y="90" text-anchor="middle" fill="#aaaacc" font-size="12">중동산 원유 수입</text>
+      <text x="110" y="108" text-anchor="middle" fill="#aaaacc" font-size="12">직접적 타격</text>
+      <text x="110" y="130" text-anchor="middle" fill="#ff5555" font-size="14" font-weight="700">HIGH RISK</text>
+    </g>
+
+    <g transform="translate(350, 80)">
+      <rect x="0" y="0" width="220" height="140" rx="10" fill="#151122" stroke="#332244" stroke-width="1"/>
+      <text x="110" y="35" text-anchor="middle" fill="#aa88ff" font-size="30">&#8361;</text>
+      <text x="110" y="65" text-anchor="middle" fill="#aa88ff" font-size="16" font-weight="700">환율 압력</text>
+      <text x="110" y="90" text-anchor="middle" fill="#aaaacc" font-size="12">경상수지 악화</text>
+      <text x="110" y="108" text-anchor="middle" fill="#aaaacc" font-size="12">원화 약세</text>
+      <text x="110" y="130" text-anchor="middle" fill="#ffaa33" font-size="14" font-weight="700">MEDIUM-HIGH</text>
+    </g>
+
+    <g transform="translate(600, 80)">
+      <rect x="0" y="0" width="220" height="140" rx="10" fill="#111522" stroke="#223344" stroke-width="1"/>
+      <text x="110" y="35" text-anchor="middle" fill="#44aaff" font-size="30">&#128200;</text>
+      <text x="110" y="65" text-anchor="middle" fill="#44aaff" font-size="16" font-weight="700">물가 상승</text>
+      <text x="110" y="90" text-anchor="middle" fill="#aaaacc" font-size="12">운송비·석유화학</text>
+      <text x="110" y="108" text-anchor="middle" fill="#aaaacc" font-size="12">가격 전이</text>
+      <text x="110" y="130" text-anchor="middle" fill="#ff5555" font-size="14" font-weight="700">HIGH RISK</text>
+    </g>
+
+    <g transform="translate(850, 80)">
+      <rect x="0" y="0" width="220" height="140" rx="10" fill="#0f1518" stroke="#224433" stroke-width="1"/>
+      <text x="110" y="35" text-anchor="middle" fill="#44cc88" font-size="30">&#9888;</text>
+      <text x="110" y="65" text-anchor="middle" fill="#44cc88" font-size="16" font-weight="700">스태그플레이션</text>
+      <text x="110" y="90" text-anchor="middle" fill="#aaaacc" font-size="12">경기 둔화 +</text>
+      <text x="110" y="108" text-anchor="middle" fill="#aaaacc" font-size="12">인플레이션 동시</text>
+      <text x="110" y="130" text-anchor="middle" fill="#ff5555" font-size="14" font-weight="700">HIGH RISK</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="2780" text-anchor="middle" fill="#445566" font-size="12">출처: WSJ (2026.3.26) 기반 재구성 | menwchen.github.io</text>
+</svg>
