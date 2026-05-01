@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif">
+<rect width="820" height="460" fill="#FBF4E9"/>
+<rect x="20" y="20" width="32" height="4" fill="#E3120B"/>
+<text x="20" y="50" font-size="17" font-weight="700" fill="#1A1A1A">소득 상위층이 끌어올린 실질 소비</text>
+<text x="20" y="70" font-size="12" fill="#5C5C5C">소득계층별 실질 소매지출 누적증가율 (2023년 1월 = 100)</text>
+<line x1="50" y1="380.0" x2="600" y2="380.0" stroke="#1A1A1A" stroke-width="1"/>
+<text x="606" y="384.0" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">96</text>
+<line x1="50" y1="315.55555555555554" x2="600" y2="315.55555555555554" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="606" y="319.55555555555554" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">100</text>
+<line x1="50" y1="251.11111111111111" x2="600" y2="251.11111111111111" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="606" y="255.11111111111111" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">104</text>
+<line x1="50" y1="186.66666666666669" x2="600" y2="186.66666666666669" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="606" y="190.66666666666669" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">108</text>
+<line x1="50" y1="122.22222222222223" x2="600" y2="122.22222222222223" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="606" y="126.22222222222223" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">112</text>
+<text x="50.0" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2023</text>
+<text x="219.2664418212479" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2024</text>
+<text x="388.99662731871837" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2025</text>
+<text x="558.2630691399663" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2026</text>
+<line x1="50" y1="315.55555555555554" x2="600" y2="315.55555555555554" stroke="#1A1A1A" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+<path d="M 50.00,315.56 L 64.38,323.92 L 77.36,353.52 L 91.74,341.96 L 105.65,367.95 L 120.03,358.28 L 133.94,354.64 L 148.31,366.98 L 162.69,371.30 L 176.60,383.55 L 190.98,340.93 L 204.89,344.84 L 219.27,352.01 L 233.64,347.63 L 247.09,341.14 L 261.47,352.64 L 275.38,324.46 L 289.76,339.47 L 303.67,339.11 L 318.04,301.49 L 332.42,298.94 L 346.33,277.86 L 360.71,293.07 L 374.62,280.07 L 389.00,273.25 L 403.37,275.40 L 416.36,266.49 L 430.73,245.47 L 444.65,254.29 L 459.02,236.78 L 472.93,220.91 L 487.31,245.02 L 501.69,251.98 L 515.60,248.33 L 529.97,236.61 L 543.89,239.89 L 558.26,249.14 L 572.64,236.46 L 585.62,294.29" fill="none" stroke="#9E9E9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="604" y="298.29450654011106" font-size="11" font-weight="600" fill="#9E9E9E">저소득 (&lt;$40k)</text>
+<path d="M 50.00,315.56 L 64.38,306.36 L 77.36,336.63 L 91.74,333.02 L 105.65,331.23 L 120.03,331.93 L 133.94,325.03 L 148.31,334.52 L 162.69,314.65 L 176.60,332.98 L 190.98,300.40 L 204.89,287.09 L 219.27,304.62 L 233.64,314.27 L 247.09,311.87 L 261.47,285.53 L 275.38,290.86 L 289.76,287.55 L 303.67,288.57 L 318.04,246.61 L 332.42,252.08 L 346.33,242.17 L 360.71,227.95 L 374.62,222.99 L 389.00,235.29 L 403.37,226.88 L 416.36,204.52 L 430.73,220.41 L 444.65,199.59 L 459.02,215.56 L 472.93,196.89 L 487.31,196.95 L 501.69,223.44 L 515.60,197.30 L 529.97,219.38 L 543.89,199.29 L 558.26,199.40 L 572.64,199.05 L 585.62,262.04" fill="none" stroke="#006BA2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="604" y="266.0419219607223" font-size="11" font-weight="600" fill="#006BA2">중간소득 ($40k–$125k)</text>
+<path d="M 50.00,315.56 L 64.38,311.88 L 77.36,331.31 L 91.74,300.60 L 105.65,322.81 L 120.03,312.17 L 133.94,305.84 L 148.31,312.99 L 162.69,298.64 L 176.60,285.03 L 190.98,259.12 L 204.89,242.02 L 219.27,241.98 L 233.64,247.87 L 247.09,237.55 L 261.47,270.89 L 275.38,234.27 L 289.76,236.65 L 303.67,254.68 L 318.04,201.65 L 332.42,205.08 L 346.33,210.28 L 360.71,199.44 L 374.62,183.37 L 389.00,207.91 L 403.37,197.17 L 416.36,192.65 L 430.73,174.92 L 444.65,169.72 L 459.02,172.44 L 472.93,148.41 L 487.31,152.91 L 501.69,175.61 L 515.60,156.21 L 529.97,168.59 L 543.89,144.87 L 558.26,149.71 L 572.64,154.11 L 585.62,193.13" fill="none" stroke="#E3120B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="604" y="197.13443746572213" font-size="11" font-weight="600" fill="#E3120B">고소득 ($125k+)</text>
+<text x="20" y="438" font-size="10" fill="#5C5C5C">출처: Numerator Consumer Spending Data, NY Fed Economic Heterogeneity Indicators, CPI(Haver Analytics).</text>
+<text x="20" y="452" font-size="10" fill="#5C5C5C">주: 소득그룹별 소매물가 디플레이터로 실질화. 자동차 제외 소매판매.</text>
+</svg>

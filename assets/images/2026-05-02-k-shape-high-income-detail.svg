@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif">
+<rect width="760" height="460" fill="#FBF4E9"/>
+<rect x="20" y="20" width="32" height="4" fill="#E3120B"/>
+<text x="20" y="50" font-size="17" font-weight="700" fill="#1A1A1A">고소득 안에서도 세분화된 격차</text>
+<text x="20" y="70" font-size="12" fill="#5C5C5C">$125k+ 가구의 실질 소매지출 누적증가율 (2023년 1월 = 100)</text>
+<line x1="50" y1="380.0" x2="590" y2="380.0" stroke="#1A1A1A" stroke-width="1"/>
+<text x="596" y="384.0" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">95</text>
+<line x1="50" y1="310.95238095238096" x2="590" y2="310.95238095238096" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="596" y="314.95238095238096" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">100</text>
+<line x1="50" y1="241.90476190476193" x2="590" y2="241.90476190476193" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="596" y="245.90476190476193" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">105</text>
+<line x1="50" y1="172.85714285714286" x2="590" y2="172.85714285714286" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="596" y="176.85714285714286" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">110</text>
+<line x1="50" y1="103.80952380952385" x2="590" y2="103.80952380952385" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="596" y="107.80952380952385" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">115</text>
+<text x="50.0" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2023</text>
+<text x="216.18887015177066" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2024</text>
+<text x="382.83305227655984" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2025</text>
+<text x="549.0219224283305" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2026</text>
+<line x1="50" y1="310.95238095238096" x2="590" y2="310.95238095238096" stroke="#1A1A1A" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+<path d="M 50.00,310.95 L 64.11,303.16 L 76.86,315.98 L 90.98,296.66 L 104.64,320.37 L 118.75,309.69 L 132.41,300.62 L 146.53,307.69 L 160.64,289.71 L 174.30,285.57 L 188.41,269.02 L 202.07,259.75 L 216.19,255.20 L 230.30,268.59 L 243.51,260.81 L 257.62,284.62 L 271.28,262.41 L 285.40,261.30 L 299.06,278.24 L 313.17,233.45 L 327.28,237.05 L 340.94,241.49 L 355.06,228.57 L 368.72,217.09 L 382.83,237.76 L 396.95,226.37 L 409.70,225.50 L 423.81,207.78 L 437.47,191.62 L 451.59,195.81 L 465.24,172.50 L 479.36,176.57 L 493.47,197.38 L 507.13,175.18 L 521.25,184.02 L 534.91,164.30 L 549.02,167.68 L 563.14,169.76 L 575.89,206.51" fill="none" stroke="#9DC3E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,310.95 L 64.11,303.59 L 76.86,321.46 L 90.98,291.98 L 104.64,314.00 L 118.75,295.68 L 132.41,305.43 L 146.53,299.70 L 160.64,301.17 L 174.30,275.12 L 188.41,246.26 L 202.07,234.64 L 216.19,237.06 L 230.30,234.46 L 243.51,231.17 L 257.62,264.34 L 271.28,210.83 L 285.40,213.28 L 299.06,224.30 L 313.17,181.08 L 327.28,180.06 L 340.94,184.43 L 355.06,189.41 L 368.72,171.74 L 382.83,187.03 L 396.95,171.86 L 409.70,160.41 L 423.81,146.55 L 437.47,162.35 L 451.59,175.23 L 465.24,144.86 L 479.36,145.12 L 493.47,163.31 L 507.13,153.08 L 521.25,159.10 L 534.91,130.64 L 549.02,136.10 L 563.14,151.89 L 575.89,180.38" fill="none" stroke="#006BA2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,310.95 L 64.11,300.69 L 76.86,300.16 L 90.98,253.96 L 104.64,288.43 L 118.75,318.04 L 132.41,287.53 L 146.53,297.13 L 160.64,293.48 L 174.30,258.43 L 188.41,226.14 L 202.07,193.05 L 216.19,208.97 L 230.30,202.91 L 243.51,187.36 L 257.62,182.48 L 271.28,170.60 L 285.40,166.98 L 299.06,178.36 L 313.17,126.14 L 327.28,142.16 L 340.94,147.95 L 355.06,144.47 L 368.72,109.54 L 382.83,125.84 L 396.95,129.43 L 409.70,147.17 L 423.81,109.64 L 437.47,95.99 L 451.59,106.85 L 465.24,111.15 L 479.36,69.48 L 493.47,101.41 L 507.13,94.07 L 521.25,86.04 L 534.91,84.16 L 549.02,134.52 L 563.14,134.08 L 575.89,134.49" fill="none" stroke="#E3120B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,310.95 L 64.11,323.79 L 76.86,345.07 L 90.98,311.87 L 104.64,315.27 L 118.75,307.59 L 132.41,305.68 L 146.53,318.76 L 160.64,307.52 L 174.30,295.23 L 188.41,265.29 L 202.07,242.04 L 216.19,238.47 L 230.30,231.82 L 243.51,225.71 L 257.62,257.77 L 271.28,230.33 L 285.40,246.68 L 299.06,255.38 L 313.17,205.93 L 327.28,209.72 L 340.94,209.21 L 355.06,191.72 L 368.72,183.55 L 382.83,215.94 L 396.95,220.18 L 409.70,208.56 L 423.81,194.16 L 437.47,202.08 L 451.59,185.34 L 465.24,173.16 L 479.36,190.38 L 493.47,204.87 L 507.13,193.00 L 521.25,219.34 L 534.91,190.98 L 549.02,196.73 L 563.14,192.03 L 575.89,231.46" fill="none" stroke="#E89B9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="594" y="138.4864877454762" font-size="11" font-weight="600" fill="#E3120B">$225k–250k</text>
+<text x="594" y="184.38167570576198" font-size="11" font-weight="600" fill="#006BA2">$175k–225k</text>
+<text x="594" y="210.51218168542863" font-size="11" font-weight="600" fill="#9DC3E6">$125k–175k</text>
+<text x="594" y="235.45593515404767" font-size="11" font-weight="600" fill="#E89B9A">$250k+</text>
+<text x="20" y="438" font-size="10" fill="#5C5C5C">출처: Numerator Consumer Spending Data, NY Fed EHIs, CPI(Haver Analytics).</text>
+<text x="20" y="452" font-size="10" fill="#5C5C5C">주: 소득구간별 소매물가 디플레이터로 실질화. $250k+ 구간은 외식·교육 등 서비스 비중이 커서 소매 데이터에 일부 누락.</text>
+</svg>

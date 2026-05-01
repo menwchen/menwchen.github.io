@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif">
+<rect width="760" height="460" fill="#FBF4E9"/>
+<rect x="20" y="20" width="32" height="4" fill="#E3120B"/>
+<text x="20" y="50" font-size="17" font-weight="700" fill="#1A1A1A">팬데믹 이전·회복기엔 K자형이 아니었다</text>
+<text x="20" y="70" font-size="12" fill="#5C5C5C">2018–2022년 소득계층별 실질 소매지출 누적증가율 (2018년 1월 = 100)</text>
+<line x1="50" y1="380.0" x2="620" y2="380.0" stroke="#1A1A1A" stroke-width="1"/>
+<text x="626" y="384.0" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">90</text>
+<line x1="50" y1="315.55555555555554" x2="620" y2="315.55555555555554" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="626" y="319.55555555555554" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">100</text>
+<line x1="50" y1="251.11111111111111" x2="620" y2="251.11111111111111" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="626" y="255.11111111111111" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">110</text>
+<line x1="50" y1="186.66666666666669" x2="620" y2="186.66666666666669" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="626" y="190.66666666666669" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">120</text>
+<line x1="50" y1="122.22222222222223" x2="620" y2="122.22222222222223" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="626" y="126.22222222222223" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A">130</text>
+<text x="50.0" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2018</text>
+<text x="189.44369973190348" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2019</text>
+<text x="328.88739946380696" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2020</text>
+<text x="468.7131367292225" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2021</text>
+<text x="608.156836461126" y="398" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif" font-size="11" fill="#1A1A1A" text-anchor="middle">2022</text>
+<rect x="340.7305630026809" y="90" width="22.922252010723867" height="290" fill="#EFE6D4"/>
+<text x="352.1916890080429" y="86" font-size="9" fill="#5C5C5C" text-anchor="middle">경기침체</text>
+<line x1="50" y1="315.55555555555554" x2="620" y2="315.55555555555554" stroke="#1A1A1A" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+<path d="M 50.00,315.56 L 61.84,298.62 L 72.54,306.41 L 84.38,323.18 L 95.84,315.82 L 107.69,324.08 L 119.15,323.87 L 130.99,308.32 L 142.84,316.70 L 154.30,330.15 L 166.14,313.04 L 177.60,310.49 L 189.44,311.71 L 201.29,313.99 L 211.98,324.78 L 223.83,306.65 L 235.29,321.69 L 247.13,323.93 L 258.59,329.19 L 270.44,324.23 L 282.28,319.18 L 293.74,322.54 L 305.58,316.84 L 317.04,319.58 L 328.89,312.86 L 340.73,320.62 L 351.81,335.99 L 363.65,320.43 L 375.11,297.48 L 386.96,284.90 L 398.42,277.72 L 410.26,289.32 L 422.10,282.35 L 433.57,277.23 L 445.41,274.43 L 456.87,284.43 L 468.71,252.48 L 480.56,272.32 L 491.25,209.21 L 503.10,223.14 L 514.56,236.15 L 526.40,253.88 L 537.86,263.44 L 549.71,261.86 L 561.55,258.58 L 573.01,277.12 L 584.85,268.32 L 596.31,279.74 L 608.16,287.08" fill="none" stroke="#E3120B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,315.56 L 61.84,309.69 L 72.54,321.42 L 84.38,326.05 L 95.84,321.00 L 107.69,322.24 L 119.15,327.09 L 130.99,317.63 L 142.84,308.17 L 154.30,322.37 L 166.14,301.49 L 177.60,299.79 L 189.44,294.40 L 201.29,295.06 L 211.98,311.19 L 223.83,308.56 L 235.29,304.99 L 247.13,311.75 L 258.59,309.58 L 270.44,297.45 L 282.28,308.77 L 293.74,304.17 L 305.58,296.81 L 317.04,298.78 L 328.89,290.39 L 340.73,287.24 L 351.81,334.10 L 363.65,361.13 L 375.11,308.63 L 386.96,297.76 L 398.42,292.66 L 410.26,292.90 L 422.10,277.66 L 433.57,269.35 L 445.41,272.90 L 456.87,276.68 L 468.71,249.71 L 480.56,261.71 L 491.25,247.46 L 503.10,249.43 L 514.56,253.21 L 526.40,265.25 L 537.86,270.67 L 549.71,269.23 L 561.55,260.07 L 573.01,268.73 L 584.85,266.46 L 596.31,269.51 L 608.16,282.75" fill="none" stroke="#006BA2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,315.56 L 61.84,307.70 L 72.54,312.70 L 84.38,322.71 L 95.84,312.13 L 107.69,314.52 L 119.15,315.64 L 130.99,314.00 L 142.84,309.51 L 154.30,321.55 L 166.14,304.18 L 177.60,303.87 L 189.44,287.78 L 201.29,300.28 L 211.98,304.22 L 223.83,301.42 L 235.29,297.72 L 247.13,314.47 L 258.59,313.53 L 270.44,306.89 L 282.28,319.30 L 293.74,319.82 L 305.58,314.49 L 317.04,310.11 L 328.89,305.14 L 340.73,313.23 L 351.81,320.46 L 363.65,366.50 L 375.11,319.49 L 386.96,297.63 L 398.42,297.49 L 410.26,283.31 L 422.10,269.30 L 433.57,257.09 L 445.41,269.19 L 456.87,279.86 L 468.71,263.78 L 480.56,255.35 L 491.25,250.47 L 503.10,241.88 L 514.56,242.88 L 526.40,252.00 L 537.86,262.57 L 549.71,261.40 L 561.55,250.41 L 573.01,260.29 L 584.85,252.84 L 596.31,264.94 L 608.16,273.10" fill="none" stroke="#9E9E9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="624" y="277.10481120364443" font-size="11" font-weight="600" fill="#9E9E9E">고소득</text>
+<text x="624" y="291.10481120364443" font-size="11" font-weight="600" fill="#006BA2">중간소득</text>
+<text x="624" y="305.10481120364443" font-size="11" font-weight="600" fill="#E3120B">저소득</text>
+<text x="20" y="438" font-size="10" fill="#5C5C5C">출처: Numerator Consumer Spending Data, NY Fed EHIs, CPI(Haver Analytics).</text>
+<text x="20" y="452" font-size="10" fill="#5C5C5C">주: 이 기간엔 저소득층의 누적 성장이 가장 빨랐다.</text>
+</svg>
