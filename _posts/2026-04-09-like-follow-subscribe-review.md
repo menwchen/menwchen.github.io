@@ -1,19 +1,15 @@
 ---
-layout: post
-title: "좋아요, 팔로우, 구독 — 인플루언서 키즈의 그늘 | 서평·요약·번역"
-date: 2026-04-09
-tags: [서평, 번역, SNS, 인플루언서, 아동권리, 프라이버시, 가족브이로그, 맘블로거]
-description: "Fortesa Latifi의 'Like, Follow, Subscribe: Influencer Kids and the Unfiltered Truth About Online Fame' 한국어 서평, 챕터별 요약, 핵심 번역"
----
 
-> *"돈은 눈이 돌아갈 만큼 많고, 명성은 중독적이며, 경제적 자유의 가능성은 현기증 날 정도다. 나는 그 모든 것을 안다. 그런데도 나라면 — 절대로, 단 1초도 — 그 거래를 하지 않겠다."*
-> — Fortesa Latifi, 본서 결론부
+## layout: post title: "좋아요, 팔로우, 구독 — 인플루언서 키즈의 그늘 | 서평·요약·번역" date: 2026-04-09 tags: \[서평, 번역, SNS, 인플루언서, 아동권리, 프라이버시, 가족브이로그, 맘블로거\] description: "Fortesa Latifi의 'Like, Follow, Subscribe: Influencer Kids and the Unfiltered Truth About Online Fame' 한국어 서평, 챕터별 요약, 핵심 번역"
+
+> *"돈은 눈이 돌아갈 만큼 많고, 명성은 중독적이며, 경제적 자유의 가능성은 현기증 날 정도다. 나는 그 모든 것을 안다. 그런데도 나라면 — 절대로, 단 1초도 — 그 거래를 하지 않겠다."*— Fortesa Latifi, 본서 결론부
 
 ---
 
 ## 책 소개
 
 **Like, Follow, Subscribe: Influencer Kids and the Unfiltered Truth About Online Fame**
+
 - **저자**: Fortesa Latifi (Rolling Stone, The Cut, NYT 기고 저널리스트)
 - **출판**: Simon & Schuster / Gallery Books
 - **분량**: 13장 + 서론·결론
@@ -22,7 +18,6 @@ description: "Fortesa Latifi의 'Like, Follow, Subscribe: Influencer Kids and th
 저자는 임신 7개월에 출판 계약을 맺고 산후 7개월에 초고를 완성했다. 자신이 갓 엄마가 된 시점에서 "인플루언서 아이들"의 삶을 취재한다는 설정 자체가 이 책의 긴장감을 만든다.
 
 ---
-
 ## 챕터별 요약
 
 ### 서론 — 1971년 라우드 가족에서 2020년대 패밀리 브이로그까지

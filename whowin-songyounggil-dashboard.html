@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WhoWin · 송영길 인천 연수갑 실시간 텍스트 마이닝</title>
+<meta name="description" content="2026 6·3 재보궐 인천 연수구갑 송영길 후보 미디어 텍스트 마이닝 실시간 대시보드. Google News RSS 기반 3시간 단위 자동 갱신.">
+<style>
+  :root {
+    --bg:#0b0f17; --panel:#131a26; --panel2:#1a2333; --border:#232f44;
+    --text:#e6ecf5; --muted:#8a96ad; --accent:#6ea8ff;
+    --dp:#004EA2; --ppp:#E61E2B; --rfp:#FF7920;
+    --pos:#4cd17a; --neg:#ff7a85; --neu:#a4b0c4;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+    font-size:14px;line-height:1.55}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header.topbar{padding:14px 24px;border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:rgba(11,15,23,.85);backdrop-filter:blur(8px);
+    position:sticky;top:0;z-index:10;flex-wrap:wrap}
+  .brand{font-weight:700;font-size:18px;letter-spacing:-.3px}
+  .brand .dot{color:var(--accent)}
+  .tag{display:inline-block;padding:2px 8px;margin-left:8px;background:#1f2a3c;
+    color:var(--muted);font-size:11px;border-radius:999px}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+  .live .pulse{width:7px;height:7px;border-radius:50%;background:var(--pos);
+    box-shadow:0 0 0 0 rgba(76,209,122,.6);animation:pulse 2s infinite}
+  @keyframes pulse {
+    0%{box-shadow:0 0 0 0 rgba(76,209,122,.6)}
+    70%{box-shadow:0 0 0 8px rgba(76,209,122,0)}
+    100%{box-shadow:0 0 0 0 rgba(76,209,122,0)}
+  }
+
+  main{max-width:1180px;margin:0 auto;padding:24px 24px 80px}
+  h1{font-size:24px;margin:0 0 4px;letter-spacing:-.5px}
+  .crumbs{color:var(--muted);font-size:12px;margin-bottom:18px}
+
+  .grid-3{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;margin-bottom:22px}
+  @media(max-width:960px){.grid-3{grid-template-columns:1fr}}
+
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px}
+  .card h3{margin:0 0 12px;font-size:13px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+
+  .poll-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .poll-row .name{width:80px;font-size:13px;font-weight:600}
+  .poll-row .bar{flex:1;height:14px;background:var(--panel2);border-radius:4px;overflow:hidden}
+  .poll-row .bar>div{height:100%;transition:width .4s ease}
+  .poll-row .val{width:54px;text-align:right;font-variant-numeric:tabular-nums;
+    font-weight:700;font-size:13px}
+  .poll-sub{color:var(--muted);font-size:11px;margin-top:6px;border-top:1px solid var(--border);
+    padding-top:8px}
+
+  .cand{display:flex;justify-content:space-between;padding:10px 0;
+    border-bottom:1px solid var(--border)}
+  .cand:last-child{border-bottom:none}
+  .cand .l{display:flex;align-items:center;gap:8px}
+  .cand .pchip{width:8px;height:24px;border-radius:2px}
+  .cand .who{font-weight:700;font-size:14px}
+  .cand .party{color:var(--muted);font-size:11px;margin-top:2px}
+
+  .kw-row{display:flex;align-items:center;gap:10px;margin:6px 0}
+  .kw-row .k{width:120px;font-size:12px;font-weight:600}
+  .kw-row .b{flex:1;height:10px;background:var(--panel2);border-radius:3px;overflow:hidden}
+  .kw-row .b>div{height:100%;background:linear-gradient(90deg,var(--accent),#3d75d0);transition:width .4s ease}
+  .kw-row .n{width:30px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px}
+
+  .gauge{position:relative;height:18px;background:linear-gradient(90deg,var(--neg),var(--neu) 50%,var(--pos));
+    border-radius:9px;overflow:hidden}
+  .gauge .needle{position:absolute;top:-4px;width:3px;height:26px;background:#fff;border-radius:2px;
+    transform:translateX(-50%);box-shadow:0 0 6px rgba(0,0,0,.6);transition:left .4s ease}
+  .gauge-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px}
+
+  .feed{max-height:520px;overflow:auto;margin:-4px -6px;padding:0 6px}
+  .feed::-webkit-scrollbar{width:6px}
+  .feed::-webkit-scrollbar-thumb{background:#2a3650;border-radius:3px}
+  .article{padding:10px 0;border-bottom:1px solid var(--border)}
+  .article:last-child{border-bottom:none}
+  .article .a-title{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px}
+  .article .a-title a{color:var(--text)}
+  .article .a-meta{font-size:11px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+
+  footer{margin-top:32px;color:var(--muted);font-size:11px;line-height:1.6;
+    border-top:1px solid var(--border);padding-top:18px}
+  .err{background:rgba(255,122,133,.1);border:1px solid rgba(255,122,133,.3);
+    border-radius:8px;padding:12px 16px;color:#ffd8dd;margin-bottom:18px;display:none}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <span class="brand">Who<span class="dot">·</span>Win</span>
+    <span class="tag">실시간 텍스트 마이닝</span>
+  </div>
+  <div class="live">
+    <span class="pulse"></span>
+    <span id="updated">데이터 로딩 중…</span>
+    · 자동 새로고침 5분
+  </div>
+</header>
+
+<main>
+  <div class="crumbs">2026 6·3 재보궐선거 › 인천 연수구갑</div>
+  <h1>송영길 — 미디어 동향 라이브 대시보드</h1>
+
+  <div class="err" id="errBox"></div>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>여론조사 (2자 대결)</h3>
+      <div id="pollBars"></div>
+      <div class="poll-sub" id="pollSub"></div>
+    </div>
+
+    <div class="card">
+      <h3>3자 구도 후보</h3>
+      <div id="candList"></div>
+    </div>
+
+    <div class="card">
+      <h3>미디어 감성 (제목 기반)</h3>
+      <div style="margin:14px 0 4px">
+        <div class="gauge"><div class="needle" id="needle" style="left:50%"></div></div>
+        <div class="gauge-labels">
+          <span>부정</span><span>중립</span><span>긍정</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:12px;color:var(--muted)" id="sentimentText">—</div>
+      <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.5">
+        분석 단위: <strong id="nArt">—</strong>건의 최근 뉴스 기사 제목 ·
+        룰 기반 키워드 매칭
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>키워드 빈도 (실측 TF)</h3>
+      <div id="kwList"></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px">
+        Google News RSS 수집 기사 제목에서 직접 카운트.
+      </div>
+    </div>
+
+    <div class="card" style="grid-column: span 2;">
+      <h3>최근 기사 피드</h3>
+      <div class="feed" id="feed"></div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>방법론.</strong>
+    이 페이지는 GitHub Actions cron 으로 매 3시간마다
+    <code>scripts/whowin_update.py</code> 를 실행해 Google News RSS 에서
+    "송영길 연수갑" 등 4개 쿼리의 최신 기사를 수집하고,
+    제목 기반 키워드 빈도(TF)·룰 기반 감성 분류를 수행합니다.
+    여론조사 수치는 자체 측정이 아닌 공개 보도(뉴스토마토 2026.05) 인용입니다.
+    페이지는 5분마다 <code>data/whowin/songyounggil.json</code> 을 다시 불러옵니다.
+    <br/><br/>
+    학습용 데모이며, 특정 후보 지지·반대 의도가 없습니다.
+  </footer>
+</main>
+
+<script>
+const DATA_URL = "data/whowin/songyounggil.json";
+const REFRESH_MS = 5 * 60 * 1000;
+
+const PARTY_COLOR = {
+  "더불어민주당": "#004EA2",
+  "국민의힘": "#E61E2B",
+  "개혁신당": "#FF7920",
+  "조국혁신당": "#06275E",
+};
+
+function fmtKstAgo(iso) {
+  if (!iso) return "—";
+  const t = new Date(iso);
+  const diffMs = Date.now() - t.getTime();
+  const min = Math.floor(diffMs / 60000);
+  if (min < 1) return "방금 전 업데이트";
+  if (min < 60) return `${min}분 전 업데이트`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `${h}시간 전 업데이트`;
+  return t.toLocaleString("ko-KR");
+}
+
+function renderPoll(p) {
+  const wrap = document.getElementById("pollBars");
+  wrap.innerHTML = "";
+  const colors = {"송영길":"var(--dp)","박종진":"var(--ppp)","모름":"#3a4866"};
+  Object.entries(p.two_way).forEach(([name, val]) => {
+    const row = document.createElement("div");
+    row.className = "poll-row";
+    row.innerHTML = `
+      <div class="name" style="${name==='모름'?'color:var(--muted)':''}">${name}</div>
+      <div class="bar"><div style="background:${colors[name]||'#888'};width:${val}%"></div></div>
+      <div class="val" style="color:${colors[name]||'inherit'}">${val}%</div>
+    `;
+    wrap.appendChild(row);
+  });
+  const gap = (p.two_way["송영길"] - p.two_way["박종진"]).toFixed(1);
+  document.getElementById("pollSub").innerHTML = `
+    격차 <strong style="color:var(--text)">${gap}%p</strong> · 출처: ${p.source}<br/>
+    적극투표층: 송 ${p.active_voters["송영길"]}% vs 박 ${p.active_voters["박종진"]}%<br/>
+    무당층: 송 ${p.swing["송영길"]}% vs 박 ${p.swing["박종진"]}%
+  `;
+}
+
+function renderCandidates(cs) {
+  const wrap = document.getElementById("candList");
+  wrap.innerHTML = "";
+  cs.forEach(c => {
+    const color = c.color || PARTY_COLOR[c.party] || "#888";
+    const row = document.createElement("div");
+    row.className = "cand";
+    row.innerHTML = `
+      <div class="l">
+        <div class="pchip" style="background:${color}"></div>
+        <div>
+          <div class="who">${c.name}</div>
+          <div class="party">${c.party} · ${c.note}</div>
+        </div>
+      </div>
+    `;
+    wrap.appendChild(row);
+  });
+}
+
+function renderKeywords(kws) {
+  const wrap = document.getElementById("kwList");
+  wrap.innerHTML = "";
+  if (!kws.length) {
+    wrap.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:10px 0">매칭된 키워드 없음 (다음 갱신 시 확인)</div>';
+    return;
+  }
+  const maxN = Math.max(...kws.map(x => x.n));
+  kws.slice(0, 10).forEach(({k, n}) => {
+    const row = document.createElement("div");
+    row.className = "kw-row";
+    row.innerHTML = `
+      <div class="k">${k}</div>
+      <div class="b"><div style="width:${(n/maxN*100).toFixed(0)}%"></div></div>
+      <div class="n">${n}</div>
+    `;
+    wrap.appendChild(row);
+  });
+}
+
+function renderSentiment(s, n) {
+  const total = s.positive + s.negative + s.neutral || 1;
+  // 점수: -1 ~ +1 → 0 ~ 100%
+  const score = (s.positive - s.negative) / total;
+  const pos = Math.max(0, Math.min(100, 50 + score * 50));
+  document.getElementById("needle").style.left = pos + "%";
+  document.getElementById("sentimentText").innerHTML = `
+    <strong style="color:var(--pos)">긍정 ${s.positive_pct}%</strong> ·
+    <strong style="color:var(--neu)">중립 ${s.neutral_pct}%</strong> ·
+    <strong style="color:var(--neg)">부정 ${s.negative_pct}%</strong>
+  `;
+  document.getElementById("nArt").textContent = n;
+}
+
+function renderFeed(articles) {
+  const wrap = document.getElementById("feed");
+  wrap.innerHTML = "";
+  if (!articles.length) {
+    wrap.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:10px 0">기사 없음</div>';
+    return;
+  }
+  articles.forEach(a => {
+    const div = document.createElement("div");
+    div.className = "article";
+    const date = a.pubDate ? new Date(a.pubDate).toLocaleString("ko-KR", {
+      month:"short", day:"numeric", hour:"2-digit", minute:"2-digit"
+    }) : "";
+    div.innerHTML = `
+      <div class="a-title"><a href="${a.link}" target="_blank" rel="noopener">${a.title}</a></div>
+      <div class="a-meta">
+        <span>${a.source || ""}</span>
+        ${date ? `<span>· ${date}</span>` : ""}
+        <span style="margin-left:auto;opacity:.7">${a.query || ""}</span>
+      </div>
+    `;
+    wrap.appendChild(div);
+  });
+}
+
+async function load() {
+  const err = document.getElementById("errBox");
+  try {
+    const res = await fetch(DATA_URL + "?ts=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const d = await res.json();
+    document.getElementById("updated").textContent = fmtKstAgo(d.updated_at);
+    renderPoll(d.poll);
+    renderCandidates(d.candidates);
+    renderKeywords(d.keywords);
+    renderSentiment(d.sentiment, d.n_articles);
+    renderFeed(d.articles);
+    err.style.display = "none";
+  } catch (e) {
+    err.style.display = "block";
+    err.textContent = "데이터 로딩 실패: " + e.message +
+      " — GitHub Actions 가 아직 첫 실행 전이거나 경로가 다를 수 있습니다.";
+  }
+}
+
+load();
+setInterval(load, REFRESH_MS);
+</script>
+</body>
+</html>

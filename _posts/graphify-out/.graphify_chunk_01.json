@@ -1,0 +1,1076 @@
+{
+  "nodes": [
+    {
+      "id": "like_follow_subscribe_review_book",
+      "label": "Like, Follow, Subscribe (Fortesa Latifi)",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Fortesa Latifi",
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_child_influencer_exploitation",
+      "label": "Child Influencer Exploitation",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapters 1-13",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_child_labor_legislation",
+      "label": "Child Influencer Labor Legislation (US States)",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 13",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_parasocial_relationship",
+      "label": "Parasocial Relationship in Influencer Culture",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapters 9-10",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_creator_economy",
+      "label": "Creator Economy ($500B by 2027)",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 11",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_structural_motherhood_penalty",
+      "label": "Structural Motherhood Penalty as Driver of Influencing",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "conclusion",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_online_predators_csam",
+      "label": "Online Predators and CSAM Risk for Influencer Kids",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 12",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_taylor_lorenz_extremely_online",
+      "label": "Extremely Online (Taylor Lorenz)",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "review section",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Taylor Lorenz",
+      "contributor": null
+    },
+    {
+      "id": "like_follow_subscribe_review_sara_petersen_momfluenced",
+      "label": "Momfluenced (Sara Louise Petersen)",
+      "file_type": "document",
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "review section",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Sara Louise Petersen",
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_habermas",
+      "label": "Juergen Habermas (1929-2026)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_communicative_rationality",
+      "label": "Communicative Rationality (Habermas)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section II",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_public_sphere",
+      "label": "Public Sphere / Oeffentlichkeit (Habermas)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section III",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_constitutional_patriotism",
+      "label": "Constitutional Patriotism (Habermas)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section V",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_modernity_incomplete_project",
+      "label": "Modernity as Incomplete Project (Habermas)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section IV",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "habermas_tribute_en_habermas_tribute_english",
+      "label": "Habermas Tribute (English Translation)",
+      "file_type": "document",
+      "source_file": "2026-03-16-habermas-tribute-en.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_revolution_ai_presentation_book",
+      "label": "French Revolution AI Interactive Presentation",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-revolution-ai-presentation.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_revolution_ai_presentation_hardman_book",
+      "label": "The French Revolution: A Political History (John Hardman, Yale UP 2025)",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-revolution-ai-presentation.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "John Hardman",
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_kirby_book",
+      "label": "Empires of Ideas (William C. Kirby, Harvard UP 2022)",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "William C. Kirby",
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_humboldt_university_model",
+      "label": "Humboldt University Model (Research-Teaching Unity)",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_university_as_public_sphere",
+      "label": "University as Public Sphere (Habermas-Kirby synthesis)",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_system_colonizes_lifeworld",
+      "label": "System Colonization of Lifeworld (US Public University Crisis)",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_china_university_party_control",
+      "label": "China University System and CCP Control",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "empires_of_ideas_habermas_review_intellectual_commons",
+      "label": "Intellectual Commons and Basic Society (Kibonsahoe)",
+      "file_type": "document",
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_book",
+      "label": "Theories francaises de la monnaie (Bruno Theret ed., PUF 2016)",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Bruno Theret",
+      "contributor": "Pierre Alary, Jerome Blanc, Ludovic Desmedt"
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_barter_myth",
+      "label": "Barter Myth Deconstruction (Fable du troc)",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_debt_sovereignty_trust",
+      "label": "Money Tripod: Debt, Sovereignty, Trust",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_three_states_of_money",
+      "label": "Three States of Money (Embodied, Objectified, Institutionalized)",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_violence_of_money",
+      "label": "Violence of Money (Aglietta-Orlean, Girard mimetic theory)",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Michel Aglietta, Andre Orlean",
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_euro_crisis",
+      "label": "Euro Crisis as Sovereignty-Trust Mismatch",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "french_institutionalist_monetary_theory_1997_korean_crisis",
+      "label": "1997 Korean Crisis as Trust Collapse in Payment Community",
+      "file_type": "document",
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_article",
+      "label": "US-Iran War and Korean Peninsula Analysis (2026-03-15)",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_thaad_withdrawal",
+      "label": "THAAD Withdrawal from Korea to Middle East",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_hormuz_blockade",
+      "label": "Hormuz Strait Blockade (2026)",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_korea_triple_crisis",
+      "label": "Korea Triple Crisis (High Oil/High FX/High Inflation)",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_us_strategic_overstretch",
+      "label": "US Strategic Overstretch (Three Fronts)",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_north_korea_leverage",
+      "label": "North Korea Leverage from Iran War",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 2",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_russia_nk_iran_triangle",
+      "label": "Russia-North Korea-Iran Triangle Dynamics",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "us_iran_war_korea_analysis_china_strategic_calculation",
+      "label": "China Strategic Calculation during Iran War",
+      "file_type": "document",
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "beloved_son_felix_book",
+      "label": "Beloved Son Felix: Coming of Age in the Renaissance (Felix Platter)",
+      "file_type": "document",
+      "source_file": "2026-03-26-beloved-son-felix.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Felix Platter",
+      "contributor": null
+    },
+    {
+      "id": "beloved_son_felix_renaissance_daily_life",
+      "label": "Renaissance Daily Life (16th Century Montpellier)",
+      "file_type": "document",
+      "source_file": "2026-03-26-beloved-son-felix.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_market_shock_comparison_article",
+      "label": "Iran War vs Past Market Shocks Comparison (WSJ-based)",
+      "file_type": "document",
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_market_shock_comparison_supply_disruption_record",
+      "label": "Record Oil Supply Disruption (10M+ bpd)",
+      "file_type": "document",
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "section 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_market_shock_comparison_spr_release",
+      "label": "Historic SPR Release (172M barrels US contribution)",
+      "file_type": "document",
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "section 5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_market_shock_comparison_stagflation_risk_korea",
+      "label": "Stagflation Risk for Korea (2026)",
+      "file_type": "document",
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "Korea implications",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_korea_impact_dashboard_article",
+      "label": "Iran War Korea Impact Interactive Dashboard",
+      "file_type": "document",
+      "source_file": "2026-03-25-iran-war-korea-impact-dashboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "iran_war_korea_impact_dashboard_three_scenarios",
+      "label": "Three Iran War Scenarios (Ceasefire / Prolonged / Full Escalation)",
+      "file_type": "document",
+      "source_file": "2026-03-25-iran-war-korea-impact-dashboard.md",
+      "source_location": "core summary",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "nonprofit_member_supreme_court_case",
+      "label": "Supreme Court Case 2023da254984 (Nonprofit Written Resolution Invalid)",
+      "file_type": "document",
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "nonprofit_member_supreme_court_member_rights",
+      "label": "Member Rights (Sawonkwon) in Nonprofit Corporations",
+      "file_type": "document",
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": "analysis section 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "nonprofit_member_supreme_court_civil_code_articles",
+      "label": "Korean Civil Code Articles 71, 72, 75 (General Assembly Rules)",
+      "file_type": "document",
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": "reference statutes",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_child_influencer_exploitation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_child_labor_legislation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 13",
+      "weight": 1.0
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_parasocial_relationship",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapters 9-10",
+      "weight": 1.0
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_creator_economy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 11",
+      "weight": 1.0
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_online_predators_csam",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "chapter 12",
+      "weight": 1.0
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_taylor_lorenz_extremely_online",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "review section",
+      "weight": 0.7
+    },
+    {
+      "source": "like_follow_subscribe_review_book",
+      "target": "like_follow_subscribe_review_sara_petersen_momfluenced",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "review section",
+      "weight": 0.7
+    },
+    {
+      "source": "like_follow_subscribe_review_structural_motherhood_penalty",
+      "target": "like_follow_subscribe_review_child_influencer_exploitation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": "conclusion",
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_habermas",
+      "target": "habermas_tribute_communicative_rationality",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section II",
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_habermas",
+      "target": "habermas_tribute_public_sphere",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section III",
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_habermas",
+      "target": "habermas_tribute_constitutional_patriotism",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section V",
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_habermas",
+      "target": "habermas_tribute_modernity_incomplete_project",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": "section IV",
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_en_habermas_tribute_english",
+      "target": "habermas_tribute_habermas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-habermas-tribute-en.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_kirby_book",
+      "target": "habermas_tribute_habermas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_kirby_book",
+      "target": "empires_of_ideas_habermas_review_humboldt_university_model",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_university_as_public_sphere",
+      "target": "habermas_tribute_public_sphere",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_university_as_public_sphere",
+      "target": "empires_of_ideas_habermas_review_humboldt_university_model",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_system_colonizes_lifeworld",
+      "target": "habermas_tribute_communicative_rationality",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 3",
+      "weight": 0.9
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_china_university_party_control",
+      "target": "habermas_tribute_public_sphere",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 4",
+      "weight": 0.8
+    },
+    {
+      "source": "empires_of_ideas_habermas_review_intellectual_commons",
+      "target": "empires_of_ideas_habermas_review_kirby_book",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-16-empires-of-ideas-habermas-review.md",
+      "source_location": "section 5",
+      "weight": 0.8
+    },
+    {
+      "source": "french_revolution_ai_presentation_book",
+      "target": "french_revolution_ai_presentation_hardman_book",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-revolution-ai-presentation.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_book",
+      "target": "french_institutionalist_monetary_theory_barter_myth",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_book",
+      "target": "french_institutionalist_monetary_theory_debt_sovereignty_trust",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_book",
+      "target": "french_institutionalist_monetary_theory_three_states_of_money",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 3",
+      "weight": 1.0
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_book",
+      "target": "french_institutionalist_monetary_theory_violence_of_money",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 4",
+      "weight": 1.0
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_debt_sovereignty_trust",
+      "target": "french_institutionalist_monetary_theory_euro_crisis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 6",
+      "weight": 0.9
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_debt_sovereignty_trust",
+      "target": "french_institutionalist_monetary_theory_1997_korean_crisis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": "section 6",
+      "weight": 0.9
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_thaad_withdrawal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 2",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_hormuz_blockade",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 1",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_korea_triple_crisis",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 3",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_us_strategic_overstretch",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_north_korea_leverage",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 2",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_russia_nk_iran_triangle",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "weight": 1.0
+    },
+    {
+      "source": "us_iran_war_korea_analysis_article",
+      "target": "us_iran_war_korea_analysis_china_strategic_calculation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md",
+      "source_location": "Part 4",
+      "weight": 1.0
+    },
+    {
+      "source": "iran_war_market_shock_comparison_article",
+      "target": "us_iran_war_korea_analysis_hormuz_blockade",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "iran_war_market_shock_comparison_article",
+      "target": "iran_war_market_shock_comparison_supply_disruption_record",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "iran_war_market_shock_comparison_article",
+      "target": "iran_war_market_shock_comparison_spr_release",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "section 5",
+      "weight": 1.0
+    },
+    {
+      "source": "iran_war_market_shock_comparison_stagflation_risk_korea",
+      "target": "us_iran_war_korea_analysis_korea_triple_crisis",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "2026-03-27-iran-war-market-shock-comparison.md",
+      "source_location": "Korea implications",
+      "weight": 0.9
+    },
+    {
+      "source": "iran_war_korea_impact_dashboard_article",
+      "target": "us_iran_war_korea_analysis_article",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "2026-03-25-iran-war-korea-impact-dashboard.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "iran_war_korea_impact_dashboard_article",
+      "target": "us_iran_war_korea_analysis_hormuz_blockade",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-25-iran-war-korea-impact-dashboard.md",
+      "source_location": "core summary",
+      "weight": 1.0
+    },
+    {
+      "source": "iran_war_korea_impact_dashboard_three_scenarios",
+      "target": "iran_war_market_shock_comparison_stagflation_risk_korea",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "2026-03-25-iran-war-korea-impact-dashboard.md",
+      "source_location": "scenarios",
+      "weight": 0.8
+    },
+    {
+      "source": "nonprofit_member_supreme_court_case",
+      "target": "nonprofit_member_supreme_court_member_rights",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": "analysis section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "nonprofit_member_supreme_court_case",
+      "target": "nonprofit_member_supreme_court_civil_code_articles",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": "reference statutes",
+      "weight": 1.0
+    },
+    {
+      "source": "beloved_son_felix_book",
+      "target": "beloved_son_felix_renaissance_daily_life",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "2026-03-26-beloved-son-felix.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "habermas_tribute_public_sphere",
+      "target": "like_follow_subscribe_review_parasocial_relationship",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "2026-03-16-habermas-tribute.md",
+      "source_location": null,
+      "weight": 0.5
+    },
+    {
+      "source": "french_institutionalist_monetary_theory_1997_korean_crisis",
+      "target": "us_iran_war_korea_analysis_korea_triple_crisis",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md",
+      "source_location": null,
+      "weight": 0.6
+    },
+    {
+      "source": "nonprofit_member_supreme_court_member_rights",
+      "target": "habermas_tribute_public_sphere",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "2026-04-04-nonprofit-member-supreme-court.md",
+      "source_location": null,
+      "weight": 0.4
+    },
+    {
+      "source": "like_follow_subscribe_review_child_labor_legislation",
+      "target": "nonprofit_member_supreme_court_civil_code_articles",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "2026-04-09-like-follow-subscribe-review.md",
+      "source_location": null,
+      "weight": 0.4
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "iran_war_korea_impact_cluster",
+      "label": "US-Iran War Impact on Korean Economy and Security",
+      "nodes": [
+        "us_iran_war_korea_analysis_article",
+        "iran_war_market_shock_comparison_article",
+        "iran_war_korea_impact_dashboard_article",
+        "us_iran_war_korea_analysis_hormuz_blockade",
+        "us_iran_war_korea_analysis_korea_triple_crisis",
+        "us_iran_war_korea_analysis_thaad_withdrawal"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "2026-03-15-us-iran-war-korea-analysis.md"
+    },
+    {
+      "id": "habermas_intellectual_legacy",
+      "label": "Habermas Intellectual Legacy (Tribute + University + Public Sphere)",
+      "nodes": [
+        "habermas_tribute_habermas",
+        "habermas_tribute_en_habermas_tribute_english",
+        "empires_of_ideas_habermas_review_kirby_book",
+        "habermas_tribute_public_sphere",
+        "habermas_tribute_communicative_rationality",
+        "empires_of_ideas_habermas_review_university_as_public_sphere"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "2026-03-16-habermas-tribute.md"
+    },
+    {
+      "id": "french_institutionalist_monetary_framework",
+      "label": "French Institutionalist Monetary Theory Core Framework",
+      "nodes": [
+        "french_institutionalist_monetary_theory_book",
+        "french_institutionalist_monetary_theory_barter_myth",
+        "french_institutionalist_monetary_theory_debt_sovereignty_trust",
+        "french_institutionalist_monetary_theory_three_states_of_money",
+        "french_institutionalist_monetary_theory_violence_of_money"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "2026-03-26-french-institutionalist-monetary-theory.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
