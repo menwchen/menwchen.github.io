@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'Helvetica Neue', 'Noto Sans KR', 'AppleGothic', Arial, sans-serif">
+<rect width="800" height="460" fill="#FBF4E9"/>
+<rect x="20" y="20" width="32" height="4" fill="#E3120B"/>
+<text x="20" y="50" font-size="17" font-weight="700" fill="#1A1A1A">한국에서도 자산은 K자 — 5분위가 따로 뛴다</text>
+<text x="20" y="70" font-size="12" fill="#5C5C5C">소득5분위별 실질 순자산 누적증가율 (CPI 디플레이트, 2017 = 100)</text>
+<line x1="50" y1="352.3809523809524" x2="580" y2="352.3809523809524" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="586" y="356.3809523809524" font-size="11" fill="#1A1A1A">100</text>
+<line x1="50" y1="283.33333333333337" x2="580" y2="283.33333333333337" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="586" y="287.33333333333337" font-size="11" fill="#1A1A1A">110</text>
+<line x1="50" y1="214.2857142857143" x2="580" y2="214.2857142857143" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="586" y="218.2857142857143" font-size="11" fill="#1A1A1A">120</text>
+<line x1="50" y1="145.23809523809524" x2="580" y2="145.23809523809524" stroke="#CDC9C3" stroke-width="0.7"/>
+<text x="586" y="149.23809523809524" font-size="11" fill="#1A1A1A">130</text>
+<text x="50.0" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2017</text>
+<text x="125.71428571428571" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2018</text>
+<text x="201.42857142857142" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2019</text>
+<text x="277.1428571428571" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2020</text>
+<text x="352.85714285714283" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2021</text>
+<text x="428.57142857142856" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2022</text>
+<text x="504.2857142857143" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2023</text>
+<text x="580.0" y="398" font-size="11" fill="#1A1A1A" text-anchor="middle">2024</text>
+<line x1="50" y1="352.3809523809524" x2="580" y2="352.3809523809524" stroke="#1A1A1A" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+<path d="M 50.00,352.38 L 125.71,294.77 L 201.43,270.96 L 277.14,249.15 L 352.86,163.52 L 428.57,111.36 L 504.29,176.79 L 580.00,140.26" fill="none" stroke="#E3120B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,352.38 L 125.71,319.81 L 201.43,294.98 L 277.14,293.10 L 352.86,199.62 L 428.57,157.63 L 504.29,243.34 L 580.00,231.14" fill="none" stroke="#E89B9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,352.38 L 125.71,295.71 L 201.43,285.22 L 277.14,281.57 L 352.86,207.44 L 428.57,162.70 L 504.29,229.68 L 580.00,266.15" fill="none" stroke="#9DC3E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,352.38 L 125.71,303.18 L 201.43,292.27 L 277.14,243.60 L 352.86,172.02 L 428.57,152.98 L 504.29,244.27 L 580.00,275.08" fill="none" stroke="#9E9E9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.00,352.38 L 125.71,303.81 L 201.43,332.76 L 277.14,311.63 L 352.86,156.04 L 428.57,167.98 L 504.29,197.99 L 580.00,233.89" fill="none" stroke="#006BA2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="618" y="144.25623035263982" font-size="11" font-weight="600" fill="#E3120B">소득 5분위</text>
+<text x="618" y="235.14452425011334" font-size="11" font-weight="600" fill="#E89B9A">소득 4분위</text>
+<text x="618" y="249.14452425011334" font-size="11" font-weight="600" fill="#006BA2">소득 1분위</text>
+<text x="618" y="270.14828741315506" font-size="11" font-weight="600" fill="#9DC3E6">소득 3분위</text>
+<text x="618" y="284.14828741315506" font-size="11" font-weight="600" fill="#9E9E9E">소득 2분위</text>
+<text x="20" y="438" font-size="10" fill="#5C5C5C">출처: 한국은행 ECOS / 통계청 가계금융복지조사, 한국은행 소비자물가지수.</text>
+<text x="20" y="452" font-size="10" fill="#5C5C5C">주: 2024년 시점 5분위 +30.7% vs 3분위 +12.5%. 1분위(+17.2%)가 2~3분위보다 빠른 점은 한국 특유의 패턴.</text>
+</svg>

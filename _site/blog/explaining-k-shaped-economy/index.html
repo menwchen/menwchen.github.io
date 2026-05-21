@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널</title>
+<meta name="description" content="뉴욕연준 후속 노트는 K자 격차의 원인을 임금·인플레이션·자산으로 분해한다. 결론: 임금으론 설명 안 되고, 인플레이션이 일부 기여하며, 자산(특히 금융자산)이 결정적이다. 상위 1%의 실질 순자산이 +30%, 중간 40%는 +9.7%.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널">
+<meta property="og:description" content="뉴욕연준 후속 노트는 K자 격차의 원인을 임금·인플레이션·자산으로 분해한다. 결론: 임금으론 설명 안 되고, 인플레이션이 일부 기여하며, 자산(특히 금융자산)이 결정적이다. 상위 1%의 실질 순자산이 +30%, 중간 40%는 +9.7%.">
+<meta property="og:url" content="http://localhost:4000/blog/explaining-k-shaped-economy/">
+<meta property="article:published_time" content="2026-05-02T00:00:00+09:00">
+<meta property="article:tag" content="K자경제"><meta property="article:tag" content="자산불평등"><meta property="article:tag" content="인플레이션"><meta property="article:tag" content="임금"><meta property="article:tag" content="뉴욕연준"><meta property="article:tag" content="LibertyStreet"><meta property="article:tag" content="거시경제"><meta property="article:tag" content="한국경제비교">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널">
+<meta name="twitter:description" content="뉴욕연준 후속 노트는 K자 격차의 원인을 임금·인플레이션·자산으로 분해한다. 결론: 임금으론 설명 안 되고, 인플레이션이 일부 기여하며, 자산(특히 금융자산)이 결정적이다. 상위 1%의 실질 순자산이 +30%, 중간 40%는 +9.7%.">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/blog/explaining-k-shaped-economy/">
+
+<!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널",
+  "description": "뉴욕연준 후속 노트는 K자 격차의 원인을 임금·인플레이션·자산으로 분해한다. 결론: 임금으론 설명 안 되고, 인플레이션이 일부 기여하며, 자산(특히 금융자산)이 결정적이다. 상위 1%의 실질 순자산이 +30%, 중간 40%는 +9.7%.",
+  "datePublished": "2026-05-02T00:00:00+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alle Menschen werden Brüder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "세상을 바꾸는 유토피아"
+  },
+  "url": "http://localhost:4000/blog/explaining-k-shaped-economy/",
+  "mainEntityOfPage": "http://localhost:4000/blog/explaining-k-shaped-economy/"
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <a href="/" class="back-link">← 홈으로</a>
+    <div class="post-header">
+      <div class="card-tags">
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">K자경제</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">자산불평등</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">인플레이션</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(84,160,255,0.2);color:#54a0ff;">임금</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,159,243,0.2);color:#ff9ff3;">뉴욕연준</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">LibertyStreet</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">거시경제</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">한국경제비교</span>
+        
+      </div>
+      <h1>K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널</h1>
+      <div class="post-meta">
+        <p class="post-date">2026년 05월 02일</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
+    </div>
+    <div class="post-content">
+      <p><img src="/assets/images/2026-05-02-kdivide-wealth.svg" alt="자산 격차가 K자의 동력이다 — 소득분위별 실질 순자산" /></p>
+
+<blockquote>
+  <p><a href="/blog/k-shaped-economy-ny-fed/">전편</a>에서 본 K자형 소비격차의 <strong>원인</strong>을 따져보는 후속 노트가 같은 날 함께 나왔다. 결론은 단호하다. <strong>임금으론 설명되지 않고, 인플레이션이 일부 기여하며, 진짜 동력은 자산 — 특히 금융자산이다.</strong></p>
+</blockquote>
+
+<p><em>Chakrabarti·Pham·Pierce·Pinkovskiy(2026, 5/1) “<a href="https://libertystreeteconomics.newyorkfed.org/2026/05/explaining-the-k-shaped-economy-whats-behind-the-divide/">Explaining the K‑Shaped Economy: What’s Behind the Divide?</a>” 정리·해설.</em></p>
+
+<hr />
+
+<h2 id="무엇을-사고-있는가--필수재-vs-사치재">무엇을 사고 있는가 — 필수재 vs 사치재</h2>
+
+<p>먼저 소비 품목을 둘로 쪼갠다. <strong>필수재</strong>(식료품·휘발유)와 <strong>사치재</strong>(소매 - 자동차·식료품·휘발유). 결과는 흥미롭다.</p>
+
+<ul>
+  <li>필수재 실질 지출은 거의 모든 소득그룹에서 <strong>감소</strong>했다.</li>
+  <li>사치재 실질 지출은 모든 그룹에서 <strong>증가</strong>했다 — 그러나 K자형으로.</li>
+</ul>
+
+<p>즉 2023년 이후 미국 소매 회복은 <strong>사치재 회복</strong>이고, 그 사치재 회복이 다시 고소득층에 쏠려 있다. 단순히 “더 많이 산다”가 아니라 “<strong>다른 것을 산다</strong>“는 차이가 있다.</p>
+
+<p>이제 그 K자가 왜 생기는지를 본다. 후보는 셋: 임금, 인플레이션, 자산.</p>
+
+<hr />
+
+<h2 id="채널-1--임금-설명력-약함">채널 1 — 임금: 설명력 약함</h2>
+
+<p><img src="/assets/images/2026-05-02-kdivide-wages.svg" alt="애틀랜타 연준 임금성장률 — 4분위별" /></p>
+
+<p>애틀랜타 연준 <a href="https://www.atlantafed.org/chcs/wage-growth-tracker">Wage Growth Tracker</a>는 같은 사람의 12개월 전후 시급 변화를 추적한다. 분위별로 보면:</p>
+
+<ul>
+  <li><strong>2023년 1월</strong>: 1분위(저임금) 7.4% &gt; 4분위(고임금) 5.0%. <strong>저임금이 더 빨리 올랐다</strong>.</li>
+  <li><strong>2024년 일부 구간</strong>: 여전히 1분위가 가장 빠른 상승.</li>
+  <li><strong>2026년 3월</strong>: 1분위 3.5% &lt; 4분위 3.8%. 격차가 역전됐지만 0.3%p에 불과.</li>
+</ul>
+
+<p>K자형 소비격차가 2023년 후반부터 <strong>굳어졌고 누적</strong>되어 7%p에 가까운 차이를 만든 반면, 임금성장률 차이는 그 정도의 누적 격차를 만들어낼 만큼 크지도 않고, 방향도 일관되지 않았다. 노트의 결론: “임금만으로는 K자를 설명할 수 없다.”</p>
+
+<hr />
+
+<h2 id="채널-2--인플레이션-저소득층이-더-많이-맞는다">채널 2 — 인플레이션: 저소득층이 더 많이 맞는다</h2>
+
+<p><img src="/assets/images/2026-05-02-kdivide-inflation.svg" alt="소득계층별 인플레이션 격차 — 전국 평균과의 차이" /></p>
+
+<p>같은 헤드라인 인플레이션 수치가 가구마다 다르게 작용한다. 저소득층은 휘발유·식료품·임대료 등 <strong>가격이 더 빨리 오르는 품목에 소비비중이 더 크기</strong> 때문이다. 이 차이를 “demographic inflation gap”으로 측정한다.</p>
+
+<ul>
+  <li><strong>2022~2023년</strong>: 하위 40%는 전국 평균보다 0.2~<strong>0.46%p 높은</strong> 인플레이션을 겪었다. 상위 20%는 평균보다 <strong>0.4~0.6%p 낮은</strong> 인플레이션. 가장 격차가 컸던 시점은 2023년 초 — 정확히 <strong>K자형 소비격차가 시작된 시점</strong>과 일치한다.</li>
+  <li><strong>2024~2025년</strong>: 격차가 줄었지만 부호는 그대로. 저소득층이 여전히 평균보다 위.</li>
+</ul>
+
+<p>이 격차가 <strong>실질 구매력</strong>을 깎는다. 같은 명목소득을 들고도 저소득 가구의 실질 가용 소비액이 더 빨리 줄어든다. 이게 K자형 소비 분기의 <strong>두 번째 채널</strong>이다. 그러나 노트 자체가 시사하듯, 인플레이션 격차만으로 보기엔 누적 효과가 6~7%p 차이를 다 설명하지는 못한다.</p>
+
+<hr />
+
+<h2 id="채널-3--자산-결정적">채널 3 — 자산: 결정적</h2>
+
+<p>위 첫 번째 차트가 핵심이다. 연준의 <a href="https://www.federalreserve.gov/releases/z1/dataviz/dfa/">분배금융계정(DFA)</a>을 소득분위별로 본 실질 순자산 누적증가율(2023년 1분기 = 100):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>소득분위</th>
+      <th>2025년 4분기 실질 순자산</th>
+      <th>누적 증가율</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>상위 1%</td>
+      <td>130.0</td>
+      <td><strong>+30.0%</strong></td>
+    </tr>
+    <tr>
+      <td>상위 20% (1% 제외)</td>
+      <td>120.7</td>
+      <td>+20.7%</td>
+    </tr>
+    <tr>
+      <td>상위 60–80%</td>
+      <td>117.8</td>
+      <td>+17.8%</td>
+    </tr>
+    <tr>
+      <td>하위 20%</td>
+      <td>113.0</td>
+      <td>+13.0%</td>
+    </tr>
+    <tr>
+      <td>중간 40%</td>
+      <td>109.7</td>
+      <td><strong>+9.7%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>상위 1%의 실질 순자산은 3년 만에 30% 늘었다. 중간 40%는 10%도 못 늘었다.</strong> 이 격차의 대부분은 <strong>금융자산</strong> — 주식·펀드·연금 자산 — 에서 나온다. 같은 데이터의 금융자산만 따로 보면 상위 1%는 +33.3%, 중간 40%는 +11.3%로 더 가파르다.</p>
+
+<p>자산이 늘면 소비가 늘어난다 — 자산효과(wealth effect). 미국에서 그 효과는 <strong>자산 분포가 극도로 쏠려있기 때문에</strong> 곧바로 K자형 소비로 전이된다. 인구의 1%가 전체 금융자산의 절반을 가진 나라에서, 주식 강세장은 그 자체로 분배적 사건이다.</p>
+
+<p>흥미로운 예외 한 가지 — 하위 20%가 중간 40%보다 살짝 빠른 자산 성장(+13.0% vs +9.7%)을 보였다. 노트는 이를 “기저 효과(낮은 출발선)와 일부 부동산 가치 상승” 정도로 설명한다. 본질적인 K자 패턴은 <strong>상위 vs 나머지</strong>의 구도다.</p>
+
+<hr />
+
+<h2 id="본인-해설--한국-거시경제와-정책에-대한-함의">본인 해설 — 한국 거시경제와 정책에 대한 함의</h2>
+
+<h3 id="1-자산효과의-정치경제">1. 자산효과의 정치경제</h3>
+
+<p>미국의 K자형 회복은 결국 <strong>금융시장 강세 → 상위 자산 가치 상승 → 상위 소비 증가 → GDP 호조</strong>라는 사슬에 의해 떠받쳐진다. 평균 통계가 좋아 보이는 이유다. 그런데 이 사슬은 한쪽 끝에 자산시장이라는 변동성 큰 매개를 달고 있다. 노트가 마지막에 한 줄로 던지는 경고가 정확하다 — “<strong>금융시장 조정 가능성에 대한 소매소비의 잠재적 취약성</strong>”.</p>
+
+<p>거시경제학자 입장에서 보면 이건 <strong>제임스 토빈의 q이론과 자산효과를 분배 차원에서 다시 쓰는 작업</strong>에 가깝다. 평균적 자산효과 계수(MPC out of wealth)만 보면 작아 보이지만, <strong>자산 보유의 분포</strong>까지 함께 보면 정책 충격이 누구의 소비에 어떻게 닿는지가 완전히 달라진다.</p>
+
+<h3 id="2-한국에-적용했을-때의-문제">2. 한국에 적용했을 때의 문제</h3>
+
+<p>한국은 미국과 두 가지 점에서 다르다.</p>
+
+<p>첫째, <strong>자산 구성</strong>. 미국 가계 자산의 핵심은 주식·연금이지만, 한국은 <strong>주택</strong>이다. 한국의 K자가 발생한다면 그 동력은 주택가격이지 코스피가 아니다. 2024–2025년 강남·용산권 아파트 가격 회복이 상위 분위 가구의 자산을 끌어올렸다는 한국개발연구원·한국은행의 단편 분석들이 이미 있다.</p>
+
+<p>둘째, <strong>인플레이션 채널의 결이 다르다</strong>. 한국은 미국보다 식료품 가격 변동성이 크고(농산물 수입 비중·환율 영향), 주거비 변동은 전세-월세 전환 양상에 좌우된다. “demographic inflation gap”을 한국에서 만들면 미국과 비슷한 부호(저소득 &gt; 평균)가 나올 가능성이 높지만, 변동의 결은 다를 것이다.</p>
+
+<h3 id="3-한국은행통계청에-대한-제안">3. 한국은행·통계청에 대한 제안</h3>
+
+<p>이 두 편의 노트가 한국 거시 데이터 정책에 던지는 시사점이 있다. 뉴욕연준의 EHIs(Economic Heterogeneity Indicators)는 <strong>거시 총량을 분포 정보와 함께 갱신</strong>하는 분기/월간 지표 체계다. 한국엔 가계동향조사가 있지만 분기 단위, 표본 한계, 공표 시차가 있어 거시 의사결정에 즉시 쓰기 어렵다.</p>
+
+<p>신용카드사·통신사 빅데이터를 대안 데이터로 쓰는 시도가 있긴 하지만 <strong>공식 디플레이터</strong>가 분위별로 따로 만들어지지 않는다. NY 연준이 한 단계 한 일은 단순하다 — CPI의 도시·품목 하위지수를 CEX의 도시·품목 가중치로 가중평균. 한국에서도 가계동향과 CPI 하위지수만 결합하면 분위별 디플레이터를 만들 수 있다. <strong>이걸 한국은행이 정례화하면, 통화정책의 분배효과 논의가 한 단계 정량화될 수 있다.</strong></p>
+
+<hr />
+
+<h2 id="시리즈를-마치며">시리즈를 마치며</h2>
+
+<p><a href="/blog/k-shaped-economy-ny-fed/">전편</a>이 <em>what</em>(K자가 그려진다)이었다면, 이번 글은 <em>why</em>(자산이 갈랐다)다. 두 글을 합치면 답이 또렷해진다 — 미국의 2023년 이후 회복은 <strong>분포가 위태롭게 쏠려있는 회복</strong>이고, 그 쏠림은 <strong>자산시장의 변동성</strong>과 직결돼 있다.</p>
+
+<p>다음에 자산시장이 한 번 흔들리면, 평균 GDP가 아니라 <strong>누가</strong> 흔들리는지를 보아야 한다. 그게 K자형 회복의 진짜 다음 장이다.</p>
+
+<hr />
+
+<h2 id="출처">출처</h2>
+
+<ul>
+  <li>원 글: Chakrabarti, R., Pham, T., Pierce, B., &amp; Pinkovskiy, M. L. (2026, May 1). “Explaining the K‑Shaped Economy: What’s Behind the Divide?” <em>Liberty Street Economics</em>, Federal Reserve Bank of New York. <a href="https://libertystreeteconomics.newyorkfed.org/2026/05/explaining-the-k-shaped-economy-whats-behind-the-divide/">원문 링크</a> · <a href="https://doi.org/10.59576/lse.20260501b">DOI</a></li>
+  <li>원 데이터: <a href="https://libertystreeteconomics.newyorkfed.org/wp-content/uploads/sites/2/2026/04/LSE-2026-Explaning-Kshaped-Economy-Whats-Behind-the-Divide_data.xlsx">LSE-2026-Explaning-Kshaped-Economy_data.xlsx</a></li>
+  <li>본 글의 차트 3장은 위 원 데이터(Chart4·Chart5·Chart6)를 <em>The Economist</em> 매거진 디자인 시스템(빨간 룰, 우측 Y축, 직접 라벨)으로 재시각화한 것이다.</li>
+  <li>관련 글: <a href="/blog/k-shaped-economy-ny-fed/">K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트</a></li>
+</ul>
+
+      
+
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GoatCounter page view count
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
+      var el = document.getElementById('post-views');
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
+  </script>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드</title>
+<meta name="description" content="Krugman의 'Why We Should, but Won't, Reduce the Budget Deficit'을 한국 상황에 대입한다. 이란 전쟁, 유가 급등, 저출생 — 한국의 재정 딜레마는 미국보다 더 깊다.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드">
+<meta property="og:description" content="Krugman의 'Why We Should, but Won't, Reduce the Budget Deficit'을 한국 상황에 대입한다. 이란 전쟁, 유가 급등, 저출생 — 한국의 재정 딜레마는 미국보다 더 깊다.">
+<meta property="og:url" content="http://localhost:4000/blog/korea-budget-deficit-krugman/">
+<meta property="article:published_time" content="2026-03-26T00:00:00+09:00">
+<meta property="article:tag" content="경제"><meta property="article:tag" content="재정"><meta property="article:tag" content="한국"><meta property="article:tag" content="미국"><meta property="article:tag" content="크루그먼"><meta property="article:tag" content="칼럼">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드">
+<meta name="twitter:description" content="Krugman의 'Why We Should, but Won't, Reduce the Budget Deficit'을 한국 상황에 대입한다. 이란 전쟁, 유가 급등, 저출생 — 한국의 재정 딜레마는 미국보다 더 깊다.">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/blog/korea-budget-deficit-krugman/">
+
+<!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드",
+  "description": "Krugman의 'Why We Should, but Won't, Reduce the Budget Deficit'을 한국 상황에 대입한다. 이란 전쟁, 유가 급등, 저출생 — 한국의 재정 딜레마는 미국보다 더 깊다.",
+  "datePublished": "2026-03-26T00:00:00+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alle Menschen werden Brüder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "세상을 바꾸는 유토피아"
+  },
+  "url": "http://localhost:4000/blog/korea-budget-deficit-krugman/",
+  "mainEntityOfPage": "http://localhost:4000/blog/korea-budget-deficit-krugman/"
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <a href="/" class="back-link">← 홈으로</a>
+    <div class="post-header">
+      <div class="card-tags">
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">경제</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">재정</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">한국</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(84,160,255,0.2);color:#54a0ff;">미국</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,159,243,0.2);color:#ff9ff3;">크루그먼</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">칼럼</span>
+        
+      </div>
+      <h1>한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드</h1>
+      <div class="post-meta">
+        <p class="post-date">2026년 03월 26일</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
+    </div>
+    <div class="post-content">
+      <blockquote>
+  <p>폴 크루그먼은 말했다. <em>“적자를 줄이는 경제학은 단순하다. 사회 지출을 줄이거나, 세금을 올리면 된다. 그러나 어느 쪽도 정치적으로 불가능하다.”</em> 한국도 마찬가지다. 아니, 더 나쁘다.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="크루그먼의-진단">크루그먼의 진단</h2>
+
+<p>뉴욕타임스 칼럼니스트 폴 크루그먼은 미국의 재정적자 문제를 이렇게 정리했다.</p>
+
+<p><strong>장기 금리가 올랐다.</strong> 이것은 민간 투자를 구축(crowding out)하고, 특히 재생에너지 같은 미래 투자를 억제한다. 금리를 내리려면 연준의 금리 인하만으로는 부족하고, 재정적자를 줄여서 경제의 열기를 빼야 한다.</p>
+
+<p><strong>그런데 줄일 수 없다.</strong> 미국 연방정부는 본질적으로 <em>“군대를 보유한 보험회사”</em>다. 지출의 대부분은 사회보장, 의료, 국방, 이자 지급이다. 재량적 비국방 지출(NDD)은 아주 작은 조각에 불과하다. 미국의 사회 안전망은 OECD 선진국 중 이미 가장 취약한 편인데, 이걸 더 줄이자는 건 비현실적이다.</p>
+
+<p><strong>답은 증세다. 그러나 불가능하다.</strong> 미국은 유럽에 비해 세금이 매우 낮은 나라다. 증세의 여지는 충분하다. 하지만 공화당이 절대 허용하지 않는다. 부자 감세를 되돌리기는커녕, IRS의 세수 집행 예산까지 삭감하려 한다.</p>
+
+<p>결론: <em>해야 하지만, 하지 못할 것이다.</em></p>
+
+<hr />
+
+<h2 id="한국-같은-딜레마-다른-차원">한국: 같은 딜레마, 다른 차원</h2>
+
+<p>크루그먼의 프레임을 한국에 대입해 보자. 구조는 놀라울 정도로 유사하다. 그러나 세부 사항은 더 나쁘다.</p>
+
+<h3 id="1-금리-이란-전쟁이라는-외생적-충격">1. 금리: 이란 전쟁이라는 외생적 충격</h3>
+
+<p>미국의 장기 금리 상승은 경기 호조의 부산물이었다. 한국은 다르다. 2026년 3월 현재, 한국 10년물 국채 금리는 <strong>3.7%</strong> 선까지 올랐다. 원인은 경기 호조가 아니라 <strong>이란 전쟁으로 인한 유가 폭등</strong>이다.</p>
+
+<p>숫자를 보자:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>지표</th>
+      <th>전쟁 전</th>
+      <th>현재</th>
+      <th>변동</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>국제유가(두바이)</td>
+      <td>68달러 (2월 평균)</td>
+      <td>128달러 (3/23)</td>
+      <td><strong>+87%</strong></td>
+    </tr>
+    <tr>
+      <td>원·달러 환율</td>
+      <td>1,448원 (2월 평균)</td>
+      <td>1,500원대 (3월)</td>
+      <td><strong>+약 3%</strong></td>
+    </tr>
+    <tr>
+      <td>국내 휘발유</td>
+      <td>—</td>
+      <td>1,900원/L 돌파</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>한국은 원유 수입 의존도가 <strong>99%</strong>이고, 연간 10억 배럴 이상을 수입한다. 원유 수입의 <strong>67%가 중동</strong>에서 온다. 호르무즈 해협이 봉쇄되면 경제의 동맥이 잘린다.</p>
+
+<p>씨티는 한국은행이 올해 두 차례 기준금리를 인상해 <strong>연 3.0%</strong>에 도달할 것으로 전망했다. 경기 부양을 위해 금리를 내려야 할 때, 인플레이션 때문에 오히려 올려야 하는 상황. 이것이 미국과 결정적으로 다른 점이다. 미국은 금리를 내리기 위해 적자를 줄여야 하는 것이고, 한국은 <strong>금리를 올려야 하는데 적자도 늘어나는 것</strong>이다.</p>
+
+<h3 id="2-재정-gdp-대비-50를-돌파한-국가채무">2. 재정: GDP 대비 50%를 돌파한 국가채무</h3>
+
+<p>2026년 한국의 국가채무는 <strong>1,415조 원</strong>, GDP 대비 <strong>51.6%</strong>로 처음으로 50%를 넘어섰다. 관리재정수지 적자는 GDP 대비 <strong>4.0%</strong>다.</p>
+
+<p>미국의 GDP 대비 부채비율(약 120%)에 비하면 낮아 보인다. 하지만 한국의 문제는 <strong>속도</strong>다. 2020년 43.6%에서 2026년 51.6%로, 6년 만에 8%포인트가 올랐다. 2029년에는 58%에 이를 전망이다. 미국은 수십 년에 걸쳐 쌓은 부채이고, 달러라는 기축통화의 특권이 있다. 한국은 둘 다 없다.</p>
+
+<p>이란 전쟁이 장기화되면 어떻게 되는가? 유가 100달러 유지 시 GDP 성장률 <strong>-0.55%p</strong>, 물가 <strong>+0.76%p</strong>. 성장이 꺾이면 세수가 줄고, 물가가 오르면 이전 지출이 늘어난다. 적자의 악순환이 시작된다.</p>
+
+<h3 id="3-지출-이미-oecd-최하위인-복지">3. 지출: 이미 OECD 최하위인 복지</h3>
+
+<p>크루그먼은 미국의 사회 안전망이 선진국 중 가장 약하다고 했다. 한국은 <strong>미국보다 더 약하다.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>국가</th>
+      <th>공공사회복지지출 (GDP 대비)</th>
+      <th>기준</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>프랑스</td>
+      <td>31.6%</td>
+      <td>2019 확정</td>
+    </tr>
+    <tr>
+      <td>독일</td>
+      <td>26.7%</td>
+      <td>2019 확정</td>
+    </tr>
+    <tr>
+      <td>OECD 평균</td>
+      <td><strong>21.1%</strong></td>
+      <td>2019 확정</td>
+    </tr>
+    <tr>
+      <td>미국</td>
+      <td>22.7%</td>
+      <td>2019 확정</td>
+    </tr>
+    <tr>
+      <td><strong>한국</strong></td>
+      <td><strong>12.3%</strong></td>
+      <td>2019 확정</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>(추정 14.9~15.2%)</td>
+      <td>2021 잠정</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>한국은 OECD 38개국 중 <strong>34위</strong>다 (확정치 기준). OECD 평균의 <strong>약 60%</strong> 수준이다. 코로나 이후 잠정 추정치(2021년)로는 15% 내외까지 올라갔으나, 여전히 최하위권이며 한국보다 낮은 나라는 멕시코, 칠레, 튀르키예 정도뿐이다.</p>
+
+<p>그런데 한국은 <strong>세계에서 가장 빠른 속도로 늙어가는 나라</strong>다. 합계출산율 0.7명대. 2025년부터 생산가능인구가 본격적으로 줄어든다. 고령화에 따른 연금·의료 지출은 <strong>줄이는 것이 불가능</strong>할 뿐 아니라 <strong>늘려야 한다.</strong> OECD 최하위 수준의 복지 지출을 더 줄이면, 이미 OECD 최하위 수준인 노인 빈곤율과 기대수명 격차가 더 벌어진다.</p>
+
+<p>크루그먼이 미국에 대해 한 말을 한국에도 그대로 적용할 수 있다: <em>우리의 취약한 사회 안전망은 높은 빈곤율과 낮은 기대수명의 원인이다. 왜 더 약하게 만들겠는가?</em></p>
+
+<h3 id="4-세금-답은-여기에-있다-그러나">4. 세금: 답은 여기에 있다. 그러나…</h3>
+
+<p>크루그먼의 처방은 명확했다. 미국은 유럽에 비해 세금이 낮으니, 증세의 여지가 있다. 한국은 어떤가?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>국가</th>
+      <th>국민부담률 (GDP 대비, 2024)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>프랑스</td>
+      <td>45.4%</td>
+    </tr>
+    <tr>
+      <td>독일</td>
+      <td>38.3%</td>
+    </tr>
+    <tr>
+      <td>OECD 평균</td>
+      <td><strong>34.1%</strong></td>
+    </tr>
+    <tr>
+      <td>미국</td>
+      <td>25.6% (31위)</td>
+    </tr>
+    <tr>
+      <td><strong>한국</strong></td>
+      <td><strong>25.3%</strong> (32위)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>한국의 국민부담률은 OECD 평균보다 <strong>거의 9%p 낮다.</strong> 미국과 거의 같은 수준으로 나란히 OECD 하위권이다. 증세의 여지는 <strong>충분하다.</strong></p>
+
+<p>OECD 평균 수준(34%)까지만 올려도, 약 <strong>130조 원</strong>의 추가 세수가 생긴다. 이는 2026년 재정적자(54조 원)를 메우고도 남는 금액이다.</p>
+
+<p>그러나 현실은 어떤가? 최근 2년간 조세부담률은 오히려 <strong>하락</strong>했다. 2022년 22.1% → 2024년 17.6%. 세수가 줄었다. 2025년에 18.4%로 반등했지만, OECD 하위권이라는 구조는 바뀌지 않았다.</p>
+
+<p>왜 증세가 안 되는가? 크루그먼이 미국에서 진단한 것과 정확히 같은 이유다. <strong>정치적으로 불가능하기 때문이다.</strong> 여야를 불문하고, 증세를 선거 공약으로 내건 정당은 없다. 국민 다수가 부자들이 세금을 덜 낸다고 생각하면서도, “내 세금이 올라가는 것”에는 반대한다. 이 모순은 한국과 미국에서 동일하다.</p>
+
+<hr />
+
+<h2 id="미국보다-더-깊은-딜레마">미국보다 더 깊은 딜레마</h2>
+
+<p>크루그먼의 분석을 한국에 대입하면, 구조적으로 동일한 딜레마가 나타나되 한국의 상황이 더 나쁜 이유가 세 가지 있다.</p>
+
+<p><strong>첫째, 기축통화가 없다.</strong> 미국은 달러를 찍으면 된다. 시장이 미국의 지불능력을 의심하면 달러가 하락해야 하는데, 실제로는 오히려 상승한다고 크루그먼이 지적했다. 한국은 이런 특권이 없다. 외국인 투자자가 한국 국채를 팔면 원화가 떨어지고, 수입 물가가 오르고, 인플레이션이 악화된다.</p>
+
+<p><strong>둘째, 저출생이라는 시한폭탄.</strong> 미국의 인구는 이민 덕에 아직 늘고 있다. 한국은 세계 최저 출산율로 인구가 줄고 있다. 세금을 낼 사람은 줄어들고, 연금과 의료를 받을 사람은 늘어난다. 적자는 구조적으로 확대될 수밖에 없다.</p>
+
+<p><strong>셋째, 에너지 자급이 불가능하다.</strong> 미국은 셰일 혁명 이후 순 에너지 수출국이 되었다. 유가가 오르면 미국 경제는 복합적 영향을 받지만 생산자 측면의 이득도 있다. 한국은 원유를 99% 수입한다. 이란 전쟁으로 인한 유가 충격은 100% 비용이다.</p>
+
+<hr />
+
+<h2 id="잠깐--다른-가능성은-없는가">잠깐 — 다른 가능성은 없는가?</h2>
+
+<p>여기까지 읽으면 절망적으로 보인다. 하지만 크루그먼의 프레임에만 갇히면 놓치는 것들이 있다. 한국에는 미국에 없는 카드도 있다.</p>
+
+<h3 id="1-국가채무-아직-oecd-하위권이다">1. 국가채무, 아직 OECD 하위권이다</h3>
+
+<p>한국의 GDP 대비 일반정부부채는 약 <strong>53%</strong>(2024). OECD 평균은 <strong>74%</strong>, 일본은 237%, 미국은 121%, 프랑스는 113%다. 속도가 빠른 것은 사실이나, <strong>절대 수준은 여전히 OECD에서 가장 낮은 축에 속한다.</strong> IMF도, OECD도 한국의 확장 재정에 대해 긍정적으로 평가해 왔다.</p>
+
+<p>크루그먼이 미국에 대해 “아직 재정 위기가 아니다 — 시장도 그렇게 본다”고 말한 것처럼, 한국은 그 말이 <strong>더 강하게</strong> 적용되는 나라다. 재정 여력이 미국보다 넓다.</p>
+
+<h3 id="2-반도체-슈퍼사이클이-세수를-바꾸고-있다">2. 반도체 슈퍼사이클이 세수를 바꾸고 있다</h3>
+
+<p>2026년 3월 1~20일 수출액은 <strong>533억 달러</strong>, 전년 대비 <strong>+50.4%</strong>로 역대 최대를 기록했다. 반도체 단일 품목이 전체 수출의 <strong>35%</strong>를 차지하며, 수출액만 <strong>187억 달러</strong>(+163.9%). AI 인프라 투자 확대에 따른 HBM 등 고부가가치 제품 수요가 폭증하고 있다.</p>
+
+<p>이것이 왜 중요한가? 반도체 호황은 <strong>법인세 세수로 직결</strong>된다. 2022년 세수 호황도 반도체가 이끌었고, 2023~24년의 세수 급감도 반도체 불황이 원인이었다. 2025~26년의 슈퍼사이클은 조세부담률을 다시 끌어올릴 수 있다. 실제로 2025년 조세부담률은 18.4%로 반등했다.</p>
+
+<p><strong>적자를 줄이는 가장 좋은 방법은 증세가 아니라 성장일 수 있다.</strong> 분모(GDP)와 세수를 동시에 키우는 것이다.</p>
+
+<h3 id="3-확장-재정이-답일-수도-있다">3. 확장 재정이 답일 수도 있다</h3>
+
+<p>크루그먼 자신이 2013년에 무슨 말을 했는지 기억하자. 그는 재정적자 축소론자(deficit scolds)를 15년간 비판해 왔다. 불황기에 적자를 줄이면 경제가 더 나빠진다고.</p>
+
+<p>한국의 현재 상황은 어떤가? 이란 전쟁 충격으로 성장률이 꺾이고 있다. KDI 전망 <strong>1.9%</strong>, 정부 목표 <strong>2.0%</strong>. 이 상황에서 긴축을 하면 성장이 더 꺾인다. 정부가 올해 예산을 역대 최대 <strong>728조 원</strong>(전년 대비 +8.1%)으로 편성한 것은, AI(6조)·반도체(4.2조)·국민성장펀드(30조) 등 <strong>성장 투자</strong>에 방점을 찍기 위해서다.</p>
+
+<p>적자가 나쁜 것이 아니라, <strong>뭐에 쓰느냐가 중요하다.</strong> 반도체·AI·에너지 전환에 대한 투자는 미래 세수를 늘리는 지출이다. 소비성 지출과 투자성 지출을 구분하지 않는 것은 크루그먼 프레임의 한계이기도 하다.</p>
+
+<h3 id="4-이란-전쟁은-영원하지-않다">4. 이란 전쟁은 영원하지 않다</h3>
+
+<p>유가 충격은 심각하다. 하지만 전쟁은 끝난다. 네타냐후는 “빨리 끝날 수 있다”고 했고, 트럼프 행정부는 종전 15개항을 전달했다. 전쟁이 종결되면 유가는 하락하고, 환율은 안정되며, 한은은 금리를 내릴 여지를 갖게 된다.</p>
+
+<p>물론 이것은 전쟁이 실제로 끝나야 성립하는 이야기다. 하지만 현재의 유가 충격을 <strong>영구적 구조 변화</strong>로 전제하고 비관론만 펼치는 것도 편향이다.</p>
+
+<hr />
+
+<h2 id="그래서-어떻게-해야-하는가">그래서 어떻게 해야 하는가</h2>
+
+<p>비관론과 낙관론 모두 일리가 있다. 종합하면 이렇다.</p>
+
+<p><strong>단기적으로는 확장 재정이 맞다.</strong> 이란 전쟁 충격 속에서 긴축은 자해 행위다. 반도체 투자, 에너지 전환, AI 인프라에 재정을 집중하는 것이 성장과 세수를 동시에 키우는 길이다.</p>
+
+<p><strong>중장기적으로는 증세가 불가피하다.</strong> 저출생·고령화라는 구조적 지출 증가를 반도체 호황만으로 감당할 수는 없다. 국민부담률을 OECD 평균에 근접시키는 것이 10년 안에 필요하다.</p>
+
+<p>한국의 국민부담률을 OECD 평균까지 올리면 연간 130조 원의 세수가 확보된다. 이것으로 재정적자를 메우고, 고령화에 대비하고, 에너지 전환에 투자할 수 있다. 복지 지출을 OECD 평균 수준으로 올리는 것도 가능해진다.</p>
+
+<p>구체적으로:</p>
+
+<ol>
+  <li><strong>법인세·소득세 최고세율 인상</strong> — 2022년 감세를 되돌린다</li>
+  <li><strong>자본이득세 정상화</strong> — 금융투자소득세를 시행한다</li>
+  <li><strong>부동산 보유세 실효세율 인상</strong> — 한국의 보유세 실효세율은 OECD 평균의 절반 수준이다</li>
+  <li><strong>탈세 단속 강화</strong> — 국세청 인력과 예산을 확충한다</li>
+</ol>
+
+<p>크루그먼은 이렇게 결론 내렸다:</p>
+
+<blockquote>
+  <p><strong>진지한 적자 축소는 10년 전에는 나쁜 아이디어였고, 지금은 좋은 아이디어다. 그러나 나는 그것이 실현될 방법을 보지 못한다.</strong></p>
+</blockquote>
+
+<p>한국에도 적용되는 말이다. 다만 한국의 이야기는 여기서 끝나지 않는다.</p>
+
+<p>미국은 기축통화의 특권 위에서 비관할 여유가 있다. 한국은 그런 여유가 없는 대신, <strong>아직 재정 여력이 있고, 반도체라는 성장 엔진이 있고, OECD 최하위 세율이라는 증세 여지가 있다.</strong> 세 가지 카드 중 하나라도 제대로 쓰면 상황은 달라질 수 있다.</p>
+
+<p>문제는 여전히 정치적 의지다. 하지만 “불가능하다”와 “아직 하지 않고 있다”는 다른 문장이다. 한국은 후자에 더 가깝다고 믿고 싶다.</p>
+
+<hr />
+
+<p><em>본 칼럼은 Paul Krugman의 “Why We Should, but Won’t, Reduce the Budget Deficit” (NYT)의 분석 프레임을 한국에 적용한 것입니다. 한국 데이터는 기획재정부, OECD, KDI, 국회예산정책처 자료에 기반합니다.</em></p>
+
+      
+
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GoatCounter page view count
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
+      var el = document.getElementById('post-views');
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
+  </script>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
+</body>
+</html>

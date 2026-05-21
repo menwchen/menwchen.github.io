@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태그</title>
+<meta name="description" content="개발과 창작을 좋아하는 사람입니다. 정치경제, 철학, 한국자본시장에 대한 분석과 서평을 공유합니다.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="태그">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://localhost:4000/tags/">
+
+
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="태그">
+<meta name="twitter:description" content="개발과 창작을 좋아하는 사람입니다. 정치경제, 철학, 한국자본시장에 대한 분석과 서평을 공유합니다.">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/tags/">
+
+<!-- JSON-LD Structured Data -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+  <div class="post-header">
+    <h1>태그</h1>
+    <p class="post-date">모든 태그 목록</p>
+  </div>
+  <section class="posts">
+    
+    
+      <div class="card" id="tag-12-3비상계엄">
+        <h3>12·3비상계엄 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-ai">
+        <h3>AI <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-revolution-ai-presentation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 AI 인터랙티브 프레젠테이션 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-claude">
+        <h3>Claude <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-revolution-ai-presentation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 AI 인터랙티브 프레젠테이션 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-ecos">
+        <h3>ECOS <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-enlightenment">
+        <h3>Enlightenment <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute-en/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-habermas">
+        <h3>Habermas <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute-en/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-k자경제">
+        <h3>K자경제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-libertystreet">
+        <h3>LibertyStreet <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-philosophy">
+        <h3>Philosophy <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute-en/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-tribute">
+        <h3>Tribute <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute-en/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-가계금융복지조사">
+        <h3>가계금융복지조사 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-거시경제">
+        <h3>거시경제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-검찰">
+        <h3>검찰 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-검찰개혁">
+        <h3>검찰개혁 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-결정론">
+        <h3>결정론 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-경제">
+        <h3>경제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-경제사">
+        <h3>경제사 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/insatiable-machine-capitalism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          끝없는 기계 — 자본주의의 기적은 왜 파멸을 향해 달리는가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-경제학">
+        <h3>경제학 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/eichengreen-money-beyond-borders/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          달러는 영원할 수 없다 — 아이켄그린이 말하지 않은 것들 <span style="color:#555;font-size:0.85rem;">2026-03-28</span>
+        </a>
+        
+        <a href="/blog/french-institutionalist-monetary-theory/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          화폐는 도구가 아니라 사회 그 자체다 — 프랑스 제도주의 화폐 이론 핵심 정리 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-계몽주의">
+        <h3>계몽주의 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          위르겐 하버마스를 추모하며 — 이 시대 마지막 계몽주의자 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-고등교육">
+        <h3>고등교육 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-공론장">
+        <h3>공론장 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-공정">
+        <h3>공정 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-국제정치">
+        <h3>국제정치 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+        <a href="/blog/us-iran-war-korea-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미국-이란 전쟁과 한반도, 그리고 미중 대결의 새로운 지형 <span style="color:#555;font-size:0.85rem;">2026-03-15</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-국제통화">
+        <h3>국제통화 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/eichengreen-money-beyond-borders/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          달러는 영원할 수 없다 — 아이켄그린이 말하지 않은 것들 <span style="color:#555;font-size:0.85rem;">2026-03-28</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-국채">
+        <h3>국채 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-기본사회">
+        <h3>기본사회 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-기본소득">
+        <h3>기본소득 <span style="color:#888;font-weight:400;font-size:0.9rem;">(4)</span></h3>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+        <a href="/blog/rural-basic-income-rebuttal/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각 <span style="color:#555;font-size:0.85rem;">2026-03-04</span>
+        </a>
+        
+        <a href="/blog/rural-basic-income-criticism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [동서남북] 요지경 농어촌기본소득 <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-노동">
+        <h3>노동 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-농어촌">
+        <h3>농어촌 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/rural-basic-income-rebuttal/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각 <span style="color:#555;font-size:0.85rem;">2026-03-04</span>
+        </a>
+        
+        <a href="/blog/rural-basic-income-criticism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [동서남북] 요지경 농어촌기본소득 <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-뉴욕연준">
+        <h3>뉴욕연준 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-능력주의">
+        <h3>능력주의 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-달러">
+        <h3>달러 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/eichengreen-money-beyond-borders/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          달러는 영원할 수 없다 — 아이켄그린이 말하지 않은 것들 <span style="color:#555;font-size:0.85rem;">2026-03-28</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-대시보드">
+        <h3>대시보드 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-대학">
+        <h3>대학 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-데이터">
+        <h3>데이터 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-독일">
+        <h3>독일 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-르네상스">
+        <h3>르네상스 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/beloved-son-felix/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          『사랑하는 아들 펠릭스』 서평: 르네상스 청년의 일상 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-미국">
+        <h3>미국 <span style="color:#888;font-weight:400;font-size:0.9rem;">(4)</span></h3>
+        
+        <a href="/blog/us-constitution-domesday-machine/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          돔스데이 기계의 종말 — 미국 헌법은 실패할 운명인가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-미국경제">
+        <h3>미국경제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-미이란전쟁">
+        <h3>미이란전쟁 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+        <a href="/blog/us-iran-war-korea-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미국-이란 전쟁과 한반도, 그리고 미중 대결의 새로운 지형 <span style="color:#555;font-size:0.85rem;">2026-03-15</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-미중관계">
+        <h3>미중관계 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/us-iran-war-korea-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미국-이란 전쟁과 한반도, 그리고 미중 대결의 새로운 지형 <span style="color:#555;font-size:0.85rem;">2026-03-15</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-박종진">
+        <h3>박종진 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/yeonsu-byelection-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-반사실적추론">
+        <h3>반사실적추론 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+        <a href="/blog/rural-basic-income-rebuttal/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각 <span style="color:#555;font-size:0.85rem;">2026-03-04</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-보궐선거">
+        <h3>보궐선거 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/yeonsu-byelection-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-부동산">
+        <h3>부동산 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-불평등">
+        <h3>불평등 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-생계비">
+        <h3>생계비 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-서평">
+        <h3>서평 <span style="color:#888;font-weight:400;font-size:0.9rem;">(7)</span></h3>
+        
+        <a href="/blog/eichengreen-money-beyond-borders/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          달러는 영원할 수 없다 — 아이켄그린이 말하지 않은 것들 <span style="color:#555;font-size:0.85rem;">2026-03-28</span>
+        </a>
+        
+        <a href="/blog/us-constitution-domesday-machine/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          돔스데이 기계의 종말 — 미국 헌법은 실패할 운명인가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/insatiable-machine-capitalism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          끝없는 기계 — 자본주의의 기적은 왜 파멸을 향해 달리는가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/french-institutionalist-monetary-theory/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          화폐는 도구가 아니라 사회 그 자체다 — 프랑스 제도주의 화폐 이론 핵심 정리 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/beloved-son-felix/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          『사랑하는 아들 펠릭스』 서평: 르네상스 청년의 일상 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-세제">
+        <h3>세제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-소비불평등">
+        <h3>소비불평등 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-송영길">
+        <h3>송영길 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/yeonsu-byelection-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-시뮬레이션">
+        <h3>시뮬레이션 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-시민사회">
+        <h3>시민사회 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-시장분석">
+        <h3>시장분석 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-신경과학">
+        <h3>신경과학 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-신안군">
+        <h3>신안군 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-심우정">
+        <h3>심우정 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-안보">
+        <h3>안보 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/us-iran-war-korea-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미국-이란 전쟁과 한반도, 그리고 미중 대결의 새로운 지형 <span style="color:#555;font-size:0.85rem;">2026-03-15</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-안전자산">
+        <h3>안전자산 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-양극화">
+        <h3>양극화 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-에너지안보">
+        <h3>에너지안보 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-여론조사">
+        <h3>여론조사 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/yeonsu-byelection-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-역사">
+        <h3>역사 <span style="color:#888;font-weight:400;font-size:0.9rem;">(5)</span></h3>
+        
+        <a href="/blog/us-constitution-domesday-machine/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          돔스데이 기계의 종말 — 미국 헌법은 실패할 운명인가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/insatiable-machine-capitalism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          끝없는 기계 — 자본주의의 기적은 왜 파멸을 향해 달리는가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/french-revolution-ai-presentation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 AI 인터랙티브 프레젠테이션 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/french-revolution-timeline/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 인터랙티브 타임라인 (1787–1795) <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/beloved-son-felix/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          『사랑하는 아들 펠릭스』 서평: 르네상스 청년의 일상 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-연수구갑">
+        <h3>연수구갑 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/yeonsu-byelection-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-원유">
+        <h3>원유 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-유가">
+        <h3>유가 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-유럽">
+        <h3>유럽 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/beloved-son-felix/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          『사랑하는 아들 펠릭스』 서평: 르네상스 청년의 일상 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-윤석열">
+        <h3>윤석열 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-이란전쟁">
+        <h3>이란전쟁 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-이프로스">
+        <h3>이프로스 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-인구소멸">
+        <h3>인구소멸 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/rural-basic-income-rebuttal/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각 <span style="color:#555;font-size:0.85rem;">2026-03-04</span>
+        </a>
+        
+        <a href="/blog/rural-basic-income-criticism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [동서남북] 요지경 농어촌기본소득 <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-인터랙티브">
+        <h3>인터랙티브 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/french-revolution-ai-presentation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 AI 인터랙티브 프레젠테이션 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/french-revolution-timeline/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 인터랙티브 타임라인 (1787–1795) <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-인플레이션">
+        <h3>인플레이션 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-일기">
+        <h3>일기 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/beloved-son-felix/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          『사랑하는 아들 펠릭스』 서평: 르네상스 청년의 일상 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-임금">
+        <h3>임금 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-자본주의">
+        <h3>자본주의 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/insatiable-machine-capitalism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          끝없는 기계 — 자본주의의 기적은 왜 파멸을 향해 달리는가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-자산불평등">
+        <h3>자산불평등 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/kospi-7000-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-05-07</span>
+        </a>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-자유의지">
+        <h3>자유의지 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-재정">
+        <h3>재정 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-정책분석">
+        <h3>정책분석 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/sinan-basic-income-simulation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석 <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-정책비판">
+        <h3>정책비판 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/rural-basic-income-criticism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [동서남북] 요지경 농어촌기본소득 <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-정책실험">
+        <h3>정책실험 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/rural-basic-income-rebuttal/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각 <span style="color:#555;font-size:0.85rem;">2026-03-04</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-정치">
+        <h3>정치 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/us-constitution-domesday-machine/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          돔스데이 기계의 종말 — 미국 헌법은 실패할 운명인가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-제도주의">
+        <h3>제도주의 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-institutionalist-monetary-theory/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          화폐는 도구가 아니라 사회 그 자체다 — 프랑스 제도주의 화폐 이론 핵심 정리 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-종합특검">
+        <h3>종합특검 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-중국">
+        <h3>중국 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-중동전쟁">
+        <h3>중동전쟁 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-즉시항고">
+        <h3>즉시항고 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-지방재정">
+        <h3>지방재정 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/rural-basic-income-criticism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          [동서남북] 요지경 농어촌기본소득 <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-지정학">
+        <h3>지정학 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-채권시장">
+        <h3>채권시장 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/china-bonds-safe-haven/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          중국 국채, 전쟁 속 유일한 안전자산으로 부상 <span style="color:#555;font-size:0.85rem;">2026-04-03</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-철학">
+        <h3>철학 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          위르겐 하버마스를 추모하며 — 이 시대 마지막 계몽주의자 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-추모">
+        <h3>추모 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/habermas-tribute/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          위르겐 하버마스를 추모하며 — 이 시대 마지막 계몽주의자 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-칼럼">
+        <h3>칼럼 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/insatiable-machine-capitalism/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          끝없는 기계 — 자본주의의 기적은 왜 파멸을 향해 달리는가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-크루그먼">
+        <h3>크루그먼 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-타임라인">
+        <h3>타임라인 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-revolution-timeline/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 인터랙티브 타임라인 (1787–1795) <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-패권">
+        <h3>패권 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/eichengreen-money-beyond-borders/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          달러는 영원할 수 없다 — 아이켄그린이 말하지 않은 것들 <span style="color:#555;font-size:0.85rem;">2026-03-28</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-프랑스">
+        <h3>프랑스 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-institutionalist-monetary-theory/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          화폐는 도구가 아니라 사회 그 자체다 — 프랑스 제도주의 화폐 이론 핵심 정리 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-프랑스혁명">
+        <h3>프랑스혁명 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/french-revolution-ai-presentation/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 AI 인터랙티브 프레젠테이션 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/french-revolution-timeline/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          프랑스 혁명 인터랙티브 타임라인 (1787–1795) <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-하버마스">
+        <h3>하버마스 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/prosecution-fear-confession/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          두려움이라는 자백 — 신화 이후의 검찰 <span style="color:#555;font-size:0.85rem;">2026-04-26</span>
+        </a>
+        
+        <a href="/blog/habermas-tribute/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          위르겐 하버마스를 추모하며 — 이 시대 마지막 계몽주의자 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+        <a href="/blog/empires-of-ideas-habermas-review/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          공론장의 붕괴와 대학의 운명 — 하버마스를 추모하며 읽는 『Empires of Ideas』 <span style="color:#555;font-size:0.85rem;">2026-03-16</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-한국">
+        <h3>한국 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+        <a href="/blog/korea-budget-deficit-krugman/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국의 재정 딜레마 — 크루그먼이 놓친 세 장의 카드 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+        <a href="/blog/invisible-wealthy-passthrough/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          보이지 않는 부자들 — 미국 '패스스루 백만장자'가 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-한국경제">
+        <h3>한국경제 <span style="color:#888;font-weight:400;font-size:0.9rem;">(3)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+        <a href="/blog/us-iran-war-korea-analysis/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미국-이란 전쟁과 한반도, 그리고 미중 대결의 새로운 지형 <span style="color:#555;font-size:0.85rem;">2026-03-15</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-한국경제비교">
+        <h3>한국경제비교 <span style="color:#888;font-weight:400;font-size:0.9rem;">(2)</span></h3>
+        
+        <a href="/blog/k-shaped-economy-ny-fed/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 이번에는 진짜 누가 사고 있나 — 뉴욕연준 2026년 5월 노트 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+        <a href="/blog/explaining-k-shaped-economy/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          K자형 경제, 무엇이 나누었는가 — 임금·인플레·자산의 세 가지 채널 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-한국은행">
+        <h3>한국은행 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/kshape-korea-verification/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          한국에도 K자가 있다 — 다만 모양과 매개가 다르다 <span style="color:#555;font-size:0.85rem;">2026-05-02</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-한국정치">
+        <h3>한국정치 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/determined-sapolsky-korea/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          거북이는 끝까지 내려간다 — 사폴스키의 『Determined』가 2026년 한국에 던지는 질문 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-헌법">
+        <h3>헌법 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/us-constitution-domesday-machine/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          돔스데이 기계의 종말 — 미국 헌법은 실패할 운명인가 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-호르무즈">
+        <h3>호르무즈 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-korea-impact-dashboard/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          미·이란 전쟁 진단과 전망 — 한국 경제·삶에 미치는 영향 (인터랙티브 대시보드) <span style="color:#555;font-size:0.85rem;">2026-03-25</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-호르무즈해협">
+        <h3>호르무즈해협 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/iran-war-market-shock-comparison/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          차트로 보는 이란 전쟁과 과거 시장 충격의 비교 <span style="color:#555;font-size:0.85rem;">2026-03-27</span>
+        </a>
+        
+      </div>
+    
+      <div class="card" id="tag-화폐이론">
+        <h3>화폐이론 <span style="color:#888;font-weight:400;font-size:0.9rem;">(1)</span></h3>
+        
+        <a href="/blog/french-institutionalist-monetary-theory/" style="display:block;color:#54a0ff;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          화폐는 도구가 아니라 사회 그 자체다 — 프랑스 제도주의 화폐 이론 핵심 정리 <span style="color:#555;font-size:0.85rem;">2026-03-26</span>
+        </a>
+        
+      </div>
+    
+  </section>
+</div>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved. | <a href="mailto:menwchen@mac.com">menwchen@mac.com</a></footer>
+  <script data-goatcounter="https://menwchen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
