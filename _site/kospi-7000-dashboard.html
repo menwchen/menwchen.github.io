@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>코스피 7,000 시대, 우리 동네는 왜 더 어려워졌는가 — 데이터 대시보드</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0a0d14;
+    --bg-2: #11151f;
+    --card: #161b29;
+    --card-2: #1c2233;
+    --border: #252b3d;
+    --border-soft: rgba(255,255,255,0.06);
+    --text: #e9ecf5;
+    --muted: #8a93ab;
+    --dim: #5a6378;
+    --red: #ff5e7a;
+    --red-2: #ff8da3;
+    --gold: #ffc857;
+    --green: #5fd49a;
+    --blue: #6aa9ff;
+    --purple: #b08bff;
+    --orange: #ff9a5a;
+    --bull: linear-gradient(135deg, #ff5e7a, #ffc857);
+    --bear: linear-gradient(135deg, #6aa9ff, #5fd49a);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.55;
+  }
+  body {
+    background:
+      radial-gradient(1200px 600px at 90% -10%, rgba(255,94,122,0.12), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(106,169,255,0.10), transparent 60%),
+      radial-gradient(700px 400px at 50% 110%, rgba(176,139,255,0.08), transparent 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  /* ========== HERO ========== */
+  .hero { margin-bottom: 56px; }
+  .ribbon { display:inline-flex; align-items:center; gap:10px; padding:7px 14px; border:1px solid var(--border); border-radius:999px; background: rgba(255,255,255,0.02); color: var(--muted); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+  .ribbon .dot { width:6px; height:6px; background: var(--red); border-radius:50%; box-shadow:0 0 12px var(--red); }
+  h1 { font-size: clamp(34px, 5.2vw, 60px); line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 20px; }
+  h1 .num { background: var(--bull); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; }
+  h1 .q { color: var(--muted); font-weight: 700; }
+  .lede { font-size: 17px; color: var(--muted); max-width: 760px; }
+  .meta { display:flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; color: var(--dim); font-size: 13px; }
+  .meta span { display:inline-flex; align-items:center; gap: 6px; }
+
+  /* ========== TWO KOREAS HEADER ========== */
+  .two-koreas { display:grid; grid-template-columns: 1fr auto 1fr; gap: 0; margin: 56px 0; border:1px solid var(--border); border-radius: 18px; overflow: hidden; }
+  .tk-side { padding: 28px 30px; }
+  .tk-side.bull { background: linear-gradient(135deg, rgba(255,94,122,0.10), rgba(255,200,87,0.04)); }
+  .tk-side.bear { background: linear-gradient(135deg, rgba(106,169,255,0.10), rgba(95,212,154,0.04)); }
+  .tk-side h3 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .tk-side .badge-icon { font-size: 22px; margin-right: 6px; }
+  .tk-side .head { font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 6px; }
+  .tk-side ul { list-style:none; }
+  .tk-side li { font-size: 14px; color: var(--text); padding: 6px 0; border-bottom: 1px dashed var(--border-soft); display:flex; gap:10px; }
+  .tk-side li:last-child { border:0; }
+  .tk-side li::before { content:"›"; color: var(--dim); }
+  .tk-divider { width: 1px; background: var(--border); position: relative; }
+  .tk-divider::before { content: "VS"; position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg); border:1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 0.1em; }
+  .tk-foot { grid-column: 1 / -1; padding: 18px 30px; background: var(--bg-2); border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 14px; font-style: italic; }
+
+  /* ========== SECTION ========== */
+  section { margin: 64px 0; scroll-margin-top: 24px; }
+  .section-head { display:flex; align-items:flex-end; gap:16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .section-head .pill { font-family:"SF Mono", ui-monospace, monospace; font-size: 12px; padding: 5px 11px; border-radius:999px; background: rgba(255,94,122,0.12); color: var(--red); letter-spacing: 0.06em; font-weight: 600; }
+  .section-head h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -0.015em; }
+  .section-head .lede2 { color: var(--muted); font-size: 14px; margin-left: auto; max-width: 460px; text-align: right; }
+
+  /* ========== KPI ========== */
+  .kpi { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 22px; }
+  .kpi .k { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; position: relative; overflow:hidden; }
+  .kpi .k::after { content:""; position:absolute; right:-30px; top:-30px; width:120px; height:120px; border-radius:50%; background: radial-gradient(closest-side, rgba(255,94,122,0.18), transparent 70%); }
+  .kpi .k.blue::after { background: radial-gradient(closest-side, rgba(106,169,255,0.18), transparent 70%); }
+  .kpi .k.gold::after { background: radial-gradient(closest-side, rgba(255,200,87,0.20), transparent 70%); }
+  .kpi .k.green::after { background: radial-gradient(closest-side, rgba(95,212,154,0.18), transparent 70%); }
+  .kpi .k.purple::after { background: radial-gradient(closest-side, rgba(176,139,255,0.18), transparent 70%); }
+  .kpi .k label { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+  .kpi .k .v { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin: 8px 0 4px; }
+  .kpi .k .v .u { font-size: 16px; color: var(--muted); margin-left: 2px; font-weight: 600; }
+  .kpi .k .sub { font-size: 13px; color: var(--muted); }
+  .v.red { background: var(--bull); -webkit-background-clip: text; background-clip:text; color: transparent; }
+  .v.blue { background: var(--bear); -webkit-background-clip: text; background-clip:text; color: transparent; }
+  .v.gold { color: var(--gold); }
+  .v.green { color: var(--green); }
+  .v.purple { color: var(--purple); }
+
+  /* ========== CHARTS ========== */
+  .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .grid-3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  @media (max-width: 860px) { .grid-2, .grid-3, .two-koreas { grid-template-columns: 1fr; } .tk-divider { display:none; } }
+  .panel { background: var(--card); border:1px solid var(--border); border-radius: 16px; padding: 22px; }
+  .panel h4 { font-size: 14px; color: var(--muted); margin-bottom: 4px; letter-spacing: 0.02em; font-weight: 600; }
+  .panel h3 { font-size: 18px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.01em; }
+  .panel .src { margin-top: 12px; padding-top: 12px; border-top:1px solid var(--border-soft); font-size: 11px; color: var(--dim); }
+  .chart-box { position: relative; height: 280px; }
+  .chart-box.tall { height: 340px; }
+
+  /* ========== COMPARE CARD ========== */
+  .compare { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .compare .c { background: var(--card-2); border-radius: 12px; padding: 18px; border:1px solid var(--border-soft); }
+  .compare .c.left { border-left: 3px solid var(--red); }
+  .compare .c.right { border-left: 3px solid var(--blue); }
+  .compare .c .label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .compare .c .big { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+  .compare .c.left .big { color: var(--red); }
+  .compare .c.right .big { color: var(--blue); }
+  .compare .c .desc { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+  /* ========== QUOTE ========== */
+  .quote { padding: 24px 28px; background: linear-gradient(135deg, rgba(255,94,122,0.08), rgba(255,200,87,0.03)); border: 1px solid rgba(255,94,122,0.25); border-left: 4px solid var(--red); border-radius: 14px; margin: 18px 0; }
+  .quote p { font-size: 17px; font-style: italic; color: var(--text); line-height: 1.6; }
+  .quote .who { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+  /* ========== STAGES ========== */
+  .stages { display:grid; grid-template-columns: repeat(4, 1fr) auto; align-items: stretch; gap: 0; margin: 16px 0; }
+  @media (max-width: 1000px) { .stages { grid-template-columns: 1fr; } .stages .arrow { display:none !important; } }
+  .stages .stg { background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .stages .stg h5 { font-size: 11px; color: var(--red); letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 700; }
+  .stages .stg .t { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .stages .stg .d { font-size: 13px; color: var(--muted); }
+  .stages .arrow { display:flex; align-items:center; justify-content: center; color: var(--dim); font-size: 18px; padding: 0 8px; }
+
+  /* ========== ACTION TRACKS ========== */
+  .tracks { display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  @media (max-width: 860px) { .tracks { grid-template-columns: 1fr; } }
+  .track { background: var(--card); border:1px solid var(--border); border-radius: 16px; padding: 24px; position:relative; overflow:hidden; }
+  .track .num { font-size: 56px; font-weight: 900; opacity: 0.08; position:absolute; top: 6px; right: 16px; letter-spacing: -0.05em; }
+  .track h5 { font-size: 12px; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 700; }
+  .track h3 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+  .track .lead { font-size: 14px; color: var(--text); margin-bottom: 12px; }
+  .track ul { list-style:none; padding:0; }
+  .track li { font-size: 13px; color: var(--muted); padding: 5px 0; border-bottom: 1px dashed var(--border-soft); }
+  .track li:last-child { border:0; }
+  .track li::before { content:"•  "; color: var(--gold); }
+
+  /* ========== TOC ========== */
+  nav.toc { display:flex; flex-wrap: wrap; gap: 8px; padding: 14px; border:1px solid var(--border); border-radius: 14px; background: rgba(255,255,255,0.02); margin-bottom: 40px; }
+  nav.toc a { font-size: 13px; padding: 8px 14px; border-radius: 999px; color: var(--muted); text-decoration:none; border:1px solid transparent; transition: all .2s; }
+  nav.toc a:hover { color: var(--text); border-color: var(--border); background: var(--card); }
+  nav.toc a .em { color: var(--red); font-family: "SF Mono", ui-monospace, monospace; margin-right: 6px; }
+
+  /* ========== FOOTER ========== */
+  footer { margin-top: 80px; padding: 24px 0; border-top: 1px solid var(--border); text-align:center; color: var(--dim); font-size: 13px; }
+  footer .org { color: var(--text); font-weight: 700; }
+
+  /* small heading */
+  .small-h { font-size:13px; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* link inline */
+  a.inline { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="ribbon"><span class="dot"></span>시민사회 강연 데이터 브리프 · 2026</span>
+    <h1>코스피는 <span class="num">7,000</span>을 넘었다.<br><span class="q">그런데 우리 동네 가게는 왜 자꾸 문을 닫는가?</span></h1>
+    <p class="lede">자산-소득 양극화 · 물가와 생계비 · 노동과 일자리 · 복지와 사회안전망 — 네 가지 진단으로 살펴본 "두 개의 한국"의 거리. 발표 자료의 핵심 수치 30여 개를 인터랙티브 차트로 재구성했습니다.</p>
+    <div class="meta">
+      <span>📅 2026.05</span>
+      <span>🏛 사단법인 먹고사는문제연구소</span>
+      <span>👤 송종운 소장</span>
+      <span>✉ menwchen@mac.com</span>
+    </div>
+  </header>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <a href="#two"><span class="em">00</span>두 개의 한국</a>
+    <a href="#d1"><span class="em">01</span>자산-소득 양극화</a>
+    <a href="#d2"><span class="em">02</span>물가·생계비 위기</a>
+    <a href="#d3"><span class="em">03</span>노동·일자리</a>
+    <a href="#d4"><span class="em">04</span>복지·안전망</a>
+    <a href="#sum"><span class="em">05</span>종합 진단</a>
+    <a href="#act"><span class="em">06</span>시민사회의 자리</a>
+  </nav>
+
+  <!-- TWO KOREAS -->
+  <section id="two" class="two-koreas">
+    <div class="tk-side bull">
+      <h3><span class="badge-icon">📈</span>자산 시장</h3>
+      <p class="head">자산을 가진 사람들의 뉴스</p>
+      <ul>
+        <li>코스피 사상 첫 7,000 돌파</li>
+        <li>서울 아파트값, 또 신고가</li>
+        <li>부동산·주식 자산가, 사상 최대</li>
+      </ul>
+    </div>
+    <div class="tk-divider"></div>
+    <div class="tk-side bear">
+      <h3><span class="badge-icon">🏠</span>생계 현장</h3>
+      <p class="head">자산이 없는 사람들의 일상</p>
+      <ul>
+        <li>가계부채 1,900조 · 자영업 폐업 100만</li>
+        <li>장바구니 물가, 5년 새 +25%</li>
+        <li>청년 "쉬었음" 인구 50만 시대</li>
+      </ul>
+    </div>
+    <div class="tk-foot">"지수는 같은 한국에서 매겨지지만, 두 한국은 다른 시간을 산다."</div>
+  </section>
+
+  <!-- ============ DIAGNOSIS 1: 자산-소득 양극화 ============ -->
+  <section id="d1">
+    <div class="section-head">
+      <span class="pill">진단 ① 자산-소득 양극화</span>
+      <h2>코스피 7,000의 주인은 누구인가</h2>
+      <p class="lede2">지수가 오를 때 모두가 오르는 게 아니다. 주식·펀드 자산은 상위 가구에 집중되어 있다.</p>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi">
+      <div class="k"><label>금융자산 상위 10% 보유</label><div class="v red">76<span class="u">%</span></div><div class="sub">하위 50%는 약 2%</div></div>
+      <div class="k blue"><label>가구 순자산 중 부동산</label><div class="v blue">75<span class="u">%</span></div><div class="sub">한국 자산의 부동산 의존도</div></div>
+      <div class="k gold"><label>자산 5분위 배율</label><div class="v gold">124<span class="u">배</span></div><div class="sub">상위 20% vs 하위 20% 순자산</div></div>
+      <div class="k purple"><label>한국 지니계수 (OECD)</label><div class="v purple">0.331</div><div class="sub">OECD 평균 0.315 · 미국 0.395</div></div>
+    </div>
+
+    <!-- Two charts: financial wealth pie, net asset bar by quintile -->
+    <div class="grid-2">
+      <div class="panel">
+        <h4>금융자산 분포</h4>
+        <h3>상위 10% 가구가 76%를 보유</h3>
+        <div class="chart-box"><canvas id="cFinPie"></canvas></div>
+        <div class="src">출처 · 통계청 가계금융복지조사 기반 추정·재구성</div>
+      </div>
+      <div class="panel">
+        <h4>분위별 평균 순자산 (단위: 억원)</h4>
+        <h3>상위 20%는 하위 20%의 124배</h3>
+        <div class="chart-box"><canvas id="cNetAsset"></canvas></div>
+        <div class="src">출처 · 통계청 가계금융복지조사 2024</div>
+      </div>
+    </div>
+
+    <!-- Generation comparison + OECD compare -->
+    <div class="grid-2" style="margin-top:18px;">
+      <div class="panel">
+        <h4>같은 30대인데 출발선이 다르다</h4>
+        <h3>세대 간 자산 격차</h3>
+        <div class="compare" style="margin-top:8px;">
+          <div class="c left">
+            <div class="label">30대 가구</div>
+            <div class="big">2.7억</div>
+            <div class="desc">평균 순자산 · 부채비율 36%<br><span style="color:var(--dim)">결혼·내 집 마련을 위해 빚지고 출발</span></div>
+          </div>
+          <div class="c right">
+            <div class="label">60대 가구</div>
+            <div class="big">5.6억</div>
+            <div class="desc">평균 순자산 · 부채비율 9%<br><span style="color:var(--dim)">자산 가격 상승의 수혜자</span></div>
+          </div>
+        </div>
+        <p style="margin-top:14px; color: var(--muted); font-size: 13px;">→ "같은 30대"라도 부모 자산 유무에 따라 출발선이 갈라진다. 자산 격차는 곧 세대 격차이자 가족사 격차.</p>
+        <div class="src">출처 · 통계청 가계금융복지조사 2024</div>
+      </div>
+      <div class="panel">
+        <h4>OECD 비교 — 처분가능소득 기준 지니계수</h4>
+        <h3>한국은 "중상위권 불평등"</h3>
+        <div class="chart-box"><canvas id="cGini"></canvas></div>
+        <div class="src">출처 · OECD Income Distribution Database 2022</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"열심히 일해도 자산을 가진 사람을 따라잡을 수 없다" — 최근 10년 자본소득(배당·이자·임대) 증가율은 근로소득 증가율을 크게 앞질렀다.</p>
+      <div class="who">— 한국은행 ECOS · 통계청 KOSIS</div>
+    </div>
+  </section>
+
+  <!-- ============ DIAGNOSIS 2: 물가·생계비 ============ -->
+  <section id="d2">
+    <div class="section-head">
+      <span class="pill">진단 ② 물가·생계비 위기</span>
+      <h2>장바구니가 먼저 안다</h2>
+      <p class="lede2">공식 평균 +15%, 하지만 매일 사는 품목은 두 배 가까이 올랐다.</p>
+    </div>
+
+    <div class="kpi">
+      <div class="k"><label>신선과일 (2019→2024)</label><div class="v red">+34<span class="u">%</span></div><div class="sub">공식 평균의 2.3배</div></div>
+      <div class="k gold"><label>도시가스 (2021→2024)</label><div class="v gold">+42<span class="u">%</span></div><div class="sub">난방·취사 직격</div></div>
+      <div class="k purple"><label>청년 1인 가구 RIR</label><div class="v purple">38<span class="u">%</span></div><div class="sub">월급의 38%가 월세로</div></div>
+      <div class="k blue"><label>공식 CPI 평균</label><div class="v blue">+15<span class="u">%</span></div><div class="sub">5년 누적 (2019→2024)</div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h4>장바구니 물가 vs 공식 평균</h4>
+        <h3>매일 사는 품목이 더 빨리 올랐다</h3>
+        <div class="chart-box"><canvas id="cBasket"></canvas></div>
+        <div class="src">출처 · 통계청 KOSIS 소비자물가 (2019→2024)</div>
+      </div>
+      <div class="panel">
+        <h4>소득 대비 임대료 비율 (RIR)</h4>
+        <h3>월급의 절반이 "잘 곳"으로 빠져나간다</h3>
+        <div class="chart-box"><canvas id="cRir"></canvas></div>
+        <div class="src">출처 · 국토교통부 주거실태조사 / 통계청 KOSIS 2024</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"월급 230만원 받는데 반지하 월세·관리비로 95만원 나갑니다. 나머지로 사는 거죠."</p>
+      <div class="who">— 서울 영등포구, 30대 1인 가구</div>
+    </div>
+
+    <div class="panel" style="margin-top:18px;">
+      <h4>공공요금 — 가장 피하기 어려운 인상 (2021→2024)</h4>
+      <h3>역진적 부담: 소득이 낮을수록 가계 비중이 더 크다</h3>
+      <div class="chart-box"><canvas id="cUtility"></canvas></div>
+      <div class="src">출처 · 한국전력 · 한국가스공사 · 국토교통부 2024</div>
+    </div>
+  </section>
+
+  <!-- ============ DIAGNOSIS 3: 노동·일자리 ============ -->
+  <section id="d3">
+    <div class="section-head">
+      <span class="pill">진단 ③ 노동·일자리</span>
+      <h2>같은 일, 다른 인생</h2>
+      <p class="lede2">비정규직·플랫폼 노동·청년 "쉬었음" — 일자리의 질이 무너지는 세 가지 신호.</p>
+    </div>
+
+    <div class="kpi">
+      <div class="k"><label>비정규직 비중</label><div class="v red">37<span class="u">%</span></div><div class="sub">약 845만 명 · 3명 중 1명</div></div>
+      <div class="k blue"><label>비정규직/정규직 임금</label><div class="v blue">54<span class="u">%</span></div><div class="sub">204만원 vs 379만원</div></div>
+      <div class="k gold"><label>플랫폼 종사자</label><div class="v gold">88<span class="u">만 명</span></div><div class="sub">고용보험 미가입 53%</div></div>
+      <div class="k purple"><label>청년 "쉬었음"</label><div class="v purple">50.7<span class="u">만 명</span></div><div class="sub">NEET 비율 ~18%</div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h4>정규직 vs 비정규직 월평균 임금</h4>
+        <h3>같은 일, 절반의 처우</h3>
+        <div class="chart-box"><canvas id="cWage"></canvas></div>
+        <div class="src">출처 · 통계청 KOSIS 경제활동인구조사 부가조사 2024</div>
+      </div>
+      <div class="panel">
+        <h4>청년이 "쉬었다"고 답한 이유 (복수응답)</h4>
+        <h3>게으름이 아니라 신호</h3>
+        <div class="chart-box"><canvas id="cYouth"></canvas></div>
+        <div class="src">출처 · 통계청 KOSIS 경제활동인구조사 2024</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"하루 12시간을 달리는데, 산재가 나도 회사가 없어요. 보험은 '특수형태근로종사자'라며 따로 들라고 합니다."</p>
+      <div class="who">— 40대 배달 라이더, 수도권</div>
+    </div>
+  </section>
+
+  <!-- ============ DIAGNOSIS 4: 복지·안전망 ============ -->
+  <section id="d4">
+    <div class="section-head">
+      <span class="pill">진단 ④ 복지·사회안전망</span>
+      <h2>성장은 했지만, 안전망은 따라오지 못했다</h2>
+      <p class="lede2">GDP 14위. 하지만 사회복지지출 비율은 OECD 하위권이고, 사각지대는 여전히 크다.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="panel" style="text-align:center;">
+        <h4>사회복지지출</h4>
+        <div style="font-size: 48px; font-weight: 900; margin: 18px 0; color: var(--red);">OECD<br><span style="font-size: 28px; color: var(--muted);">하위권</span></div>
+        <p style="color: var(--muted); font-size: 13px;">GDP 대비 사회지출 비율, OECD 평균 미달</p>
+      </div>
+      <div class="panel" style="text-align:center;">
+        <h4>기초생활 사각지대</h4>
+        <div style="font-size: 64px; font-weight: 900; margin: 18px 0; background: var(--bull); -webkit-background-clip: text; background-clip: text; color: transparent;">44<span style="font-size: 28px;">%</span></div>
+        <p style="color: var(--muted); font-size: 13px;">제도가 있어도 닿지 않는 빈곤</p>
+      </div>
+      <div class="panel" style="text-align:center;">
+        <h4>공공의료·돌봄 비중</h4>
+        <div style="font-size: 64px; font-weight: 900; margin: 18px 0; color: var(--purple);">한 자릿<span style="font-size: 28px;">수 %</span></div>
+        <p style="color: var(--muted); font-size: 13px;">민간 의존이 너무 큰 의료·돌봄 시스템</p>
+      </div>
+    </div>
+
+    <div class="quote" style="background: linear-gradient(135deg, rgba(176,139,255,0.10), rgba(106,169,255,0.04)); border-color: rgba(176,139,255,0.3); border-left-color: var(--purple);">
+      <p style="font-style: normal; font-weight: 600;">→ 보편복지·기본사회 — 모든 시민이 "기본적인 삶"을 권리로 누리는 사회로</p>
+    </div>
+  </section>
+
+  <!-- ============ 종합진단 ============ -->
+  <section id="sum">
+    <div class="section-head">
+      <span class="pill">종합 진단</span>
+      <h2>네 가지 진단은 서로 맞물려 있다</h2>
+      <p class="lede2">분리된 문제가 아니다. 자산이 자산을 낳고, 그 자산이 노동을 약하게 만들고, 약한 노동이 빈약한 안전망을 만든다.</p>
+    </div>
+
+    <div class="stages">
+      <div class="stg"><h5>① 자산-소득</h5><div class="t">자산 격차 확대</div><div class="d">코스피·부동산은 상위 10~20%에 집중</div></div>
+      <div class="arrow">→</div>
+      <div class="stg"><h5>② 물가-생계비</h5><div class="t">실질소득 잠식</div><div class="d">장바구니·주거비가 월급보다 빠르게 상승</div></div>
+      <div class="arrow">→</div>
+      <div class="stg"><h5>③ 노동-일자리</h5><div class="t">근로의 빈곤화</div><div class="d">비정규·플랫폼화로 사회보험 사각지대 확대</div></div>
+      <div class="arrow">→</div>
+      <div class="stg"><h5>④ 복지-안전망</h5><div class="t">공공의 빈자리</div><div class="d">사회지출 OECD 하위, 사각지대 44%</div></div>
+    </div>
+    <p style="text-align:center; color: var(--muted); margin-top: 16px; font-size: 14px;">하나의 부분만 고치면 다른 부분이 어긋난다. <b style="color: var(--gold);">통합적 접근</b>이 필요한 이유.</p>
+  </section>
+
+  <!-- ============ 시민사회의 자리 ============ -->
+  <section id="act">
+    <div class="section-head">
+      <span class="pill">닫는 글</span>
+      <h2>시민사회의 자리 — 진단을 운동으로</h2>
+      <p class="lede2">현장에 있는 우리는 통계가 가린 얼굴을 안다.</p>
+    </div>
+
+    <div class="tracks">
+      <div class="track">
+        <span class="num">01</span>
+        <h5>기록한다 · 현장의 목소리</h5>
+        <h3>통계 너머의 사람을 기록한다</h3>
+        <p class="lead">사례·증언·구술 — 추상적 수치를 사람의 이름으로 되돌린다.</p>
+        <ul>
+          <li>빈곤·돌봄·노동 사례 아카이브</li>
+          <li>당사자 운동·자조모임 지원</li>
+          <li>지역 르포·구술 프로젝트</li>
+        </ul>
+      </div>
+      <div class="track">
+        <span class="num">02</span>
+        <h5>연결한다 · 현장과 정책</h5>
+        <h3>분절된 문제를 연결한다</h3>
+        <p class="lead">우리 동네의 문제는 다른 동네의 문제이고, 작년의 문제는 올해의 정책 과제다.</p>
+        <ul>
+          <li>지역 단위 네트워크·연대체</li>
+          <li>연구자·정치인과 정책 라운드테이블</li>
+          <li>캠페인·국회 입법 청원</li>
+        </ul>
+      </div>
+      <div class="track">
+        <span class="num">03</span>
+        <h5>전환한다 · 권리로서의 기본</h5>
+        <h3>잔여적 복지에서 보편적 권리로</h3>
+        <p class="lead">"시혜"가 아니라 "기본"으로, 시민이 "신청"하지 않아도 닿는 사회로.</p>
+        <ul>
+          <li>기본사회·기본권 의제 확산</li>
+          <li>공공성 강화 운동(의료·돌봄·주거)</li>
+          <li>시민 정치교육·풀뿌리 조직화</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote" style="margin-top: 32px; padding: 32px; text-align: center;">
+      <p style="font-size: 22px; font-weight: 700;">"코스피는 7천을 넘었지만, 우리 동네 가게는 자꾸 문을 닫는다."</p>
+      <div class="who" style="margin-top: 14px; font-size: 14px;">— 두 개의 한국. 우리는 어느 쪽을 보고 정책을 말할 것인가.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="org">사단법인 먹고사는문제연구소</div>
+    소장 송종운 · menwchen@mac.com · 2026 시민사회 강연<br>
+    <span style="font-size: 11px;">데이터 출처 · 한국은행 ECOS · 통계청 KOSIS · OECD · 국토교통부 · 한국전력 · 한국가스공사</span>
+  </footer>
+</div>
+
+<script>
+// Common chart styling
+Chart.defaults.color = '#8a93ab';
+Chart.defaults.font.family = '-apple-system, "Pretendard", "Apple SD Gothic Neo", sans-serif';
+Chart.defaults.font.size = 12;
+Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+
+const palette = {
+  red: '#ff5e7a', red2: '#ff8da3',
+  gold: '#ffc857', green: '#5fd49a',
+  blue: '#6aa9ff', purple: '#b08bff',
+  orange: '#ff9a5a', dim: '#3a4258'
+};
+
+// 1. 금융자산 분포 (Doughnut)
+new Chart(document.getElementById('cFinPie'), {
+  type: 'doughnut',
+  data: {
+    labels: ['상위 10%', '9분위', '8분위', '7분위', '6분위', '1~5분위'],
+    datasets: [{
+      data: [76, 12, 6, 3, 1, 2],
+      backgroundColor: [palette.red, palette.orange, palette.gold, palette.green, palette.blue, palette.purple],
+      borderColor: '#161b29', borderWidth: 3,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '62%',
+    plugins: {
+      legend: { position: 'right', labels: { boxWidth: 12, padding: 10, font: { size: 12 } } },
+      tooltip: { callbacks: { label: c => `${c.label}: ${c.parsed}%` } }
+    }
+  }
+});
+
+// 2. 분위별 순자산 (Bar)
+new Chart(document.getElementById('cNetAsset'), {
+  type: 'bar',
+  data: {
+    labels: ['1분위 (하위20%)', '2분위', '3분위', '4분위', '5분위 (상위20%)'],
+    datasets: [{
+      label: '평균 순자산 (억원)',
+      data: [0.05, 0.6, 1.8, 3.6, 12.5],
+      backgroundColor: ctx => {
+        const v = ctx.parsed?.y || 0;
+        if (v > 10) return palette.red;
+        if (v > 3) return palette.orange;
+        if (v > 1) return palette.gold;
+        return palette.blue;
+      },
+      borderRadius: 8, borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `${c.parsed.y} 억원` } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '억' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 3. OECD 지니계수
+new Chart(document.getElementById('cGini'), {
+  type: 'bar',
+  data: {
+    labels: ['체코', '덴마크', '독일', '프랑스', 'OECD 평균', '한국', '일본', '영국', '미국'],
+    datasets: [{
+      label: '지니계수',
+      data: [0.246, 0.263, 0.297, 0.298, 0.315, 0.331, 0.334, 0.355, 0.395],
+      backgroundColor: (ctx) => {
+        const lbl = ctx.chart.data.labels[ctx.dataIndex];
+        if (lbl === '한국') return palette.red;
+        if (lbl === 'OECD 평균') return palette.gold;
+        return palette.blue;
+      },
+      borderRadius: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: 'rgba(255,255,255,0.05)' }, min: 0.2 },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// 4. 장바구니 물가
+new Chart(document.getElementById('cBasket'), {
+  type: 'bar',
+  data: {
+    labels: ['신선과일', '신선채소', '외식 평균', '대중교통', '공식 CPI 평균'],
+    datasets: [{
+      label: '5년 누적 상승률 (%)',
+      data: [34, 28, 24, 22, 15],
+      backgroundColor: ctx => ctx.dataIndex === 4 ? palette.blue : palette.red,
+      borderRadius: 8
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `+${c.parsed.y}%` } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => '+' + v + '%' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 5. RIR
+new Chart(document.getElementById('cRir'), {
+  type: 'bar',
+  data: {
+    labels: ['청년 1인 가구\n(서울)', '저소득(1~2분위)', '전체 임차 가구 평균'],
+    datasets: [{
+      label: 'RIR (%)',
+      data: [38, 30, 17],
+      backgroundColor: [palette.red, palette.orange, palette.blue],
+      borderRadius: 8
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `${c.parsed.y}%` } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '%' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 6. 공공요금
+new Chart(document.getElementById('cUtility'), {
+  type: 'bar',
+  data: {
+    labels: ['전기요금', '도시가스', '대중교통'],
+    datasets: [{
+      label: '인상률 (%)',
+      data: [30, 42, 25],
+      backgroundColor: [palette.gold, palette.red, palette.purple],
+      borderRadius: 10, barThickness: 60
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `+${c.parsed.y}%` } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => '+' + v + '%' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 7. Wage 정규직 vs 비정규직
+new Chart(document.getElementById('cWage'), {
+  type: 'bar',
+  data: {
+    labels: ['정규직', '비정규직'],
+    datasets: [{
+      label: '월평균 임금 (만원)',
+      data: [379, 204],
+      backgroundColor: [palette.blue, palette.red],
+      borderRadius: 10, barThickness: 80
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `${c.parsed.y}만원` } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '만' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 8. 청년 쉬었음
+new Chart(document.getElementById('cYouth'), {
+  type: 'bar',
+  data: {
+    labels: ['원하는 일자리 없음', '취업 준비·자격증', '건강·심리적 어려움', '일·가족 돌봄', '기타'],
+    datasets: [{
+      data: [56, 32, 24, 14, 9],
+      backgroundColor: [palette.red, palette.orange, palette.gold, palette.purple, palette.dim],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => `${c.parsed.x}%` } }
+    },
+    scales: {
+      x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '%' } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html>

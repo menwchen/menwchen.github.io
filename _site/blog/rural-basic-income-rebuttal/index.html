@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각</title>
+<meta name="description" content="노컷뉴스 기고. 농어촌기본소득에 대한 '제로섬 게임', '공짜 돈' 비판의 논리적 결함을 반박하고, 건설적 비판의 방향을 제시합니다.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각">
+<meta property="og:description" content="노컷뉴스 기고. 농어촌기본소득에 대한 '제로섬 게임', '공짜 돈' 비판의 논리적 결함을 반박하고, 건설적 비판의 방향을 제시합니다.">
+<meta property="og:url" content="http://localhost:4000/blog/rural-basic-income-rebuttal/">
+<meta property="article:published_time" content="2026-03-04T00:00:00+09:00">
+<meta property="article:tag" content="기본소득"><meta property="article:tag" content="농어촌"><meta property="article:tag" content="정책실험"><meta property="article:tag" content="인구소멸"><meta property="article:tag" content="반사실적추론">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각">
+<meta name="twitter:description" content="노컷뉴스 기고. 농어촌기본소득에 대한 '제로섬 게임', '공짜 돈' 비판의 논리적 결함을 반박하고, 건설적 비판의 방향을 제시합니다.">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/blog/rural-basic-income-rebuttal/">
+
+<!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각",
+  "description": "노컷뉴스 기고. 농어촌기본소득에 대한 '제로섬 게임', '공짜 돈' 비판의 논리적 결함을 반박하고, 건설적 비판의 방향을 제시합니다.",
+  "datePublished": "2026-03-04T00:00:00+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alle Menschen werden Brüder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "세상을 바꾸는 유토피아"
+  },
+  "url": "http://localhost:4000/blog/rural-basic-income-rebuttal/",
+  "mainEntityOfPage": "http://localhost:4000/blog/rural-basic-income-rebuttal/"
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <a href="/" class="back-link">← 홈으로</a>
+    <div class="post-header">
+      <div class="card-tags">
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">기본소득</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">농어촌</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">정책실험</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(84,160,255,0.2);color:#54a0ff;">인구소멸</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,159,243,0.2);color:#ff9ff3;">반사실적추론</span>
+        
+      </div>
+      <h1>농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각</h1>
+      <div class="post-meta">
+        <p class="post-date">2026년 03월 04일</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
+    </div>
+    <div class="post-content">
+      <h2 id="농어촌기본소득이-제로섬공짜돈이라는-착각">농어촌기본소득이 ‘제로섬’·’공짜돈’이라는 착각</h2>
+
+<blockquote>
+  <p>송종운 기본사회정책연구소 소장 · 노컷뉴스 기고</p>
+</blockquote>
+
+<p><strong><a href="/blog/sinan-basic-income-simulation/">이 글의 주장을 데이터로 검증한 시뮬레이션 분석 보기 →</a></strong></p>
+
+<p>기본소득 담론이 힘을 받을 때마다 어김없이 제기되는 비판들이 올해부터 시범사업을 시작한 농어촌 기본소득에도 따라붙고 있다. 기본소득은 지역 간 ‘제로섬 게임’에 불과하고 이미 실패한 사례가 있으며, 투입 세금 대비 효과를 담보할 수 없고 ‘공짜 돈’만 살포하는 것으로 끝날 것이란 우려다.</p>
+
+<p>정책에 대한 비판은 얼마든지 가능하고 또 필요하지만, 비판이 정책의 개선으로 이어지려면 최소한의 논리적 정합성과 사실에 대한 균형 잡힌 해석이 전제되어야 한다. 위의 비판들에는 그 둘 모두가 부족하다.</p>
+
+<hr />
+
+<h3 id="제로섬이라는-착각">제로섬이라는 착각</h3>
+
+<p>최근 농어촌 기본소득에 대해 제기된 비판 중 가장 강력한 수사는 ‘제로섬 게임’이다. 기본소득 대상지로 선정된 신안 인구는 갑자기 3천명 늘고, 대상지가 아닌 목포에선 3300명 줄었다며 한쪽이 얻어도 어차피 다른 쪽에서 잃는 구조라는 것이다. 그러나 이 논리는 두 가지 점에서 결함이 있다.</p>
+
+<p>첫째, 주민등록 이동을 곧바로 제로섬의 증거로 해석하는 것은 인구 이동의 다층적 동기를 무시한 것이다. 농어촌 기본소득 대상지로 선정된 이후 실제 거주지를 옮긴 경우, 기존에 생활 근거지가 해당 지역이었으나 행정상 타지에 등록되어 있던 경우, 귀농·귀촌을 고려하던 이들이 결정을 앞당긴 경우가 혼재되어 있다. 이 중 두 번째와 세 번째는 오히려 정책이 유도하고자 했던 방향 그 자체다. 인구 소멸 위기 지역에 사람이 돌아오도록 유인을 제공하는 것, 그것이 바로 이 정책의 핵심 목표 중 하나다.</p>
+
+<p>둘째, 목포 인구 감소를 신안 기본소득의 결과로 단정하려면, 목포의 자연 감소 추세, 다른 지역으로의 유출, 경제적 요인 등을 통제한 분석이 필요하다. 같은 시기에 일어난 두 현상의 상관관계를 인과관계로 치환하여 제 목소리를 정당화하려는 것으로 보이는데 여러모로 무리였다고 하겠다.</p>
+
+<hr />
+
+<h3 id="청산면-실패-주장-속내가-빤히-보이는-트집">청산면 “실패” 주장, 속내가 빤히 보이는 트집</h3>
+
+<p>농어촌 기본소득 주장이 사실상 실패했다는 주장도 들여다보자. 대표적으로 거론되는 사례가 연천 청산면에서 기본소득을 도입한 후 인구가 반짝 늘었다가 다시 줄면서 시행 전보다 1.4% 감소했다는 것이다. 그러나 이는 청산면이 위치한 연천군, 나아가 한국 농어촌 전체가 구조적 인구 감소 국면에 있다는 사실을 의도적으로 배제한 해석이다.</p>
+
+<p>연천군 전체 인구가 같은 기간 0.6% 감소한 가운데 청산면이 1.4% 줄었으니 기본소득이 오히려 해로웠다는 식의 단순 비교는, 청산면의 인구 구조와 기초 여건의 차이를 전혀 고려하지 않은 것이다. 기본소득 시행 이전 청산면의 인구 감소 추세가 어떠했는지, 기본소득이 없었다면 감소폭이 얼마나 더 컸을지를 따져야 한다. 이것이 바로 반사실적 추론(counterfactual reasoning)이며, 정책 평가의 기본이다. 기본소득이 있었던 세계와 없었던 세계를 비교해야지, 단순히 시행 전후 수치만 늘어놓아서는 안 된다.</p>
+
+<hr />
+
+<h3 id="1조2천억원은-정말-많은-돈일까">1조2천억원은 정말 많은 돈일까?</h3>
+
+<p>이번 농어촌 기본소득에 들어가는 세금이 ‘무려’ 1조2천억원이라는 점도 비판 지점이다. 큰돈이다. 그러나 맥락이 필요하다. 2026년 대한민국 총지출 예산은 약 727조9천억원이다. 농어촌 기본소득 2년 총예산 1조2천억원은 연간 기준으로 6천억원, 총지출의 약 0.08%에 해당한다. 매년 농어촌에 투입되는 각종 보조금, 직불금, 지역개발 예산의 규모와 비교해도 미미한 수준이다. 물론 재정의 효율적 사용은 금액의 크기와 무관하게 중요하다. 그러나 ‘전 국민의 0.6%만 혜택을 보는 사업’이라는 프레이밍은, 이 정책이 보편적 복지가 아니라 특정 지역의 구조적 위기에 대응하는 타깃형 실험이라는 본질을 왜곡한다.</p>
+
+<hr />
+
+<h3 id="공짜-돈-프레이밍-정당한가">‘공짜 돈’ 프레이밍, 정당한가</h3>
+
+<p>특히 일각에서 기본소득을 반복적으로 ‘공짜 돈’이라 부르는 것은 정당한 비판이라고 보기 어렵다. 이 단어 선택 자체가 이미 결론을 내포하고 있다고 볼 수 있다. 국가가 시민에게 제공하는 모든 현금성 이전—기초연금, 아동수당, 근로장려금—을 ‘공짜 돈’이라 부르지 않으면서 기본소득만 ‘공짜 돈’이라 지칭하는 것은 지독한 수사적 편향이다.</p>
+
+<p>농어촌 기본소득은 인구 소멸이라는 국가적 위기에 대한 하나의 정책적 응답이다. 전국 229개 기초자치단체 중 60%가 소멸 위험 지역으로 분류되고, 해마다 면 단위 지역이 사실상 공동화되는 현실에서, 이 지역에 사람이 살 수 있는 최소한의 경제적 기반을 마련하려는 시도를 ‘돈 뿌리기’로 환원하는 것은 문제의 심각성을 외면하는 것이다.</p>
+
+<hr />
+
+<h3 id="진짜-질문은-따로-있다">진짜 질문은 따로 있다</h3>
+
+<p>비판해야 할 것이 있다면, 이런 것들이다. 실험 설계는 인과효과를 식별할 수 있을 만큼 정교한가? 2년이라는 실험 기간은 정책의 중장기 효과를 측정하기에 충분한가? 월 15만 원이라는 급여 수준은 실질적 행동 변화를 유도할 수 있는 임계점을 넘는가? 지역 상품권이라는 지급 방식이 수급자의 소비 자유를 과도하게 제약하지는 않는가? 기본소득과 병행해야 할 주거, 의료, 교육 등 공공서비스 인프라 확충은 어떻게 설계되어 있는가?</p>
+
+<p>이것이 건설적 비판의 방향이다. 그러나 ‘공돈 살포’라는 프레이밍으로 시작해, 불완전한 데이터를 편의적으로 해석한 비판들에는 정책을 개선하려는 의지가 아니라 정책 자체를 무력화하려는 의도가 읽힌다.</p>
+
+<hr />
+
+<h3 id="맺으며">맺으며</h3>
+
+<p>정책 실험은 본질적으로 불확실성을 동반한다. 실험의 가치는 성공을 보장하는 데 있는 것이 아니라, 근거에 기반한 의사결정(evidence-based policy making)의 토대를 만드는 데 있다. 실험 설계의 미비함을 지적하는 것은 생산적 비판이다. 그러나 실험 자체를 ‘묻지마 실험’이라 부르며, 실험을 통해 배울 수 있는 가능성까지 부정하는 것은 비판이 아니라 힐난(詰難)이다. 곧 트집을 잡아 거북할 만큼 따지고 든, 이유 없는 비난이라 하겠다.</p>
+
+<p>농어촌 소멸은 대한민국이 당면한 가장 절박한 구조적 위기 중 하나다. 이 위기에 대한 응답이 완벽할 수는 없다. 그러나 불완전한 응답이라도 시도하고, 그 결과를 엄밀하게 평가하여 더 나은 정책으로 나아가는 것이 성숙한 사회의 태도다.</p>
+
+      
+
+
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;margin:2em 0;">
+  <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">이 시리즈의 다른 글 — 농어촌기본소득 논쟁</h4>
+  
+  <div style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+    
+      <a href="/blog/rural-basic-income-criticism/" style="color:#54a0ff;text-decoration:none;">1. [동서남북] 요지경 농어촌기본소득</a>
+      <span style="color:#555;font-size:0.85rem;">2026-02-27</span>
+    
+  </div>
+  
+  <div style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+    
+      <span style="color:#feca57;font-weight:600;">2. 농어촌기본소득이 '제로섬'·'공짜돈'이라는 착각</span>
+      <span style="color:#888;font-size:0.85rem;">(현재 글)</span>
+    
+  </div>
+  
+  <div style="padding:8px 0;">
+    
+      <a href="/blog/sinan-basic-income-simulation/" style="color:#54a0ff;text-decoration:none;">3. 신안군 농어촌기본소득 시뮬레이션 — 5가지 건설적 질문에 대한 정량적 분석</a>
+      <span style="color:#555;font-size:0.85rem;">2026-03-22</span>
+    
+  </div>
+  
+</div>
+
+
+
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GoatCounter page view count
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
+      var el = document.getElementById('post-views');
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
+  </script>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
+</body>
+</html>

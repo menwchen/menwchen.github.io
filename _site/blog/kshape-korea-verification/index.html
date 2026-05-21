@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한국에도 K자가 있다 — 다만 모양과 매개가 다르다</title>
+<meta name="description" content="한국은행 ECOS와 통계청 가계금융복지조사로 한국판 K자를 검증한다. 결론: 자산은 K자가 분명하다(5분위 실질 순자산 +30.7%, 3분위 +12.5%). 그러나 미국과 다른 특이점이 셋. ① 매개가 부동산. ② 1분위가 2~3분위보다 빠른 비단조 패턴. ③ 처분가능소득 격차는 오히려 줄어드는 중. 소득과 자산이 다른 방향으로 움직이는 한국식 양극화.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="한국에도 K자가 있다 — 다만 모양과 매개가 다르다">
+<meta property="og:description" content="한국은행 ECOS와 통계청 가계금융복지조사로 한국판 K자를 검증한다. 결론: 자산은 K자가 분명하다(5분위 실질 순자산 +30.7%, 3분위 +12.5%). 그러나 미국과 다른 특이점이 셋. ① 매개가 부동산. ② 1분위가 2~3분위보다 빠른 비단조 패턴. ③ 처분가능소득 격차는 ...">
+<meta property="og:url" content="http://localhost:4000/blog/kshape-korea-verification/">
+<meta property="article:published_time" content="2026-05-02T00:00:00+09:00">
+<meta property="article:tag" content="K자경제"><meta property="article:tag" content="한국경제"><meta property="article:tag" content="자산불평등"><meta property="article:tag" content="부동산"><meta property="article:tag" content="가계금융복지조사"><meta property="article:tag" content="한국은행"><meta property="article:tag" content="ECOS"><meta property="article:tag" content="거시경제">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="한국에도 K자가 있다 — 다만 모양과 매개가 다르다">
+<meta name="twitter:description" content="한국은행 ECOS와 통계청 가계금융복지조사로 한국판 K자를 검증한다. 결론: 자산은 K자가 분명하다(5분위 실질 순자산 +30.7%, 3분위 +12.5%). 그러나 미국과 다른 특이점이 셋. ① 매개가 부동산. ② 1분위가 2~3분위보다 빠른 비단조 패턴. ③ 처분가능소득 격차는 ...">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/blog/kshape-korea-verification/">
+
+<!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "한국에도 K자가 있다 — 다만 모양과 매개가 다르다",
+  "description": "한국은행 ECOS와 통계청 가계금융복지조사로 한국판 K자를 검증한다. 결론: 자산은 K자가 분명하다(5분위 실질 순자산 +30.7%, 3분위 +12.5%). 그러나 미국과 다른 특이점이 셋. ① 매개가 부동산. ② 1분위가 2~3분위보다 빠른 비단조 패턴. ③ 처분가능소득 격차는 ...",
+  "datePublished": "2026-05-02T00:00:00+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alle Menschen werden Brüder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "세상을 바꾸는 유토피아"
+  },
+  "url": "http://localhost:4000/blog/kshape-korea-verification/",
+  "mainEntityOfPage": "http://localhost:4000/blog/kshape-korea-verification/"
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <a href="/" class="back-link">← 홈으로</a>
+    <div class="post-header">
+      <div class="card-tags">
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">K자경제</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">한국경제</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">자산불평등</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(84,160,255,0.2);color:#54a0ff;">부동산</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,159,243,0.2);color:#ff9ff3;">가계금융복지조사</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">한국은행</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">ECOS</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">거시경제</span>
+        
+      </div>
+      <h1>한국에도 K자가 있다 — 다만 모양과 매개가 다르다</h1>
+      <div class="post-meta">
+        <p class="post-date">2026년 05월 02일</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
+    </div>
+    <div class="post-content">
+      <p><img src="/assets/images/2026-05-02-kr-wealth-kshape.svg" alt="한국 소득5분위별 실질 순자산 누적증가율" /></p>
+
+<blockquote>
+  <p><a href="/blog/k-shaped-economy-ny-fed/">전편(미국 K자 trace)</a>과 <a href="/blog/explaining-k-shaped-economy/">후속편(원인 분해)</a>에서 본 NY 연준의 K자 분석을 한국에 옮겼다. 한국은행 ECOS API로 가계금융복지조사·소득분배지표·CPI·KB 주택가격지수를 직접 받아 같은 기간 같은 방법론으로 다시 그렸다.</p>
+</blockquote>
+
+<p>*결론을 먼저 말하면, <strong>한국에도 자산 K자는 분명하다 — 그러나 모양과 매개가 미국과 다르다.</strong></p>
+
+<hr />
+
+<h2 id="한-줄-요약">한 줄 요약</h2>
+
+<p><strong>한국 가계의 실질 순자산은 K자형으로 갈렸다.</strong> 2017→2024년 누적 증가율(CPI 디플레이트 기준):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>소득분위</th>
+      <th>실질 순자산 변화</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5분위</td>
+      <td><strong>+30.7%</strong></td>
+    </tr>
+    <tr>
+      <td>4분위</td>
+      <td>+17.6%</td>
+    </tr>
+    <tr>
+      <td>1분위</td>
+      <td>+17.2%</td>
+    </tr>
+    <tr>
+      <td>3분위</td>
+      <td>+12.5%</td>
+    </tr>
+    <tr>
+      <td>2분위</td>
+      <td>+11.2%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5분위가 일종의 별도 궤도</strong>에 있고, 나머지는 +11~18% 사이로 모여있다. 미국식 “top vs everyone else” 패턴과 비슷하지만, <strong>1분위가 2~3분위보다 빠르다는 비단조성</strong>이 한국 특유. 정부 기초생활보장 강화·기초연금 확대가 1분위를 살짝 끌어올렸을 가능성이 있다.</p>
+
+<hr />
+
+<h2 id="분석-1--자산-k자의-본질은-부동산">분석 1 — 자산 K자의 본질은 부동산</h2>
+
+<p><img src="/assets/images/2026-05-02-kr-wealth-composition.svg" alt="한국 1~5분위 가구의 자산 구성 — 2024년" /></p>
+
+<p>미국 K자의 동력은 <strong>금융자산(특히 주식)</strong>이었다. 한국은 다르다. 절대 규모로 보면:</p>
+
+<ul>
+  <li><strong>5분위 부동산 8.7억</strong> vs <strong>1분위 부동산 1.3억</strong> (격차 6.7배)</li>
+  <li><strong>5분위 주식·채권·펀드 6,933만</strong> vs <strong>1분위 338만</strong> (격차 20.5배)</li>
+  <li><strong>5분위 자산 12.4억</strong> vs <strong>1분위 자산 1.7억</strong> (격차 7.3배)</li>
+</ul>
+
+<p>비율로 보면 주식·채권·펀드 격차(20.5배)가 가장 크다. 그러나 5분위 가구도 주식·채권·펀드가 자산의 5.6%에 불과하다. <strong>매개의 본체는 부동산</strong> — 5분위 자산의 70.6%, 1분위 자산의 76.4%가 부동산이다(거주주택+거주주택외).</p>
+
+<p>KB 주택매매가격지수는 이 그림과 정합적이다.</p>
+
+<ul>
+  <li>전국 종합: 2017.01 76.5 → 2026.03 100.6 (+31.6%)</li>
+  <li>전국 아파트: 72.7 → 100.8 (+38.6%)</li>
+  <li><strong>서울 아파트: 61.6 → 102.8 (+66.9%)</strong></li>
+</ul>
+
+<p>같은 기간 누적 인플레이션이 약 25%였으니, 서울 아파트는 실질 +33% 정도. 5분위 가구 실질 순자산 +30.7%와 거의 같은 크기다. <strong>서울 아파트 한 채의 가격 상승분이 5분위 가구의 자산효과를 거의 다 설명한다</strong>고 봐도 무방하다.</p>
+
+<p>미국의 자산효과가 <em>주식 강세장</em>을 통해 작동한다면, 한국의 자산효과는 <strong>수도권 부동산 가격</strong>을 통해 작동한다. 같은 K자, 다른 매개.</p>
+
+<hr />
+
+<h2 id="분석-2--한국이-정말-흥미로운-지점-두-k자가-분리되어-있다">분석 2 — 한국이 정말 흥미로운 지점: 두 K자가 분리되어 있다</h2>
+
+<p><img src="/assets/images/2026-05-02-kr-two-kshapes.svg" alt="소득 K자(감소)와 자산 K자(증가)의 분리" /></p>
+
+<p>미국에선 소득 격차와 자산 격차가 같은 방향으로 움직이고 K자형으로 함께 굳어졌다. <strong>한국에선 둘이 정반대로 움직였다.</strong></p>
+
+<ul>
+  <li><strong>처분가능소득 5분위배율</strong>: 2017년 6.84 → 2024년 5.78 (감소). 정부의 세금·이전소득 재분배가 작동했다는 증거다.</li>
+  <li><strong>순자산 5분위/1분위 비율</strong>: 2017년 6.18 → 2024년 6.89 (증가). 자산 격차는 같은 기간 도리어 벌어졌다.</li>
+</ul>
+
+<p>지니계수도 같은 분리가 보인다.</p>
+
+<ul>
+  <li>시장소득 지니: 2017년 0.406 → 2024년 0.399 (거의 변화 없음)</li>
+  <li>처분가능소득 지니: 2017년 0.352 → 2024년 0.325 (개선)</li>
+</ul>
+
+<p>즉 한국 정부의 재분배는 <strong>소득 플로우의 격차는 줄이는 데 성공</strong>했지만, <strong>자산 스톡의 격차는 거의 건드리지 못했다</strong>. 부동산이라는 거대한 누적 자산이 5분위에 쏠려 있고, 그 자산 가격이 누적적으로 오를 때마다 격차는 자동으로 벌어진다. 소득세·이전소득은 매년 계산되지만, 부동산은 한 번 보유하면 가만히 있어도 자산 K자가 그려진다.</p>
+
+<p><strong>이 비대칭이 한국의 재정·복지 정책에 던지는 첫 번째 질문이다</strong> — <em>재분배의 단위를 플로우(flow)에서 스톡(stock)으로 어떻게 옮길 것인가?</em> 종합부동산세, 상속·증여세, 자산소득 분리과세 같은 도구의 의미가 여기서 다시 평가되어야 한다.</p>
+
+<hr />
+
+<h2 id="본인-해설--미국-k자와-한국-k자의-정책-함의-차이">본인 해설 — 미국 K자와 한국 K자의 정책 함의 차이</h2>
+
+<h3 id="1-미국식-통화정책의-분배-비대칭은-한국에-더-강하게-작동한다">1. 미국식 “통화정책의 분배 비대칭”은 한국에 더 강하게 작동한다</h3>
+
+<p>미국에선 자산효과 채널이 주식이라 통화정책 → 주식 → 상위 소비로 이어지지만, 한국에선 통화정책 → <strong>주택담보대출 금리</strong> → 주택가격 → 자산 → 상위 자산보유 가구로 이어진다. 한국 가계부채의 주택담보대출 비중이 절반을 넘는다는 점, 그리고 가계금융복지조사에서 5분위 가구 부채(2.05억) 중 부동산 담보대출 비중이 가장 높다는 점을 고려하면 — <strong>금리 인상은 5분위에게 자산효과 충격, 1~3분위에게 임대료·이자 부담</strong>이라는 두 채널을 동시에 가동시킨다.</p>
+
+<p>이게 통화정책 분배 비대칭(distributional asymmetry of monetary policy)의 한국식 작동이다. 한국은행이 거시 통화정책을 결정할 때 평균값(KOSPI 종합, 가계대출 평균 이자율)으로만 보면, 누구의 어떤 부담이 어떻게 누적되는지를 놓친다. NY 연준이 EHIs를 만든 동기와 같은 동기를 한국은행도 점차 가져야 한다.</p>
+
+<h3 id="2-가계동향조사를-분위별로-매월-갱신하는-것은-절실하다">2. 가계동향조사를 분위별로 매월 갱신하는 것은 절실하다</h3>
+
+<p>NY 연준이 EHIs로 한 일의 본질은 <strong>거시 평균을 분포 정보와 함께 갱신</strong>하는 데이터 인프라다. 한국에선 가계동향조사가 분기 단위, 가계금융복지조사는 연 단위로만 발표된다. 내가 이 글에서 사용한 자산 데이터는 2024년이 가장 최신이다. <strong>2025년에 무슨 일이 있었는지를 분위별로 보려면 2026년 4월 발표를 기다려야 한다.</strong> 정책 의사결정 사이클에 비해 너무 느리다.</p>
+
+<p>KOSIS·ECOS API에서 빠진 한 조각을 한국은행이 채울 수 있다 — 신용카드 빅데이터·통신사 LBS·전월세 실거래가를 결합해 <strong>분위별 분기 추정 자산·소비 지표</strong>를 만드는 작업. 일부 민간 연구기관(KDI·우리금융경영연구소)에서 단편적으로 시도되고 있지만, 공식 데이터로 정례화되지는 않았다.</p>
+
+<h3 id="3-정책-어휘의-재구성이-필요하다">3. 정책 어휘의 재구성이 필요하다</h3>
+
+<p>“불평등이 심화됐는가”에 대한 답이 한국에선 측정 단위에 따라 다르다. 소득 플로우만 보면 <em>완화</em>, 자산 스톡으로 보면 <em>심화</em>. 이 분리를 인지하지 못한 채 “분배 개선됐다 / 안 됐다”로 단순화된 논쟁이 반복되는 게 지난 3~4년의 풍경이었다. <strong>플로우과 스톡을 함께 보는 어휘</strong>가 정책 토론에 필요하다. 적어도 5분위배율을 인용할 때 “처분가능소득 기준”인지 “순자산 기준”인지를 구분해서 말해야 한다.</p>
+
+<hr />
+
+<h2 id="시리즈를-마치며">시리즈를 마치며</h2>
+
+<p>세 편을 합치면 다음과 같다.</p>
+
+<ol>
+  <li><a href="/blog/k-shaped-economy-ny-fed/"><strong>미국 K자 trace</strong></a>: 2023년 이후 미국 실질 소비가 고소득층에 쏠림. 격차 6.3%p.</li>
+  <li><a href="/blog/explaining-k-shaped-economy/"><strong>미국 K자 원인 분해</strong></a>: 임금 아님, 인플레이션 일부, 자산(특히 금융자산)이 결정적. 상위 1% +30%, 중간 40% +9.7%.</li>
+  <li><strong>한국 K자 검증</strong> (이 글): 자산 K자 동일 패턴(5분위 실질 +30.7%), 다만 매개는 부동산. 그리고 소득 K자와 자산 K자가 분리.</li>
+</ol>
+
+<p>미·한 비교의 한 줄 결론은 이렇다 — <strong>K자형 회복은 자산시장 강세장의 계급적 결과물이고, 그 자산이 어디에 쏠려있는지에 따라 매개와 처방이 갈린다.</strong> 미국엔 주식 보유 분포, 한국엔 수도권 부동산 분포다.</p>
+
+<p>다음 자산시장 국면이 흔들릴 때, 평균이 아니라 <strong>누가 흔들리는지</strong>를 보아야 한다는 게 이 시리즈의 종착역이다.</p>
+
+<hr />
+
+<h2 id="데이터-출처">데이터 출처</h2>
+
+<p>이 글의 모든 차트는 <strong>공개 API에서 직접 받은 원자료</strong>로 그렸다. 재현·검증 가능하도록 명시한다.</p>
+
+<ul>
+  <li><strong>한국은행 ECOS API</strong> (인증키 필요): <a href="https://ecos.bok.or.kr">https://ecos.bok.or.kr</a>
+    <ul>
+      <li>표 903Y210: 소득5분위별 자산, 부채, 소득 현황(2017~) — 가계금융복지조사 결합 분배 데이터</li>
+      <li>표 901Y112: 소득분배지표(2011~) — 시장소득·처분가능소득 지니/5분위배율</li>
+      <li>표 901Y009: 소비자물가지수 — 실질화 디플레이터</li>
+      <li>표 901Y062: KB 주택매매가격지수 — 자산효과 매개 검증</li>
+    </ul>
+  </li>
+  <li><strong>차트 제작</strong>: 한국은행 ECOS 원자료 → Python 스크립트 → SVG (The Economist 매거진 디자인 시스템: 빨간 룰, 우측 Y축, 직접 라벨)</li>
+</ul>
+
+<p>원본 NY 연준 노트 두 편:</p>
+
+<ul>
+  <li>Chakrabarti et al. (2026, May 1). “<a href="https://libertystreeteconomics.newyorkfed.org/2026/05/tracking-the-k-shaped-economy-whos-driving-spending/">Tracking the K‑Shaped Economy: Who’s Driving Spending?</a>”</li>
+  <li>Chakrabarti et al. (2026, May 1). “<a href="https://libertystreeteconomics.newyorkfed.org/2026/05/explaining-the-k-shaped-economy-whats-behind-the-divide/">Explaining the K‑Shaped Economy: What’s Behind the Divide?</a>”</li>
+</ul>
+
+      
+
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GoatCounter page view count
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
+      var el = document.getElementById('post-views');
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
+  </script>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
+</body>
+</html>

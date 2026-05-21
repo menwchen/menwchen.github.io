@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7)</title>
+<meta name="description" content="개발과 창작을 좋아하는 사람입니다. 정치경제, 철학, 한국자본시장에 대한 분석과 서평을 공유합니다.">
+<!-- Open Graph -->
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="세상을 바꾸는 유토피아">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="[비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7)">
+<meta property="og:description" content="
+  비공개 분석 노트. 외부 공유 금지. 두 공표 여론조사(한길리서치 4.17–18, 여론조사꽃 5.4–5)와 4.17~5.7 사이의 뉴스 보도 텍스트를 종합한 일회성 분석.
+
+">
+<meta property="og:url" content="http://localhost:4000/blog/yeonsu-byelection-analysis/">
+<meta property="article:published_time" content="2026-05-07T21:00:00+09:00">
+<meta property="article:tag" content="연수구갑"><meta property="article:tag" content="송영길"><meta property="article:tag" content="박종진"><meta property="article:tag" content="보궐선거"><meta property="article:tag" content="여론조사">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7)">
+<meta name="twitter:description" content="
+  비공개 분석 노트. 외부 공유 금지. 두 공표 여론조사(한길리서치 4.17–18, 여론조사꽃 5.4–5)와 4.17~5.7 사이의 뉴스 보도 텍스트를 종합한 일회성 분석.
+
+">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://localhost:4000/blog/yeonsu-byelection-analysis/">
+
+<!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7)",
+  "description": "\n  비공개 분석 노트. 외부 공유 금지. 두 공표 여론조사(한길리서치 4.17–18, 여론조사꽃 5.4–5)와 4.17~5.7 사이의 뉴스 보도 텍스트를 종합한 일회성 분석.\n\n",
+  "datePublished": "2026-05-07T21:00:00+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alle Menschen werden Brüder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "세상을 바꾸는 유토피아"
+  },
+  "url": "http://localhost:4000/blog/yeonsu-byelection-analysis/",
+  "mainEntityOfPage": "http://localhost:4000/blog/yeonsu-byelection-analysis/"
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f0f1a;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    letter-spacing: -0.01em;
+  }
+  img { max-width: 100%; height: auto; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,26,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .nav-logo {
+    font-size: 1.4rem; font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: #a8a8b8; text-decoration: none; font-size: 0.95rem;
+    transition: color 0.2s; padding: 8px 4px; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 160px 0 100px; }
+  .hero h1 {
+    font-size: 3.5rem; font-weight: 700; margin-bottom: 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .hero p {
+    font-size: 1.1rem; color: #888; max-width: 500px;
+    margin: 0 auto 40px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 12px 28px; border-radius: 9999px; border: none;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #000; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    padding: 12px 28px; border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: #e8e8f0;
+    font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #48dbfb; color: #48dbfb; }
+
+  /* Categories grid */
+  .categories a:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(84,160,255,0.12)) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,107,107,0.1);
+  }
+
+  /* Cards */
+  .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; }
+  .card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(84,160,255,0.1));
+    box-shadow: 0 0 30px rgba(255,107,107,0.15), 0 0 60px rgba(84,160,255,0.1);
+    transform: translateY(-4px);
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .card p { color: #888; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.6; }
+  .card time { color: #555; font-size: 0.8rem; }
+
+  /* Post page */
+  .post-header { padding-top: 100px; margin-bottom: 2em; }
+  .post-header h1 {
+    font-size: 2.2rem; font-weight: 700; margin-bottom: 16px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .post-date { color: #a8a8b8; font-size: 0.9rem; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 2em; }
+  .post-views { color: #888; font-size: 0.85rem; }
+
+  /* Giscus comments */
+  .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .comments-section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 24px; }
+
+  /* Post content */
+  .post-content { line-height: 1.8; max-width: 800px; font-size: 17px; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 { color: #fff; margin-top: 2em; margin-bottom: 0.5em; }
+  .post-content h2 { font-size: 1.5rem; padding-bottom: 0.4em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-content h3 { font-size: 1.25rem; }
+  .post-content h4 { font-size: 1.1rem; }
+  .post-content p { color: #c8c8d8; margin-bottom: 1.5em; line-height: 1.85; }
+  .post-content strong { color: #fff; }
+  .post-content a { color: #54a0ff; text-decoration: underline; }
+  .post-content ul, .post-content ol { color: #c8c8d8; padding-left: 1.5em; margin-bottom: 1.5em; }
+  .post-content li { margin-bottom: 0.5em; line-height: 1.8; }
+  .post-content blockquote {
+    border-left: 3px solid #ff6b6b; padding: 0.8em 1.2em;
+    color: #a8a8b8; font-style: italic; margin-bottom: 1.25em;
+    background: rgba(255,107,107,0.05); border-radius: 0 8px 8px 0;
+  }
+  .post-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2.5em 0; }
+  .post-content table {
+    width: 100%; border-collapse: collapse; margin-bottom: 1.5em;
+    background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
+  }
+  .post-content th {
+    padding: 12px 16px; text-align: left; color: #fff; font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);
+  }
+  .post-content td { padding: 12px 16px; color: #c8c8d8; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .post-content code {
+    background: rgba(255,255,255,0.1); padding: 2px 6px;
+    border-radius: 4px; font-size: 0.9em;
+  }
+  .post-content pre {
+    background: rgba(0,0,0,0.4); padding: 1.25em;
+    border-radius: 12px; overflow-x: auto; margin-bottom: 1.5em;
+  }
+  .post-content pre code { background: none; padding: 0; }
+
+  footer {
+    text-align: center; padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555; font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block; color: #a8a8b8; text-decoration: none;
+    font-size: 0.9rem; padding: 8px 0; transition: color 0.2s;
+  }
+  .back-link:hover { color: #48dbfb; }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 2.6rem; }
+    .post-content { font-size: 16.5px; }
+    .card { padding: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 120px 0 60px; }
+    .hero p { font-size: 1rem; }
+    nav { padding: 12px 16px; }
+    .container { padding: 0 16px; }
+    .post-header { padding-top: 80px; }
+    .post-header h1 { font-size: 1.5rem; }
+    .post-content { font-size: 16px; }
+    .post-content p { margin-bottom: 1.3em; }
+    .card { padding: 20px; margin-bottom: 16px; border-radius: 12px; }
+    .card h3 { font-size: 1.1rem; }
+    .card-tags { gap: 6px; }
+    .tag { font-size: 0.7rem; padding: 3px 10px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+  <a href="/" class="nav-logo">Alle Menschen werden Brüder</a>
+  <div class="nav-links">
+    <a href="/">홈</a>
+    <a href="/#posts">블로그</a>
+    <a href="/categories/">카테고리</a>
+    <a href="/tags/">태그</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <a href="/" class="back-link">← 홈으로</a>
+    <div class="post-header">
+      <div class="card-tags">
+        
+          
+          
+          <span class="tag" style="background:rgba(255,107,107,0.2);color:#ff6b6b;">연수구갑</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(254,202,87,0.2);color:#feca57;">송영길</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(72,219,251,0.2);color:#48dbfb;">박종진</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(84,160,255,0.2);color:#54a0ff;">보궐선거</span>
+        
+          
+          
+          <span class="tag" style="background:rgba(255,159,243,0.2);color:#ff9ff3;">여론조사</span>
+        
+      </div>
+      <h1>[비공개] 인천 연수구 갑 보궐선거 정세 분석 — 한길리서치(4.18) → 여론조사꽃(5.7)</h1>
+      <div class="post-meta">
+        <p class="post-date">2026년 05월 07일</p>
+        <span class="post-views" id="post-views"></span>
+      </div>
+    </div>
+    <div class="post-content">
+      <blockquote>
+  <p><strong>비공개 분석 노트</strong>. 외부 공유 금지. 두 공표 여론조사(한길리서치 4.17–18, 여론조사꽃 5.4–5)와 4.17~5.7 사이의 뉴스 보도 텍스트를 종합한 일회성 분석.</p>
+</blockquote>
+
+<h2 id="0-분석-범위와-데이터">0. 분석 범위와 데이터</h2>
+
+<ul>
+  <li><strong>여론조사 1</strong>: 한길리서치, 4.17–18, N=615, 무선 ARS 100%, 응답률 6.2%, 표본오차 ±4.0%p (95% 신뢰수준)</li>
+  <li><strong>여론조사 2</strong>: 여론조사꽃, 5.4–5, N=501, 무선 ARS 100%, 응답률 7.3%, 표본오차 ±4.4%p</li>
+  <li><strong>뉴스/논평</strong>: 4.23 송영길 전략공천 → 5.7 김미연 의원 추가 폭로 예고까지의 핵심 보도 18건</li>
+  <li><strong>분석 시점</strong>: 2026.5.7 (선거일 6.3까지 D-27)</li>
+</ul>
+
+<hr />
+
+<h2 id="1-3주간-핵심-지표-변화--격차-축소가-시작됐다">1. 3주간 핵심 지표 변화 — 격차 축소가 시작됐다</h2>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/01_changes.png" alt="핵심 지표 변화" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>지표</th>
+      <th>4.17–18 (한길)</th>
+      <th>5.4–5 (꽃)</th>
+      <th>변화</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>민주당 정당지지</td>
+      <td>55.3</td>
+      <td>51.4</td>
+      <td><strong>−3.9</strong></td>
+    </tr>
+    <tr>
+      <td>국민의힘 정당지지</td>
+      <td>27.3</td>
+      <td>34.1</td>
+      <td><strong>+6.8</strong></td>
+    </tr>
+    <tr>
+      <td>양자대결 민주측</td>
+      <td>58.3 (추상)</td>
+      <td>51.9 (송영길)</td>
+      <td>−6.4</td>
+    </tr>
+    <tr>
+      <td>양자대결 국힘측</td>
+      <td>30.5 (추상)</td>
+      <td>33.4 (박종진)</td>
+      <td>+2.9</td>
+    </tr>
+    <tr>
+      <td>정당지지 격차</td>
+      <td>+28.0</td>
+      <td>+17.3</td>
+      <td><strong>−10.7</strong></td>
+    </tr>
+    <tr>
+      <td>양자대결 격차</td>
+      <td>+27.8</td>
+      <td>+18.5</td>
+      <td><strong>−9.3</strong></td>
+    </tr>
+    <tr>
+      <td>이재명 잘함</td>
+      <td>66.7</td>
+      <td>64.0</td>
+      <td>−2.7</td>
+    </tr>
+    <tr>
+      <td>이재명 잘못함</td>
+      <td>27.7</td>
+      <td>31.4</td>
+      <td>+3.7</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>세 가지 동조 변화 — <strong>국힘 정당지지 +6.8%p, 양자대결 격차 −9.3%p, 이재명 부정평가 +3.7%p</strong> — 가 노이즈가 아니라 보수 결집의 초기 신호임을 시사. 격차 축소의 절반 이상이 민주당 하락이 아니라 <strong>국힘 결집</strong> 쪽에서 나옴.</p>
+
+<p>같은 시기 여론조사꽃 전국 정례조사(5.1–2)는 민주 58.7% vs 국힘 21.6%(격차 37%p). 연수구 갑 5.4–5 격차 17.3%p는 <strong>전국 평균보다 약 20%p 좁은 수치</strong>로, 4.18 시점 9%p 보수 프리미엄에서 <strong>20%p 보수 프리미엄으로 확대</strong>.</p>
+
+<hr />
+
+<h2 id="2-정치-일정-시계열--51-박종진-단수공천이-변곡점">2. 정치 일정 시계열 — 5.1 박종진 단수공천이 변곡점</h2>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/05_timeline.png" alt="정치 일정 시계열" /></p>
+
+<p>3주 사이 일어난 일을 시계열로 정리하면 데이터 변화의 인과 구조가 드러남.</p>
+
+<ul>
+  <li><strong>4.17–18</strong>: 한길조사 (송영길 적합도 34.3%, 정승연 적합도 27.9%)</li>
+  <li><strong>4.23</strong>: 민주당 송영길 전략공천 최종 확정</li>
+  <li><strong>5.1</strong>: 국민의힘 박종진(인천시당위원장) 단수공천 — <strong>정승연 컷오프</strong></li>
+  <li><strong>5.3</strong>: 박종진 출마 선언 (정해권 시의장 동석) + 정승연 중앙당사 앞 삭발식</li>
+  <li><strong>5.4</strong>: 정승연 서울남부지법 효력정지 가처분 신청 + 송영길 고남석 후원회장 위촉</li>
+  <li><strong>5.4–5</strong>: 여론조사꽃 조사</li>
+  <li><strong>5.5</strong>: 송영길 연수·선학 A13 재개발 타운홀 + 청학역 복합환승센터 검토</li>
+  <li><strong>5.6</strong>: 송영길 인천시청 기자간담회(동춘·연수·선학 선도지구, KTX 송도역 연장, 제4연륙교) + 정승연 ‘대만 대가성 여행’ 의혹 제기</li>
+  <li><strong>5.7</strong>: 여론조사꽃 결과 발표 + 김미연 서구의원 추가 폭로 기자회견 예고</li>
+</ul>
+
+<p>박종진 단수공천(5.1) → 즉각 정승연 반발(5.1, 5.3, 5.6) → 김미연 추가 폭로(5.7)로 이어지는 <strong>국힘 본진 분열 라인</strong>이 5.4–5 조사 시점에는 아직 본격화되지 않았음에 주목. 즉 꽃 조사의 박종진 33.4%는 <strong>분열 효과가 충분히 반영되기 전의 결집 수치</strong>일 가능성이 큼.</p>
+
+<hr />
+
+<h2 id="3-권역코호트-교차--세-권역이-서로-다른-시계로-작동">3. 권역×코호트 교차 — 세 권역이 서로 다른 시계로 작동</h2>
+
+<h3 id="31-권역별-인구학적-정체성">3.1 권역별 인구학적 정체성</h3>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/02_kwon_demographics.png" alt="권역별 인구 구성" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>1권역 (옥련2·연수1·청학)</th>
+      <th>2권역 (선학·연수2/3·동춘3)</th>
+      <th>3권역 (옥련1·동춘1·동춘2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>60+ 비중</td>
+      <td><strong>37.2%</strong></td>
+      <td>35.7%</td>
+      <td>32.3%</td>
+    </tr>
+    <tr>
+      <td>40·50대 비중</td>
+      <td>35.2%</td>
+      <td>34.4%</td>
+      <td><strong>37.5%</strong></td>
+    </tr>
+    <tr>
+      <td>70+ 비중</td>
+      <td><strong>15.3%</strong></td>
+      <td>15.0%</td>
+      <td><strong>12.5%</strong></td>
+    </tr>
+    <tr>
+      <td>정체성</td>
+      <td>구도심·노년화</td>
+      <td>혼합·균형</td>
+      <td>장년·신축혼합</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>1권역은 가장 노년화된 구도심</strong>, <strong>2권역은 균형형</strong>, <strong>3권역은 장년 비중이 가장 높은 동춘 신축·옥련1 혼합지역</strong>.</p>
+
+<h3 id="32-권역별-동학--1권역-흔들림-2권역-안정-3권역-정책-진영전">3.2 권역별 동학 — 1권역 흔들림, 2권역 안정, 3권역 정책 진영전</h3>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/03_kwon_dynamics.png" alt="권역별 양자대결 변화" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>권역</th>
+      <th>한길 양자(민주측)</th>
+      <th>꽃 송영길</th>
+      <th>변화</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1권역</td>
+      <td>58.3</td>
+      <td>47.3</td>
+      <td><strong>−11.0</strong></td>
+    </tr>
+    <tr>
+      <td>2권역</td>
+      <td>55.3</td>
+      <td>55.1</td>
+      <td><strong>−0.2</strong></td>
+    </tr>
+    <tr>
+      <td>3권역</td>
+      <td>61.8</td>
+      <td>52.8</td>
+      <td><strong>−9.0</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>1권역 −11.0%p 하락</strong>: 70+ 비중이 가장 높고(15.3%) 이재명 잘함 출발선이 65.7%로 낮음 → 박종진 공천 직후 70+ 보수 결집이 가장 강하게 작동.</p>
+
+<p><strong>2권역 안정</strong>: 한길 시점 양자대결 55.3%로 가장 낮은 출발선이었고, 더 빠질 곳이 적었음. 송영길의 첫 캠페인 동선(5.5 선학동 A13 타운홀)이 2권역 핵심에서 작동한 효과 일부 반영.</p>
+
+<p><strong>3권역 −9.0%p</strong>: 50대 비중 20.8%로 가장 높음. 50대 양자대결 한길 70.8% → 꽃 62.0%로 8.8%p 하락하는데 이는 3권역 하락폭과 거의 부합. <strong>40–50대 동춘 부동산 민감층이 박종진 정책 공세(GTX-B 청학역 조기·원도심 재정비·학군 강화)를 흡수하고 있다는 신호</strong>.</p>
+
+<hr />
+
+<h2 id="4-변환계수-분해--60대-변환-붕괴가-격차-축소의-진짜-동인">4. 변환계수 분해 — 60대 변환 붕괴가 격차 축소의 진짜 동인</h2>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/04_transmission.png" alt="변환계수" /></p>
+
+<p><strong>변환계수 = 양자대결 민주측 ÷ 이재명 잘함</strong>으로 정의. 1.0에 가까울수록 국정평가 호감이 손실 없이 인물지지로 변환됨을 의미.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>코호트</th>
+      <th>한길 4.18 (잘함→양자)</th>
+      <th>꽃 5.5 (잘함→송영길)</th>
+      <th>변화</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18–29세</td>
+      <td>0.83</td>
+      <td>약 0.75 (추정)</td>
+      <td>≈ 안정</td>
+    </tr>
+    <tr>
+      <td>40대</td>
+      <td>0.88</td>
+      <td>0.81</td>
+      <td><strong>−0.07</strong></td>
+    </tr>
+    <tr>
+      <td>50대</td>
+      <td>0.90</td>
+      <td>0.89</td>
+      <td>안정</td>
+    </tr>
+    <tr>
+      <td>60대</td>
+      <td><strong>0.93</strong></td>
+      <td><strong>0.79</strong></td>
+      <td><strong>−0.14</strong></td>
+    </tr>
+    <tr>
+      <td>70대 이상</td>
+      <td>0.76</td>
+      <td>0.79</td>
+      <td>≈ 안정</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>핵심 발견</strong>: 60대 변환계수가 0.93 → 0.79로 14%포인트 붕괴. 이는 격차 축소의 가장 강한 단일 동인. 60대는 한길 시점에 “이재명 잘함이 정당·인물로 거의 100% 변환”되던 코호트였는데, 박종진 공천 직후 그 변환이 절반쯤 끊어짐.</p>
+
+<p>50대 변환계수는 0.90 → 0.89로 사실상 천장. 캠페인이 50대에서 추가 동원할 표는 거의 없음 — <strong>결집 유지가 캠페인 목표</strong>.</p>
+
+<p>70+ 변환계수 0.79는 평가 호감이 있어도 정당·인물로 변환되지 않는 구조. <strong>평가-투표 분리가 구조화된 영역</strong>으로, 추가 회수보다 손실 최소화 전략이 합리적.</p>
+
+<hr />
+
+<h2 id="5-박종진-결집의-천장--정승연-표는-어디로-갔는가">5. 박종진 결집의 천장 — 정승연 표는 어디로 갔는가</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>변화</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>국힘 정당지지</td>
+      <td>+6.8%p (27.3 → 34.1)</td>
+    </tr>
+    <tr>
+      <td>양자대결 국힘측</td>
+      <td>+2.9%p (30.5 → 33.4)</td>
+    </tr>
+    <tr>
+      <td><strong>차이</strong></td>
+      <td><strong>+3.9%p</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>정당 라벨로는 6.8%p가 결집됐는데 박종진 인물 양자대결로는 2.9%p만 결집됨. <strong>정당지지 상승의 절반이 박종진 인물에서 흡수되지 않았다</strong>는 뜻. 한길조사에서 정승연이 국힘 본진 55.5%를 가졌고 정해권 14.4%, 없다+잘모름 25.4%였던 것을 떠올리면, 박종진은 정승연의 본진을 그대로 인수받지 못한 상태에서 출발.</p>
+
+<p>해석 두 갈래:</p>
+<ul>
+  <li><strong>(A) 본진 누수</strong>: 정승연 지지자 일부(추정 5–8%p)가 박종진 거부 또는 부동화</li>
+  <li><strong>(B) 박종진 본인의 비연고 한계</strong>: 채널A 인지도는 있지만 21·22대 인천 서구을 출마 이력 + 연수구 비연고</li>
+</ul>
+
+<p>5.6 정승연 회견 → 5.7 김미연 추가 폭로 라인이 본진 추가 분열을 만들면 박종진 점수는 33.4에서 더 하락할 가능성. <strong>박종진 양자대결 천장 추정: 35–37% 영역</strong>.</p>
+
+<hr />
+
+<h2 id="6-분열-라인--정승연김미연이-박종진에-던진-9개의-프레임">6. 분열 라인 — 정승연/김미연이 박종진에 던진 9개의 프레임</h2>
+
+<p><img src="/assets/images/yeonsu-2026-05-07/06_division_frames.png" alt="분열 프레임" /></p>
+
+<p>5.1~5.7 사이 정승연(8건)·김미연(1건)이 박종진에 제기한 분열 프레임:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>프레임</th>
+      <th>건수</th>
+      <th>핵심</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>연고성</td>
+      <td>2</td>
+      <td>“지역구 세탁(서구을→연수갑)”</td>
+    </tr>
+    <tr>
+      <td>공정성</td>
+      <td>2</td>
+      <td>“10년 헌신을 짓밟은 표적공천”</td>
+    </tr>
+    <tr>
+      <td>자기부정</td>
+      <td>1</td>
+      <td>“1월 ‘경선이 기본·공천헌금=매관매직’ 발언과 정면 모순”</td>
+    </tr>
+    <tr>
+      <td>대만의혹</td>
+      <td>1</td>
+      <td>“공천심사 직전 시당관계자·지방의원 20여명 대만 방문”</td>
+    </tr>
+    <tr>
+      <td>공천절차</td>
+      <td>1</td>
+      <td>“공정성 상실한 표적공천”</td>
+    </tr>
+    <tr>
+      <td>당선가능성</td>
+      <td>1</td>
+      <td>“패배를 선언한 결정”</td>
+    </tr>
+    <tr>
+      <td>법적조치</td>
+      <td>1</td>
+      <td>“효력정지 가처분 신청”</td>
+    </tr>
+    <tr>
+      <td>비례공천의혹</td>
+      <td>1</td>
+      <td>“비례대표 밀실 결정 + 박종진 지침 강조”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>특히 <strong>자기부정 프레임</strong>(1월 박종진 본인 발언과의 정면 모순)과 <strong>대만 대가성 의혹</strong>은 박종진 캠페인의 클린 이미지를 직접 공격하는 강도 높은 프레임. 박종진의 5.6 반박(“모든 비용 각자 부담”, “근거 없는 의혹 제기 시 법적 조치 검토”)이 작동했는지는 다음 공표 조사에서 확인 가능.</p>
+
+<hr />
+
+<h2 id="7-후보-정책-어젠다-비교--gtx-b-청학역에서-정면-충돌">7. 후보 정책 어젠다 비교 — GTX-B 청학역에서 정면 충돌</h2>
+
+<h3 id="송영길-5556-발표">송영길 (5.5–5.6 발표)</h3>
+<ul>
+  <li><strong>재개발</strong>: 동춘·연수·선학 선도지구 지정 + 용적률 상향</li>
+  <li><strong>교통 1</strong>: GTX-B 청학역 <strong>복합환승센터</strong> (단순 신설을 넘은 환승 인프라)</li>
+  <li><strong>교통 2</strong>: KTX 송도역 → 인천역·인천국제공항 연장</li>
+  <li><strong>교통 3</strong>: 제4연륙교 (영종 구읍배터-인천역)</li>
+  <li><strong>산업</strong>: 송도-원도심 일자리 연계, 송도유원지 개발</li>
+  <li><strong>정치</strong>: 인천국제공항공사 통폐합 반대</li>
+</ul>
+
+<h3 id="박종진-5354-발표">박종진 (5.3–5.4 발표)</h3>
+<ul>
+  <li><strong>교통</strong>: GTX-B 청학역 <strong>조기 신설</strong> (이미 12.22 확정된 사안)</li>
+  <li><strong>재개발</strong>: 원도심 재정비</li>
+  <li><strong>생활</strong>: 주차난 해소, 학군 강화</li>
+  <li><strong>도시</strong>: 평택·동탄 수준 미래 융합 도시</li>
+  <li><strong>부동산</strong>: 연수갑 도시가치 정상화</li>
+</ul>
+
+<p><strong>구도</strong>: 박종진은 GTX-B 청학역을 단일 핵심 어젠다로 잡았으나 — 청학역은 12.22 비용편익분석 통과로 이미 신설이 확정된 사업. 박종진은 “조기 신설”을 강조해 차별화를 시도하는 반면, 송영길은 한 단계 위인 <strong>“복합환승센터”</strong> 결합을 제시. 즉 송영길이 박종진의 진영에 들어가서 한 층 더 높은 정책으로 응전하는 구도.</p>
+
+<p>연수·선학·동춘 재개발 어젠다는 박찬대 의원의 누적 자산이고, 송영길의 5.5 A13 타운홀은 그 자산의 직접 인수. 박종진의 “원도심 재정비”는 같은 영역이지만 구체성·실행 신뢰도에서 송영길의 5선·인천시장 경험과 비교 열세.</p>
+
+<hr />
+
+<h2 id="8-종합--추세선과-63-안착-시나리오">8. 종합 — 추세선과 6.3 안착 시나리오</h2>
+
+<p><strong>현재 상황</strong>: 송영길 양자대결 +18.5%p (오차범위 4.4%p의 4배). 여전히 압도적 우세 구도이나 격차 축소가 시작됨.</p>
+
+<p><strong>격차 축소의 인과</strong>:</p>
+<ol>
+  <li>(5%–7%p) 박종진 공천 확정에 따른 일반 결집 효과 (일회성)</li>
+  <li>(2%–3%p) 60대 변환계수 붕괴 (잠재 회수 가능)</li>
+  <li>(1%–2%p) 이재명 정부 평가 미세 약화 (외부 변수)</li>
+</ol>
+
+<p><strong>역동인</strong>:</p>
+<ul>
+  <li>정승연·김미연의 분열 라인이 박종진 본진 결집을 추가로 깎음 (5.6–5.7 진행 중)</li>
+  <li>박종진 비연고 한계는 3주 캠페인으로 극복 어려움</li>
+</ul>
+
+<p><strong>6.3 안착선 추정</strong>: 격차 <strong>12–16%p 영역</strong>이 가장 현실적. 17%p 추가 축소가 산술적으로 가능하지만 일회성 결집 효과는 한 번만 발생.</p>
+
+<p><strong>안착 시나리오 매트릭스</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>시나리오</th>
+      <th>격차</th>
+      <th>조건</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>강한 우세</td>
+      <td>18–22%p</td>
+      <td>정승연 분열 본격화 + 송영길 정책 메시지 도달</td>
+    </tr>
+    <tr>
+      <td>중간 우세</td>
+      <td>14–18%p</td>
+      <td>분열·결집 균형</td>
+    </tr>
+    <tr>
+      <td>약한 우세</td>
+      <td>10–14%p</td>
+      <td>박종진 의혹 무력화 + 보수 결집 추가 진행</td>
+    </tr>
+    <tr>
+      <td>박빙(낮은 확률)</td>
+      <td>5–10%p</td>
+      <td>이재명 정부 중대 악재 + 박종진 인물 부각</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>데이터상 가장 가능성 높은 시나리오는 <strong>중간 우세 → 강한 우세</strong>.</p>
+
+<hr />
+
+<h2 id="9-캠페인-행동지표-요약">9. 캠페인 행동지표 (요약)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>권역</th>
+      <th>가장 위협받는 코호트</th>
+      <th>회수 가능 코호트</th>
+      <th>권장 모드</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1권역</td>
+      <td>70+ (보수 결집 가시화)</td>
+      <td>60대 (변환계수 회복 가능)</td>
+      <td>손실 최소화 + 60대 정책 결집</td>
+    </tr>
+    <tr>
+      <td>2권역</td>
+      <td>없음 (안정)</td>
+      <td>30대 이하 (부동층 흡수)</td>
+      <td>결집 유지 + 청년 추가 동원</td>
+    </tr>
+    <tr>
+      <td>3권역</td>
+      <td>40–50대 (정책 진영전 중)</td>
+      <td>40–50대 (같은 층)</td>
+      <td>정책 차별화 — GTX-B 어젠다 응전</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>KPI 추적선</strong>:</p>
+<ul>
+  <li>양자대결 격차 ≥ 12%p 유지</li>
+  <li>60대 송영길 양자 ≥ 50% 회복</li>
+  <li>1권역 양자대결 격차 ≥ 10%p 봉쇄</li>
+  <li>3권역 40–50대 양자대결 ≥ 60% 방어</li>
+  <li>송영길–박종진 호감도 차 ≥ 10pt 유지</li>
+</ul>
+
+<hr />
+
+<h2 id="부록--데이터-한계와-자료-신뢰성">부록 — 데이터 한계와 자료 신뢰성</h2>
+
+<ul>
+  <li><strong>응답률</strong>: 한길 6.2% / 꽃 7.3%. 둘 다 ARS 평균 수준이지만 사일런트 보수 미반영 가능성 +2~3%p 보정 고려.</li>
+  <li><strong>30대 가중</strong>: 한길 가중배율 1.38(원표본 64명→가중 88명). 30대 단독 결과는 셀 표본오차 약 ±10%p.</li>
+  <li><strong>여론조사꽃 의뢰자</strong>: 자체 의뢰. 의뢰자 편향 가능성은 낮으나 코호트 간 비교 시 양자대결-적합도 측정 차이 주의.</li>
+  <li><strong>한길조사 권역별 응답자 분포</strong>: 1권역 가중배율 0.78(과대표집 보정) → 1권역 실측 대표성은 수치상 결과보다 다소 보수적으로 해석 권장.</li>
+</ul>
+
+<p>분석 데이터셋(<code class="language-plaintext highlighter-rouge">dataset.py</code>)과 차트 6종(PNG, 150dpi)은 별도 파일로 제공.</p>
+
+<hr />
+
+<p><em>분석 작성: 2026-05-07. 외부 공유 금지. 일회성 분석으로 자동화 트래커 미운영.</em></p>
+
+      
+
+
+      <div class="comments-section">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+          data-repo="menwchen/menwchen.github.io"
+          data-repo-id="R_kgDORnhMbQ"
+          data-category="General"
+          data-category-id="DIC_kwDORnhMbc4C5XL6"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GoatCounter page view count
+    var defined = window.goatcounter;
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.no_onload = true;
+  </script>
+  <script async src="//gc.zgo.at/count.js" data-goatcounter="https://menwchen.goatcounter.com/count"
+    onload="
+      if (typeof goatcounter.count === 'function') goatcounter.count();
+      var el = document.getElementById('post-views');
+      if (el) {
+        var r = new XMLHttpRequest();
+        r.open('GET', 'https://menwchen.goatcounter.com/counter/' + encodeURIComponent(window.location.pathname) + '.json');
+        r.onload = function() {
+          if (r.status === 200) {
+            var d = JSON.parse(r.responseText);
+            el.textContent = '\uC870\uD68C ' + d.count_unique + '\uD68C';
+          }
+        };
+        r.send();
+      }
+    ">
+  </script>
+
+  <footer>&copy; 2026 Alle Menschen werden Brüder. All rights reserved.</footer>
+</body>
+</html>
