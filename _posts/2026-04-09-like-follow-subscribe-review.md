@@ -1,6 +1,10 @@
 ---
-
-## layout: post title: "좋아요, 팔로우, 구독 — 인플루언서 키즈의 그늘 | 서평·요약·번역" date: 2026-04-09 tags: \[서평, 번역, SNS, 인플루언서, 아동권리, 프라이버시, 가족브이로그, 맘블로거\] description: "Fortesa Latifi의 'Like, Follow, Subscribe: Influencer Kids and the Unfiltered Truth About Online Fame' 한국어 서평, 챕터별 요약, 핵심 번역"
+layout: post
+title: "좋아요, 팔로우, 구독 — 인플루언서 키즈의 그늘 | 서평·요약·번역"
+date: 2026-04-09
+tags: [서평, 번역, SNS, 인플루언서, 아동권리, 프라이버시, 가족브이로그, 맘블로거]
+description: "Fortesa Latifi의 'Like, Follow, Subscribe: Influencer Kids and the Unfiltered Truth About Online Fame' 한국어 서평, 챕터별 요약, 핵심 번역"
+---
 
 > *"돈은 눈이 돌아갈 만큼 많고, 명성은 중독적이며, 경제적 자유의 가능성은 현기증 날 정도다. 나는 그 모든 것을 안다. 그런데도 나라면 — 절대로, 단 1초도 — 그 거래를 하지 않겠다."*— Fortesa Latifi, 본서 결론부
 
