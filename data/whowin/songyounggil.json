@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T15:42:47Z",
+  "updated_at": "2026-05-29T20:29:40Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -45,16 +45,20 @@
       "n": 3
     },
     {
-      "k": "인천공항",
-      "n": 2
+      "k": "원도심",
+      "n": 3
     },
     {
       "k": "박찬대",
       "n": 2
     },
     {
-      "k": "원도심",
-      "n": 2
+      "k": "인천공항",
+      "n": 1
+    },
+    {
+      "k": "이재명",
+      "n": 1
     },
     {
       "k": "올드보이",
@@ -66,12 +70,12 @@
     }
   ],
   "sentiment": {
-    "positive": 5,
+    "positive": 7,
     "negative": 2,
-    "neutral": 73,
-    "positive_pct": 6.2,
+    "neutral": 71,
+    "positive_pct": 8.8,
     "negative_pct": 2.5,
-    "neutral_pct": 91.2
+    "neutral_pct": 88.8
   },
   "articles": [
     {
@@ -124,6 +128,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "송영길 “인천 바꾼 행정력으로 연수 새롭게… 초선 심정으로 골목 뛸 것” [굿모닝 인천 - 6.3지방선거 특집 모닝터뷰]",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1BT09OMm5sTUxpVXFObHRpeDJUN0tmLXdzRVkzZnhNUUw4RHFTcTRyWkVxUjVlMEVRY1N5LXdRUlEzX09IbVU3WW4yc2Z4bGgyWE9ZOEk3NkRWUGZoaFJ4elpjMULSAWhBVV95cUxQZlVGbjdMZ0NOSnVCSVl0Nno5bDFjNW1HV1U1ZTFYLW5JOHRFX2ZMQzB6UHBZcDBwbHVIQV8yczVBLTBtQkJUSS1Eb2c1YUxJRkowalF6OVN4dFZLdzVJX0NFbF9WRWoxdQ?oc=5",
+      "pubDate": "Thu, 28 May 2026 01:53:50 GMT",
+      "source": "경인방송 뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "[연수갑 공약 비교] '송도와 격차 줄여라' 원도심 해법 경쟁 3파전 각양각색 접근법",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE95RjU3SF9kQ2hGd1RVTHBGQzFPdW5RdUpSMUR6dncycXo4WW1VMmt2SEZHaDNxZlpjOWZ6bHUzUXRoQmI5WlVwX1VJeWYxbllnczVsS0MySGZDTi1vUTBMZWJLQk1SSDRoa2QzM2tLNVc?oc=5",
       "pubDate": "Thu, 28 May 2026 07:09:25 GMT",
@@ -166,16 +177,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 “인천 바꾼 행정력으로 연수 새롭게… 초선 심정으로 골목 뛸 것” [굿모닝 인천 - 6.3지방선거 특집 모닝터뷰]",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1BT09OMm5sTUxpVXFObHRpeDJUN0tmLXdzRVkzZnhNUUw4RHFTcTRyWkVxUjVlMEVRY1N5LXdRUlEzX09IbVU3WW4yc2Z4bGgyWE9ZOEk3NkRWUGZoaFJ4elpjMULSAWhBVV95cUxQZlVGbjdMZ0NOSnVCSVl0Nno5bDFjNW1HV1U1ZTFYLW5JOHRFX2ZMQzB6UHBZcDBwbHVIQV8yczVBLTBtQkJUSS1Eb2c1YUxJRkowalF6OVN4dFZLdzVJX0NFbF9WRWoxdQ?oc=5",
-      "pubDate": "Thu, 28 May 2026 01:53:50 GMT",
-      "source": "경인방송 뉴스",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길 꽃길 걷나…인천 연수갑 보선 3파전",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaS0xDNVlld3NhZGRITzFVaUVDLVFzQ2JZWXZvV000UWstWlM3M3d3Ri1kWTdpYk1kbHUxalpfbnRTeFZfVDhhVGt4SDFFbkk?oc=5",
-      "pubDate": "Thu, 21 May 2026 08:31:43 GMT",
+      "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
       "source": "v.daum.net",
       "query": "송영길 연수갑"
     },
@@ -187,10 +191,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[6·3 인천지선 현장] 선거전 막판 가짜 정보·고소전·토론회 반발 확산",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ETHJEZ1FEcDhWaC1WQ296Zzluak9oc24wMWtVSU1jZFltek51dXJDU0xZYlN3OEdLdTYwUVBJaXI0VWxqc3RUOWl6RWlfQWRlMndWano3aURURkdidDJDMkt0eUxnWmJXTFVDaFdhUQ?oc=5",
-      "pubDate": "Thu, 28 May 2026 20:48:37 GMT",
-      "source": "기호일보",
+      "title": "[경인일보-한국갤럽 여론조사] 연수갑 보궐, 송영길 48% vs 박종진 26%… ‘강중약’ 구도",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1CZmtueXRIS2xYMFp4MUsxTXRQdTVpaTU4REFzeTNqdFVlOUZzOTlMR3pPMmw3ZGZ6OW16d3VEc3Q1cEdFaU9QMmthcE9Ra2kxMWc?oc=5",
+      "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
+      "source": "경인일보",
       "query": "송영길 연수갑"
     },
     {
@@ -201,10 +205,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[6·3 인천보선 현장] 송영길, 인천공항노조와 정책협약…“공항 통합 반대”",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBmR0JIVkNmTDUybHpITnBkQzN5ZjZXUDRBMWFNZ2l0OUhIcmFlSTVuRzFOTGJaWFdxVk9qb1F4UFZZNU9lNnZDNVYzblJxT0N4R3JXaENTM2k0WklNOTZFMWlVYWJFUnlmckQ5UFdIaw?oc=5",
-      "pubDate": "Wed, 27 May 2026 07:10:31 GMT",
-      "source": "기호일보",
+      "title": "[현장] 인천 연수구갑, 유권자 “실생활 공약” 주문, 후보들 ‘바닥 민심’ 잡기 총력",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03MUdZSW41NnJ2QkM4ZmNENjBiWGVqaDAyajRCSUlQbVcyM09mdTNwZXF6aHJMQTlubUcyN2xnNGg1WEM2M0toOVlQYlM3dV9KQ3E3ZG5yb3FpNlRNWWttQnJ5ZmFGU1dJaU1ZV1h2NA?oc=5",
+      "pubDate": "Thu, 28 May 2026 02:01:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -222,6 +226,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "[경인일보-한국갤럽 여론조사] 보선 연수갑, 중도층 53% 택한 송영길, 30~60대도 우위",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vMG5JYW5TNG1pUjVXb2x1TmRtOURSMDFHeG9meDBBdjFlN19kQ2lLaVYzVV9leV9HNVNXZmhMQWdQUHM0LS1mMHNoSUVodXpOckE?oc=5",
+      "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
+      "source": "경인일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "[6.3지방선거] 송영길·박종진·정승연 토론회서 지역 발전 공방",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1GZ3RmMHdGSm5XVUZOeG0xYmktYUIzUEl2ak4wWFhNNmlrVTd4TFJMMzFnMDNnM0ZBQWQyaFV3dWV6RURFc0YzNVEyNGNBUHd5YUowcGNlUFNyUnVyaDNSQTR2U2NRYWc?oc=5",
       "pubDate": "Tue, 26 May 2026 00:25:07 GMT",
@@ -229,10 +240,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[경인일보-한국갤럽 여론조사] 연수갑 보궐, 송영길 48% vs 박종진 26%… ‘강중약’ 구도",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1CZmtueXRIS2xYMFp4MUsxTXRQdTVpaTU4REFzeTNqdFVlOUZzOTlMR3pPMmw3ZGZ6OW16d3VEc3Q1cEdFaU9QMmthcE9Ra2kxMWc?oc=5",
-      "pubDate": "Thu, 21 May 2026 11:23:21 GMT",
-      "source": "경인일보",
+      "title": "송영길 민주당 인천 연수갑 후보 “李정부와 호흡 맞출 국회 구성 위한 선거” [6·3 지방선거]",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBnc0NMSVBBVllYTk94Y1N5ZXlXTUFiM1dWbFc2ZDdzNk9Bb2NpNGhuQlVSbzM2cGhjcG9QbkJkcWJsUWNMUGYxbFM0MA?oc=5",
+      "pubDate": "Wed, 20 May 2026 07:00:00 GMT",
+      "source": "v.daum.net",
       "query": "송영길 연수갑"
     },
     {
@@ -250,17 +261,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 민주당 인천 연수갑 후보 “李정부와 호흡 맞출 국회 구성 위한 선거” [6·3 지방선거]",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE42SE8tRnVOTmRuYTVZWlBWTmEyN2JXTmEwWl9HQ2NDVEQ0RG5OVzVncVZzR2xlN21DYzlRY1BwenZCVWhNUVgtOWVMN2JBdFJMc2F4Xw?oc=5",
-      "pubDate": "Wed, 20 May 2026 07:00:00 GMT",
-      "source": "v.daum.net",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "사찰 순회·눈물 유세…첫 주말 연수구갑 표심잡기 총력전",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5scDhlSk5UQS13LUlqTEdCTlpyVEVKdEgzUmx0b185ZjZySlJ3M25SZUxGZlJKVmZsbHJHVnU2RlRmNmpZS29WNzdFY280c1g4R0o2b0FETGtBT0haNFloTGExSE5ZSTlBN0I4MklTdk8?oc=5",
-      "pubDate": "Mon, 25 May 2026 08:01:00 GMT",
-      "source": "인천일보",
+      "title": "[6·3 인천지선 현장] 선거전 막판 가짜 정보·고소전·토론회 반발 확산",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ETHJEZ1FEcDhWaC1WQ296Zzluak9oc24wMWtVSU1jZFltek51dXJDU0xZYlN3OEdLdTYwUVBJaXI0VWxqc3RUOWl6RWlfQWRlMndWano3aURURkdidDJDMkt0eUxnWmJXTFVDaFdhUQ?oc=5",
+      "pubDate": "Thu, 28 May 2026 20:48:37 GMT",
+      "source": "기호일보",
       "query": "송영길 연수갑"
     },
     {
@@ -271,17 +275,17 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "사찰 순회·눈물 유세…첫 주말 연수구갑 표심잡기 총력전",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5scDhlSk5UQS13LUlqTEdCTlpyVEVKdEgzUmx0b185ZjZySlJ3M25SZUxGZlJKVmZsbHJHVnU2RlRmNmpZS29WNzdFY280c1g4R0o2b0FETGtBT0haNFloTGExSE5ZSTlBN0I4MklTdk8?oc=5",
+      "pubDate": "Mon, 25 May 2026 08:01:00 GMT",
+      "source": "인천일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "인천 연수갑·계양을 국회의원 재보선 ‘3파전’ 대진표 완성",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5oMTFYeENweHU0R0JOd2JTUEZCeFlaLW45SlAtcHJIMFg3OG1YbEtNamF0OTdWZHVkNEpzc1RhYk5ILTNZOFlfbUdybkd0V0M2SmhTZzNQVnZMb3ItdWZmRnE2N0hvUFM0MnVVbDdkSU8?oc=5",
       "pubDate": "Fri, 15 May 2026 07:00:00 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "[6·3 보선] 송영길·박종진·정승연…인천 연수갑 보선 3파전 재편",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE96T2paczZYcGtYbEk4Y0JqRW9PRW9pa0s2UGVLRGhGWUtVVHlERk9jZ3lkUnN2emJFNW1NeVprbF9va1dGOFZuYnd0eXRMZnc?oc=5",
-      "pubDate": "Tue, 12 May 2026 07:00:00 GMT",
-      "source": "v.daum.net",
       "query": "송영길 연수갑"
     }
   ]
