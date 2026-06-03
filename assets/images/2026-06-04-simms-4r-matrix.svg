@@ -1,1 +1,58 @@
-��1�Y�
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system, 'Malgun Gothic', sans-serif">
+  <rect width="880" height="560" fill="#ffffff"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#111">Simms의 4R 평가틀 — 오늘의 강대국</text>
+  <text x="40" y="70" font-size="13" fill="#777">Resources · Reach · Reputation · Resilience (점이 많을수록 상대적 강도, 저자 서술 기반 정성 평가)</text>
+  <g font-size="14" font-weight="700" fill="#111" text-anchor="middle">
+    <text x="430" y="108">자원</text>
+    <text x="545" y="108">도달범위</text>
+    <text x="660" y="108">평판</text>
+    <text x="775" y="108">회복력</text>
+  </g>
+  <text x="40" y="108" font-size="14" font-weight="700" fill="#111">강대국</text>
+  <line x1="40" y1="120" x2="840" y2="120" stroke="#111" stroke-width="2"/>
+  <g font-size="15">
+    <text x="40" y="168" font-weight="700" fill="#111">미국</text>
+    <text x="40" y="188" font-size="11" fill="#999">"가장 강한 강대국, 적어도 지금은"</text>
+    <text x="430" y="172" text-anchor="middle" fill="#111" font-size="20">●●●●●</text>
+    <text x="545" y="172" text-anchor="middle" fill="#111" font-size="20">●●●●●</text>
+    <text x="660" y="172" text-anchor="middle" fill="#111" font-size="20">●●●●○</text>
+    <text x="775" y="172" text-anchor="middle" fill="#111" font-size="20">●●●●●</text>
+  </g>
+  <line x1="40" y1="208" x2="840" y2="208" stroke="#e5e5e5" stroke-width="1"/>
+  <g font-size="15">
+    <text x="40" y="252" font-weight="700" fill="#111">중국</text>
+    <text x="40" y="272" font-size="11" fill="#999">"끝없이 부상하나 결코 따라잡지 못할 수도"</text>
+    <text x="430" y="256" text-anchor="middle" fill="#111" font-size="20">●●●●○</text>
+    <text x="545" y="256" text-anchor="middle" fill="#111" font-size="20">●●●○○</text>
+    <text x="660" y="256" text-anchor="middle" fill="#111" font-size="20">●●○○○</text>
+    <text x="775" y="256" text-anchor="middle" fill="#111" font-size="20">●●●○○</text>
+  </g>
+  <line x1="40" y1="292" x2="840" y2="292" stroke="#e5e5e5" stroke-width="1"/>
+  <g font-size="15">
+    <text x="40" y="336" font-weight="700" fill="#111">영국</text>
+    <text x="40" y="356" font-size="11" fill="#999">"자원의 손실을 도달·평판·회복력으로 벌충"</text>
+    <text x="430" y="340" text-anchor="middle" fill="#111" font-size="20">●●○○○</text>
+    <text x="545" y="340" text-anchor="middle" fill="#111" font-size="20">●●●●○</text>
+    <text x="660" y="340" text-anchor="middle" fill="#111" font-size="20">●●●●○</text>
+    <text x="775" y="340" text-anchor="middle" fill="#111" font-size="20">●●●●●</text>
+  </g>
+  <line x1="40" y1="376" x2="840" y2="376" stroke="#e5e5e5" stroke-width="1"/>
+  <g font-size="15">
+    <text x="40" y="420" font-weight="700" fill="#111">러시아</text>
+    <text x="40" y="440" font-size="11" fill="#999">"여전히 간신히 강대국, 분명히 후퇴 중"</text>
+    <text x="430" y="424" text-anchor="middle" fill="#111" font-size="20">●●○○○</text>
+    <text x="545" y="424" text-anchor="middle" fill="#111" font-size="20">●●●○○</text>
+    <text x="660" y="424" text-anchor="middle" fill="#111" font-size="20">●○○○○</text>
+    <text x="775" y="424" text-anchor="middle" fill="#111" font-size="20">●●○○○</text>
+  </g>
+  <line x1="40" y1="460" x2="840" y2="460" stroke="#e5e5e5" stroke-width="1"/>
+  <g font-size="15">
+    <text x="40" y="504" font-weight="700" fill="#999">프랑스</text>
+    <text x="40" y="524" font-size="11" fill="#bbb">"지위가 불분명한 유일한 나라"</text>
+    <text x="430" y="508" text-anchor="middle" fill="#999" font-size="20">●●●○○</text>
+    <text x="545" y="508" text-anchor="middle" fill="#999" font-size="20">●●●○○</text>
+    <text x="660" y="508" text-anchor="middle" fill="#999" font-size="20">●●●○○</text>
+    <text x="775" y="508" text-anchor="middle" fill="#999" font-size="20">●●●○○</text>
+  </g>
+  <line x1="40" y1="540" x2="840" y2="540" stroke="#111" stroke-width="2"/>
+</svg>
