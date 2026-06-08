@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T20:22:02Z",
+  "updated_at": "2026-06-08T22:41:27Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -58,12 +58,12 @@
     }
   ],
   "sentiment": {
-    "positive": 47,
+    "positive": 46,
     "negative": 0,
-    "neutral": 33,
-    "positive_pct": 58.8,
+    "neutral": 34,
+    "positive_pct": 57.5,
     "negative_pct": 0.0,
-    "neutral_pct": 41.2
+    "neutral_pct": 42.5
   },
   "articles": [
     {
@@ -109,6 +109,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "연수갑 보선 후보들 한 표 행사…“좋은 결과” vs “민심 기적” 기대",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BRW45NzF1ZVlabVREMWRjbWxnU05Vc3ZnRnFTN28xV3dNdzhyNHJUMVFTaVBqVHRReUZRTTNaVnNxVWs0OVZDUUlnaE53RThRVGNSWWpWOXpuZ0NvcmdEQjRVSkU2M1NWQnR5aTRvMA?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 03:34:00 GMT",
+      "source": "기호일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "‘이제는 6선’ 송영길, 인천 연수 갑 당선…당권 도전하나",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkZ2JkcDNTTVJBSnlLU3BUQVYzM1NiSmdubjZ4MGx3V2xKUElTWF9uWm02UUMyNFEyaHBjZ2V6dG1QaVhzUDFoV1AtSHFra19T?oc=5",
       "pubDate": "Wed, 03 Jun 2026 20:50:08 GMT",
@@ -123,13 +130,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "연수갑 보선 후보들 한 표 행사…“좋은 결과” vs “민심 기적” 기대",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BRW45NzF1ZVlabVREMWRjbWxnU05Vc3ZnRnFTN28xV3dNdzhyNHJUMVFTaVBqVHRReUZRTTNaVnNxVWs0OVZDUUlnaE53RThRVGNSWWpWOXpuZ0NvcmdEQjRVSkU2M1NWQnR5aTRvMA?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 03:34:00 GMT",
-      "source": "기호일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 연수갑 보선] 송영길의 귀환…연수갑이 선택한 정치적 무게감",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xUGRKVFZMOHc5enphS2NXOXdnX2dxVkRmNkNFdVBhcE1Ddm5Jdnk3b3FQUVZrZU0tclZSU1hUXzA0dEVPNzkxakN5MGNzVms?oc=5",
       "pubDate": "Sat, 06 Jun 2026 10:55:21 GMT",
@@ -141,13 +141,6 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94UWtDU0xQVTR0X1B6YlZaS3g0VjlJdjQ2VV95QjZ3MlZKN0FjQUZ3N2xWeHRtNVQ3NnhUcFdWUmtmU0ZTaVJxaS1COS1FSjlIUFdGZlZROVc5Q1NyVWxDSV9UQUxJYkhOTHlNYXJpWno?oc=5",
       "pubDate": "Thu, 04 Jun 2026 05:50:58 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "[당선인 인터뷰] 송영길 “연수갑 구민의 승리… 2년간 정부 뒷받침 할 것”",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZVF81cmtoeXVpcmJTTmRTRXpudmoxOUxCZFhSeDRxQ2liS3dESU5UUlFVN3NFT0ZYOWZKSkNlVFgzWWw0T2FxZ2IwZlo2cUM1QmdRRFRpQzVneUlQN00xdE12djZxSUNFWXR3SFNKNA?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 15:41:08 GMT",
-      "source": "기호일보",
       "query": "송영길 연수갑"
     },
     {
@@ -186,6 +179,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "[당선인 인터뷰] 송영길 “연수갑 구민의 승리… 2년간 정부 뒷받침 할 것”",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZVF81cmtoeXVpcmJTTmRTRXpudmoxOUxCZFhSeDRxQ2liS3dESU5UUlFVN3NFT0ZYOWZKSkNlVFgzWWw0T2FxZ2IwZlo2cUM1QmdRRFRpQzVneUlQN00xdE12djZxSUNFWXR3SFNKNA?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 15:41:08 GMT",
+      "source": "기호일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "송영길 인천 연수갑 당선인, 돈 봉투 살포 의혹 ‘정치적 위기’ 딛고 당 최다선 ‘6선 고지’",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
       "pubDate": "Wed, 03 Jun 2026 15:22:00 GMT",
@@ -197,6 +197,13 @@
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5BY3hhYUhqSVVOdlgtUDB6bWh2QTlsZG5rMS16YUtvVDZtUm9SX0oyM3pCS3pMVUU0QVREUkhiWGl1MjVOUmttQ0w0ZmRDTmM?oc=5",
       "pubDate": "Thu, 04 Jun 2026 04:11:53 GMT",
       "source": "v.daum.net",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "호남 간 與 당권주자 송영길, ‘선관위 개혁 3법’으로 존재감 부각한 한동훈 [투데이 여의도 스케치]",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1OUTFIbTI3VlBFUnJhX0NSMVNuU1Y3cFNyS2E2TXVaUG1LWWV3eVdlSDlGU2VnMWhMOGhxODByU1RPSjJiSHRVNElIb0g2QTRWTkR3anJYX3fSAVRBVV95cUxPTDNuWGxXZ0NFbDBLSE8xeUhJeEN3cERWakVzUGdpa29yN2s4SmJCUl93bFQ3SjFVbXFSUHNNZ1FJWmpudlZ3WjYtRmt0ajJ1Nld0V1Q?oc=5",
+      "pubDate": "Mon, 08 Jun 2026 21:00:00 GMT",
+      "source": "세계일보",
       "query": "송영길 연수갑"
     },
     {
@@ -242,24 +249,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[6·3 지선] 송영길, 인천 연수갑 당선…'6선'으로 원내 복귀",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBlakl4LXR5RDdXOGR4RDJsUTRDUG02ZDJYRDNLQ19ueUd3V0JRSmw2TmQ1eE5jMVVrUjRZdm5rZWt4bjZlSl9HMEVYSQ?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 20:51:01 GMT",
-      "source": "v.daum.net",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[포토] 새벽 메운 환호성…송영길 후보, 연수구갑 ‘당선 확실’ 세레머니",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5sTWNPakZmb1hxRzdROTRRZ0t0UmdFUlpiV2x0bkxjX1ItcDFTeG9tQy1YOUJDNDhBMU9QY19UMDVhRi1tVklpWTZHa2J1ZTBVRWhxazdSdmxnYVNkN1BrQzFVM0FjR3I2YWVZalU1VE0?oc=5",
       "pubDate": "Wed, 03 Jun 2026 16:33:00 GMT",
       "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "송영길, 인천 첫 6선 중진 의원 등극…“이재명 정부 버팀목 역할”",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YaXFFM244SXZ1cUxtN0VzWFlnOUkxTHIyVEVQVXlzQVdJQ2dPV2loa3gycS10UWNxUHZBT2liTDkxVERaWHpqTWFRd0hYams?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 17:15:25 GMT",
-      "source": "v.daum.net",
       "query": "송영길 연수갑"
     },
     {
@@ -274,6 +267,13 @@
       "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yR3BlTllyMElnelRwWjVzY19XamE3czdKVDlDVDZrTlAzNHozTUJWZGtFR3J2QlBMUUc0NS1KX3MwOV9SSElDRzdRRzVwN3VQT0VPdWFsYnFraFp5?oc=5",
       "pubDate": "Wed, 03 Jun 2026 16:17:00 GMT",
       "source": "뉴스핌",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[6.3 국회의원 재보선] 인천 연수구갑 민주당 송영길 당선",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB5djhxREVRU05ocHZkdUh0RVVURlhCUnVNZVYwTXhHUHRTUjhkdFlUM0hCcHlsN0NKQXp4Z2VHOEFkWnBMN3VJejJ2alhsV2hMZEFzQlVfalNteF9UVjhqWXUxdm5ZanNEbThr?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 20:35:25 GMT",
+      "source": "미디어인천신문",
       "query": "송영길 연수갑"
     }
   ]
