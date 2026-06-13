@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T16:15:17Z",
+  "updated_at": "2026-06-13T19:40:32Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -58,12 +58,12 @@
     }
   ],
   "sentiment": {
-    "positive": 38,
+    "positive": 39,
     "negative": 0,
-    "neutral": 42,
-    "positive_pct": 47.5,
+    "neutral": 41,
+    "positive_pct": 48.8,
     "negative_pct": 0.0,
-    "neutral_pct": 52.5
+    "neutral_pct": 51.2
   },
   "articles": [
     {
@@ -193,17 +193,17 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "[속보] 인천 연수갑 국회의원 보선 송영길 당선 유력[KBS]",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBET0hKcDRPWUtLdWNrUWhrQ3VyUFMyU0tOZmNjOUhhQ1NNY1MzTFpuSGRuZTdyLU1Vd29JY3VZZXI4SWNxdUxVM1BMdw?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "v.daum.net",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "민주당 송영길 후보 연수갑 국회의원 당선 유력··· 득표율 61.47%",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBJNEt4eE1ESWZ4N3lXZzJIT01mbDNXZnVYcHJ6amsxQl9RekktVlpWODRmQ1UwZnNIXzQySFBfclduUzMyLVUtQzJfYXBaMGhRS3lpVXZuY0NCU056T1NKZEwxWXVQQnNDVmxPNlk2amM?oc=5",
       "pubDate": "Wed, 03 Jun 2026 15:33:42 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "[속보] 인천 연수갑 국회의원 보선 송영길 당선 유력[KBS]",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pTWVLMzdocFBxY3I0T2NCODNfVTJOQjByejlIRWNxaXBMZWc2NXhGZDVuQWZ5Yk9yUjN1M0JEQzdicjZEX2t6SXhRcjVBMGc?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 15:17:06 GMT",
-      "source": "v.daum.net",
       "query": "송영길 연수갑"
     },
     {
@@ -243,8 +243,8 @@
     },
     {
       "title": "[당선소감] 연수갑 송영길 당선인 “이재명 정부 버팀목 되겠다”…국회 복귀 발판 삼아 존재감",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBPVnVBcmdPN0dLb2lTWnVadVpuQ3FuVFlPYXpkYVRCRzBhNDRCT3VCcW5WeFA3TXdIekdrUXVCamh0ZktlQVo4T0xLZTNIbEE?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 04:10:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE56alktdi0zREFoaXBPQnpsVENMV1p1bGJGZFZBRUxkNUwtcllkUUZueEdCVDJjY01LV2piV1I1R3NQTFFxS05EX0NFdFZuRG5sQU10Sw?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "v.daum.net",
       "query": "송영길 연수갑"
     },
