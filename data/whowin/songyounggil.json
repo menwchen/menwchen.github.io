@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T20:28:38Z",
+  "updated_at": "2026-06-18T22:56:43Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 39,
+    "positive": 40,
     "negative": 0,
-    "neutral": 41,
-    "positive_pct": 48.8,
+    "neutral": 40,
+    "positive_pct": 50.0,
     "negative_pct": 0.0,
-    "neutral_pct": 51.2
+    "neutral_pct": 50.0
   },
   "articles": [
     {
@@ -106,17 +106,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "인천 연수갑 보궐선거, 민주당 송영길 ‘당선 유력’",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3alRyckdNX2h1X3JMVGp5MUZNMklTVlNvMU4yZnB2MU5vWFNNQ1JlT29rajFicDRXZFZQM3F0aVQzWlZVdTZhM3VqYW16RTN4bDN3bA?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "JTBC",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 지선] 인천 연수갑 송영길 당선 유력…6선 고지 코앞",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VTWxpckI4bnFIbHM2MVJCRFBGRUlZYy1CalJRUDUyQlVHMnhJSkcyeXhBWkpac1QycnFkbHhqS0o1VEVuRnZmLXhpeHFOQ1k?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "v.daum.net",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "인천 연수갑 보궐선거, 민주당 송영길 ‘당선 유력’",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3alRyckdNX2h1X3JMVGp5MUZNMklTVlNvMU4yZnB2MU5vWFNNQ1JlT29rajFicDRXZFZQM3F0aVQzWlZVdTZhM3VqYW16RTN4bDN3bA?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "JTBC",
       "query": "송영길 연수갑"
     },
     {
@@ -183,13 +183,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[속보] 인천 연수갑 국회의원 보선 송영길 당선 유력[KBS]",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pTWVLMzdocFBxY3I0T2NCODNfVTJOQjByejlIRWNxaXBMZWc2NXhGZDVuQWZ5Yk9yUjN1M0JEQzdicjZEX2t6SXhRcjVBMGc?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "v.daum.net",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길 인천 연수갑 국회의원 당선자 [재보선 당선 소감]",
       "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBHWDREWV85a0pDX21FVTlUZE1rRG9QUldfVUxpUXpBNzBuc3cwSkZ6MmplZkFQNGtVY2czTG9HR1M4OEdfcHc?oc=5",
       "pubDate": "Sun, 07 Jun 2026 07:00:00 GMT",
@@ -246,6 +239,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "[당선인 인터뷰] 송영길 “연수갑 구민의 승리… 2년간 정부 뒷받침 할 것”",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9fYXVXVktLaUxwY2pOYXR5RHlmWXNxZktEUjlnaEdVY0l1SVZWVGZZRU5OVzlxV1QtaFBFYm1ERDdrVGlCVjNiU3lzQQ?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "v.daum.net",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "[6·3 연수갑 보선] 송영길의 귀환…연수갑이 선택한 정치적 무게감",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10TFg1dDZMNXozamNoa0c0a1FKM05TeW9OVWRydTJFZWVqOVgxekRzYjRlbUU2NHB5cmN3M1pFTTd3bWlxMlpVS1l5ZV9LWGRRandGRWwxbzZnYXhHRVI3UGtCbk93bnIzd1RuRzJyZw?oc=5",
       "pubDate": "Sat, 06 Jun 2026 07:00:00 GMT",
@@ -267,17 +267,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[당선인 인터뷰] 송영길 “연수갑 구민의 승리… 2년간 정부 뒷받침 할 것”",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9wa3R6ZE1jMWQ0Nm5KTTVzdkh0TU9JWlFndndRX0JKY2RKRWF5aFZoNDJGVGRHd196WGhJMFhNQzNMWlJfb3JYRGxpeHpESzF2WWhFXw?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "v.daum.net",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[속보] 인천 연수갑 보궐선거, 송영길 민주당 후보 당선",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EMWxxNnVSNENRN0dGLS1COFdmb2thaHIwb0JVZlRZWEJVUktOVV9hTnRDMFZzWkR4ZXVBeW9lYTlyNFVfQUQ3ZDNXRTRqV1NqZVItWE56Z0JlQQ?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "뉴스1",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "계양을·연수갑 보궐선거… 수성이냐 탈환이냐",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
+      "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "source": "경인일보",
       "query": "송영길 연수갑"
     }
   ]
