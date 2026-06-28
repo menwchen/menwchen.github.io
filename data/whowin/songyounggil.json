@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T16:13:28Z",
+  "updated_at": "2026-06-28T19:24:29Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -53,17 +53,21 @@
       "n": 2
     },
     {
+      "k": "전대",
+      "n": 1
+    },
+    {
       "k": "전당대회",
       "n": 1
     }
   ],
   "sentiment": {
-    "positive": 45,
+    "positive": 44,
     "negative": 0,
-    "neutral": 35,
-    "positive_pct": 56.2,
+    "neutral": 36,
+    "positive_pct": 55.0,
     "negative_pct": 0.0,
-    "neutral_pct": 43.8
+    "neutral_pct": 45.0
   },
   "articles": [
     {
