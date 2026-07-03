@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T14:11:19Z",
+  "updated_at": "2026-07-03T16:27:02Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -41,20 +41,20 @@
   "n_articles": 80,
   "keywords": [
     {
+      "k": "이재명",
+      "n": 4
+    },
+    {
       "k": "제2경인선",
       "n": 3
     },
     {
-      "k": "이재명",
-      "n": 3
+      "k": "박찬대",
+      "n": 2
     },
     {
       "k": "전대",
       "n": 2
-    },
-    {
-      "k": "박찬대",
-      "n": 1
     },
     {
       "k": "전당대회",
@@ -66,26 +66,26 @@
     }
   ],
   "sentiment": {
-    "positive": 43,
+    "positive": 42,
     "negative": 0,
-    "neutral": 37,
-    "positive_pct": 53.8,
+    "neutral": 38,
+    "positive_pct": 52.5,
     "negative_pct": 0.0,
-    "neutral_pct": 46.2
+    "neutral_pct": 47.5
   },
   "articles": [
-    {
-      "title": "[뉴스1 PICK]정청래·송영길·김민석 與 당권주자 3인방 한자리에",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBHTjl6WExUWnpkRXpJQmhOcVZwVy1iZG5iVms2ZG5VTE1NNUVnWUFTX0xmd2psSVE1RjQ2SVI5U3lmaHp6eTg4NWg1eldRN3dKbTBlTjJwaHgwbkxzb2I0?oc=5",
-      "pubDate": "Fri, 03 Jul 2026 06:23:28 GMT",
-      "source": "뉴스1",
-      "query": "송영길 연수갑"
-    },
     {
       "title": "정청래, ‘연수갑’ 송영길에 \"통 큰 역할\" 치켜세웠지만…",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHdXFYb0hoQ1FKNGY5eVB6TE83OS0zT2luWUU0OVFvdk9Wa29NelhjdjhLYTJPVHpLVkllenFub2JULXdWNUM0dEN3LXA3UWc1cUE?oc=5",
       "pubDate": "Mon, 29 Jun 2026 19:37:11 GMT",
       "source": "JTBC",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[뉴스1 PICK]정청래·송영길·김민석 與 당권주자 3인방 한자리에",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBHTjl6WExUWnpkRXpJQmhOcVZwVy1iZG5iVms2ZG5VTE1NNUVnWUFTX0xmd2psSVE1RjQ2SVI5U3lmaHp6eTg4NWg1eldRN3dKbTBlTjJwaHgwbkxzb2I0?oc=5",
+      "pubDate": "Fri, 03 Jul 2026 06:23:28 GMT",
+      "source": "뉴스1",
       "query": "송영길 연수갑"
     },
     {
@@ -159,6 +159,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "송영길, 4년만에 화려한 복귀…인천 연수갑 당선 확실",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBDbmZPRDhLangweGlJZ2l0OFdndHFUYTNhTElZa3U1dFJjWGc1SnljNm5NVHgwUmRpV0paUGluaFhBb0NUMndGcXMyNmM2SlZSYnhlUEtR?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+      "source": "중앙일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "송영길, 제2경인선·송도역 KTX 등 현안 점검···공약 이행 잰걸음",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PV2IxVi1sbkZoZ3UwMUdINWxFckxLVlpyYVNFM1RJQkMwaUtUUjZseEhDT3R4V2hqQWF0RUhOaTdVblQwVC05bVlYOUs0NUZJQ29UeDR2RU1zcWZtNG9YeVpfZnVMZVlWb0dLMnRmeDM?oc=5",
       "pubDate": "Tue, 16 Jun 2026 07:00:00 GMT",
@@ -205,13 +212,6 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94UWtDU0xQVTR0X1B6YlZaS3g0VjlJdjQ2VV95QjZ3MlZKN0FjQUZ3N2xWeHRtNVQ3NnhUcFdWUmtmU0ZTaVJxaS1COS1FSjlIUFdGZlZROVc5Q1NyVWxDSV9UQUxJYkhOTHlNYXJpWno?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "송영길, 4년만에 화려한 복귀…인천 연수갑 당선 확실",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBDbmZPRDhLangweGlJZ2l0OFdndHFUYTNhTElZa3U1dFJjWGc1SnljNm5NVHgwUmRpV0paUGluaFhBb0NUMndGcXMyNmM2SlZSYnhlUEtR?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "중앙일보",
       "query": "송영길 연수갑"
     },
     {
