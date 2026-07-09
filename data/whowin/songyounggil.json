@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T22:09:08Z",
+  "updated_at": "2026-07-09T03:32:33Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -66,12 +66,12 @@
     }
   ],
   "sentiment": {
-    "positive": 36,
+    "positive": 37,
     "negative": 1,
-    "neutral": 43,
-    "positive_pct": 45.0,
+    "neutral": 42,
+    "positive_pct": 46.2,
     "negative_pct": 1.2,
-    "neutral_pct": 53.8
+    "neutral_pct": 52.5
   },
   "articles": [
     {
@@ -124,13 +124,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길, 민주당 당 대표 출마 선언",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9scVl3NjNZTDZQWk0zeDJ0bE1WbmQ4UGZDcV9KNkV1TmRWNWtYak1hbUd5dDI2dVlidmoxUU94TjdkY0xzRHNJdHdSbXRIZzUzZFRib1M3Qy10VXNYbm13dlJYWmxVaDl5Xzd0cUd1bUg?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 01:18:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 지선] 인천 연수갑서 송영길 당선…6선 고지 올랐다(종합)",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NT01oUFNZbERtanlRNWw4NWJ5VVNlMmsxX2JxVWwwZVpvbC0xbFU1LVFaUVlNQ0VHbEFwOVhZa09ORGN2bEFaZzR3akdnellGbWpBck1Tc0lZdWfSAWBBVV95cUxOa2Q1UTBQMnRfaHc3ZTIwQ25UVnRrdnJIZ0ZQY2I5LWpJMk9FbDJUMUVMdjRreHkxZjJnZGExdGwxUUJ3VmstZFc5YkZaU2ZJd2psYnR1YkRXc1hVVmN5NE4?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -149,6 +142,13 @@
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경향신문",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길, 민주당 당 대표 출마 선언",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9scVl3NjNZTDZQWk0zeDJ0bE1WbmQ4UGZDcV9KNkV1TmRWNWtYak1hbUd5dDI2dVlidmoxUU94TjdkY0xzRHNJdHdSbXRIZzUzZFRib1M3Qy10VXNYbm13dlJYWmxVaDl5Xzd0cUd1bUg?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 01:18:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
