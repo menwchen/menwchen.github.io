@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T16:57:50Z",
+  "updated_at": "2026-07-10T19:36:09Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -75,13 +75,6 @@
   },
   "articles": [
     {
-      "title": "순천 찾은 송영길 \"지방 청년 글로벌로 연결…鄭체제 경선 부당\"",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1kaDFaN2tyQ3dSUWNIRDVRUzRtaW53RWpEZ1JmSFBjS1cyMlJCbWRCSHl0UkZCUVJZNFdaOGdHSTJva1VYc2ZQYzRrWTJUaU1MWUc4UXRIX3ZTT2RoRGlB?oc=5",
-      "pubDate": "Fri, 10 Jul 2026 13:14:49 GMT",
-      "source": "뉴스1",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "연수갑 송영길 당대표 출사표 … 민주당 당권 경쟁 4파전 본격화되나",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAwUWZlWmU1SVFRV3VrV2lZZ1pKUjdVQ0xsYk9fYkR4VlpmX0FiLUhYZVY5NWVkSC1xUWxFLTVlbTYyb1E1SDFiSHEwVVVsTFFlU3N2bWZrZ0RmRVdhX05iZ0UwSzBEeE5lcTV3VHpMbw?oc=5",
       "pubDate": "Wed, 08 Jul 2026 07:24:32 GMT",
@@ -93,6 +86,13 @@
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHdXFYb0hoQ1FKNGY5eVB6TE83OS0zT2luWUU0OVFvdk9Wa29NelhjdjhLYTJPVHpLVkllenFub2JULXdWNUM0dEN3LXA3UWc1cUE?oc=5",
       "pubDate": "Wed, 08 Jul 2026 02:03:53 GMT",
       "source": "JTBC",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "순천 찾은 송영길 \"지방 청년 글로벌로 연결…鄭체제 경선 부당\"",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1kaDFaN2tyQ3dSUWNIRDVRUzRtaW53RWpEZ1JmSFBjS1cyMlJCbWRCSHl0UkZCUVJZNFdaOGdHSTJva1VYc2ZQYzRrWTJUaU1MWUc4UXRIX3ZTT2RoRGlB?oc=5",
+      "pubDate": "Fri, 10 Jul 2026 13:14:49 GMT",
+      "source": "뉴스1",
       "query": "송영길 연수갑"
     },
     {
@@ -138,17 +138,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56cG14VDBla3JmT3dpY2I3N2ZFVlJyVVIwTU5YZHhzaXBSYno4akpYN0czd1Z0QjJJVTV3SHlDQ2RIY3g2cmJOejhPWjdIeDBqeW01cTFZS1NzLXU3NndJRHVLcTc?oc=5",
-      "pubDate": "Fri, 10 Jul 2026 07:46:02 GMT",
-      "source": "뉴스1",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길, 더불어민주당 당대표 출마 선언...“이재명 정부 반드시 성공시키겠다”",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBudzI0c281ejZRMnppRGQ2WS1TOVpyV0xQOEtlNEEzREhoNFVHcUZBU0RFZlNabjcwa3dydDVLSEwxelpKaEtTeFN5Zjc2LXhubVd3aTIzRFdpVDdoZ2N3VXplQQ?oc=5",
       "pubDate": "Wed, 08 Jul 2026 12:17:20 GMT",
       "source": "시사뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56cG14VDBla3JmT3dpY2I3N2ZFVlJyVVIwTU5YZHhzaXBSYno4akpYN0czd1Z0QjJJVTV3SHlDQ2RIY3g2cmJOejhPWjdIeDBqeW01cTFZS1NzLXU3NndJRHVLcTc?oc=5",
+      "pubDate": "Fri, 10 Jul 2026 07:46:02 GMT",
+      "source": "뉴스1",
       "query": "송영길 연수갑"
     },
     {
