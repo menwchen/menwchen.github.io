@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T08:21:15Z",
+  "updated_at": "2026-07-12T10:35:51Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -45,12 +45,12 @@
       "n": 6
     },
     {
-      "k": "전대",
+      "k": "제2경인선",
       "n": 3
     },
     {
-      "k": "제2경인선",
-      "n": 2
+      "k": "전대",
+      "n": 3
     },
     {
       "k": "박찬대",
@@ -62,18 +62,18 @@
     }
   ],
   "sentiment": {
-    "positive": 34,
+    "positive": 35,
     "negative": 1,
-    "neutral": 45,
-    "positive_pct": 42.5,
+    "neutral": 44,
+    "positive_pct": 43.8,
     "negative_pct": 1.2,
-    "neutral_pct": 56.2
+    "neutral_pct": 55.0
   },
   "articles": [
     {
       "title": "‘이재명의 입’ 김남준, 인천 계양을 공천…연수갑엔 송영길",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1qUExITzZOcE5IcF9UV0ZJZmE0ZTdJeXVKMF9YdUJqbDhJaDBxZVVWd3hINjY3UEYzYXQ5TEFLM0VhRkZackFKYmFvYzQ3XzFBMlE?oc=5",
-      "pubDate": "Fri, 10 Jul 2026 22:00:23 GMT",
+      "pubDate": "Sat, 11 Jul 2026 21:47:53 GMT",
       "source": "JTBC",
       "query": "송영길 연수갑"
     },
@@ -92,17 +92,17 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "송영길·김민석, 전남광주서 당심·민심 잡기 ‘본격화’",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9nRlJsczN4Yl9zQWJudkdOZnFpOWRVSThXVmNYYUNQN2FXRG9qbkhoNjF3M3UxNENsUE1fenEzbEFSdWM3cE5sdnVlN09xRGpBaDVZRkV3?oc=5",
+      "pubDate": "Thu, 09 Jul 2026 08:25:00 GMT",
+      "source": "무등일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "송영길, 당대표 출마 선언 \"6·3 지선은 승리 외피 쓴 패배, 검증된 사람 필요\"",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyMHZETGs5YnpiaGQ4Wi01amkxNFMzbG5yM2FVUFVGaDB3eV9kU2pfcHhYbUc1N3FVb25VdVMyamRyVGdkRTJGcFNMaU1BcTNPaGxTWFUxXy1tUEJ4eW5oQmRMY1JhWDhBb2dBYWVwTk0?oc=5",
       "pubDate": "Wed, 08 Jul 2026 03:03:29 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "송영길·김민석, 전남광주서 당심·민심 잡기 ‘본격화’",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9XVmpvWWtFWDdHejhfTy1ZdE1HTlMzTVRVMk9XUUdLckJZRVlsbWUzUzBOQmtEdDE1RWU1UkpudmR4azEwcTRqelNGUVg?oc=5",
-      "pubDate": "Thu, 09 Jul 2026 08:25:00 GMT",
-      "source": "무등일보",
       "query": "송영길 연수갑"
     },
     {
@@ -274,10 +274,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "몸 푸는 송영길, 김민석과 손 잡나…‘정청래 견제’ 연대 가능성",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jYWdvdDN1UEdsd3JKSU0yOVhjc0kyVWhLWVVhcmlQZGpMY3hjQjFmQmFwVE93TUt1cXNSUGlveXJZMXBqdks1VTVCNUMzMm1wUW1zam5OVjctSFVQdWdPYmFiOUZUSFY1SWRXS216Q1hMaTR1?oc=5",
-      "pubDate": "Tue, 23 Jun 2026 07:00:00 GMT",
-      "source": "한겨레",
+      "title": "계양을·연수갑 보궐선거… 수성이냐 탈환이냐",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
+      "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "source": "경인일보",
       "query": "송영길 연수갑"
     }
   ]
