@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T16:17:38Z",
+  "updated_at": "2026-07-14T19:22:57Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -66,12 +66,12 @@
     }
   ],
   "sentiment": {
-    "positive": 34,
+    "positive": 35,
     "negative": 1,
-    "neutral": 45,
-    "positive_pct": 42.5,
+    "neutral": 44,
+    "positive_pct": 43.8,
     "negative_pct": 1.2,
-    "neutral_pct": 56.2
+    "neutral_pct": 55.0
   },
   "articles": [
     {
@@ -138,17 +138,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길, 당대표 출사표 “李정부 성공 위해 진짜 여당 만들겠다” [영상]",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43c2lWOUE2NlhUVTBJUmRsRFZ3UDNmYTF1RnRPMnA4cWt0X1o0cjFHbWhfN25kM0hINGY5YWZmQVVTSjJENDdLalNWNE00WGZ0aER3eFJ5a1QtLU0?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 01:12:09 GMT",
-      "source": "경기일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길 인천 연수갑 당선인, 돈 봉투 살포 의혹 ‘정치적 위기’ 딛고 당 최다선 ‘6선 고지’",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경향신문",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길, 당대표 출사표 “李정부 성공 위해 진짜 여당 만들겠다” [영상]",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43c2lWOUE2NlhUVTBJUmRsRFZ3UDNmYTF1RnRPMnA4cWt0X1o0cjFHbWhfN25kM0hINGY5YWZmQVVTSjJENDdLalNWNE00WGZ0aER3eFJ5a1QtLU0?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 01:12:09 GMT",
+      "source": "경기일보",
       "query": "송영길 연수갑"
     },
     {
@@ -166,17 +166,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[종합] 송영길 “2030 없는 민주당 미래 없다”…‘집권 여당 책임론’으로 당권 도전",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pa01RaHJPbmhLc2NFWVYwczhuT05aNHJRQk9JalYtc19uSjdlOEpvakN0c0NJeEJ2ZGpSR2pjOUVnQ0pnTWthR1ZTV19NbWxBWW02WC1qcU9nYlBJX3JXVW5pMV80OVlkMHgzcHpfOEk?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 02:24:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8teW5hWFVRU2tYTHdFX2E2eWFNVlEzUm1ESzRwMm0yd3htWmdsLXJIYUVDcmEzMTRLNy1jYXJKajN3bVZrMnctdEM3RHYyeVJaN3VGQUVPNm9Bc3ozUWNF?oc=5",
       "pubDate": "Fri, 10 Jul 2026 07:46:02 GMT",
       "source": "뉴스1",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[종합] 송영길 “2030 없는 민주당 미래 없다”…‘집권 여당 책임론’으로 당권 도전",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pa01RaHJPbmhLc2NFWVYwczhuT05aNHJRQk9JalYtc19uSjdlOEpvakN0c0NJeEJ2ZGpSR2pjOUVnQ0pnTWthR1ZTV19NbWxBWW02WC1qcU9nYlBJX3JXVW5pMV80OVlkMHgzcHpfOEk?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 02:24:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -222,13 +222,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길, 더불어민주당 당대표 출마 선언...“이재명 정부 반드시 성공시키겠다”",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBudzI0c281ejZRMnppRGQ2WS1TOVpyV0xQOEtlNEEzREhoNFVHcUZBU0RFZlNabjcwa3dydDVLSEwxelpKaEtTeFN5Zjc2LXhubVd3aTIzRFdpVDdoZ2N3VXplQQ?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 12:17:20 GMT",
-      "source": "시사뉴스",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길, 연수갑 보궐 승리 ‘6선’ 달성··· 민주당 당권 도전 신호탄",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94UWtDU0xQVTR0X1B6YlZaS3g0VjlJdjQ2VV95QjZ3MlZKN0FjQUZ3N2xWeHRtNVQ3NnhUcFdWUmtmU0ZTaVJxaS1COS1FSjlIUFdGZlZROVc5Q1NyVWxDSV9UQUxJYkhOTHlNYXJpWno?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -240,6 +233,13 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KcDZtclZLYk1rQXY2RDVCYkZRX2NFMjFlTWF5VGc4azlhNmhzVkI2c0VERFJjdk5NLTVPX2ZHVHRITXFtaTRLaWM4UHp3R09MZ19xdWprNE9UaTMxTGNOWktJcHhWUTdIYkZreTB0MWs?oc=5",
       "pubDate": "Tue, 07 Jul 2026 00:59:27 GMT",
       "source": "인천투데이",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길, 더불어민주당 당대표 출마 선언...“이재명 정부 반드시 성공시키겠다”",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBudzI0c281ejZRMnppRGQ2WS1TOVpyV0xQOEtlNEEzREhoNFVHcUZBU0RFZlNabjcwa3dydDVLSEwxelpKaEtTeFN5Zjc2LXhubVd3aTIzRFdpVDdoZ2N3VXplQQ?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 12:17:20 GMT",
+      "source": "시사뉴스",
       "query": "송영길 연수갑"
     },
     {
