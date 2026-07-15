@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T08:17:00Z",
+  "updated_at": "2026-07-15T10:52:15Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -47,10 +47,6 @@
     {
       "k": "전대",
       "n": 3
-    },
-    {
-      "k": "제2경인선",
-      "n": 1
     },
     {
       "k": "박찬대",
@@ -215,17 +211,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 당 대표 출마 선언…수도권·호남 당심 최대 변수",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE04cE1iWFdIQWQ2c3V1NlV0ZHZ2cktpNXQzdnhwN3pZQk55ZDVwdXBBOTlTZG1vajFQeUdZRVJRSFVrZnBrYXZwZ2l1bXZZLVpDNk9MU18wT1lSclZleXppdlo2NVAyYktRQWIxRmwya2s?oc=5",
-      "pubDate": "Tue, 07 Jul 2026 10:28:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[인천TV] 송영길, 연수갑 보궐 승리 ‘6선’ 달성··· 민주당 당권 도전 신호탄",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBUeGVUZ092RGNGUDZkQzMwR3VFOENsYVdxRWJWU1NfOEwtbXZTYnRnWXhwMG9DSTFxeHpCMFJ1bk02MnZpOWU0WEF1LS1HYkpEcjRMWUx3bmFzQ0xoSjNpZjQ5Rmw0MUN5S0V4bjZCUGo?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "인천투데이",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 당 대표 출마 선언…수도권·호남 당심 최대 변수",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE04cE1iWFdIQWQ2c3V1NlV0ZHZ2cktpNXQzdnhwN3pZQk55ZDVwdXBBOTlTZG1vajFQeUdZRVJRSFVrZnBrYXZwZ2l1bXZZLVpDNk9MU18wT1lSclZleXppdlo2NVAyYktRQWIxRmwya2s?oc=5",
+      "pubDate": "Tue, 07 Jul 2026 10:28:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -240,6 +236,13 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KcDZtclZLYk1rQXY2RDVCYkZRX2NFMjFlTWF5VGc4azlhNmhzVkI2c0VERFJjdk5NLTVPX2ZHVHRITXFtaTRLaWM4UHp3R09MZ19xdWprNE9UaTMxTGNOWktJcHhWUTdIYkZreTB0MWs?oc=5",
       "pubDate": "Tue, 07 Jul 2026 00:59:27 GMT",
       "source": "인천투데이",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[6·3 지선] 인천 연수갑 송영길 당선 유력…6선 고지 코앞",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBaOWdyeUdyVEZtSnRMT2NaMFh5NHpRazAta3Q5R04wQjFoNW8waExUYmhDSFpyQTBhSmRZR0ZEWlpqVlN2Y05qNElrdkpuN21YRGdrUTNpa0lOdjDSAWBBVV95cUxNbHA1MXVDeVViNkxkUHJacEMyVml2cS1mODJLZ0JIUGlZSmtEMEdoWjdBMGRfbnhwcWVVcHZYVWJ6MjNUZWRLQjNpc0FJNGJtYVNGSEpMeFNWR1U1WEJYb0M?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "연합뉴스",
       "query": "송영길 연수갑"
     },
     {
@@ -261,13 +264,6 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE95RjU3SF9kQ2hGd1RVTHBGQzFPdW5RdUpSMUR6dncycXo4WW1VMmt2SEZHaDNxZlpjOWZ6bHUzUXRoQmI5WlVwX1VJeWYxbllnczVsS0MySGZDTi1vUTBMZWJLQk1SSDRoa2QzM2tLNVc?oc=5",
       "pubDate": "Thu, 28 May 2026 07:00:00 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "송영길 “지방선거, ‘내란 심판’보다 ‘일 잘하는 이재명 정부’ 앞세워 싸워야”",
-      "link": "https://news.google.com/rss/articles/CBMi1gRBVV95cUxPakQxUEJpSmhPNXZrTFVCQkU4ZDFneXk1NkEyS0ZQVTE2dWlUVFJMNHBMRU9lZ0Y5THlfUkIta3k3Y3BGNVQ4UW14bFI1ZGxKbjlMci1ibnh4a0dDNWFtcHhwQkl6MUw2QlZmS0Q5VHhIRFVweC1ORHBKVzNpTTNrQ3htNjM0bzJlUnBsNGFoYjlKT3NnYnRkaGZyZU82SFYyc04wT0NNdC1Bb1RZeVgwS3c5UWFfemcxTklkaWtWOXp0SmFrN3FWYU84blplTVpwME51SzdWc28xaEROUEF1WFplWkJIS0phbnJ6LTloMjNiSmFoQk5Md0hWWUxvNFQyZFhueHpqREFyWXVDZlBhLXpEM1pfdkhkU29TMHhiZU5fbnUyQ0dnN0l5SE9xdXIwbXdmY0k0c1VlT2pJUlFwNUxIYWNiU2VWYTJJYkVjT2VMendpM2xfRVZPQ1BLSGhkd21fRkZ3ckRwSzVvWkdKR255bEdvQlF2MWRPSnJoSXVPUHY1WGtZOFNWU0FqRzB3OWszQmVnckZ5cFJPcXIxUVJ4eFQ5X0xOM25HV1ZVWERTeXVERWU1dUFCdGN3NE1admNRQ1UwWjI1UVE0RHlEaXFHdTRlMUhrRVNOc19leFJjVE1vYk81aG40S21sTTRwanZOT0ZFcTZxMFRZSXhYSEsweENsRi1Ddko5bFMyb3dKMTl1dURyRFpVNS1lS3FSWDFpMmktMmd1OXpQejVER09hU2lQZGVlUHNmWDVUaXJJWms4bU1jVE9icWN6TGtYNktmS3l3?oc=5",
-      "pubDate": "Tue, 14 Jul 2026 16:41:56 GMT",
-      "source": "MSN",
       "query": "송영길 연수갑"
     },
     {
