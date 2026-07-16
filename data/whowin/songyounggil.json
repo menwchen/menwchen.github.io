@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T08:17:42Z",
+  "updated_at": "2026-07-16T11:01:53Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 34,
+    "positive": 35,
     "negative": 1,
-    "neutral": 45,
-    "positive_pct": 42.5,
+    "neutral": 44,
+    "positive_pct": 43.8,
     "negative_pct": 1.2,
-    "neutral_pct": 56.2
+    "neutral_pct": 55.0
   },
   "articles": [
     {
@@ -92,17 +92,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "\"북구갑·평택을 등 다 져서 마음 아프다\"…송영길 \"전대에서 정청래 평가받을 것\"",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sTVNEOFh3a3U0NlQ5bEdlenNCR3lMQzRVYkR4eEg1UXlUdC01cXlSWWtSWEFRNXhlbFVkUzM1d2NsTmttajJBSklnWnZLTU1VN1E?oc=5",
-      "pubDate": "Tue, 14 Jul 2026 16:15:40 GMT",
-      "source": "JTBC",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길 인천 연수갑 당선인, 돈 봉투 살포 의혹 ‘정치적 위기’ 딛고 당 최다선 ‘6선 고지’",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경향신문",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "\"북구갑·평택을 등 다 져서 마음 아프다\"…송영길 \"전대에서 정청래 평가받을 것\"",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sTVNEOFh3a3U0NlQ5bEdlenNCR3lMQzRVYkR4eEg1UXlUdC01cXlSWWtSWEFRNXhlbFVkUzM1d2NsTmttajJBSklnWnZLTU1VN1E?oc=5",
+      "pubDate": "Tue, 14 Jul 2026 16:15:40 GMT",
+      "source": "JTBC",
       "query": "송영길 연수갑"
     },
     {
@@ -190,9 +190,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길, 민주당 당 대표 출마 선언",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9scVl3NjNZTDZQWk0zeDJ0bE1WbmQ4UGZDcV9KNkV1TmRWNWtYak1hbUd5dDI2dVlidmoxUU94TjdkY0xzRHNJdHdSbXRIZzUzZFRib1M3Qy10VXNYbm13dlJYWmxVaDl5Xzd0cUd1bUg?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 01:18:00 GMT",
+      "title": "송영길 의원, 22대 국회 1호 법안 발의",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sVDRTOVZleExuQ2llZWI4Y0s2RmdsandNd2RZcFpTWHBtd1hrTDNFRXNNcHZQbUhldVFKMFRnQ1lPZ2E4aVNwRXRCX0tlNFdLdlJFMzExZFdzNHVsRVBlTF95WUZrTGFISllra2V1OGM?oc=5",
+      "pubDate": "Tue, 07 Jul 2026 02:12:00 GMT",
       "source": "인천일보",
       "query": "송영길 연수갑"
     },
@@ -204,9 +204,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 의원, 22대 국회 1호 법안 발의",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sVDRTOVZleExuQ2llZWI4Y0s2RmdsandNd2RZcFpTWHBtd1hrTDNFRXNNcHZQbUhldVFKMFRnQ1lPZ2E4aVNwRXRCX0tlNFdLdlJFMzExZFdzNHVsRVBlTF95WUZrTGFISllra2V1OGM?oc=5",
-      "pubDate": "Tue, 07 Jul 2026 02:12:00 GMT",
+      "title": "송영길, 민주당 당 대표 출마 선언",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9scVl3NjNZTDZQWk0zeDJ0bE1WbmQ4UGZDcV9KNkV1TmRWNWtYak1hbUd5dDI2dVlidmoxUU94TjdkY0xzRHNJdHdSbXRIZzUzZFRib1M3Qy10VXNYbm13dlJYWmxVaDl5Xzd0cUd1bUg?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 01:18:00 GMT",
       "source": "인천일보",
       "query": "송영길 연수갑"
     },
