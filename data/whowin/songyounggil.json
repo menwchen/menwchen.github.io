@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T19:14:03Z",
+  "updated_at": "2026-07-17T21:55:33Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 35,
+    "positive": 34,
     "negative": 1,
-    "neutral": 44,
-    "positive_pct": 43.8,
+    "neutral": 45,
+    "positive_pct": 42.5,
     "negative_pct": 1.2,
-    "neutral_pct": 55.0
+    "neutral_pct": 56.2
   },
   "articles": [
     {
@@ -99,9 +99,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 의원 “AI 반도체 이후 승부처는 바이오”",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAxM2IxRHlDVVJXTHNXWjQ0ZThGY3JsN0x3TmJ0cFNma2R0UTVkb3Q0SjdoOTFpaGdKUTAwd1ZtYWd5U1U2a05kdEE4Wi1zMkZCRElJanhZekNGUlphVmM4aHpDWjNpRUFXd1ZTT2tMbGk?oc=5",
-      "pubDate": "Thu, 09 Jul 2026 10:38:00 GMT",
+      "title": "[종합] 송영길 “2030 없는 민주당 미래 없다”…‘집권 여당 책임론’으로 당권 도전",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pa01RaHJPbmhLc2NFWVYwczhuT05aNHJRQk9JalYtc19uSjdlOEpvakN0c0NJeEJ2ZGpSR2pjOUVnQ0pnTWthR1ZTV19NbWxBWW02WC1qcU9nYlBJX3JXVW5pMV80OVlkMHgzcHpfOEk?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 07:00:00 GMT",
       "source": "인천일보",
       "query": "송영길 연수갑"
     },
@@ -155,9 +155,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[종합] 송영길 “2030 없는 민주당 미래 없다”…‘집권 여당 책임론’으로 당권 도전",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pa01RaHJPbmhLc2NFWVYwczhuT05aNHJRQk9JalYtc19uSjdlOEpvakN0c0NJeEJ2ZGpSR2pjOUVnQ0pnTWthR1ZTV19NbWxBWW02WC1qcU9nYlBJX3JXVW5pMV80OVlkMHgzcHpfOEk?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 07:00:00 GMT",
+      "title": "송영길 의원 “AI 반도체 이후 승부처는 바이오”",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAxM2IxRHlDVVJXTHNXWjQ0ZThGY3JsN0x3TmJ0cFNma2R0UTVkb3Q0SjdoOTFpaGdKUTAwd1ZtYWd5U1U2a05kdEE4Wi1zMkZCRElJanhZekNGUlphVmM4aHpDWjNpRUFXd1ZTT2tMbGk?oc=5",
+      "pubDate": "Thu, 09 Jul 2026 10:38:00 GMT",
       "source": "인천일보",
       "query": "송영길 연수갑"
     },
