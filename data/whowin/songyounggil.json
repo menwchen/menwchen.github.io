@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T05:56:09Z",
+  "updated_at": "2026-07-19T08:22:39Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 36,
+    "positive": 37,
     "negative": 1,
-    "neutral": 43,
-    "positive_pct": 45.0,
+    "neutral": 42,
+    "positive_pct": 46.2,
     "negative_pct": 1.2,
-    "neutral_pct": 53.8
+    "neutral_pct": 52.5
   },
   "articles": [
     {
@@ -124,6 +124,13 @@
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43c2lWOUE2NlhUVTBJUmRsRFZ3UDNmYTF1RnRPMnA4cWt0X1o0cjFHbWhfN25kM0hINGY5YWZmQVVTSjJENDdLalNWNE00WGZ0aER3eFJ5a1QtLU0?oc=5",
       "pubDate": "Wed, 08 Jul 2026 01:12:09 GMT",
       "source": "경기일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길·김민석, 전남광주서 당심·민심 잡기 ‘본격화’",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5CcDQ3RGVHQkt4VG04empKOGpxWlFobGlBbk1FVXVtYUR5REp2bnE5SldkZDFRbTA1c3MtczhrU3BNeFctTDBVcnRMczVPdzhpNFJB?oc=5",
+      "pubDate": "Thu, 09 Jul 2026 08:25:00 GMT",
+      "source": "무등일보",
       "query": "송영길 연수갑"
     },
     {
@@ -204,13 +211,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 의원, 중고자동차 수출산업 육성법 발의 국가 지원체계 마련",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KcDZtclZLYk1rQXY2RDVCYkZRX2NFMjFlTWF5VGc4azlhNmhzVkI2c0VERFJjdk5NLTVPX2ZHVHRITXFtaTRLaWM4UHp3R09MZ19xdWprNE9UaTMxTGNOWktJcHhWUTdIYkZreTB0MWs?oc=5",
-      "pubDate": "Tue, 07 Jul 2026 00:59:27 GMT",
-      "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[연수갑 공약 비교] '송도와 격차 줄여라' 원도심 해법 경쟁 3파전 각양각색 접근법",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE95RjU3SF9kQ2hGd1RVTHBGQzFPdW5RdUpSMUR6dncycXo4WW1VMmt2SEZHaDNxZlpjOWZ6bHUzUXRoQmI5WlVwX1VJeWYxbllnczVsS0MySGZDTi1vUTBMZWJLQk1SSDRoa2QzM2tLNVc?oc=5",
       "pubDate": "Thu, 28 May 2026 07:00:00 GMT",
@@ -253,17 +253,17 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "송영길 \"강력한 정치력 필요\" vs 박종진 \"협상 가능한 적임자\"",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5GSlpiX2w1VUpYSFkxdXdVYTJKZ25GaHI5ODh5eWtWaFJBNlNyOXBFYnh6OHE0X2tpN2kydkJzUVpydW1aNUVjbkhsc0VuQk5TNnhnMmhIbDRSa3PSAWBBVV95cUxQcUpBTmtNenZLeElEc2hIaTh0NzBMb3QweWVWUXJKVkVkN3dReDIxSDdWc2tneEY1V2VPQXdkN0N4YVVGeWVRNW5GaHpZMXdxNkt0cFdQS1RXVmcyYmoyeDM?oc=5",
+      "pubDate": "Fri, 29 May 2026 07:00:00 GMT",
+      "source": "연합뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "[포토] 새벽 메운 환호성…송영길 후보, 연수구갑 ‘당선 확실’ 세레머니",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5sTWNPakZmb1hxRzdROTRRZ0t0UmdFUlpiV2x0bkxjX1ItcDFTeG9tQy1YOUJDNDhBMU9QY19UMDVhRi1tVklpWTZHa2J1ZTBVRWhxazdSdmxnYVNkN1BrQzFVM0FjR3I2YWVZalU1VE0?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "민주 송영길, 인천 연수갑 국회의원 당선 확실",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5fY3kwbm1Pa29VQlRiNUZoRDUzT2lZLW96dG5ibDVNRGhQZ2s3VWdsVE14b0hFQkNSQ1ZEX1BtOUhzbmNpd21sZDlQendqNThHS3ljSlNScHdiRGRtbV90M1FpZXJUV2VYMGtsLU5SOUJIaU5M?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "한겨레",
       "query": "송영길 연수갑"
     },
     {
@@ -274,10 +274,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[6·3 연수갑 보선] 송영길의 귀환…연수갑이 선택한 정치적 무게감",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10TFg1dDZMNXozamNoa0c0a1FKM05TeW9OVWRydTJFZWVqOVgxekRzYjRlbUU2NHB5cmN3M1pFTTd3bWlxMlpVS1l5ZV9LWGRRandGRWwxbzZnYXhHRVI3UGtCbk93bnIzd1RuRzJyZw?oc=5",
-      "pubDate": "Sat, 06 Jun 2026 07:00:00 GMT",
-      "source": "기호일보",
+      "title": "민주 송영길, 인천 연수갑 국회의원 당선 확실",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5fY3kwbm1Pa29VQlRiNUZoRDUzT2lZLW96dG5ibDVNRGhQZ2s3VWdsVE14b0hFQkNSQ1ZEX1BtOUhzbmNpd21sZDlQendqNThHS3ljSlNScHdiRGRtbV90M1FpZXJUV2VYMGtsLU5SOUJIaU5M?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "한겨레",
       "query": "송영길 연수갑"
     }
   ]
