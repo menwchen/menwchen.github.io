@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T16:25:04Z",
+  "updated_at": "2026-07-20T19:45:47Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 39,
+    "positive": 38,
     "negative": 1,
-    "neutral": 40,
-    "positive_pct": 48.8,
+    "neutral": 41,
+    "positive_pct": 47.5,
     "negative_pct": 1.2,
-    "neutral_pct": 50.0
+    "neutral_pct": 51.2
   },
   "articles": [
     {
@@ -106,17 +106,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길, 당대표 출사표 “李정부 성공 위해 진짜 여당 만들겠다” [영상]",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43c2lWOUE2NlhUVTBJUmRsRFZ3UDNmYTF1RnRPMnA4cWt0X1o0cjFHbWhfN25kM0hINGY5YWZmQVVTSjJENDdLalNWNE00WGZ0aER3eFJ5a1QtLU0?oc=5",
-      "pubDate": "Wed, 08 Jul 2026 01:12:09 GMT",
-      "source": "경기일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[종합] 송영길 “2030 없는 민주당 미래 없다”…‘집권 여당 책임론’으로 당권 도전",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pa01RaHJPbmhLc2NFWVYwczhuT05aNHJRQk9JalYtc19uSjdlOEpvakN0c0NJeEJ2ZGpSR2pjOUVnQ0pnTWthR1ZTV19NbWxBWW02WC1qcU9nYlBJX3JXVW5pMV80OVlkMHgzcHpfOEk?oc=5",
       "pubDate": "Wed, 08 Jul 2026 07:00:00 GMT",
       "source": "인천일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길, 당대표 출사표 “李정부 성공 위해 진짜 여당 만들겠다” [영상]",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43c2lWOUE2NlhUVTBJUmRsRFZ3UDNmYTF1RnRPMnA4cWt0X1o0cjFHbWhfN25kM0hINGY5YWZmQVVTSjJENDdLalNWNE00WGZ0aER3eFJ5a1QtLU0?oc=5",
+      "pubDate": "Wed, 08 Jul 2026 01:12:09 GMT",
+      "source": "경기일보",
       "query": "송영길 연수갑"
     },
     {
@@ -218,17 +218,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8teW5hWFVRU2tYTHdFX2E2eWFNVlEzUm1ESzRwMm0yd3htWmdsLXJIYUVDcmEzMTRLNy1jYXJKajN3bVZrMnctdEM3RHYyeVJaN3VGQUVPNm9Bc3ozUWNF?oc=5",
-      "pubDate": "Fri, 10 Jul 2026 07:00:00 GMT",
-      "source": "뉴스1",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "‘이재명과 인연’ 송영길과 김남준, 인천 연수갑·계양을 보궐선거서 압승",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sYVJsWWdQVHFIYTUya2V4b0M5azJRalZrQkp5TzBGZUZxTmZBSDhhYnJYaWluN2Z3Y3o3eWdRTWFlT2hUbm03aFJjYWQ4Q2g3Tmc?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경인일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8teW5hWFVRU2tYTHdFX2E2eWFNVlEzUm1ESzRwMm0yd3htWmdsLXJIYUVDcmEzMTRLNy1jYXJKajN3bVZrMnctdEM3RHYyeVJaN3VGQUVPNm9Bc3ozUWNF?oc=5",
+      "pubDate": "Fri, 10 Jul 2026 07:00:00 GMT",
+      "source": "뉴스1",
       "query": "송영길 연수갑"
     },
     {
