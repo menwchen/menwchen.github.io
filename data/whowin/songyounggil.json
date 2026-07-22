@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T11:11:02Z",
+  "updated_at": "2026-07-22T14:00:58Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -253,6 +253,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "광주 찾은 송영길 \"페이스메이커 아닌 필승메이커…끝까지 간다\"",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8teW5hWFVRU2tYTHdFX2E2eWFNVlEzUm1ESzRwMm0yd3htWmdsLXJIYUVDcmEzMTRLNy1jYXJKajN3bVZrMnctdEM3RHYyeVJaN3VGQUVPNm9Bc3ozUWNF?oc=5",
+      "pubDate": "Fri, 10 Jul 2026 07:00:00 GMT",
+      "source": "뉴스1",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "‘이제는 6선’ 송영길, 인천 연수 갑 당선…당권 도전하나",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkZ2JkcDNTTVJBSnlLU3BUQVYzM1NiSmdubjZ4MGx3V2xKUElTWF9uWm02UUMyNFEyaHBjZ2V6dG1QaVhzUDFoV1AtSHFra19T?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -271,13 +278,6 @@
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
       "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
       "source": "경인일보",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "[6·3선거 개표/인천연수갑] 민주당 송영길 여의도 귀환, 8월 전당대회 흔들 핵심 변수",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE05aFB2NnR0aEdzbmk1cUN1aTAyNUhuUThzZVZrS3pJdTNkU25GZ3NodTlIWTVOenNoWXBkVDkwTlBSMjVBTmhKQ0ZVdUFCcHFFeFpYNDYxSkRzTk02VDlLWk8wZjFpWHdmZVNMVGhYVmpZcTg?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "비즈니스포스트",
       "query": "송영길 연수갑"
     }
   ]
