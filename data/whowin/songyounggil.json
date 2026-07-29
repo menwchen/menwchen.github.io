@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T19:19:58Z",
+  "updated_at": "2026-07-29T22:02:27Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -71,17 +71,17 @@
   },
   "articles": [
     {
-      "title": "송영길 후보, 기부 인생 눈길",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PRFQyV1VMOVNtUGYyM2lLSklhdGxZZmF6MFFnanpFQTVVeDUzZmlCdGpTUmVHM0VCX2ktd09JUW91SmNQVk1iQXVzNmNUcWxDNzhMQ3hseFhWLWprMm9jWTEtQVRqYzJhUGlCZFA2dnA?oc=5",
-      "pubDate": "Thu, 23 Jul 2026 07:45:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 지선] 인천 연수갑서 송영길 당선…6선 고지 올랐다(종합)",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NT01oUFNZbERtanlRNWw4NWJ5VVNlMmsxX2JxVWwwZVpvbC0xbFU1LVFaUVlNQ0VHbEFwOVhZa09ORGN2bEFaZzR3akdnellGbWpBck1Tc0lZdWfSAWBBVV95cUxOa2Q1UTBQMnRfaHc3ZTIwQ25UVnRrdnJIZ0ZQY2I5LWpJMk9FbDJUMUVMdjRreHkxZjJnZGExdGwxUUJ3VmstZFc5YkZaU2ZJd2psYnR1YkRXc1hVVmN5NE4?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "연합뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 후보, 기부 인생 눈길",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PRFQyV1VMOVNtUGYyM2lLSklhdGxZZmF6MFFnanpFQTVVeDUzZmlCdGpTUmVHM0VCX2ktd09JUW91SmNQVk1iQXVzNmNUcWxDNzhMQ3hseFhWLWprMm9jWTEtQVRqYzJhUGlCZFA2dnA?oc=5",
+      "pubDate": "Thu, 23 Jul 2026 07:45:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -95,7 +95,7 @@
       "title": "[개표방송] 인천 연수갑 송영길 당선 확정 “이재명 정부 든든히 뒷받침할 것”",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4xZG8tM3VBUW14Nkx5R3FIdzVTWG1oSl93ZHFjUFd0TjF0RlFvTEV5RWNyTWFXNHFWUk9KamlnMWZPM1ZLNWpvM1JHSnJ6d1BVQjJrN09TeGM3NWc?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "KBS 뉴스",
+      "source": "news.kbs.co.kr",
       "query": "송영길 연수갑"
     },
     {
