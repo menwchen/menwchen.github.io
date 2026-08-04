@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T08:40:07Z",
+  "updated_at": "2026-08-04T11:25:02Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 37,
+    "positive": 38,
     "negative": 1,
-    "neutral": 42,
-    "positive_pct": 46.2,
+    "neutral": 41,
+    "positive_pct": 47.5,
     "negative_pct": 1.2,
-    "neutral_pct": 52.5
+    "neutral_pct": 51.2
   },
   "articles": [
     {
@@ -162,17 +162,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길·김민석·정청래 민주당 당 대표 후보 3인 예비경선 통과",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8zdzk4TkhzTXlWZ1pweGF1LVBIdXU0V0hkbFp1bUpBd3VWMlVsZUZtSnB5OFJXU1NoWlkweGpwenlmQWpudmItTTFYUk01OVVldDlBS2V1ck40bG03d0o4eWxUVGcyQkQ3UV9mMW01eE4?oc=5",
-      "pubDate": "Thu, 23 Jul 2026 09:44:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 지선] 인천 연수갑 송영길 당선 유력…6선 고지 코앞",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBaOWdyeUdyVEZtSnRMT2NaMFh5NHpRazAta3Q5R04wQjFoNW8waExUYmhDSFpyQTBhSmRZR0ZEWlpqVlN2Y05qNElrdkpuN21YRGdrUTNpa0lOdjDSAWBBVV95cUxNbHA1MXVDeVViNkxkUHJacEMyVml2cS1mODJLZ0JIUGlZSmtEMEdoWjdBMGRfbnhwcWVVcHZYVWJ6MjNUZWRLQjNpc0FJNGJtYVNGSEpMeFNWR1U1WEJYb0M?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "연합뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길·김민석·정청래 민주당 당 대표 후보 3인 예비경선 통과",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8zdzk4TkhzTXlWZ1pweGF1LVBIdXU0V0hkbFp1bUpBd3VWMlVsZUZtSnB5OFJXU1NoWlkweGpwenlmQWpudmItTTFYUk01OVVldDlBS2V1ck40bG03d0o4eWxUVGcyQkQ3UV9mMW01eE4?oc=5",
+      "pubDate": "Thu, 23 Jul 2026 09:44:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -249,7 +249,7 @@
       "title": "인천 연수갑 보궐선거, 송영길 민주당 후보 당선",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrbEJZVTYxcHB6ME1adk94MG5kVmtBSGNESGluLWY2MWZzWWFfck1kdnJGM1lpMDk5cWl3Rmp6TDdjUm9DS01xak5SdDM5T25xSmM1QzA3bkJrUQ?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "query": "송영길 연수갑"
     },
     {
@@ -267,17 +267,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "'당선 확실' 인천 연수 갑 송영길 민주당 후보 입장 발표",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9pLU45TEdjblNMZ0xDSFllMFRUa3FQWVZrLTNzcERBVHFqNnh5bE9seDJvZGlDWTJPdG9YelhNc2h5V293WjFzSEpfc0hnSVF3TlFERXRhUGhfeGxqYzBRM2FkSzhTRmdabHBFTlFuYTFjc25SWENXY9IBeEFVX3lxTE1OUGs4a2lYZXF5LWVjQzdoRkhPc2dMU2dDSmI1ckJYeE93OXlsMkxaSDFnNV9VTVdQQ0ZtNGVqR05QdGx3WGZCWVdGdTVJbFVUOHdQTm1ZV21YekdqZWdKZEprUnl0UGtKY2xqVXRHUjlCdDBZeWlzVQ?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "MBC 뉴스",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 선거 현장] 인천 연수갑 세 후보, 공식 선거운동 종료",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2cmJKZGtYc3VFVTFweHJGS29CdDc2VDNfeTY2bVpiaEE3dmhsT2VTVjhEc0pfUmhlQUN5d3dEWmxuamhwbnVwQkpuYV9CbjNEWVFiSXo3eTJyalZiaXk5bXlzaVVUYkNnQW9BUTRXcUY?oc=5",
       "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
       "source": "인천일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "'당선 확실' 인천 연수 갑 송영길 민주당 후보 입장 발표",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9pLU45TEdjblNMZ0xDSFllMFRUa3FQWVZrLTNzcERBVHFqNnh5bE9seDJvZGlDWTJPdG9YelhNc2h5V293WjFzSEpfc0hnSVF3TlFERXRhUGhfeGxqYzBRM2FkSzhTRmdabHBFTlFuYTFjc25SWENXY9IBeEFVX3lxTE1OUGs4a2lYZXF5LWVjQzdoRkhPc2dMU2dDSmI1ckJYeE93OXlsMkxaSDFnNV9VTVdQQ0ZtNGVqR05QdGx3WGZCWVdGdTVJbFVUOHdQTm1ZV21YekdqZWdKZEprUnl0UGtKY2xqVXRHUjlCdDBZeWlzVQ?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "MBC 뉴스",
       "query": "송영길 연수갑"
     }
   ]
