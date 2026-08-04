@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T19:39:52Z",
+  "updated_at": "2026-08-04T22:14:20Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -151,7 +151,7 @@
       "title": "‘이제는 6선’ 송영길, 인천 연수 갑 당선…당권 도전하나",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkZ2JkcDNTTVJBSnlLU3BUQVYzM1NiSmdubjZ4MGx3V2xKUElTWF9uWm02UUMyNFEyaHBjZ2V6dG1QaVhzUDFoV1AtSHFra19T?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "문화일보",
+      "source": "munhwa.com",
       "query": "송영길 연수갑"
     },
     {
@@ -267,17 +267,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 의원 “AI 반도체 이후 승부처는 바이오”",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAxM2IxRHlDVVJXTHNXWjQ0ZThGY3JsN0x3TmJ0cFNma2R0UTVkb3Q0SjdoOTFpaGdKUTAwd1ZtYWd5U1U2a05kdEE4Wi1zMkZCRElJanhZekNGUlphVmM4aHpDWjNpRUFXd1ZTT2tMbGk?oc=5",
-      "pubDate": "Thu, 09 Jul 2026 07:00:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길, 연수구갑 보궐선거 통해 6선 등극",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9tOFNvRmJONy14NzdyQlp3S1c0Q01HTjFycmRxZXhvak4zWWMtam92OGltaTNSVGloTWxBVVhOVXFPU0hQdjl6QlV2aGV3V0d4MXNxci1hb1ByRFlNeWxhSElVb2Jxd3JlUWdLVFZVc9IBc0FVX3lxTE4tMEpjRklGMUNBMXhVU0IwWkJFZEViRnoydTZjQXd4QzhlTG5zTXVqaUJvcUdad1RIRDNEeUJ4Y25tZEFXdTdPNWFrTnBJcTFTc1ZCWEYxdktnLVZrRjc0bjV3T3lOdVMzcDQxSUQxakYyM0k?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "시사저널",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 의원 “AI 반도체 이후 승부처는 바이오”",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAxM2IxRHlDVVJXTHNXWjQ0ZThGY3JsN0x3TmJ0cFNma2R0UTVkb3Q0SjdoOTFpaGdKUTAwd1ZtYWd5U1U2a05kdEE4Wi1zMkZCRElJanhZekNGUlphVmM4aHpDWjNpRUFXd1ZTT2tMbGk?oc=5",
+      "pubDate": "Thu, 09 Jul 2026 07:00:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     }
   ]
