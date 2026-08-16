@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T09:28:48Z",
+  "updated_at": "2026-08-16T12:42:08Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -169,17 +169,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 후보, 기부 인생 눈길",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PRFQyV1VMOVNtUGYyM2lLSklhdGxZZmF6MFFnanpFQTVVeDUzZmlCdGpTUmVHM0VCX2ktd09JUW91SmNQVk1iQXVzNmNUcWxDNzhMQ3hseFhWLWprMm9jWTEtQVRqYzJhUGlCZFA2dnA?oc=5",
-      "pubDate": "Thu, 23 Jul 2026 07:00:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 연수갑 보선] 송영길의 귀환…연수갑이 선택한 정치적 무게감",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10TFg1dDZMNXozamNoa0c0a1FKM05TeW9OVWRydTJFZWVqOVgxekRzYjRlbUU2NHB5cmN3M1pFTTd3bWlxMlpVS1l5ZV9LWGRRandGRWwxbzZnYXhHRVI3UGtCbk93bnIzd1RuRzJyZw?oc=5",
       "pubDate": "Sat, 06 Jun 2026 07:00:00 GMT",
       "source": "기호일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 후보, 기부 인생 눈길",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PRFQyV1VMOVNtUGYyM2lLSklhdGxZZmF6MFFnanpFQTVVeDUzZmlCdGpTUmVHM0VCX2ktd09JUW91SmNQVk1iQXVzNmNUcWxDNzhMQ3hseFhWLWprMm9jWTEtQVRqYzJhUGlCZFA2dnA?oc=5",
+      "pubDate": "Thu, 23 Jul 2026 07:00:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
