@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T12:54:00Z",
+  "updated_at": "2026-08-24T15:41:06Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -42,7 +42,7 @@
   "keywords": [
     {
       "k": "이재명",
-      "n": 6
+      "n": 5
     },
     {
       "k": "박찬대",
@@ -58,12 +58,12 @@
     }
   ],
   "sentiment": {
-    "positive": 39,
+    "positive": 40,
     "negative": 2,
-    "neutral": 39,
-    "positive_pct": 48.8,
+    "neutral": 38,
+    "positive_pct": 50.0,
     "negative_pct": 2.5,
-    "neutral_pct": 48.8
+    "neutral_pct": 47.5
   },
   "articles": [
     {
