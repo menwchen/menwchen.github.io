@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T16:01:14Z",
+  "updated_at": "2026-09-10T20:33:49Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -62,12 +62,12 @@
     }
   ],
   "sentiment": {
-    "positive": 38,
+    "positive": 39,
     "negative": 1,
-    "neutral": 41,
-    "positive_pct": 47.5,
+    "neutral": 40,
+    "positive_pct": 48.8,
     "negative_pct": 1.2,
-    "neutral_pct": 51.2
+    "neutral_pct": 50.0
   },
   "articles": [
     {
@@ -130,7 +130,7 @@
       "title": "'연수갑' 송영길, 아내와 투표 완료…\"간절한 눈빛과 명령 잊지 않겠다\" - 머니투데이",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLeUpPLTVHa3ZRQVNyWUlsMUpGSjZubWNlWHlMOGs3TzdKX2hONHVxRW9NM0RSbzNza0pRa1gzcjcxbEI4elR1WHNDbmE4cjFLVUtCdnNQUVNreERGY1JEYm5HT3dDQUpxV1h1YtIBckFVX3lxTE5uYmtMai1TcHBCSlRwYm1lVkJZdGNQbHNmVVVuRDl3dmkxQzVMaFB3NHhoQTBqVGN3QlI0QUR5WjFibzlDcFRkaFdaWHBYZDZTb2FfTkh4eEdGNGFLeThzQkZmeEFvRTE2SG5XMUt1X0NhZw?oc=5",
       "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "query": "송영길 연수갑"
     },
     {
@@ -204,6 +204,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "인천 연수갑 보궐선거, 민주당 송영길 ‘당선 유력’",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3alRyckdNX2h1X3JMVGp5MUZNMklTVlNvMU4yZnB2MU5vWFNNQ1JlT29rajFicDRXZFZQM3F0aVQzWlZVdTZhM3VqYW16RTN4bDN3bA?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "JTBC",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "[속보] 인천 연수갑 국회의원 보선 송영길 당선 유력[KBS]",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Jb0xSNC1Nd1hkV0hpUERxOGRvZHlobDkwclo3cV9DTENWalNYdEdZdDdON3RVQXBuX0owMy1jME1pNGtycEdCbjJCS0w5aU1tRm1NaHc2cGsxZ03SAWBBVV95cUxQZWk5WmdmUnJlVnUySTE5c3ZDcEtuRnNCSnRmV21jQTJmZkZFeW5vdmxFX2xyenc5VHBicXJVRTVjSHZsby1rczYyTFJLQnF3eFFHdTFCZjB2TTVVMHh1MEw?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -235,7 +242,7 @@
       "title": "‘이제는 6선’ 송영길, 인천 연수 갑 당선…당권 도전하나",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkZ2JkcDNTTVJBSnlLU3BUQVYzM1NiSmdubjZ4MGx3V2xKUElTWF9uWm02UUMyNFEyaHBjZ2V6dG1QaVhzUDFoV1AtSHFra19T?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "문화일보",
+      "source": "munhwa.com",
       "query": "송영길 연수갑"
     },
     {
@@ -271,13 +278,6 @@
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12X2NablRUR2RoX2tEVWh6RzJweVJTS0JxQmNMcWlpa21VUGZvNDVPLTlTRUdEeHAxNVR6djNMRl9KR3lIbjFoY2kyaTV5WFd4bDFTMG5GeVVuMW9PTDM2RHh2VE7SAWhBVV95cUxQZWFVS2VtZUxOQ3pBdlBqdHdBTVpSbHFLdnltbEY5dTNHV19ZV3BWRVJDTVNCM1RoRDZxcWEzSDZUdVdMSm5HVVozbjNmdnJKaXY0MWx6YWFvMGN5bUc2bVBRbHhCdGVtZA?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경인방송 뉴스",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "6.3 지선·보궐서 나타난 인천 연수갑 한지붕 두 민심",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE50Xy05LThNTFlKaVBIYThFUUdyRFpQbXFUZ3dvNGlEY21NTU1KMGp3VkRfZVhYcXpMdG9YOUpyMEJnc2YtOVg0TWZveDZUc25sWklxTXFxemIzalRhRUQ0T1ZHNFFsMEw0OFZZNC1wVS0?oc=5",
-      "pubDate": "Wed, 10 Jun 2026 07:00:00 GMT",
-      "source": "인천투데이",
       "query": "송영길 연수갑"
     }
   ]
