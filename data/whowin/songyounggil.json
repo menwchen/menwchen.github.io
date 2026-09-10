@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T20:33:49Z",
+  "updated_at": "2026-09-10T22:58:29Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -78,17 +78,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 옥중 창당 ‘소나무당’ 공식 해산",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43dUlzeXlfQnJJTUpna3B1UE0taGZrOXFXS0pXOHVvak40Zm0zVnZkcjEzMDB0a3NwMHVwWml6bzQtZHNpMHRIZ1VUZVlTUWd0eHk1Q2doNmNCbktQWTdDSFlyeDZmcjdkS29hQTAtemQ?oc=5",
-      "pubDate": "Fri, 04 Sep 2026 06:57:25 GMT",
-      "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "[6·3 지선] 인천 연수갑서 송영길 당선…6선 고지 올랐다(종합)",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NT01oUFNZbERtanlRNWw4NWJ5VVNlMmsxX2JxVWwwZVpvbC0xbFU1LVFaUVlNQ0VHbEFwOVhZa09ORGN2bEFaZzR3akdnellGbWpBck1Tc0lZdWfSAWBBVV95cUxOa2Q1UTBQMnRfaHc3ZTIwQ25UVnRrdnJIZ0ZQY2I5LWpJMk9FbDJUMUVMdjRreHkxZjJnZGExdGwxUUJ3VmstZFc5YkZaU2ZJd2psYnR1YkRXc1hVVmN5NE4?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "연합뉴스",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 옥중 창당 ‘소나무당’ 공식 해산",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43dUlzeXlfQnJJTUpna3B1UE0taGZrOXFXS0pXOHVvak40Zm0zVnZkcjEzMDB0a3NwMHVwWml6bzQtZHNpMHRIZ1VUZVlTUWd0eHk1Q2doNmNCbktQWTdDSFlyeDZmcjdkS29hQTAtemQ?oc=5",
+      "pubDate": "Fri, 04 Sep 2026 06:57:25 GMT",
+      "source": "인천투데이",
       "query": "송영길 연수갑"
     },
     {
@@ -242,7 +242,7 @@
       "title": "‘이제는 6선’ 송영길, 인천 연수 갑 당선…당권 도전하나",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkZ2JkcDNTTVJBSnlLU3BUQVYzM1NiSmdubjZ4MGx3V2xKUElTWF9uWm02UUMyNFEyaHBjZ2V6dG1QaVhzUDFoV1AtSHFra19T?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "munhwa.com",
+      "source": "문화일보",
       "query": "송영길 연수갑"
     },
     {
