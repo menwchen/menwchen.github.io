@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T15:12:53Z",
+  "updated_at": "2026-09-12T20:19:04Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -42,14 +42,10 @@
   "keywords": [
     {
       "k": "이재명",
-      "n": 4
+      "n": 3
     },
     {
       "k": "송도유원지",
-      "n": 2
-    },
-    {
-      "k": "박찬대",
       "n": 2
     },
     {
@@ -57,17 +53,21 @@
       "n": 2
     },
     {
+      "k": "박찬대",
+      "n": 1
+    },
+    {
       "k": "전당대회",
       "n": 1
     }
   ],
   "sentiment": {
-    "positive": 38,
+    "positive": 39,
     "negative": 1,
-    "neutral": 41,
-    "positive_pct": 47.5,
+    "neutral": 40,
+    "positive_pct": 48.8,
     "negative_pct": 1.2,
-    "neutral_pct": 51.2
+    "neutral_pct": 50.0
   },
   "articles": [
     {
