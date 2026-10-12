@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T19:23:15Z",
+  "updated_at": "2026-10-12T00:17:05Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -45,15 +45,15 @@
       "n": 4
     },
     {
-      "k": "전대",
-      "n": 3
-    },
-    {
       "k": "송도유원지",
       "n": 2
     },
     {
       "k": "박찬대",
+      "n": 2
+    },
+    {
+      "k": "전대",
       "n": 2
     },
     {
@@ -74,12 +74,12 @@
     }
   ],
   "sentiment": {
-    "positive": 41,
+    "positive": 42,
     "negative": 2,
-    "neutral": 37,
-    "positive_pct": 51.2,
+    "neutral": 36,
+    "positive_pct": 52.5,
     "negative_pct": 2.5,
-    "neutral_pct": 46.2
+    "neutral_pct": 45.0
   },
   "articles": [
     {
@@ -118,17 +118,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[포토] 출구조사 민주당 ‘우세’…환호하는 송영길 캠프",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE51UWFtS3FoeHBsREJmZzh4clFEdFZKMWdPQWVqTElmTTVYa0VEcHgzTTZnU2xFaWRpYVh5alZCQjFwVnZRcUZpaS1TNWM1MWEweGNDS1FTbEsyNko3MldUZWZVQ2h3Wk04QzU0TXl6a3I?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "‘이재명과 인연’ 송영길과 김남준, 인천 연수갑·계양을 보궐선거서 압승",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sYVJsWWdQVHFIYTUya2V4b0M5azJRalZrQkp5TzBGZUZxTmZBSDhhYnJYaWluN2Z3Y3o3eWdRTWFlT2hUbm03aFJjYWQ4Q2g3Tmc?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경인일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[포토] 출구조사 민주당 ‘우세’…환호하는 송영길 캠프",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE51UWFtS3FoeHBsREJmZzh4clFEdFZKMWdPQWVqTElmTTVYa0VEcHgzTTZnU2xFaWRpYVh5alZCQjFwVnZRcUZpaS1TNWM1MWEweGNDS1FTbEsyNko3MldUZWZVQ2h3Wk04QzU0TXl6a3I?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
