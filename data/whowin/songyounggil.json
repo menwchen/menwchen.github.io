@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T23:38:07Z",
+  "updated_at": "2026-10-16T03:41:00Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -74,12 +74,12 @@
     }
   ],
   "sentiment": {
-    "positive": 38,
+    "positive": 37,
     "negative": 1,
-    "neutral": 41,
-    "positive_pct": 47.5,
+    "neutral": 42,
+    "positive_pct": 46.2,
     "negative_pct": 1.2,
-    "neutral_pct": 51.2
+    "neutral_pct": 52.5
   },
   "articles": [
     {
@@ -202,10 +202,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "GTX-B 청학역 주민들 “변전소 지반조사 허가해야”…송영길 “연수구 적극 협조해야”",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAycXhTMENHQ3BCR3dsSXlRZF9ES0VRUXVfc0tZVFlGWFBNcFgxQ2NyY0FlUG4zRHZCX09kSW05T1FxMlY3bHRtbTFFY29JQlpnUkNycDhBTFJ4UWM?oc=5",
-      "pubDate": "Tue, 22 Sep 2026 07:00:00 GMT",
-      "source": "경기일보",
+      "title": "[6·3 선거 현장] 인천 연수갑 세 후보, 공식 선거운동 종료",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2cmJKZGtYc3VFVTFweHJGS29CdDc2VDNfeTY2bVpiaEE3dmhsT2VTVjhEc0pfUmhlQUN5d3dEWmxuamhwbnVwQkpuYV9CbjNEWVFiSXo3eTJyalZiaXk5bXlzaVVUYkNnQW9BUTRXcUY?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -216,17 +216,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[6·3 선거 현장] 인천 연수갑 세 후보, 공식 선거운동 종료",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2cmJKZGtYc3VFVTFweHJGS29CdDc2VDNfeTY2bVpiaEE3dmhsT2VTVjhEc0pfUmhlQUN5d3dEWmxuamhwbnVwQkpuYV9CbjNEWVFiSXo3eTJyalZiaXk5bXlzaVVUYkNnQW9BUTRXcUY?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "계양을·연수갑 보궐선거… 수성이냐 탈환이냐",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
       "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
       "source": "경인일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "GTX-B 청학역 주민들 “변전소 지반조사 허가해야”…송영길 “연수구 적극 협조해야”",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAycXhTMENHQ3BCR3dsSXlRZF9ES0VRUXVfc0tZVFlGWFBNcFgxQ2NyY0FlUG4zRHZCX09kSW05T1FxMlY3bHRtbTFFY29JQlpnUkNycDhBTFJ4UWM?oc=5",
+      "pubDate": "Tue, 22 Sep 2026 07:00:00 GMT",
+      "source": "경기일보",
       "query": "송영길 연수갑"
     },
     {
