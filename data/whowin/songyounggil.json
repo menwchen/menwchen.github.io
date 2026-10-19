@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T22:51:09Z",
+  "updated_at": "2026-10-19T03:47:36Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -53,15 +53,15 @@
       "n": 3
     },
     {
-      "k": "송도유원지",
-      "n": 2
-    },
-    {
       "k": "박찬대",
       "n": 2
     },
     {
       "k": "GTX-B",
+      "n": 1
+    },
+    {
+      "k": "송도유원지",
       "n": 1
     },
     {
@@ -74,14 +74,21 @@
     }
   ],
   "sentiment": {
-    "positive": 37,
+    "positive": 38,
     "negative": 1,
-    "neutral": 42,
-    "positive_pct": 46.2,
+    "neutral": 41,
+    "positive_pct": 47.5,
     "negative_pct": 1.2,
-    "neutral_pct": 52.5
+    "neutral_pct": 51.2
   },
   "articles": [
+    {
+      "title": "[송영길 ⑤] 떠났던 국회로 돌아오다…구속·재판·무죄, 그리고 6선",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ya2pnNHkxNllRS3VPaWF3VDJ6Zjg3UXplVE14bndyckJkZ3NFUmZZMHI3Q0dqVTRfMmdBUzFySDJUUmdnQTVFSlF4WmVEdFdYMmlldFdzZlU4R0hDNkZNck8waVRRYm5M?oc=5",
+      "pubDate": "Sun, 18 Oct 2026 23:37:00 GMT",
+      "source": "시사프리즘",
+      "query": "송영길 연수갑"
+    },
     {
       "title": "송영길 “청학역 중투심 통과, 2031년 본선과 동시 개통 총력”",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ocHB6SFBqTnBSclRDRjdkZW1STnhsYURINFhDTUZPSUJuWGlOci1wNHQ2bFZJdHFsRndITWdpRTFndmhQX0U0cm8xNDdCX20yOXRTTGV4b1lGTFE?oc=5",
@@ -195,13 +202,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "계양을·연수갑 보궐선거… 수성이냐 탈환이냐",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
-      "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
-      "source": "경인일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "민주당 송영길 후보 연수갑 국회의원 당선 유력··· 득표율 61.47%",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBJNEt4eE1ESWZ4N3lXZzJIT01mbDNXZnVYcHJ6amsxQl9RekktVlpWODRmQ1UwZnNIXzQySFBfclduUzMyLVUtQzJfYXBaMGhRS3lpVXZuY0NCU056T1NKZEwxWXVQQnNDVmxPNlk2amM?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -213,6 +213,13 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94UWtDU0xQVTR0X1B6YlZaS3g0VjlJdjQ2VV95QjZ3MlZKN0FjQUZ3N2xWeHRtNVQ3NnhUcFdWUmtmU0ZTaVJxaS1COS1FSjlIUFdGZlZROVc5Q1NyVWxDSV9UQUxJYkhOTHlNYXJpWno?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "인천투데이",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "계양을·연수갑 보궐선거… 수성이냐 탈환이냐",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yM0d2aWJHazdCTnlKZjVDSnZjY25udm9ITDlxUExZTHNCcENrY3kyTDNXRWJGRmxBTHp1eEtTT2xUYURTUUdJSGVXMUtnSUVNaEE?oc=5",
+      "pubDate": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "source": "경인일보",
       "query": "송영길 연수갑"
     },
     {
@@ -283,13 +290,6 @@
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12X2NablRUR2RoX2tEVWh6RzJweVJTS0JxQmNMcWlpa21VUGZvNDVPLTlTRUdEeHAxNVR6djNMRl9KR3lIbjFoY2kyaTV5WFd4bDFTMG5GeVVuMW9PTDM2RHh2VE7SAWhBVV95cUxQZWFVS2VtZUxOQ3pBdlBqdHdBTVpSbHFLdnltbEY5dTNHV19ZV3BWRVJDTVNCM1RoRDZxcWEzSDZUdVdMSm5HVVozbjNmdnJKaXY0MWx6YWFvMGN5bUc2bVBRbHhCdGVtZA?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경인방송 뉴스",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "송영길, 인천 연수갑 보궐선거 승리…정치적 재기 넘어 6선 고지",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5lZlRBZENmaHZMYnRwcmlaV09HTVd0TDVvVTE4bXZ2WXdqSV9CZzdQRnRZai1rNHNkODUxUXdvWVhxNDB5V0xQX0puN1U1NFRwcDRtMHBYYUFhOE5XZUcwZG42WVZDZkFuTlJr?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "일간투데이",
       "query": "송영길 연수갑"
     }
   ]
