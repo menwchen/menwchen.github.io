@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T14:09:57Z",
+  "updated_at": "2026-10-20T19:00:43Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -53,6 +53,10 @@
       "n": 2
     },
     {
+      "k": "전대",
+      "n": 2
+    },
+    {
       "k": "송도유원지",
       "n": 1
     },
@@ -61,21 +65,17 @@
       "n": 1
     },
     {
-      "k": "전대",
-      "n": 1
-    },
-    {
       "k": "전당대회",
       "n": 1
     }
   ],
   "sentiment": {
-    "positive": 36,
+    "positive": 35,
     "negative": 1,
-    "neutral": 43,
-    "positive_pct": 45.0,
+    "neutral": 44,
+    "positive_pct": 43.8,
     "negative_pct": 1.2,
-    "neutral_pct": 53.8
+    "neutral_pct": 55.0
   },
   "articles": [
     {
