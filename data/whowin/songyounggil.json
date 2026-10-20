@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T19:00:43Z",
+  "updated_at": "2026-10-20T23:40:03Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -42,7 +42,7 @@
   "keywords": [
     {
       "k": "이재명",
-      "n": 5
+      "n": 6
     },
     {
       "k": "청학역",
@@ -53,15 +53,15 @@
       "n": 2
     },
     {
-      "k": "전대",
-      "n": 2
-    },
-    {
       "k": "송도유원지",
       "n": 1
     },
     {
       "k": "제2경인선",
+      "n": 1
+    },
+    {
+      "k": "전대",
       "n": 1
     },
     {
@@ -142,17 +142,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 “청학역 중투심 조건부 통과… 개통 일정 챙길 것”",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ZVmdFM3lfdWp0Z3R1SzJKdjUyWUtnWUc3NXR0SDllZDdscm1yZXpuNDRfdi1aX2JMelBmcEhWWWFOZTZvOU9RQjZwN2ZDYVRCUHJhLWZVWExYRDd4TUFDdFYxM2FTVGNGd3c?oc=5",
-      "pubDate": "Thu, 15 Oct 2026 14:12:25 GMT",
-      "source": "천지일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "'연수갑' 송영길, 아내와 투표 완료…\"간절한 눈빛과 명령 잊지 않겠다\" - 머니투데이",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLeUpPLTVHa3ZRQVNyWUlsMUpGSjZubWNlWHlMOGs3TzdKX2hONHVxRW9NM0RSbzNza0pRa1gzcjcxbEI4elR1WHNDbmE4cjFLVUtCdnNQUVNreERGY1JEYm5HT3dDQUpxV1h1YtIBckFVX3lxTE5uYmtMai1TcHBCSlRwYm1lVkJZdGNQbHNmVVVuRDl3dmkxQzVMaFB3NHhoQTBqVGN3QlI0QUR5WjFibzlDcFRkaFdaWHBYZDZTb2FfTkh4eEdGNGFLeThzQkZmeEFvRTE2SG5XMUt1X0NhZw?oc=5",
       "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
       "source": "머니투데이",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 “청학역 중투심 조건부 통과… 개통 일정 챙길 것”",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ZVmdFM3lfdWp0Z3R1SzJKdjUyWUtnWUc3NXR0SDllZDdscm1yZXpuNDRfdi1aX2JMelBmcEhWWWFOZTZvOU9RQjZwN2ZDYVRCUHJhLWZVWExYRDd4TUFDdFYxM2FTVGNGd3c?oc=5",
+      "pubDate": "Thu, 15 Oct 2026 14:12:25 GMT",
+      "source": "천지일보",
       "query": "송영길 연수갑"
     },
     {
@@ -233,6 +233,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "민주 송영길, 인천 연수갑 국회의원 당선 확실",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5fY3kwbm1Pa29VQlRiNUZoRDUzT2lZLW96dG5ibDVNRGhQZ2s3VWdsVE14b0hFQkNSQ1ZEX1BtOUhzbmNpd21sZDlQendqNThHS3ljSlNScHdiRGRtbV90M1FpZXJUV2VYMGtsLU5SOUJIaU5M?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "한겨레",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "6선 인천 국회의원 송영길, 대통령 평화외교특보 위촉",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE93TnZtTXVhdHY2Y2lQLWxpZGlsN0ExSEVzNUl1T2RudnFSZmtNXzkyVFpkQmgyN1c3azUyV0htN242VUozdkFQai1wcFB4R0NPM1JhMFllOExkR3E5b2o3YTVjQ0x1WFhFME9wamRBaWM?oc=5",
       "pubDate": "Thu, 01 Oct 2026 07:00:00 GMT",
@@ -251,13 +258,6 @@
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10TFg1dDZMNXozamNoa0c0a1FKM05TeW9OVWRydTJFZWVqOVgxekRzYjRlbUU2NHB5cmN3M1pFTTd3bWlxMlpVS1l5ZV9LWGRRandGRWwxbzZnYXhHRVI3UGtCbk93bnIzd1RuRzJyZw?oc=5",
       "pubDate": "Sat, 06 Jun 2026 07:00:00 GMT",
       "source": "기호일보",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "민주 송영길, 인천 연수갑 국회의원 당선 확실",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5fY3kwbm1Pa29VQlRiNUZoRDUzT2lZLW96dG5ibDVNRGhQZ2s3VWdsVE14b0hFQkNSQ1ZEX1BtOUhzbmNpd21sZDlQendqNThHS3ljSlNScHdiRGRtbV90M1FpZXJUV2VYMGtsLU5SOUJIaU5M?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "한겨레",
       "query": "송영길 연수갑"
     },
     {
