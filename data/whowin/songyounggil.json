@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T03:48:00Z",
+  "updated_at": "2026-10-22T11:22:12Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -74,12 +74,12 @@
     }
   ],
   "sentiment": {
-    "positive": 32,
+    "positive": 33,
     "negative": 1,
-    "neutral": 47,
-    "positive_pct": 40.0,
+    "neutral": 46,
+    "positive_pct": 41.2,
     "negative_pct": 1.2,
-    "neutral_pct": 58.8
+    "neutral_pct": 57.5
   },
   "articles": [
     {
@@ -202,6 +202,13 @@
       "query": "송영길 연수갑"
     },
     {
+      "title": "[포토] 새벽 메운 환호성…송영길 후보, 연수구갑 ‘당선 확실’ 세레머니",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5sTWNPakZmb1hxRzdROTRRZ0t0UmdFUlpiV2x0bkxjX1ItcDFTeG9tQy1YOUJDNDhBMU9QY19UMDVhRi1tVklpWTZHa2J1ZTBVRWhxazdSdmxnYVNkN1BrQzFVM0FjR3I2YWVZalU1VE0?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "인천일보",
+      "query": "송영길 연수갑"
+    },
+    {
       "title": "민주당 송영길 후보 연수갑 국회의원 당선 유력··· 득표율 61.47%",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBJNEt4eE1ESWZ4N3lXZzJIT01mbDNXZnVYcHJ6amsxQl9RekktVlpWODRmQ1UwZnNIXzQySFBfclduUzMyLVUtQzJfYXBaMGhRS3lpVXZuY0NCU056T1NKZEwxWXVQQnNDVmxPNlk2amM?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
@@ -209,24 +216,10 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 “청학역 중투심 통과, 2031년 본선과 동시 개통 총력”",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ocHB6SFBqTnBSclRDRjdkZW1STnhsYURINFhDTUZPSUJuWGlOci1wNHQ2bFZJdHFsRndITWdpRTFndmhQX0U0cm8xNDdCX20yOXRTTGV4b1lGTFE?oc=5",
-      "pubDate": "Thu, 15 Oct 2026 11:08:02 GMT",
-      "source": "경기일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "6선 인천 국회의원 송영길, 대통령 평화외교특보 위촉",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE93TnZtTXVhdHY2Y2lQLWxpZGlsN0ExSEVzNUl1T2RudnFSZmtNXzkyVFpkQmgyN1c3azUyV0htN242VUozdkFQai1wcFB4R0NPM1JhMFllOExkR3E5b2o3YTVjQ0x1WFhFME9wamRBaWM?oc=5",
       "pubDate": "Thu, 01 Oct 2026 07:00:00 GMT",
       "source": "인천투데이",
-      "query": "송영길 연수갑"
-    },
-    {
-      "title": "[포토] 새벽 메운 환호성…송영길 후보, 연수구갑 ‘당선 확실’ 세레머니",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5sTWNPakZmb1hxRzdROTRRZ0t0UmdFUlpiV2x0bkxjX1ItcDFTeG9tQy1YOUJDNDhBMU9QY19UMDVhRi1tVklpWTZHa2J1ZTBVRWhxazdSdmxnYVNkN1BrQzFVM0FjR3I2YWVZalU1VE0?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -248,6 +241,13 @@
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10TFg1dDZMNXozamNoa0c0a1FKM05TeW9OVWRydTJFZWVqOVgxekRzYjRlbUU2NHB5cmN3M1pFTTd3bWlxMlpVS1l5ZV9LWGRRandGRWwxbzZnYXhHRVI3UGtCbk93bnIzd1RuRzJyZw?oc=5",
       "pubDate": "Sat, 06 Jun 2026 07:00:00 GMT",
       "source": "기호일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 “청학역 중투심 통과, 2031년 본선과 동시 개통 총력”",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ocHB6SFBqTnBSclRDRjdkZW1STnhsYURINFhDTUZPSUJuWGlOci1wNHQ2bFZJdHFsRndITWdpRTFndmhQX0U0cm8xNDdCX20yOXRTTGV4b1lGTFE?oc=5",
+      "pubDate": "Thu, 15 Oct 2026 11:08:02 GMT",
+      "source": "경기일보",
       "query": "송영길 연수갑"
     },
     {
