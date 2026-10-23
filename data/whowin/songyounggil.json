@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T21:18:20Z",
+  "updated_at": "2026-10-23T03:52:28Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -46,7 +46,7 @@
     },
     {
       "k": "청학역",
-      "n": 3
+      "n": 2
     },
     {
       "k": "박찬대",
@@ -55,10 +55,6 @@
     {
       "k": "전대",
       "n": 2
-    },
-    {
-      "k": "GTX-B",
-      "n": 1
     },
     {
       "k": "송도유원지",
@@ -74,12 +70,12 @@
     }
   ],
   "sentiment": {
-    "positive": 31,
+    "positive": 32,
     "negative": 1,
-    "neutral": 48,
-    "positive_pct": 38.8,
+    "neutral": 47,
+    "positive_pct": 40.0,
     "negative_pct": 1.2,
-    "neutral_pct": 60.0
+    "neutral_pct": 58.8
   },
   "articles": [
     {
@@ -132,17 +128,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 인천 연수갑 당선인, 돈 봉투 살포 의혹 ‘정치적 위기’ 딛고 당 최다선 ‘6선 고지’",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
-      "source": "경향신문",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "송영길 의원, 서해 5도 해병대 장병 4,500명 생활용수 부족·노후 배관 개선 촉구",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE52dGhJTnVpNkRwdjJRbXV6UHhRVExPdktxTU9ENHBHaVBjNG9aMVBIVnhzekY4SlVTazljb3ZjQVROUGFra1Z6SnpiS3hPcnNCcVFOMEFFUUxURndjQnV1N0VsVHhUclFM?oc=5",
       "pubDate": "Tue, 20 Oct 2026 04:38:29 GMT",
       "source": "경인매일",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길 인천 연수갑 당선인, 돈 봉투 살포 의혹 ‘정치적 위기’ 딛고 당 최다선 ‘6선 고지’",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YSDVzQnRIa0t4dS1TM0NNdGdGMGY3Q29mTjBieWtZUUpfVlpjdFZXdU5WTGFtYTdsU1R5UTUzWmVESHZtUlptVjdWd1lEcmp4bnJzY3Z1Z2tCd9IBX0FVX3lxTE5HcWVad2dTNHN4RHQ1VmRKN0hVTnZEOE9vVTBod1pQak1kRzFLYkQ1bnFuM1JMVUtWcnBZRUFDTjRkRkJTNjNJT3lLM3cyTDVYbGVLVGZCV0VCa2wtdzFV?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "경향신문",
       "query": "송영길 연수갑"
     },
     {
