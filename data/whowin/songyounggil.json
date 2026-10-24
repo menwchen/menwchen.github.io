@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T20:25:34Z",
+  "updated_at": "2026-10-24T22:58:23Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -49,11 +49,11 @@
       "n": 3
     },
     {
-      "k": "전대",
-      "n": 3
+      "k": "박찬대",
+      "n": 2
     },
     {
-      "k": "박찬대",
+      "k": "전대",
       "n": 2
     },
     {
@@ -146,17 +146,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[송영길 ⑤] 떠났던 국회로 돌아오다…구속·재판·무죄, 그리고 6선",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ya2pnNHkxNllRS3VPaWF3VDJ6Zjg3UXplVE14bndyckJkZ3NFUmZZMHI3Q0dqVTRfMmdBUzFySDJUUmdnQTVFSlF4WmVEdFdYMmlldFdzZlU4R0hDNkZNck8waVRRYm5M?oc=5",
-      "pubDate": "Sun, 18 Oct 2026 23:37:00 GMT",
-      "source": "시사프리즘",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "중앙정치 숨 고른 송영길, 연수갑 현안 전면에…‘지역구 챙기기’ 시동",
       "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5qVGpDeTVzVkk1UkpObWxjZEoxaVIyM0N2RFZkVFNLa2RWLTNFMG9OWHlLbU53Vk1ZdnZGUTZqTV9lMkZWV3c?oc=5",
       "pubDate": "Mon, 31 Aug 2026 07:00:00 GMT",
       "source": "Daum",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[송영길 ⑤] 떠났던 국회로 돌아오다…구속·재판·무죄, 그리고 6선",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ya2pnNHkxNllRS3VPaWF3VDJ6Zjg3UXplVE14bndyckJkZ3NFUmZZMHI3Q0dqVTRfMmdBUzFySDJUUmdnQTVFSlF4WmVEdFdYMmlldFdzZlU4R0hDNkZNck8waVRRYm5M?oc=5",
+      "pubDate": "Sun, 18 Oct 2026 23:37:00 GMT",
+      "source": "시사프리즘",
       "query": "송영길 연수갑"
     },
     {
