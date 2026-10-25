@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T15:44:47Z",
+  "updated_at": "2026-10-25T20:31:56Z",
   "district": "인천 연수구갑",
   "election_date": "2026-06-03",
   "candidates": [
@@ -74,12 +74,12 @@
     }
   ],
   "sentiment": {
-    "positive": 33,
+    "positive": 32,
     "negative": 1,
-    "neutral": 46,
-    "positive_pct": 41.2,
+    "neutral": 47,
+    "positive_pct": 40.0,
     "negative_pct": 1.2,
-    "neutral_pct": 57.5
+    "neutral_pct": 58.8
   },
   "articles": [
     {
@@ -104,17 +104,17 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[포토] 출구조사 민주당 ‘우세’…환호하는 송영길 캠프",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE51UWFtS3FoeHBsREJmZzh4clFEdFZKMWdPQWVqTElmTTVYa0VEcHgzTTZnU2xFaWRpYVh5alZCQjFwVnZRcUZpaS1TNWM1MWEweGNDS1FTbEsyNko3MldUZWZVQ2h3Wk04QzU0TXl6a3I?oc=5",
-      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-      "source": "인천일보",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "‘이재명과 인연’ 송영길과 김남준, 인천 연수갑·계양을 보궐선거서 압승",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sYVJsWWdQVHFIYTUya2V4b0M5azJRalZrQkp5TzBGZUZxTmZBSDhhYnJYaWluN2Z3Y3o3eWdRTWFlT2hUbm03aFJjYWQ4Q2g3Tmc?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "경인일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "[포토] 출구조사 민주당 ‘우세’…환호하는 송영길 캠프",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE51UWFtS3FoeHBsREJmZzh4clFEdFZKMWdPQWVqTElmTTVYa0VEcHgzTTZnU2xFaWRpYVh5alZCQjFwVnZRcUZpaS1TNWM1MWEweGNDS1FTbEsyNko3MldUZWZVQ2h3Wk04QzU0TXl6a3I?oc=5",
+      "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+      "source": "인천일보",
       "query": "송영길 연수갑"
     },
     {
@@ -125,9 +125,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "인천 서해5도 해병대, 물 부족에 생활관은 낡아…송영길 “장병 생활여건 개선 촉구”",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBxYlluVXpEWXFweVFCVTFGYzFhVjF0Q3VSdU9WbFRaUlAyVk4zM0NPZjFHaGdwZjB5UXlJZFlPSUYySG1INEZhRUltc0JhLWN6TGtuTC11eFIyTlk?oc=5",
-      "pubDate": "Tue, 20 Oct 2026 06:19:50 GMT",
+      "title": "송영길 인천 연수갑 국회의원 당선자 [재보선 당선 소감]",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52UXhQclB2LWNDMThXRzFLZkVkdW5Gam9hTjFhMFNIaldkYXRJNFRNNGZVZ1VmN2pWU21IYmpNY3VRZ1NQUy1GMUFuRmRvZG1mVnN5MVdPSWFLSzQ?oc=5",
+      "pubDate": "Sun, 07 Jun 2026 07:00:00 GMT",
       "source": "경기일보",
       "query": "송영길 연수갑"
     },
@@ -167,9 +167,9 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "송영길 인천 연수갑 국회의원 당선자 [재보선 당선 소감]",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52UXhQclB2LWNDMThXRzFLZkVkdW5Gam9hTjFhMFNIaldkYXRJNFRNNGZVZ1VmN2pWU21IYmpNY3VRZ1NQUy1GMUFuRmRvZG1mVnN5MVdPSWFLSzQ?oc=5",
-      "pubDate": "Sun, 07 Jun 2026 07:00:00 GMT",
+      "title": "인천 서해5도 해병대, 물 부족에 생활관은 낡아…송영길 “장병 생활여건 개선 촉구”",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBxYlluVXpEWXFweVFCVTFGYzFhVjF0Q3VSdU9WbFRaUlAyVk4zM0NPZjFHaGdwZjB5UXlJZFlPSUYySG1INEZhRUltc0JhLWN6TGtuTC11eFIyTlk?oc=5",
+      "pubDate": "Tue, 20 Oct 2026 06:19:50 GMT",
       "source": "경기일보",
       "query": "송영길 연수갑"
     },
@@ -272,13 +272,6 @@
       "query": "송영길 연수갑"
     },
     {
-      "title": "[송영길 ⑤] 떠났던 국회로 돌아오다…구속·재판·무죄, 그리고 6선",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ya2pnNHkxNllRS3VPaWF3VDJ6Zjg3UXplVE14bndyckJkZ3NFUmZZMHI3Q0dqVTRfMmdBUzFySDJUUmdnQTVFSlF4WmVEdFdYMmlldFdzZlU4R0hDNkZNck8waVRRYm5M?oc=5",
-      "pubDate": "Sun, 18 Oct 2026 23:37:00 GMT",
-      "source": "시사프리즘",
-      "query": "송영길 연수갑"
-    },
-    {
       "title": "6.3 지선·보궐서 나타난 인천 연수갑 한지붕 두 민심",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE50Xy05LThNTFlKaVBIYThFUUdyRFpQbXFUZ3dvNGlEY21NTU1KMGp3VkRfZVhYcXpMdG9YOUpyMEJnc2YtOVg0TWZveDZUc25sWklxTXFxemIzalRhRUQ0T1ZHNFFsMEw0OFZZNC1wVS0?oc=5",
       "pubDate": "Wed, 10 Jun 2026 07:00:00 GMT",
@@ -290,6 +283,13 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83VG1FZUZadGJyUzJ3aFAzZFlfREZmbmtoWEFyd2xadmxkNTk2el93VFl4LWZfMWFRUjEzdDFpRXZnQlZ5aHp2TC00Z0k5czV1QUtCYTZJaGg1Zjc3Y0lkOEk0U1kzeEpXYXVDel9LT2U?oc=5",
       "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
       "source": "인천일보",
+      "query": "송영길 연수갑"
+    },
+    {
+      "title": "송영길, 인천 연수갑 당선…‘6선’으로 원내 복귀",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxc19QWFIwZzNUbWF1TlpsUHBqZzlGWW5uNndOeTVmajNrb2dLbHVmYTFBYU9FQXpDUTB2ZkEwMC1TcHpIX2FYRHVjTnh6UVFtUnE0ZlFIRlhpQW5yUmV0bnZac3ZOa2lySWIxRkZNNkN5WEgyRzZR0gFmQVVfeXFMTm1jSENIOHlpRkZMVXNtT012SXFPQ0s4ZnVPWF8tVmFOTzItWlQ2Q3R2V2tyVWRoYlhrc29rU0pWeHlnVFBUWVZLeFJOLUtMeUNja3oyWHhBTTJHN01QQmlsUGM3N2Jn?oc=5",
+      "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+      "source": "동아일보",
       "query": "송영길 연수갑"
     }
   ]
